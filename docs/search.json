@@ -1,20 +1,33 @@
 {
   "articles": [
     {
-      "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "path": "code_of_conduct.html",
+      "title": "Code of Conduct",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-24T11:53:48+02:00"
+      "contents": "\r\n\r\nTo ensure a welcoming environment for all, we require everyone participating in the course to conform to the Code of Conduct given below. This code applies to all spaces related to the course including, but not limited to, classroom, ‘aula virtual’, emails, shared documents, and code repositories. We strongly recommend that anyone running workshops or classes of any kind choose and publish a similar code so that everyone will know what is expected of them and what to do when those expectations are not met.\r\n\r\nYou can report Code of Conduct violations in person to Carlos Granell.\r\nWe are dedicated to providing a welcoming and supportive environment for all people, regardless of background or identity. However, we recognize that some groups in our community are subject to historical and ongoing discrimination, and may be vulnerable or disadvantaged. Membership in such a specific group can be on the basis of characteristics such as gender, sexual orientation, disability, physical appearance, body size, race, nationality, sex, color, ethnic or social origin, pregnancy, citizenship, familial status, veteran status, genetic information, religion or belief, political or any other opinion, membership of a national minority, property, birth, age, or choice of text editor. We do not tolerate harassment of participants on the basis of these categories, or for any other reason.\r\nHarassment is any form of behavior intended to exclude, intimidate, or cause discomfort. Because we are a diverse community, we may have different ways of communicating and of understanding the intent behind actions. Therefore we have chosen to prohibit certain forms of behavior in our community, regardless of intent.\r\nProhibited harassing behavior includes but is not limited to:\r\nwritten or verbal comments which have the effect of excluding people on the basis of membership of a specific group listed above;\r\ncausing someone to fear for their safety, such as through stalking, following, or intimidation;\r\nthe display of sexual or violent images;\r\nunwelcome sexual attention;\r\nnon-consensual or unwelcome physical contact;\r\nsustained disruption of talks, events or communications;\r\nincitement to violence, suicide, or self-harm;\r\ncontinuing to initiate interaction (including photography or recording) with someone after being asked to stop; and\r\npublication of private communication without consent.\r\nBehavior not explicitly mentioned above may still constitute harassment. The list above should not be taken as exhaustive but rather as a guide to make it easier to enrich all of us and the communities in which we participate. All interactions should be professional regardless of location: harassment is prohibited whether it occurs on or offline, and the same standards apply to both.\r\nEnforcement of the Code of Conduct will be respectful and not include any harassing behaviors.\r\nThank you for helping make this a welcoming, friendly community for all.\r\n[This code of conduct is a simplification of the CoC for Reproducible Research workshops at AGILE, which in turn is based on a CoC for Teaching Tech Together by Greg Wilson.]\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-24T12:50:13+02:00"
     },
     {
       "path": "index.html",
-      "title": "EI1039",
-      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "title": "EI1039 - Dise&ntilde;o de software",
+      "description": "Ampliación de la Guía Docente EI1039 para el curso académico 2021/2022\n",
+      "author": [
+        {
+          "name": "Carlos Granell",
+          "url": "http://carlosgranell.eu"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\n\r\nContents\r\nContacto\r\nObjetivo y resultados de aprendizaje\r\nOutline Enlaces\r\n\r\n\r\n\r\n\r\nContacto\r\n\r\nCarlos Granell  Associate Professor in Computer Science  Office UB1520DD, Espaitec2, 5th floor  Universitat Jaume I, Spain\r\n\r\nTutorías (virtuales) primer semestre:\r\nMartes de 10 a 12:00\r\nJueves de 15 a 16:00\r\nen otros horarios mediante cita previa (por email)\r\nPolítica de tutorías: Todos sabemos que las restricciones sanitarias todavía permanecen en vigor para el curso 2021/22, por lo que las tutorías serán preferiblemente telemáticas (via Meet), aunque estoy abierto a tutorías presenciales si es necesario.\r\nObjetivo y resultados de aprendizaje\r\nSegún el SIA\r\n\r\n“La asignatura Diseño de Software se imparte en el primer semestre de cuarto curso del grado en Ingeniería Informática de la Universitat Jaume I, como parte del itinerario de Ingeniería del Software. El objetivo de esta asignatura es proporcionar al alumnado conocimientos y habilidades sobre las distintas etapas del diseño del software dentro del proceso de desarrollo.”\r\n\r\nOutline Enlaces\r\nSemana 1: Introducción a la reproducibilidad\r\nSesión 1.1: Reproducibilidad y replicabilidad\r\nSesión 1.2: Evaluación de la reproducibilidad\r\nSemana 2: Prácticas y recomendaciones\r\nSesión 2.1: Organización, recomendaciones y buenas prácticas reproducibles\r\nSemana 3: Literate programming y notebooks\r\nSesión 3.1: Literate programming y markdown\r\nSesión 3.2: Notebooks con R Markdown\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-24T12:50:15+02:00"
+    },
+    {
+      "path": "syllabus.html",
+      "title": "Syllabus",
+      "description": "Esta programación temporal puede estar sujeta a cambios durantes el curso.",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-24T11:53:49+02:00"
+      "last_modified": "2021-08-24T12:50:15+02:00"
     }
   ],
   "collections": []

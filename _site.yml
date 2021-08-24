@@ -1,5 +1,5 @@
 name: "ei1039"
-title: "EI1039 - Diseño de Software"
+title: "EI1039"
 description: |
   Asignatura EI1039
 output_dir: "docs"
@@ -11,8 +11,10 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Code of Conduct"
+      href: code_of_conduct.html
+    - text: "Syllabus"
+      href: syllabus.html
 
     - icon: fab fa-github
       href: https://github.com/cgranell/ei1039

@@ -1,0 +1,9 @@
+---
+title: "Syllabus"
+description: |
+  Esta programación temporal puede estar sujeta a cambios durantes el curso.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

@@ -1,7 +1,18 @@
 ---
-title: "EI1039"
+title: "EI1039 - Dise&ntilde;o de software"
+author:
+- name: Carlos Granell
+  url: http://carlosgranell.eu
+  affiliation: Universitat Jaume I
+  affiliation_url: http://geotec.uji.es/
+  orcid_id: 0000-0003-1004-9695
+  
+date: "`r Sys.Date()`"
+bibliography: references.bib
+link-citations: true
+
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Ampliación de la Guía Docente EI1039 para el curso académico 2021/2022
 site: distill::distill_website
 ---
 
@@ -16,3 +27,59 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "cgranell/ei1039") %>%
+  meta_social(
+    title = "EI1039 - Diseno de Software",
+    url ="https://cgranell.github.io/ei1039/"
+  )
+
+```
+
+
+## Contacto
+
+> Carlos Granell <br>
+Associate Professor in Computer Science <br>
+Office [UB1520DD](http://smart.uji.es/index.php?room=UB1520DD), Espaitec2, 5th floor <br>
+Universitat Jaume I, Spain 
+
+
+
+Tutorías (virtuales) primer semestre:
+
+-	Martes de 10 a 12:00
+-	Jueves de 15 a 16:00
+-	en otros horarios mediante cita previa (por email)
+
+_Política de tutorías: Todos sabemos que las restricciones sanitarias todavía permanecen en vigor para el curso 2021/22, por lo que las tutorías serán preferiblemente telemáticas (via Meet), aunque estoy abierto a tutorías presenciales si es necesario._
+
+
+## Objetivo y resultados de aprendizaje
+
+Según el SIA 
+
+> “La asignatura Diseño de Software se imparte en el primer semestre de cuarto curso del grado en Ingeniería Informática de la Universitat Jaume I, como parte del itinerario de Ingeniería del Software. El objetivo de esta asignatura es proporcionar al alumnado conocimientos y habilidades sobre las distintas etapas del diseño del software dentro del proceso de desarrollo.”
+
+
+
+
+## Outline Enlaces
+
+**Semana 1: Introducción a la reproducibilidad**
+
+-   Sesión 1.1: [Reproducibilidad y replicabilidad](sesion11.html)
+
+-   Sesión 1.2: [Evaluación de la reproducibilidad](sesion12.html)
+
+**Semana 2: Prácticas y recomendaciones**
+
+-   Sesión 2.1: [Organización, recomendaciones y buenas prácticas reproducibles](sesion21.html)
+
+**Semana 3: Literate programming y notebooks**
+
+-   Sesión 3.1: [Literate programming y markdown](sesion31.html)
+
+-   Sesión 3.2: [Notebooks con R Markdown](sesion32.html)

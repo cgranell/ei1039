@@ -34,6 +34,6 @@ Thank you for helping make this a welcoming, friendly community for all.
 
 <aside>
 
-[This code of conduct is a simplification of the CoC for [Reproducible Research workshos at AGILE](https://o2r.info/reproducible-agile/), which is based on a CoC for [Teaching Tech Together](http://teachtogether.tech/) by Greg Wilson, which in turn is based on that used by PyCon, which in turn is forked from a template written by the Ada Initiative and hosted on the Geek Feminism Wiki.]
+[This code of conduct is a simplification of the CoC for [Reproducible Research workshops at AGILE](https://o2r.info/reproducible-agile/), which in turn is based on a CoC for [Teaching Tech Together](http://teachtogether.tech/) by Greg Wilson.]
 
 </aside>
