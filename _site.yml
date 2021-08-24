@@ -1,0 +1,24 @@
+name: "ei1039"
+title: "EI1039 - Diseño de Software"
+description: |
+  Asignatura EI1039
+output_dir: "docs"
+creative_commons: CC BY-NC-SA
+navbar:
+  logo:
+    image: images/marca-uji-blanc.png
+    href: https://www.uji.es
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+
+    - icon: fab fa-github
+      href: https://github.com/cgranell/ei1039
+  search: true
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    code_download: true
