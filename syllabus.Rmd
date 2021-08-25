@@ -1,9 +1,29 @@
 ---
 title: "Syllabus"
 description: |
-  Esta programación temporal puede estar sujeta a cambios durantes el curso.
+  Esta programación temporal puede estar sujeta a cambios durante el curso.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+| Semana | Fecha          | Pre (lecturas) | clase TE                                  | Post (HW) | clase LA/SE                      |
+|--------|----------------|----------------|-------------------------------------------|-----------|----------------------------------|
+| 1      | 10-sep         |                | [TE1 Intro y logística](TE1.html)         |           | NA                               |
+| 2      | 17-sep         |                | NA                                        |           | NA                               |
+| 3      | 24-sep         |                | TE2 Architectura software                 |           | NA                               |
+| 4      | 01-oct         |                | TE3 Patrones creacionales                 |           | LA1                              |
+| 5      | 08-oct         |                | TE4 Patrones estructurales                |           | LA2                              |
+| 6      | 15-oct         |                | TE5 Patrones estructurales                |           | LA3. **Entrega \#1 proyecto**    |
+| 7      | 22-oct         |                | TE6 Patrones comportamiento               |           | SE1 Arquitectura Software        |
+| 8      | 29-oct         |                | TE7 Patrones comportamiento               |           | LA4                              |
+| 9      | 05-nov         |                | TE8 Patrones Intefaces Usuario o patrones |           | LA5                              |
+| 10     | 12-nov         |                | NA                                        |           | LA6. **Entrega \#2 proyecto**    |
+| 11     | 19-nov         |                | NA                                        |           | SE2 Interfaces Usuario           |
+| 12     | 26-nov         |                | NA                                        |           | LA7                              |
+| 13     | 03-dic         |                | NA                                        |           | LA8                              |
+| 14     | 10-dic         |                | NA                                        |           | SE3 Interfaces Usuario           |
+| 15     | 17-dic         |                | NA                                        |           | SE4 Ensayo presentación proyecto |
+|        | 23-dic , 23:39 |                |                                           |           | **Entrega \#3 proyecto**         |
+|        | ene 2022       |                |                                           |           | Presentación proyecto            |

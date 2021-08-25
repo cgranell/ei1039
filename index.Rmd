@@ -38,48 +38,120 @@ meta() %>%
 
 ```
 
-
 ## Contacto
 
-> Carlos Granell <br>
-Associate Professor in Computer Science <br>
-Office [UB1520DD](http://smart.uji.es/index.php?room=UB1520DD), Espaitec2, 5th floor <br>
-Universitat Jaume I, Spain 
-
-
+Carlos Granell <br> Associate Professor in Computer Science <br> Office [UB1520DD](http://smart.uji.es/index.php?room=UB1520DD), Espaitec2, 5th floor <br> Universitat Jaume I, Spain
 
 Tutorías (virtuales) primer semestre:
 
--	Martes de 10 a 12:00
--	Jueves de 15 a 16:00
--	en otros horarios mediante cita previa (por email)
+-   Martes de 10 a 12:00
+-   Jueves de 15 a 16:00
+-   en otros horarios mediante cita previa (por email)
 
-_Política de tutorías: Todos sabemos que las restricciones sanitarias todavía permanecen en vigor para el curso 2021/22, por lo que las tutorías serán preferiblemente telemáticas (via Meet), aunque estoy abierto a tutorías presenciales si es necesario._
+> [Política de tutorías]{.ul}: *Todos sabemos que las restricciones sanitarias todavía permanecen en vigor para el curso 2021/22, por lo que las tutorías serán preferiblemente telemáticas (via Meet), aunque estoy abierto a tutorías presenciales si es necesario.*
 
+Ver en SIA los [horarios y localización](https://ujiapps.uji.es/sia/rest/publicacion/2021/estudio/225/asignatura/EI1039) de las clases teóricas (TE), seminarios (SE) y laboratorio (LA):
+
+-   TE/SE: [TD1019AA](http://smart.uji.es/index.php?room=TD1019AA).
+
+-   LA: [TD0209AI](http://smart.uji.es/index.php?room=TD0209AI).
 
 ## Objetivo y resultados de aprendizaje
 
-Según el SIA 
+Según el SIA "la asignatura Diseño de Software se imparte en el primer semestre de cuarto curso del grado en Ingeniería Informática de la Universitat Jaume I, como parte del itinerario de Ingeniería del Software. El objetivo de esta asignatura es proporcionar al alumnado conocimientos y habilidades sobre las distintas etapas del diseño del software dentro del proceso de desarrollo."
 
-> “La asignatura Diseño de Software se imparte en el primer semestre de cuarto curso del grado en Ingeniería Informática de la Universitat Jaume I, como parte del itinerario de Ingeniería del Software. El objetivo de esta asignatura es proporcionar al alumnado conocimientos y habilidades sobre las distintas etapas del diseño del software dentro del proceso de desarrollo.”
+Al final de la EI1039, deberías ser capaz de:
 
+-   Comparar las distintas estrategias que se pueden utilizar en el diseño de un sistema software.
+-   Seleccionar, aplicar y evaluar patrones de arquitectura y diseño adecuados a la resolución de un determinado problema de desarrollo del software.
+-   Diseñar y evaluar la interfaz de usuario utilizando principios y técnicas propias de la interacción persona-computador.
 
+Tan imporante como los resultaods de aprendizaje anteriores son las competencias blandas (o *soft skills*) como la habilidad de comunicación, trabajo en equipo, sintetizar información, capacidad de toma de decisiones y resolución de conflictos, gestión de tiempo o liderazgo. Trabajaremos estas competencias blandas a lo largo del curso pues, lo creas o no, son aspectos vitales en el día a día de un arquitecto/a de software.
 
+Arquitectura software, patrones de diseño, comunicación, trabajo en equipo, .... Suena bien, ¿no? No menos importante, espero que te diviertas en el aprendizaje y comprensión del contenido de la asignatura para el diseño y desarrollo de aplicaciones avanzadas.
 
-## Outline Enlaces
+## Método de instrucción
 
-**Semana 1: Introducción a la reproducibilidad**
+Si esperas presentaciones largas por mi parte todos los viernes por la tarde, entonces creo que te has matriculado de la asignatura equivocada. Hay evidencia científica de sobra que demuestra una y otra vez que los métodos de *aprendizaje activos* son mucho más efectivos que escucharme y tomar apuntes de forma pasiva. Vale, es cierto que a veces son necesarias presentaciones breves aclaratorias; pero tú debes ser el protagonista (y no yo) de tu propio proceso de aprendizaje para alcanzar los resultados esperados con éxito. Por lo tanto, esta asignatura mezcla diversas estrategias de aprendizaje activo, como [*Process Oriented Guided Inquiry Learning*](https://pogil.org/) (para trabajo en grupo y competencias comunicativas) y [flippedclassroom](https://www.theflippedclassroom.es/) (lecturas y ejercicios básicos en casa, competencias de análisis y resolución de problemas en aula), combinadas con mini-presentaciones tradicionales por mi parte cuando sea necesario. Para que te hagas una idea, una semana típica de clase de teoría podría ser así:
 
--   Sesión 1.1: [Reproducibilidad y replicabilidad](sesion11.html)
+-   Hasta el miércoles, a las 23:59: Fecha límite para entregar las actividades no presenciales propuestas de la semana anterior en el Aula Virtual.
 
--   Sesión 1.2: [Evaluación de la reproducibilidad](sesion12.html)
+-   Hasta el viernes, antes de clase: Revisar lecturas asignadas y videos propuestos.
 
-**Semana 2: Prácticas y recomendaciones**
+-   Viernes (en aula): puesta en común sobre el trabajo no presencial entregado previamente, mini-presentaciones, actividad POGIL, etc. Propuesta de trabajo no presenciales para la próxima semana, normalmente como continuación de la actividad POGIL desarrollada en el aula.
 
--   Sesión 2.1: [Organización, recomendaciones y buenas prácticas reproducibles](sesion21.html)
+La asignatura también consta de clases de seminarios (SE) donde explorarás temas adicionales al diseño de patrones, como arquitectura de software e interfaces de usuario, y podrás practicar tus competencias blandas. Más detalles a lo largo del curso.
 
-**Semana 3: Literate programming y notebooks**
+Las asignaturas [EI1039 (Diseño de software)](https://ujiapps.uji.es/sia/rest/publicacion/2021/estudio/225/asignatura/EI1039) y [EI1048 (Paradigmas de Software)](https://ujiapps.uji.es/sia/rest/publicacion/2021/estudio/225/asignatura/EI1048) están muy relacionadas, ya que son dos caras de la misma moneda a la hora de diseñar y desarrollar aplicaciones avanzadas. Para facilitar el aprendizaje de las competencias de ambas asignaturas, el profesorado nos hemos organizado para proponerte un proyecto común que viene detallado en un documento separado colgado en el Aula Virtual de las dos asignaturas. Las clases de laboratorio (LA) de la EI1039 son de trabajo (en grupo) para la consecución del proyecto común.
 
--   Sesión 3.1: [Literate programming y markdown](sesion31.html)
+## Materiales y contenido
 
--   Sesión 3.2: [Notebooks con R Markdown](sesion32.html)
+Los materiales del curso están disponibles tanto en el [Aula Virtual](https://aulavirtual.uji.es/course/view.php?id=71005) como en este sitio web. Te recominedo que siempre tengas a mano el [syllabus](syllabus.html) con la planifiación temporal de las actividades a lo largo de curso.
+
+Las actividades propuestas para trabajo no presencial se entregan a través de las tareas correspondientes en el Aula Virtual de la asignatura. Voy a utilizar el Aula Virtual para proporcionarte feedback sobre las actividades propuestas, para anuncios de la asignatura y, en definitiva, para cualquier tipo de comunicación oficial. Agradecería enormemente que todas las comunicaciones entre nosotros relativas a la asignatura fueran canalizadas a través del Aula Virtual, y no a través de mi correo personal.
+
+## Métodos de evaluación
+
+La participación en clase es fundamental. Las actividades propuestas en aula invitan al trabajo colaborativo y participativo, fomentado el aprendizaje activo, la discusión y la comuniación. Las actividades presenciales incluyen una componente evaluable a discreción del instructor (5%). Estas actividades presenciales se complementan con actividades no presenciales individuales (*homework*) para entregar en el Aula Virtual, las cuales contribuye un 15% de la nota. En total, el trabajo presencial y no presencial relacionado con las clases de teoría computa un 20% de la nota de la asignatura.
+
+Los seminarios computan otro 20% de la nota final. A lo largo del curso se informará con más detalle de la naturaleza de los dos seminarios evaluables. En esencia, son presentaciones grupales sobre un tema explorado por cada grupo.
+
+El desarrollo, entrega y defensa del proyecto común cubre el 60% de la nota.
+
++----------------------------------------------+------------+------+-----------------------------------------------+
+| Actividad                                    | Tipo       | Peso | Instrumento                                   |
++==============================================+============+======+===============================================+
+| Trabajo presencial en aula                   | Grupo      | 5%   | Observación, participación, trabajo en equipo |
++----------------------------------------------+------------+------+-----------------------------------------------+
+| Trabajo no presencial                        | Individual | 15%  | Código                                        |
++----------------------------------------------+------------+------+-----------------------------------------------+
+| Seminario Arquitectura software (con EI1048) | Grupo      | 10%  | Presentación y discusión                      |
++----------------------------------------------+------------+------+-----------------------------------------------+
+| Seminario Interfaces Usuario                 | Grupo      | 10%  | Presentación y discusión                      |
++----------------------------------------------+------------+------+-----------------------------------------------+
+| Proyecto común (con EI1048)                  | Grupo      | 60%  | Codigo, documento escrito y presentación      |
++----------------------------------------------+------------+------+-----------------------------------------------+
+
+: Instrumentos de evaluación
+
+> [Política de entrega tardía/retrasada*:*]{.ul} *Las fechas límite semanales (miércoles noche para el trabajo no presencial, por ejemplo) tienen sentido para que pueda evaluar el trabajo y proporcionar feedback rápido en la siguiente clase de teoría (viernes). Por lo tanto, las actividades entregadas con retraso no se aceptarán sin permiso especial o debida justificación. Estoy dispuesto a ser flexible ante circunstancias especiales (por ejemplo, si tu o miembros de tu familia son hospitalizados).*
+
+## Código de Conducta
+
+To ensure a welcoming environment for all, we require everyone participating in the course to conform to the Code of Conduct given below. This code applies to all spaces related to the course including, but not limited to, classroom, seminars, *Aula Virtual*, emails, shared documents, and code repositories. You can report Code of Conduct violations to Carlos Granell either in person or by e-mail.
+
+We are dedicated to providing a welcoming and supportive environment for all people, regardless of background or identity. However, we recognize that some groups in our community are subject to historical and ongoing discrimination, and may be vulnerable or disadvantaged. Membership in such a specific group can be on the basis of characteristics such as gender, sexual orientation, disability, physical appearance, body size, race, nationality, sex, color, ethnic or social origin, pregnancy, citizenship, familial status, veteran status, genetic information, religion or belief, political or any other opinion, membership of a national minority, property, birth, age, or choice of text editor. We do not tolerate harassment of participants on the basis of these categories, or for any other reason.
+
+Harassment is any form of behavior intended to exclude, intimidate, or cause discomfort. Because we are a diverse community, we may have different ways of communicating and of understanding the intent behind actions. Therefore we have chosen to prohibit certain forms of behavior in our community, regardless of intent.
+
+Prohibited harassing behavior includes but is not limited to:
+
+-   written or verbal comments which have the effect of excluding people on the basis of membership of a specific group listed above;
+
+-   causing someone to fear for their safety, such as through stalking, following, or intimidation;
+
+-   the display of sexual or violent images;
+
+-   unwelcome sexual attention;
+
+-   non-consensual or unwelcome physical contact;
+
+-   sustained disruption of talks, events or communications;
+
+-   incitement to violence, suicide, or self-harm;
+
+-   continuing to initiate interaction (including photography or recording) with someone after being asked to stop; and
+
+-   publication of private communication without consent.
+
+Behavior not explicitly mentioned above may still constitute harassment. The list above should not be taken as exhaustive but rather as a guide to make it easier to enrich all of us and the communities in which we participate. All interactions should be professional regardless of location: harassment is prohibited whether it occurs on-line or off-line, and the same standards apply to both.
+
+Enforcement of the Code of Conduct will be respectful and not include any harassing behaviors.
+
+Thank you for helping make this a welcoming, friendly community for all.
+
+<aside>
+
+[This code of conduct is a simplification of the CoC for [Reproducible Research workshops at AGILE](%5Bhttps://o2r.info/reproducible-agile/),](<https://o2r.info/reproducible-agile/>),) which in turn is based on a CoC for [Teaching Tech Together](%5Bhttp://teachtogether.tech/)](<http://teachtogether.tech/>)) by Greg Wilson.]
+
+</aside>

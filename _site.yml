@@ -11,11 +11,12 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Code of Conduct"
-      href: code_of_conduct.html
     - text: "Syllabus"
       href: syllabus.html
-
+    - text: "Sesiones"
+      menu:
+        - text: "TE1"
+          href: sesion11.html
     - icon: fab fa-github
       href: https://github.com/cgranell/ei1039
   search: true
