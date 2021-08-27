@@ -1,0 +1,32 @@
+---
+title: "TE2"
+description: |
+  Fundamentos de arquitectura: estilos y patrones.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Organización clase
+
+-   [05 min] **Opening**
+
+-   [10 min] **Revisión** HW1
+
+-   [60 min] **Actividad POGIL**: Trabajo en equipo + historias de arquitectura
+
+    -   POGIL en EI1039? (mas interacción y participación, mejor aprendizaje
+
+    -   Grupos de 3-4 personas
+
+    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)
+
+    -   [Actividad POGIL](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/0126/Act02-Arithmetic.pdf)
+
+-   [20 min] **Mini presentación**. Fundamentos de arquitectura: Estilos y patrones
+
+-   [10 min] **Closing**. Intro HW2
+
+## Roles en POGIL 

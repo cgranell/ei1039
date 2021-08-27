@@ -1,0 +1,22 @@
+---
+title: "HW1"
+description: |
+  Preparativos proyecto y exploración estilos de arquitectura
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objetivos
+
+## Envio
+
+## Tareas
+
+-   Preparativos del proyecto
+
+-   Exploración estilos de arquitectura software
+
+### 

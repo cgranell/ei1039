@@ -66,13 +66,17 @@ Al final de la EI1039, deberías ser capaz de:
 -   Seleccionar, aplicar y evaluar patrones de arquitectura y diseño adecuados a la resolución de un determinado problema de desarrollo del software.
 -   Diseñar y evaluar la interfaz de usuario utilizando principios y técnicas propias de la interacción persona-computador.
 
-Tan imporante como los resultaods de aprendizaje anteriores son las competencias blandas (o *soft skills*) como la habilidad de comunicación, trabajo en equipo, sintetizar información, capacidad de toma de decisiones y resolución de conflictos, gestión de tiempo o liderazgo. Trabajaremos estas competencias blandas a lo largo del curso pues, lo creas o no, son aspectos vitales en el día a día de un arquitecto/a de software.
+Tan importante como los resultados de aprendizaje listados arrbia son las competencias blandas (o *soft skills*) tales como la habilidad de comunicación, trabajo en equipo, capacidad de sintesis de información, capacidad de toma de decisiones y resolución de conflictos, gestión del tiempo o liderazgo. Trabajaremos estas competencias blandas a lo largo del curso pues, lo creas o no, son aspectos vitales en el día a día de un arquitecto/a de software.
 
 Arquitectura software, patrones de diseño, comunicación, trabajo en equipo, .... Suena bien, ¿no? No menos importante, espero que te diviertas en el aprendizaje y comprensión del contenido de la asignatura para el diseño y desarrollo de aplicaciones avanzadas.
 
 ## Método de instrucción
 
-Si esperas presentaciones largas por mi parte todos los viernes por la tarde, entonces creo que te has matriculado de la asignatura equivocada. Hay evidencia científica de sobra que demuestra una y otra vez que los métodos de *aprendizaje activos* son mucho más efectivos que escucharme y tomar apuntes de forma pasiva. Vale, es cierto que a veces son necesarias presentaciones breves aclaratorias; pero tú debes ser el protagonista (y no yo) de tu propio proceso de aprendizaje para alcanzar los resultados esperados con éxito. Por lo tanto, esta asignatura mezcla diversas estrategias de aprendizaje activo, como [*Process Oriented Guided Inquiry Learning*](https://pogil.org/) (para trabajo en grupo y competencias comunicativas) y [flippedclassroom](https://www.theflippedclassroom.es/) (lecturas y ejercicios básicos en casa, competencias de análisis y resolución de problemas en aula), combinadas con mini-presentaciones tradicionales por mi parte cuando sea necesario. Para que te hagas una idea, una semana típica de clase de teoría podría ser así:
+Si esperas presentaciones largas por mi parte todos los viernes por la tarde, entonces creo que te has matriculado de la asignatura equivocada. Hay evidencia científica de sobra que demuestra una y otra vez que los métodos de *aprendizaje activos* son mucho más efectivos que escucharme y tomar apuntes de forma pasiva. Vale, es cierto que a veces son necesarias presentaciones breves aclaratorias; pero tú debes ser el protagonista (y no yo) de tu propio proceso de aprendizaje para alcanzar los resultados esperados con éxito. Por lo tanto, esta asignatura mezcla diversas estrategias de aprendizaje activo, como [*Process Oriented Guided Inquiry Learning*](https://pogil.org/) (para trabajo en grupo y competencias comunicativas) y [flippedclassroom](https://www.theflippedclassroom.es/) (lecturas y ejercicios básicos en casa, competencias de análisis y resolución de problemas en aula), combinadas con mini-presentaciones tradicionales por mi parte cuando sea necesario.
+
+<aside>¿Te has preguntamos alguna vez como aprende tu cerebro?</aside>
+
+Para que te hagas una idea, una semana típica de clase de teoría podría ser así:
 
 -   Hasta el miércoles, a las 23:59: Fecha límite para entregar las actividades no presenciales propuestas de la semana anterior en el Aula Virtual.
 
@@ -103,13 +107,13 @@ El desarrollo, entrega y defensa del proyecto común cubre el 60% de la nota.
 +==============================================+============+======+===============================================+
 | Trabajo presencial en aula                   | Grupo      | 5%   | Observación, participación, trabajo en equipo |
 +----------------------------------------------+------------+------+-----------------------------------------------+
-| Trabajo no presencial                        | Individual | 15%  | Código                                        |
+| Trabajo no presencial                        | Individual | 15%  | Código y/0 documento escrito                  |
 +----------------------------------------------+------------+------+-----------------------------------------------+
 | Seminario Arquitectura software (con EI1048) | Grupo      | 10%  | Presentación y discusión                      |
 +----------------------------------------------+------------+------+-----------------------------------------------+
 | Seminario Interfaces Usuario                 | Grupo      | 10%  | Presentación y discusión                      |
 +----------------------------------------------+------------+------+-----------------------------------------------+
-| Proyecto común (con EI1048)                  | Grupo      | 60%  | Codigo, documento escrito y presentación      |
+| Proyecto común (con EI1048)                  | Grupo      | 60%  | Código, documento escrito y presentación      |
 +----------------------------------------------+------------+------+-----------------------------------------------+
 
 : Instrumentos de evaluación
@@ -152,6 +156,6 @@ Thank you for helping make this a welcoming, friendly community for all.
 
 <aside>
 
-[This code of conduct is a simplification of the CoC for [Reproducible Research workshops at AGILE](%5Bhttps://o2r.info/reproducible-agile/),](<https://o2r.info/reproducible-agile/>),) which in turn is based on a CoC for [Teaching Tech Together](%5Bhttp://teachtogether.tech/)](<http://teachtogether.tech/>)) by Greg Wilson.]
+[This code of conduct is a simplification of the CoC for [Reproducible Research workshops at AGILE](%5Bhttps://o2r.info/reproducible-agile/),](https://o2r.info/reproducible-agile/),) which in turn is based on a CoC for [Teaching Tech Together](%5Bhttp://teachtogether.tech/)](<http://teachtogether.tech/>)) by Greg Wilson.]
 
 </aside>

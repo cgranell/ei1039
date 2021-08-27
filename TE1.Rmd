@@ -1,7 +1,7 @@
 ---
 title: "TE1"
 description: |
-  Intro y Logística.
+  Introducción de la asignatura y logística <br/> Fundamentos de arquitectura: características y compromisos.
 output: distill::distill_article
 ---
 
@@ -9,8 +9,26 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Clase
+## Organización clase
 
-Distill is a publication format for scientific and technical writing, native to the web.
+-   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html)!
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+-   [20 min] **Mini presentación**. Proyecto común de EI1039/EI1048
+
+-   [10 min] **Revisión**. Resultados del pretest
+
+-   [20 min] **Mini presentación**: Diseño de sofware
+
+    -   Definición de *arquitectura de software*
+
+    -   Tareas de un arquitecto de software
+
+    -   Arquitecto *vs* diseñador/desarrolador
+
+-   [20 min] **Mini presentación**: Características de una arquitectura (CA) y compromisos
+
+    -   Definición de CA y dimensiones (operacionales, estructurales, horizontales)
+
+    -   ¿Cuáles son las CA relevantes para mi proyecto?
+
+-   [10 min] **Closing**: Into HW1
