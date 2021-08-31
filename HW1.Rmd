@@ -9,11 +9,25 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Objetivos
+## Objetivos de aprendizaje (contenido)
 
-## Envio
+After completing this activity, learners should be able to:
 
-## Tareas
+● Evaluate a Java expression that uses the / operator with integers.
+
+● Explain the difference between integer and floating-point division
+
+## Objetivos de aprendizaje (de proceso/soft skills)
+
+After completing this activity, learners should be able to:
+
+● Provide feedback on how well group members are fulfilling their responsibilities
+
+## Entregra
+
+¿Qué se entrega, cuando y como (individual/grupo)?
+
+## Actividades a realizar
 
 -   Preparativos del proyecto
 

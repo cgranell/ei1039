@@ -11,24 +11,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html)!
+-   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html) (y EI1048)!
 
--   [20 min] **Mini presentación**. Proyecto común de EI1039/EI1048
+-   [20 min] **Presentación**. Proyecto común de EI1039/EI1048
 
 -   [10 min] **Revisión**. Resultados del pretest
 
--   [20 min] **Mini presentación**: Diseño de sofware
+-   [20 min] **Presentación**: [Fundamentos de arquitectura](slides/TE1_1_fundamentos_arquitectura.html)
 
     -   Definición de *arquitectura de software*
 
     -   Tareas de un arquitecto de software
 
-    -   Arquitecto *vs* diseñador/desarrolador
+    -   Arquitecto *vs* diseñador/desarrollador
 
--   [20 min] **Mini presentación**: Características de una arquitectura (CA) y compromisos
+-   [20 min] **Presentación**: [Características de una arquitectura (CA)](slides/TE1_2_caracteristicas_arquitectura.html)
 
     -   Definición de CA y dimensiones (operacionales, estructurales, horizontales)
 
     -   ¿Cuáles son las CA relevantes para mi proyecto?
 
--   [10 min] **Closing**: Into HW1
+    -   Todo en arquitectura de software tiene compromisos
+
+-   [10 min] **Closing**: Intro [HW1](HW1.html)

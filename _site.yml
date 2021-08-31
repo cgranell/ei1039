@@ -1,5 +1,5 @@
 name: "ei1039"
-title: "EI1039 - Diseno de software"
+title: "EI1039 - Curso 2021/2022"
 description: |
   Asignatura EI1039
 output_dir: "docs"
@@ -16,7 +16,11 @@ navbar:
     - text: "Sesiones"
       menu:
         - text: "TE1"
-          href: sesion11.html
+          href: TE1.html
+        - text: "TE2"
+          href: TE2.html
+    - text: "Referencias"
+      href: references.html
     - icon: fab fa-github
       href: https://github.com/cgranell/ei1039
   search: true
