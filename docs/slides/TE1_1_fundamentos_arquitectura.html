@@ -25,11 +25,14 @@ background-size: cover
 
 # .fancy[[TE1_1] Fundamentos de arquitectura]
 
-### Concepto de arquitectura software
+# .fancy[&amp;#183; Conceptos y roles]
 
-__EI1039 - Diseño de Software &amp;#183; Sep 2021__
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
-__Carlos Granell&amp;#183; Universitat Jaume I__
+
+.whiteinline[Carlos Granell&amp;#183; Universitat Jaume I]
+
+.whiteinline[EI1039 - Diseño de Software &amp;#183; Sep 2021]
 
 
 ???
@@ -47,21 +50,41 @@ class: inverse, center, middle
 class: center, top
 
 
-### Una aplicación móvil
+### ¿Una aplicación móvil?
 
 --
 
-### una librería 
+### ¿Una librería software?
 
 --
 
-###
+### ¿Una aplicación empresarial?
+
+--
+
+### ¿Una red de sensores desplegados en la ciudad junto a un centro (hub) de datos?
+
+--
+
+### ¿Un diagrama de classes?
 
 ---
-class: center
-# Arquitectura de software
+# .center[Arquitectura de software &lt;a name=cite-fowler2003&gt;&lt;/a&gt;[[Fow03](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)]]
 
-## Algo dificil de definir, depened del escenario/proyecto contcreto
+&gt;  .large[Architecture is about the important stuff. Whatever that is.]
+
+&lt;br/&gt;
+
+&gt;  .large[Architecture is a social construct, a shared understanding of the system. It doesn't depend on the software, but on what part of the software is considered important by group consensus.] 
+
+.right[Ralph Johnson]
+
+---
+class: center, middle
+
+### .fat[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de lo que se considera importante para el éxito del proyecto]
+
+
 
 ---
 class: center
@@ -96,7 +119,7 @@ class: inverse, center, middle
 
 # Características de la arquitectura 
 
-## criterios/requisitos par ael funcionamiento correcto del sistema (ortogonal a la funcionalidad)
+## criterios/requisitos para el funcionamiento correcto del sistema (ortogonal a la funcionalidad)
 
 
 ---
@@ -114,7 +137,7 @@ class: inverse, center, middle
 
 # Decisiones de la arquitectura 
 
-## reglas/restricciones para la construcion del sistema, i.e., que se puede y no se puede hacer
+## reglas/restricciones del sistema, i.e., que se puede y no se puede hacer
 
 
 ---
@@ -132,7 +155,7 @@ class: inverse, center, middle
 
 # Principios de diseño 
 
-## guías preferencias (en vez de _reglas tajantes_ como las decisiones)
+## guías, recomendaciones o preferencias (en vez de _reglas tajantes_ como las decisiones)
 
 ---
 class: center
@@ -144,14 +167,6 @@ class: center
 
 Image credits: [[RF20](#bib-richards2020)]
 
----
-# Dimensiones
-
-## Estructura (estilo) 
-## Caracteristicas de la arquitectura
-## Decisiones de arquitectura
-## Principios de diseño
-
 
 ---
 background-image: url(images/rawpixel/architect.jpg)
@@ -162,8 +177,116 @@ background-size: cover
 Home Decor Renovation Style Architecture Building
 Image by [rawpixel.com](https://www.rawpixel.com/image/65068/)
 
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué tareas lleva a cabo un/a arquitecto/a de software?
+
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+&lt;img src="images/FundamentalsSoftwareArquitecture06.png" width="60%"/&gt;
+
+???
+
+A developer’s early career focuses on expanding the top of the pyramid, to build experience and expertise.
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+&lt;img src="images/FundamentalsSoftwareArquitecture07.png" width="55%"/&gt;
+
+???
+
+What someone knows is technical depth, and how much someone knows is technical breadth
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+.pull-left[
+## Arquitecto   
+
+.acid[breadth] &gt;&gt; .coldinline[depth]
+
+]
+
+.pull-right[
+## Diseñador  
+
+.cold[depth] &gt;&gt; .acidinline[breadth]
+
+]
+
+---
+class: center
+# Arquitecto = .acidinline[breadth] &gt;&gt; .coldinline[depth]
+
+&lt;img src="images/FundamentalsSoftwareArquitecture08.png" width="55%"/&gt;
+
+???
+
+
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+class: center
+
+# ¿Qué tareas lleva a cabo un/a arquitecto/a?
+
+### Realizar decisiones de arquitectura y principios de diseño (guía)
+
+--
+
+### Analizar continuamente la arquitectura y recomendar mejoras
+
+--
+
+### Estar al día con (y expuesto a) las últimas tendencias
+
+--
+
+### Asegurarse que la implementación sigue las decisiones/principios
+
+--
+
+### Poseer conocimiento de negocio
+
+--
+
+### Poseer habilidades de comunicación, liderazgo, soft skills!
+
+---
+# .center[Resumen]
+
+
+&gt; .large[Everything in software architecture is a trade-off.]
+
+.right[First Law of Software Architecture]
+
+&lt;br/&gt;
+
+&gt; .large[Why is more important than how.]
+
+.right[Second Law of Software Architecture]
+
+
 ---
 # Referencias
+
+&lt;a name=bib-fowler2003&gt;&lt;/a&gt;[Fowler martin](#cite-fowler2003) (2003).
+"Who Needs an Architect?" In: _IEEE Software_ 20.5, pp. 2-4. DOI:
+[10.1109/MS.2003.1231144](https://doi.org/10.1109%2FMS.2003.1231144).
+URL:
+[https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf).
 
 &lt;a name=bib-richards2020&gt;&lt;/a&gt;[Richards, Mark and Neal
 Ford](#cite-richards2020) (2020). _Fundamentals of Software

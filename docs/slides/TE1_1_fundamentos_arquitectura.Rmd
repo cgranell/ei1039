@@ -1,6 +1,6 @@
 ---
 title: "[TE1_1] Fundamentos de arquitectura"
-subtitle: "Concepto de arquitectura software"
+subtitle: "Conceptos y roles"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2021" 
@@ -36,11 +36,14 @@ background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
-### `r rmarkdown::metadata$subtitle`
+# .fancy[&#183; `r rmarkdown::metadata$subtitle`]
 
-__`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`__
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-__`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`__
+
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
 
 
 ???
@@ -58,21 +61,41 @@ class: inverse, center, middle
 class: center, top
 
 
-### Una aplicación móvil
+### ¿Una aplicación móvil?
 
 --
 
-### una librería 
+### ¿Una librería software?
 
 --
 
-###
+### ¿Una aplicación empresarial?
+
+--
+
+### ¿Una red de sensores desplegados en la ciudad junto a un centro (hub) de datos?
+
+--
+
+### ¿Un diagrama de classes?
 
 ---
-class: center
-# Arquitectura de software
+# .center[Arquitectura de software `r Cite(my_refs, "fowler2003")`]
 
-## Algo dificil de definir, depened del escenario/proyecto contcreto
+>  .large[Architecture is about the important stuff. Whatever that is.]
+
+<br/>
+
+>  .large[Architecture is a social construct, a shared understanding of the system. It doesn't depend on the software, but on what part of the software is considered important by group consensus.] 
+
+.right[Ralph Johnson]
+
+---
+class: center, middle
+
+### .fat[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de lo que se considera importante para el éxito del proyecto]
+
+
 
 ---
 class: center
@@ -107,7 +130,7 @@ class: inverse, center, middle
 
 # Características de la arquitectura 
 
-## criterios/requisitos par ael funcionamiento correcto del sistema (ortogonal a la funcionalidad)
+## criterios/requisitos para el funcionamiento correcto del sistema (ortogonal a la funcionalidad)
 
 
 ---
@@ -125,7 +148,7 @@ class: inverse, center, middle
 
 # Decisiones de la arquitectura 
 
-## reglas/restricciones para la construcion del sistema, i.e., que se puede y no se puede hacer
+## reglas/restricciones del sistema, i.e., que se puede y no se puede hacer
 
 
 ---
@@ -143,7 +166,7 @@ class: inverse, center, middle
 
 # Principios de diseño 
 
-## guías preferencias (en vez de _reglas tajantes_ como las decisiones)
+## guías, recomendaciones o preferencias (en vez de _reglas tajantes_ como las decisiones)
 
 ---
 class: center
@@ -155,14 +178,6 @@ class: center
 
 Image credits: `r Cite(my_refs, "richards2020")`
 
----
-# Dimensiones
-
-## Estructura (estilo) 
-## Caracteristicas de la arquitectura
-## Decisiones de arquitectura
-## Principios de diseño
-
 
 ---
 background-image: url(images/rawpixel/architect.jpg)
@@ -173,9 +188,111 @@ background-size: cover
 Home Decor Renovation Style Architecture Building
 Image by [rawpixel.com](https://www.rawpixel.com/image/65068/)
 
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué tareas lleva a cabo un/a arquitecto/a de software?
+
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+<img src="images/FundamentalsSoftwareArquitecture06.png" width="60%"/>
+
+???
+
+A developer’s early career focuses on expanding the top of the pyramid, to build experience and expertise.
+Image credits: `r Cite(my_refs, "richards2020")`
+
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+<img src="images/FundamentalsSoftwareArquitecture07.png" width="55%"/>
+
+???
+
+What someone knows is technical depth, and how much someone knows is technical breadth
+Image credits: `r Cite(my_refs, "richards2020")`
+
+---
+class: center
+# Arquitecto vs. diseñador/desarrollador
+
+.pull-left[
+## Arquitecto   
+
+.acid[breadth] >> .coldinline[depth]
+
+]
+
+.pull-right[
+## Diseñador  
+
+.cold[depth] >> .acidinline[breadth]
+
+]
+
+---
+class: center
+# Arquitecto = .acidinline[breadth] >> .coldinline[depth]
+
+<img src="images/FundamentalsSoftwareArquitecture08.png" width="55%"/>
+
+???
+
+
+Image credits: `r Cite(my_refs, "richards2020")`
+
+---
+class: center
+
+# ¿Qué tareas lleva a cabo un/a arquitecto/a?
+
+### Realizar decisiones de arquitectura y principios de diseño (guía)
+
+--
+
+### Analizar continuamente la arquitectura y recomendar mejoras
+
+--
+
+### Estar al día con (y expuesto a) las últimas tendencias
+
+--
+
+### Asegurarse que la implementación sigue las decisiones/principios
+
+--
+
+### Poseer conocimiento de negocio
+
+--
+
+### Poseer habilidades de comunicación, liderazgo, soft skills!
+
+---
+# .center[Resumen]
+
+
+> .large[Everything in software architecture is a trade-off.]
+
+.right[First Law of Software Architecture]
+
+<br/>
+
+> .large[Why is more important than how.]
+
+.right[Second Law of Software Architecture]
+
+
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 1)
+PrintBibliography(my_refs, start = 1, end = 2)
 ```
