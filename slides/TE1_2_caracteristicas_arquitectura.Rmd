@@ -1,11 +1,14 @@
 ---
-title: "[TE1_2] Características de arquitectura"
-subtitle: "EI1039 - Diseño de Software"
+title: "[TE1_2] Fundamentos de arquitectura"
+subtitle: "Características"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
 output:
   xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
     lib_dir: libs
     nature:
       highlightStyle: solarized-light
@@ -19,3 +22,297 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
                       fig.retina = 3)
 ```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: left, top
+background-image: url(images/rawpixel/greenapartment.jpg)
+background-size: cover
+
+# .fancy[`r rmarkdown::metadata$title`]
+
+### &#183; `r rmarkdown::metadata$subtitle`
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+
+
+???
+
+Green apartment building. Original public domain image from Wikimedia Commons.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3285587)
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué son las características de una arquitectura?
+
+---
+class: center, top
+# Requisitos 
+
+## _Todo lo que el software a desarrollar debe hacer_
+
+--
+
+.pull-left[
+
+### Requisitos funcionales o de negocio
+]
+
+--
+
+.pull-right[
+
+### Requisitos no funcionales -> .heatinline[características de la arquitectura]
+
+]
+
+--
+
+.heat[Un arquitecto considera tanto los requisitos funcionales como las características de la arquitectura.]
+
+
+---
+
+.pull-left[
+
+<img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/>
+
+
+]
+
+.pull-right[
+
+### By Mark Richards, Neal Ford
+
+### Released January 2020
+
+.large[Capítulos 4 y 5 `r Cite(my_refs, "richards2020")`]
+
+]
+
+
+---
+# .center[Características]
+
+.left-column[
+### Operacionales
+
+]
+
+.right-column[
+
+- .large[Availability/disponibilidad]: cuánto tiempo deberá estar disponible el sistema
+- .large[Continuity/continuidad]: capacidad de recuperación ante desastres
+- .large[Performance/rendimiento]: pruebas de estrés, análisis de picos, análisis de la frecuencia de las funciones utilizadas, capacidad requerida y tiempos de respuesta
+- .large[Reliability/fiabilidad]: Sistema a prueba de fallos
+- .large[Robustness/robustez]: Habilidad para manejar condiciones límite y de error (fallo hw)
+- .large[Scalability/escalabilidad]: Capacidad del sistema para seguir funcionando a medida que aumenta el número de usuarios o solicitudes
+]
+
+???
+
+Continuity/continuidad = Recoverability/recuperabilidad
+
+---
+# .center[Características]
+
+.left-column[
+### Operacionales
+### Estructurales
+]
+
+.right-column[
+
+- .large[Configurability/configurabilidad]:
+- .large[Extensibility/extensibilidad]:
+- .large[Installability/instalabilidad]:
+- .large[Reuse/Reutilización]:
+- .large[I18n]
+- .large[Maintainability/mantenibilidad]:
+- .large[Portability/portabilidad]:
+- .large[Supportability/Soporte]:
+- .large[Upgradeability/Actualización]:
+
+]
+
+
+---
+# .center[Características]
+
+.left-column[
+### Operacionales
+### Estructurales
+### Transverales
+]
+
+.right-column[
+
+- .large[Accesibility/]:
+- .large[Authentication/]:
+- .large[Authorization/]:
+- .large[Legal]:
+- .large[Privacy/privacidad]:
+- .large[Security/seguridad]:
+- .large[Usability/usabilidad]:
+]
+
+---
+class: inverse, center, middle
+
+# Vale, pero muchas de estas características no vienen _explícitamente_ escritas en los requisitos 
+
+
+---
+class: inverse, center, middle
+
+# ¿Cómo separo las que son relevantes de las que no?
+
+
+---
+class: bottom, middle
+background-image: url(images/rawpixel/tips.jpg)
+background-size: cover
+
+
+### #1 Selecciona las justas. 
+###    No diseñes a _generic architecture_ 
+
+
+???
+
+Cada característica que incorpores complicará el diseño global del sistema. Mantén la lista corta!  
+
+Helpful Tips Information Knowledge Concept.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/1033876)
+
+
+---
+class: bottom, middle
+background-image: url(images/rawpixel/tips.jpg)
+background-size: cover
+
+
+### #2 Existen compromisos opuestos entre características. 
+###    Todo es compromiso (_First Law of Software Architecture_) 
+
+???
+
+Por ejemplo, rendimiento vs seguridad. Aumentar la seguridad de un sistema, puede degradar su rendimiento. 
+
+Helpful Tips Information Knowledge Concept.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/1033876)
+
+
+
+---
+class: bottom, middle
+background-image: url(images/rawpixel/tips.jpg)
+background-size: cover
+
+
+### #3 Nunca busques la _mejor_ arquitectura, 
+###    sino la _menos mala_. 
+
+???
+
+¿Sabes? la architectura, como el software, cambiará en el futuro. Diseña para que esos cambios sean fáciles en el futuro. 
+
+Helpful Tips Information Knowledge Concept.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/1033876) 
+
+---
+class: inverse, center, middle
+
+# Vale, vale. Pillo los _tips_. 
+
+--
+
+# Pero como decía, ¿cómo extraigo las características relevantes? 
+
+
+---
+class: left, top
+background-image: url(images/rawpixel/meeting.jpg)
+background-size: cover
+
+
+### Escucha a los _stakeholders_ 
+
+### Entiende su lenguaje 
+
+### Evita el problema _lost in translation_
+
+### Traduce sus peticiones en características 
+
+???
+
+People meeting and brainstorming for a project.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/427255)
+
+---
+# .center[Si los stakeholders hablan de] 
+
+.large[...adquisiciones y fusiones]
+
+--
+
+.right[.heat[Interoperability + scalability + adaptability + extensibility]]
+
+--
+
+.large[...reducir tiempos para llegar al mercado]
+
+--
+
+.right[.heat[Agility + testability + deployability]]
+
+
+--
+
+.large[...la satisfaccion del usuario]
+
+--
+
+.right[.heat[performance + availability + testability + security]]
+
+--
+
+.large[...presupuesto limitado]
+
+--
+
+.right[.heat[Simplicity + feasibility]]
+
+
+---
+# .center[Warren Buffett's 25/5 Rule]
+
+.pull-left[
+
+### [Productividad en 3 simples pasos](https://jamesclear.com/buffett-focus)
+
+1. Escribe los 25 objetivos para tu carrera/profesión
+2. Marca las 5 más importantes
+3. Descarta las otras 20. No requieren tu atención hasta que hayas tenido éxito con las top5. 
+
+]
+
+--
+
+.pull-right[
+
+.large[TOP3]
+]
+
+---
+# Architectura kata

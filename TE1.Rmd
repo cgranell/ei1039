@@ -15,9 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Presentación**. Proyecto común de EI1039/EI1048
 
--   [10 min] **Revisión**. Resultados del pretest
-
--   [20 min] **Presentación**: [Fundamentos de arquitectura](slides/TE1_1_fundamentos_arquitectura.html)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE1_1_fundamentos_arquitectura.html)
 
     -   Definición de *arquitectura de software*
 
@@ -25,11 +23,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Arquitecto *vs* diseñador/desarrollador
 
--   [20 min] **Presentación**: [Características de una arquitectura (CA)](slides/TE1_2_caracteristicas_arquitectura.html)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE1_2_caracteristicas_arquitectura.html)
 
-    -   Definición de CA y dimensiones (operacionales, estructurales, horizontales)
+    -   Definición de características de arquitectura; dimensiones (operacionales, estructurales, horizontales)
 
-    -   ¿Cuáles son las CA relevantes para mi proyecto?
+    -   Identificación de las características relevantes para un sistema
 
     -   Todo en arquitectura de software tiene compromisos
 

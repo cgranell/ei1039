@@ -36,9 +36,9 @@ background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
-# .fancy[&#183; `r rmarkdown::metadata$subtitle`]
+### &#183; `r rmarkdown::metadata$subtitle`
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 .whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
@@ -49,7 +49,7 @@ background-size: cover
 ???
 
 A European city. Original public domain image from Wikimedia Commons.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3285415/free-photo-image-city-architecture-apartment-building)
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3285415)
 
 
 ---
@@ -77,29 +77,54 @@ class: center, top
 
 --
 
-### ¿Un diagrama de classes?
+### ¿Un diagrama de clases?
+
+
+---
+
+.pull-left[
+
+<img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/>
+
+
+]
+
+.pull-right[
+
+### By Mark Richards, Neal Ford
+
+### Released January 2020
+
+.large[Capítulos 1 y 2 `r Cite(my_refs, "richards2020")`]
+
+]
+
 
 ---
 # .center[Arquitectura de software `r Cite(my_refs, "fowler2003")`]
 
 >  .large[Architecture is about the important stuff. Whatever that is.]
 
+.right[Ralph Johnson]
+
 <br/>
 
->  .large[Architecture is a social construct, a shared understanding of the system. It doesn't depend on the software, but on what part of the software is considered important by group consensus.] 
+>  .large[Architecture is a social construct, a shared understanding of the system. It doesn't just depend on the software, but on what part of the software is considered important by group consensus.] 
 
 .right[Ralph Johnson]
 
+
+
 ---
-class: center, middle
+# .center[Arquitectura de software `r Cite(my_refs, "richards2020")`]
 
-### .fat[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de lo que se considera importante para el éxito del proyecto]
 
+> .large[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de todo lo que se considera importante para el éxito del proyecto.]
 
 
 ---
 class: center
-# Definición arquitectura `r Cite(my_refs, "richards2020")`
+# Dimensiones arquitectura `r Cite(my_refs, "richards2020")`
 
 <img src="images/FundamentalsSoftwareArquitecture01.png" width="70%"/>
 
@@ -112,11 +137,11 @@ class: inverse, center, middle
 
 # Estructura 
 
-## tipo de estilo(s) de arquitectura, como por capas, microservicios, etc.
+## tipo de estilo(s) de arquitectura, i.e. por capas, microservicios, etc.
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 <img src="images/FundamentalsSoftwareArquitecture02.png" width="70%"/>
 
@@ -135,7 +160,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 <img src="images/FundamentalsSoftwareArquitecture03.png" width="70%"/>
 
@@ -153,7 +178,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 <img src="images/FundamentalsSoftwareArquitecture04.png" width="70%"/>
 
@@ -170,7 +195,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 <img src="images/FundamentalsSoftwareArquitecture05.png" width="70%"/>
 
@@ -186,15 +211,18 @@ background-size: cover
 ???
 
 Home Decor Renovation Style Architecture Building
-Image by [rawpixel.com](https://www.rawpixel.com/image/65068/)
+Image by [rawpixel.com](https://www.rawpixel.com/image/65068)
 
 
 
 ---
 class: inverse, center, middle
 
-# ¿Qué tareas lleva a cabo un/a arquitecto/a de software?
+# ¿Qué tareas se esperan de un/a arquitecto/a de software?
 
+???
+
+Las tareas de un programador o analista son más conociendo. Incluso, hay especializaciones de programador, como programador back-end, front-end, of full-stack 
 
 ---
 class: center
@@ -204,7 +232,7 @@ class: center
 
 ???
 
-A developer’s early career focuses on expanding the top of the pyramid, to build experience and expertise.
+Pirámide del conocimiento. Un desarrollador, al principio de su carrera, se centra en la parte alta de la pirámide, para adquirir experiencia y conocimiento técnico, y también para manternerse actualizado sobre lo que sabe. 
 Image credits: `r Cite(my_refs, "richards2020")`
 
 
@@ -216,64 +244,61 @@ class: center
 
 ???
 
-What someone knows is technical depth, and how much someone knows is technical breadth
+Pirámide del conocimiento: profundidad vs. amplitud técnica. Lo que uno sabe es _technical depth_, y lo mucho que uno abarca o sabe es _technical breadth_. 
 Image credits: `r Cite(my_refs, "richards2020")`
 
 ---
-class: center
-# Arquitecto vs. diseñador/desarrollador
+class: center, middle
 
 .pull-left[
 ## Arquitecto   
 
-.acid[breadth] >> .coldinline[depth]
+.acid[breadth] >>> .coldinline[depth]
 
 ]
 
 .pull-right[
-## Diseñador  
+## diseñador/desarrollador  
 
-.cold[depth] >> .acidinline[breadth]
+.cold[depth] >>> .acidinline[breadth]
 
 ]
 
 ---
 class: center
-# Arquitecto = .acidinline[breadth] >> .coldinline[depth]
+# Arquitecto = .acidinline[breadth] >>> .coldinline[depth]
 
 <img src="images/FundamentalsSoftwareArquitecture08.png" width="55%"/>
 
 ???
 
-
+Pirámide del conocimiento: El arquitecto se especializa en algunas áreas de interés del proyecto. Sacrifica profundidad técnica en aras de tener una visión más amplia.
 Image credits: `r Cite(my_refs, "richards2020")`
 
 ---
-class: center
+# .center[¿Qué tareas se esperan de un arquitecto?]
 
-# ¿Qué tareas lleva a cabo un/a arquitecto/a?
-
-### Realizar decisiones de arquitectura y principios de diseño (guía)
+### .acidinline[GUÍA]: decisiones de arquitectura, principios de diseño, estructura...
 
 --
 
-### Analizar continuamente la arquitectura y recomendar mejoras
+### .acidinline[CAMBIO]: Analiza continuamente y recomienda mejoras
 
 --
 
-### Estar al día con (y expuesto a) las últimas tendencias
+### .acidinline[VISIÓN]: Esta al día con (y expuesto a) las últimas tendencias
 
 --
 
-### Asegurarse que la implementación sigue las decisiones/principios
+### .acidinline[LIDERAZGO]: Se asegura que la implementación sigue las decisiones/principios
 
 --
 
-### Poseer conocimiento de negocio
+### .acidinline[SÍNTESIS]: Integra conocimiento dominio de negocio y técnico 
 
 --
 
-### Poseer habilidades de comunicación, liderazgo, soft skills!
+### .acidinline[MENTORING]: Posee habilidades de comunicación, trabajo en equipo, soft skills!
 
 ---
 # .center[Resumen]

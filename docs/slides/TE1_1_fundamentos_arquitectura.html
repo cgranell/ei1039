@@ -25,9 +25,9 @@ background-size: cover
 
 # .fancy[[TE1_1] Fundamentos de arquitectura]
 
-# .fancy[&amp;#183; Conceptos y roles]
+### &amp;#183; Conceptos y roles
 
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 
 .whiteinline[Carlos Granell&amp;#183; Universitat Jaume I]
@@ -66,29 +66,54 @@ class: center, top
 
 --
 
-### ¿Un diagrama de classes?
+### ¿Un diagrama de clases?
+
+
+---
+
+.pull-left[
+
+&lt;img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/&gt;
+
+
+]
+
+.pull-right[
+
+### By Mark Richards, Neal Ford
+
+### Released January 2020
+
+.large[Capítulos 1 y 2 &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]]
+
+]
+
 
 ---
 # .center[Arquitectura de software &lt;a name=cite-fowler2003&gt;&lt;/a&gt;[[Fow03](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)]]
 
 &gt;  .large[Architecture is about the important stuff. Whatever that is.]
 
+.right[Ralph Johnson]
+
 &lt;br/&gt;
 
-&gt;  .large[Architecture is a social construct, a shared understanding of the system. It doesn't depend on the software, but on what part of the software is considered important by group consensus.] 
+&gt;  .large[Architecture is a social construct, a shared understanding of the system. It doesn't just depend on the software, but on what part of the software is considered important by group consensus.] 
 
 .right[Ralph Johnson]
 
+
+
 ---
-class: center, middle
+# .center[Arquitectura de software [[RF20](#bib-richards2020)]]
 
-### .fat[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de lo que se considera importante para el éxito del proyecto]
 
+&gt; .large[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de todo lo que se considera importante para el éxito del proyecto.]
 
 
 ---
 class: center
-# Definición arquitectura &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]
+# Dimensiones arquitectura [[RF20](#bib-richards2020)]
 
 &lt;img src="images/FundamentalsSoftwareArquitecture01.png" width="70%"/&gt;
 
@@ -101,11 +126,11 @@ class: inverse, center, middle
 
 # Estructura 
 
-## tipo de estilo(s) de arquitectura, como por capas, microservicios, etc.
+## tipo de estilo(s) de arquitectura, i.e. por capas, microservicios, etc.
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 &lt;img src="images/FundamentalsSoftwareArquitecture02.png" width="70%"/&gt;
 
@@ -124,7 +149,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 &lt;img src="images/FundamentalsSoftwareArquitecture03.png" width="70%"/&gt;
 
@@ -142,7 +167,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 &lt;img src="images/FundamentalsSoftwareArquitecture04.png" width="70%"/&gt;
 
@@ -159,7 +184,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Definición arquitectura
+# Dimensiones arquitectura
 
 &lt;img src="images/FundamentalsSoftwareArquitecture05.png" width="70%"/&gt;
 
@@ -182,8 +207,11 @@ Image by [rawpixel.com](https://www.rawpixel.com/image/65068/)
 ---
 class: inverse, center, middle
 
-# ¿Qué tareas lleva a cabo un/a arquitecto/a de software?
+# ¿Qué tareas se esperan de un/a arquitecto/a de software?
 
+???
+
+Las tareas de un programador o analista son más conociendo. Incluso, hay especializaciones de programador, como programador back-end, front-end, of full-stack 
 
 ---
 class: center
@@ -193,7 +221,7 @@ class: center
 
 ???
 
-A developer’s early career focuses on expanding the top of the pyramid, to build experience and expertise.
+Pirámide del conocimiento. Un desarrollador, al principio de su carrera, se centra en la parte alta de la pirámide, para adquirir experiencia y conocimiento técnico, y también para manternerse actualizado sobre lo que sabe. 
 Image credits: [[RF20](#bib-richards2020)]
 
 
@@ -205,64 +233,61 @@ class: center
 
 ???
 
-What someone knows is technical depth, and how much someone knows is technical breadth
+Pirámide del conocimiento: profundidad vs. amplitud técnica. Lo que uno sabe es _technical depth_, y lo mucho que uno abarca o sabe es _technical breadth_. 
 Image credits: [[RF20](#bib-richards2020)]
 
 ---
-class: center
-# Arquitecto vs. diseñador/desarrollador
+class: center, middle
 
 .pull-left[
 ## Arquitecto   
 
-.acid[breadth] &gt;&gt; .coldinline[depth]
+.acid[breadth] &gt;&gt;&gt; .coldinline[depth]
 
 ]
 
 .pull-right[
-## Diseñador  
+## diseñador/desarrollador  
 
-.cold[depth] &gt;&gt; .acidinline[breadth]
+.cold[depth] &gt;&gt;&gt; .acidinline[breadth]
 
 ]
 
 ---
 class: center
-# Arquitecto = .acidinline[breadth] &gt;&gt; .coldinline[depth]
+# Arquitecto = .acidinline[breadth] &gt;&gt;&gt; .coldinline[depth]
 
 &lt;img src="images/FundamentalsSoftwareArquitecture08.png" width="55%"/&gt;
 
 ???
 
-
+Pirámide del conocimiento: El arquitecto se especializa en algunas áreas de interés del proyecto. Sacrifica profundidad técnica en aras de tener una visión más amplia.
 Image credits: [[RF20](#bib-richards2020)]
 
 ---
-class: center
+# .center[¿Qué tareas se esperan de un arquitecto?]
 
-# ¿Qué tareas lleva a cabo un/a arquitecto/a?
-
-### Realizar decisiones de arquitectura y principios de diseño (guía)
+### .acidinline[GUÍA]: decisiones de arquitectura, principios de diseño, estructura...
 
 --
 
-### Analizar continuamente la arquitectura y recomendar mejoras
+### .acidinline[CAMBIO]: Analiza continuamente y recomienda mejoras
 
 --
 
-### Estar al día con (y expuesto a) las últimas tendencias
+### .acidinline[VISIÓN]: Esta al día con (y expuesto a) las últimas tendencias
 
 --
 
-### Asegurarse que la implementación sigue las decisiones/principios
+### .acidinline[LIDERAZGO]: Se asegura que la implementación sigue las decisiones/principios
 
 --
 
-### Poseer conocimiento de negocio
+### .acidinline[SÍNTESIS]: Integra conocimiento dominio de negocio y técnico 
 
 --
 
-### Poseer habilidades de comunicación, liderazgo, soft skills!
+### .acidinline[MENTORING]: Posee habilidades de comunicación, trabajo en equipo, soft skills!
 
 ---
 # .center[Resumen]
