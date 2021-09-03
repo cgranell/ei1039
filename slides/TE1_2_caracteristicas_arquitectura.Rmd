@@ -111,12 +111,13 @@ class: center, top
 
 .right-column[
 
-- .large[Availability/disponibilidad]: cuánto tiempo deberá estar disponible el sistema
-- .large[Continuity/continuidad]: capacidad de recuperación ante desastres
-- .large[Performance/rendimiento]: pruebas de estrés, análisis de picos, análisis de la frecuencia de las funciones utilizadas, capacidad requerida y tiempos de respuesta
-- .large[Reliability/fiabilidad]: Sistema a prueba de fallos
-- .large[Robustness/robustez]: Habilidad para manejar condiciones límite y de error (fallo hw)
-- .large[Scalability/escalabilidad]: Capacidad del sistema para seguir funcionando a medida que aumenta el número de usuarios o solicitudes
+- .large[Availability/Disponibilidad]: cuánto tiempo deberá estar disponible el sistema
+- .large[Continuity/Continuidad]: capacidad de recuperación ante desastres
+- .large[Performance/Rendimiento]: pruebas de estrés, análisis de picos, análisis de la frecuencia de las funciones utilizadas, capacidad requerida y tiempos de respuesta
+- .large[Reliability/Fiabilidad]: Sistema a prueba de fallos
+- .large[Robustness/Robustez]: Habilidad para manejar condiciones límite y de error (fallo hw)
+- .large[Scalability/Escalabilidad]: Capacidad para gestionar un numero creciente de usuarios/solicitudes sin degradar rendimiento
+- .large[Elasticity/Elasticidad]: Capacidad para getionar picos masivos de usuarios/solicitudes
 ]
 
 ???
@@ -133,15 +134,29 @@ Continuity/continuidad = Recoverability/recuperabilidad
 
 .right-column[
 
-- .large[Configurability/configurabilidad]:
-- .large[Extensibility/extensibilidad]:
-- .large[Installability/instalabilidad]:
-- .large[Reuse/Reutilización]:
-- .large[I18n]
-- .large[Maintainability/mantenibilidad]:
-- .large[Portability/portabilidad]:
-- .large[Supportability/Soporte]:
-- .large[Upgradeability/Actualización]:
+- .large[Configurability/Configurabilidad]: cambiar fácilmente aspectos de la configuración del software
+- .large[Extensibility/Extensibilidad]: Importancia de añadir nuevas funcionalidades
+- .large[Installability/Instalabilidad]: Facilidad de instalación del sistema en las plataformas necesarias.
+- .large[Reuse/Reutilización]: Capacidad para aprovechar componentes comunes en múltiples productos
+- .large[I18n]: Soporte para múltiples idiomas; unidades de medida; monedas
+
+]
+
+
+---
+# .center[Características]
+
+.left-column[
+### Operacionales
+### Estructurales
+]
+
+.right-column[
+
+- .large[Maintainability/Mantenibilidad]: Facilidad de aplicar cambios y mejorar el sistema
+- .large[Portability/Portabilidad]: ¿Es necesario que el sistema se ejecute en más de una plataforma?
+- .large[Supportability/Soporte]: ¿Qué nivel de soporte técnico (logging) necesita la aplicación?
+- .large[Upgradeability/Actualización]: Capacidad para actualizar rápidamente desde una versión anterior a una versión más nueva en servidores y clientes.
 
 ]
 
@@ -157,25 +172,29 @@ Continuity/continuidad = Recoverability/recuperabilidad
 
 .right-column[
 
-- .large[Accesibility/]:
-- .large[Authentication/]:
-- .large[Authorization/]:
-- .large[Legal]:
-- .large[Privacy/privacidad]:
-- .large[Security/seguridad]:
-- .large[Usability/usabilidad]:
+- .large[Accesibility/Accesibilidad]: Acceso a todos sus usuarios, incluidos aquellos con discapacidades como daltonismo o pérdida auditiva
+- .large[Authentication/Autenticación]: Garantizar que los usuarios sean quienes dicen ser
+- .large[Authorization/Autorización]: Garantizar que los usuarios solo puedan acceder a determinadas funciones.
+- .large[Legal/Legalidad]: ¿A qué restricciones legislativas está sujeta el sistema (protección de datos, GDPR, etc.)?
+- .large[Privacy/Privacidad]: Capacidad para ocultar transacciones/mensajes a los usuarios
+- .large[Security/Seguridad]: ¿Es necesario cifrar los datos en la base de datos? ¿O en la comunicación entre sistemas/componentes internos?
+- .large[Usability/Usabilidad]: Nivel de formación necesario para que los usuarios logren sus objetivos con el sistema.
 ]
 
 ---
 class: inverse, center, middle
 
-# Vale, pero muchas de estas características no vienen _explícitamente_ escritas en los requisitos 
+# Entiendo, pero... 
+
+--
+
+# ¡la mayoría de estas características no vienen _explícitamente_ escritas en los requisitos! 
 
 
 ---
 class: inverse, center, middle
 
-# ¿Cómo separo las que son relevantes de las que no?
+# ¿Cómo separo las que son relevantes de las que no lo son?
 
 
 ---
@@ -295,24 +314,111 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/427255)
 
 
 ---
-# .center[Warren Buffett's 25/5 Rule]
+class: center
+# Warren Buffett's 25/5 Rule
+
+### [Estrategia de productividad en 3 pasos](https://jamesclear.com/buffett-focus)
+
+--
+
+.large[Escribe los 25 objetivos para tu carrera/profesión]
+
+--
+
+.large[Marca las 5 más importantes]
+
+--
+
+.large[Descarta las otras 20. No requieren tu atención hasta que hayas tenido éxito con las top5] 
+
+--
+
+.heat[Deja que los stakeholders sean los que determinen las 3 (ó 5) características esenciales]
+
+---
+class: right, middle
+background-image: url(images/sandra-sanchez-kata-tokio2020.jpg)
+background-size: cover
+
+
+# .whiteinline[Architectura _katas_]
+
+???
+
+[La final de kata femenina entre Sandra Sánchez y Kiyou Shimizu](https://www.sport.es/es/noticias/juegos-olimpicos/final-kata-femenina-sandra-sanchez-11969507)
+
+
+---
+# .center[Architectura katas]
+
+.large[Para practicar la derivación de las características a partir de descripciones (de requisistos) explícitas]
+
+- __Descripción__: El problema general del dominio que el sistema está tratando de resolver.
+
+- __Usuarios__: El número esperado y/o tipos de usuarios del sistema.
+
+- __Requisitos__: Lo que un arquitecto puede esperar de los stakeholders/expertos en el dominio
+
+- __Contexto__: Otras consideraciones que no se expresan explícitamente en los requisitos, sino en el conocimiento implícito del dominio del problema.
+
+
+???
+
+See [Neal Ford's architectural katas](http://nealford.com/katas/list.html)
+
+---
+# Kata: Silicon Sandwiches
+
+- __Descripción__: Una franquicia de tiendas de sándwiches nacional quiere habilitar los pedidos en línea (además de su actual servicio de llamada).
+
+- __Usuarios__: Miles, quizás millones al día
+
+- __Requisitos__
+
+  - Los usuarios realizarán su pedido, luego se les dará un tiempo para recoger su sándwich e instrucciones para llegar a la tienda (que debe integrarse con varios servicios de mapas externos que incluyen información de tráfico).
+  - Ofrece promociones diarias nacionales.
+  - Ofrece promociones diarias locales.
+  - Acepta pago en línea, en persona o a la entrega.
+
+- __Contexto__:
+
+  - La empresa matriz tiene planes a corto plazo para expandirse al extranjero.
+  - El objetivo corporativo es contratar mano de obra barata para maximizar las ganancias.
+  
+???
+
+Example from `r Cite(my_refs, "richards2020")` on page 69
+
+---
+class: center
+# Kata: Silicon Sandwiches
+
+### Miles de usuarios, quizás millones al día
+
+--
 
 .pull-left[
+### .heatinline[Escalabilidad]
 
-### [Productividad en 3 simples pasos](https://jamesclear.com/buffett-focus)
-
-1. Escribe los 25 objetivos para tu carrera/profesión
-2. Marca las 5 más importantes
-3. Descarta las otras 20. No requieren tu atención hasta que hayas tenido éxito con las top5. 
-
+<img src="images/FundamentalsSoftwareArquitecture09.png" width="75%"/>
 ]
 
 --
 
 .pull-right[
+### .heatinline[Elasticidad]
 
-.large[TOP3]
+<img src="images/FundamentalsSoftwareArquitecture10.png" width="75%"/>
+
 ]
 
+???
+
+Image credits: `r Cite(my_refs, "richards2020")`
+
 ---
-# Architectura kata
+# Referencias
+
+```{r print_refs1, echo=FALSE, results="asis"}
+PrintBibliography(my_refs, start = 1, end = 1)
+```

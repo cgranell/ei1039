@@ -1,7 +1,7 @@
 ---
 title: "HW1"
 description: |
-  Preparativos proyecto y exploración estilos de arquitectura
+  Preparativos proyecto y exploración características de la arquitectura
 output: distill::distill_article
 ---
 
@@ -11,26 +11,48 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Objetivos de aprendizaje (contenido)
 
-After completing this activity, learners should be able to:
+Después de completar esta actividad, los alumnos deberían poder:
 
-● Evaluate a Java expression that uses the / operator with integers.
+-   Evaluar las características de la arquitectura a partir de requisitos explícitos
 
-● Explain the difference between integer and floating-point division
+-   Evaluar las características de la arquitectura a partir de requisitos implícitos
+
+-   Sintetizar las características más relevantes
 
 ## Objetivos de aprendizaje (de proceso/soft skills)
 
-After completing this activity, learners should be able to:
+Después de completar esta actividad, los alumnos deberían poder:
 
-● Provide feedback on how well group members are fulfilling their responsibilities
+-   Establecerse en grupos de trabajos y asignar responsabilidades
 
 ## Entregra
 
-¿Qué se entrega, cuando y como (individual/grupo)?
+-   Se entrega de forma individual la Actividad 2 en el Aual Virtual. Se deberá subir un documento en formato PDF de extensión máxima de 1 página.
 
-## Actividades a realizar
+-   Fecha límite: 22 sep, 23:59
 
--   Preparativos del proyecto
+## Actividades
 
--   Exploración estilos de arquitectura software
+1.  Lee con atención el proyecto común. Durante estos días iniciales, es muy importante resolver cualquier duda con el profesorado y realizar una planificación temporal del proyecto, evaluando las actividades requeridas en cada una de las entregas establecidas. Por supuesto, hay que establcerse en grupso de trabajo. Encuentra a tus compañeros/as!
+
+2.  Arquitectura kata: *Sillicon Sandwiches*
+
+-   **Descripción**: Una franquicia de tiendas de sándwiches nacional quiere habilitar los pedidos en línea (además de su actual servicio de llamada).
+
+-   **Usuarios**: Miles, quizás millones al día
+
+-   **Requisitos**
+
+    -   Los usuarios realizarán su pedido, luego se les dará un tiempo para recoger su sándwich e instrucciones para llegar a la tienda (que debe integrarse con varios servicios de mapas externos que incluyen información de tráfico).
+    -   Ofrece promociones diarias nacionales.
+    -   Ofrece promociones diarias locales.
+    -   Acepta pago en línea, en persona o a la entrega.
+
+-   **Contexto**:
+
+    -   La empresa matriz tiene planes a corto plazo para expandirse al extranjero.
+    -   El objetivo corporativo es contratar mano de obra barata para maximizar las ganancias.
+
+Para cada una de las sentencias en **usarios**, **requisitos**, y **contexto**, justifica que características de la arquitectua son importantes. Para terminar, como arquitecto/a, indica las 3 características más relevantes para el diseño del sistema.
 
 ### 
