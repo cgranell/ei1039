@@ -72,9 +72,17 @@ Arquitectura software, patrones de diseño, comunicación, trabajo en equipo, ..
 
 ## Método de instrucción
 
-Si esperas presentaciones largas por mi parte todos los viernes por la tarde, entonces creo que te has matriculado de la asignatura equivocada. Hay evidencia científica de sobra que demuestra una y otra vez que los métodos de *aprendizaje activos* son mucho más efectivos que escucharme y tomar apuntes de forma pasiva. Vale, es cierto que a veces son necesarias presentaciones breves aclaratorias; pero tú debes ser el protagonista (y no yo) de tu propio proceso de aprendizaje para alcanzar los resultados esperados con éxito. Por lo tanto, esta asignatura mezcla diversas estrategias de aprendizaje activo, como [*Process Oriented Guided Inquiry Learning*](https://pogil.org/) (para trabajo en grupo y competencias comunicativas) y [flippedclassroom](https://www.theflippedclassroom.es/) (lecturas y ejercicios básicos en casa, competencias de análisis y resolución de problemas en aula), combinadas con mini-presentaciones tradicionales por mi parte cuando sea necesario.
+> ¿Te has preguntamos alguna vez qué pasa en tu cerebro cuando aprendes? [@lang2016] Tenemos millones de neuronas. que "hacen amigos fácilmente". Las neuronas se conectan con otras neuronas con cada nueva experiencia que tenemos (nuevas emociones, pensamientos, acciones. etc.) formando redes. Las redes al principio son débiles., pero cada vez que repetimos la experiencia o acción, la red se consolida y se hace más fuerte. **Cuando aprendemos, nuestro cerebro cambia** por la formación de nuevas conexiones entre neuronas**.**
+>
+> Cuando reflexionamos y aplicamos cierto conocimento a contexto nuevos, lo comprendemos más profundamente, provocando que la red sea más densa y tenga conexiones con otras redes. La differencia entre la red de un principiante y la de un experto radica justamente en el número y densidad de conexiones**. Cuanto más interconexiones, mayor comprensión**.
 
-<aside>¿Te has preguntamos alguna vez como aprende tu cerebro?</aside>
+Si esperas presentaciones largas por mi parte todos los viernes por la tarde, entonces creo que te has matriculado de la asignatura equivocada. Hay evidencia científica de sobra que demuestra una y otra vez que los métodos de *aprendizaje activo* (por *activo* me refiero a todos, tanto dentro como fuera de clase) son mucho más efectivos que escucharme y tomar apuntes de forma pasiva. Vale, es cierto que a veces son necesarias presentaciones breves aclaratorias; pero tú debes ser el protagonista (y no yo) de tu propio proceso de aprendizaje para alcanzar los resultados esperados con éxito. Por lo tanto, esta asignatura mezcla diversas estrategias de aprendizaje activo, como [*Process Oriented Guided Inquiry Learning*](https://pogil.org/) (para trabajo en grupo y competencias comunicativas) y [*Flipped Classroom*](https://www.theflippedclassroom.es/) (lecturas y ejercicios básicos en casa, competencias de análisis y resolución de problemas en aula), combinadas con mini-presentaciones tradicionales por mi parte cuando sea necesario.
+
+<aside>
+
+[![Taxonomía de Bloom](images/bloom_taxonomy.jpg){width="250"}](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy)
+
+</aside>
 
 Para que te hagas una idea, una semana típica de clase de teoría podría ser así:
 

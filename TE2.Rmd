@@ -1,7 +1,7 @@
 ---
 title: "TE2"
 description: |
-  Fundamentos de arquitectura: estilos y patrones.
+  Fundamentos de arquitectura: características <br/>Fundamentos de arquitectura: estilos.
 output: distill::distill_article
 ---
 
@@ -13,20 +13,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [10 min] **Revisión** HW1
+-   [10 min] **Revisión:** HW1
 
--   [60 min] **Actividad POGIL**: Trabajo en equipo + historias de arquitectura
+-   [70 min] **Actividad POGIL**: Trabajo en equipo + arquitectura kata
 
-    -   POGIL en EI1039? (mas interacción y participación, mejor aprendizaje
+    -   POGIL en EI1039? (mas interacción y participación, mejor aprendizaje)
 
     -   Grupos de 3-4 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)
+    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)(AV)
 
     -   [Actividad POGIL](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/0126/Act02-Arithmetic.pdf)
 
--   [20 min] **Presentación**. [Estilos de arquitectura](slides/TE2_1_estilos_arquitectura.html)
+-   [25 min] **Presentación:** [Estilos de arquitectura](slides/TE2_1_estilos_arquitectura.html)
 
 -   [10 min] **Closing**. Intro HW2
 
-## Roles en POGIL
+## 

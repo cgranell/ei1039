@@ -1,7 +1,7 @@
 ---
 title: "TE3 Patrones creacionales"
 description: |
-  Patrones de diseño: creacionales.
+  Introducción a los patrones de diseño <br/> Patrones creacionales.
 output: distill::distill_article
 ---
 
@@ -13,18 +13,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [10 min] **Revisión** HW2
+-   [10 min] **Revisión:** HW2
 
--   [20 min] Mini presentación. Patrones de diseño (ver coursera)
+-   [20 min] **Presentación:** Patrones de diseño (ver coursera)
 
--   [60 min] **Actividad POGIL**: Singleton y Factories
+-   [75 min] **Actividad POGIL**: Singleton y Factories
 
     -   Grupos de 3-4 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)
+    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)(AV)
 
     -   [Actividad POGIL](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/0126/Act02-Arithmetic.pdf)
 
--   [10 min] **Closing**. Intro HW3
+-   [10 min] **Closing:** Intro HW3
 
-## Roles en POGIL 
+## 

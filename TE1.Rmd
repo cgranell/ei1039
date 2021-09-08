@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html) (y EI1048)!
 
--   [20 min] **Presentación**. Proyecto común de EI1039/EI1048
+-   [20 min] **Presentación:** Proyecto común de EI1039/EI1048
 
 -   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE1_1_fundamentos_arquitectura.html)
 
