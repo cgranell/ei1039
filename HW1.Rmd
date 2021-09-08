@@ -19,7 +19,7 @@ Después de completar esta actividad, los alumnos deberían poder:
 
 -   Sintetizar las características más relevantes
 
-## Objetivos de aprendizaje (de proceso/soft skills)
+## Objetivos de proceso (soft skills)
 
 Después de completar esta actividad, los alumnos deberían poder:
 
@@ -53,6 +53,6 @@ Después de completar esta actividad, los alumnos deberían poder:
     -   La empresa matriz tiene planes a corto plazo para expandirse al extranjero.
     -   El objetivo corporativo es contratar mano de obra barata para maximizar las ganancias.
 
-Para cada una de las sentencias en **usarios**, **requisitos**, y **contexto**, justifica que características de la arquitectua son importantes. Para terminar, como arquitecto/a, indica las 3 características más relevantes para el diseño del sistema.
+Para cada una de las sentencias en **usarios**, **requisitos**, y **contexto**, justifica que características de la arquitectua son importantes. Recuerda, todo en arquitectura es compromiso. Para terminar, como arquitecto/a, indica las 3 características más relevantes para el sistema.
 
 ### 

@@ -15,15 +15,23 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión:** HW1
 
--   [70 min] **Actividad POGIL**: Trabajo en equipo + arquitectura kata
+-   [30 min] **Actividad POGIL**: Buenas prácticas para el aprendizaje
 
     -   POGIL en EI1039? (mas interacción y participación, mejor aprendizaje)
 
-    -   Grupos de 3-4 personas
+    -   Equipos de 3-4 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)(AV)
+    -   Asignación de roles. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   [Actividad POGIL](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/0126/Act02-Arithmetic.pdf)
+    -   Actividad POGIL (AV)
+
+-   [40 min] **Actividad POGIL**: Arquitectura kata
+
+    -   Mismo equipo que actividad anterior
+
+    -   Asignación de roles (rotan)
+
+    -   Actividad POGIL (AV)
 
 -   [25 min] **Presentación:** [Estilos de arquitectura](slides/TE2_1_estilos_arquitectura.html)
 
