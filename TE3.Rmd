@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión:** HW2
 
--   [20 min] **Presentación:** Patrones de diseño (ver coursera)
+-   [20 min] **Presentación:** Patrones de diseño
 
 -   [75 min] **Actividad POGIL**: Singleton y Factories
 
@@ -23,7 +23,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)(AV)
 
-    -   [Actividad POGIL](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/0126/Act02-Arithmetic.pdf)
+    -   Actividad POGIL
+
+    -   
 
 -   [10 min] **Closing:** Intro HW3
 
