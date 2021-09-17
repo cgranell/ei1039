@@ -15,17 +15,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión:** HW2
 
--   [20 min] **Presentación:** Patrones de diseño
+-   [20 min] **Presentación:** Introducción a los Patrones de Diseño
 
--   [75 min] **Actividad POGIL**: Singleton y Factories
+-   [45 min] **Actividad POGIL**: Singleton pattern
 
     -   Grupos de 3-4 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards*](https://w3.cs.jmu.edu/mayfiecs/cs149/notes/POGIL-Role-Cards.pdf)(AV)
+    -   Asignación de roles. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL
+    -   Actividad POGIL (AV)
 
-    -   
+-   [30] **Presentación**: Factory objects y Factory pattern
+
+    -   Mismos grupos y roles que en actividad anterior
+
+    -   Preguntas/quizzes para discutir en grupo
 
 -   [10 min] **Closing:** Intro HW3
 
