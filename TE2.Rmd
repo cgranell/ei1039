@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión:** HW1
 
--   [30 min] **Actividad POGIL**: Buenas prácticas para el aprendizaje
+-   [20 min] **Actividad POGIL**: Buenas prácticas para el aprendizaje
 
     -   POGIL en EI1039? (mas interacción y participación, mejor aprendizaje)
 
@@ -23,15 +23,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Asignación de roles. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4587389)
 
--   [40 min] **Actividad POGIL**: Arquitectura kata
+-   [30 min] **Actividad POGIL**: Arquitectura kata
 
-    -   Mismo equipo que actividad anterior
+    -   Mismo equipo que anterior actividad
 
     -   Asignación de roles (rotan)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4592587)
+
+-   [10 min] Revisión: Dudas del [proyecto común de EI1039/EI1048](https://aulavirtual.uji.es/mod/resource/view.php?id=4597584)
 
 -   [25 min] **Presentación:** [Estilos de arquitectura](slides/TE2_1_estilos_arquitectura.html)
 
