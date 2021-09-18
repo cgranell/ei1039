@@ -1,27 +1,318 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>[TE2_1] Estilos de arquitectura</title>
+    <title>[TE2_1] Fundamentos de arquitectura</title>
     <meta charset="utf-8" />
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# [TE2_1] Estilos de arquitectura
-## EI1039 - Diseño de Software
-### Carlos Granell
-### Universitat Jaume I
-### Sep 2021
+
+
+
+
+
+name: title
+class: left, top
+background-image: url(images/rawpixel/greenapartment.jpg)
+background-size: cover
+
+# .fancy[[TE2_1] Fundamentos de arquitectura]
+
+### &amp;#183; Estilos de arquitectura
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+
+.whiteinline[Carlos Granell&amp;#183; Universitat Jaume I]
+
+.whiteinline[EI1039 - Diseño de Software &amp;#183; Sep 2021]
+
+
+???
+
+Green apartment building. Original public domain image from Wikimedia Commons.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3285587)
+
+
+---
+class: center
+# Recuerda: Dimensiones arquitectura
+
+&lt;img src="images/FundamentalsSoftwareArquitecture02.png" width="70%"/&gt;
+
+???
+
+Image credits: &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]
+
 
 ---
 
+.pull-left[
+
+&lt;img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/&gt;
 
 
+]
+
+.pull-right[
+
+### By Mark Richards, Neal Ford
+
+### Released January 2020
+
+.large[Capítulos 9 - 18 [[RF20](#bib-richards2020)]]
+
+]
+
+---
+class: inverse, center, middle
+
+# ¿Estructura o estilo de arquitectura?
+
+--
+
+## como se estructura o organiza todo el backend e interfaces de usuario.
+
+---
+class: center
+# Categorías de estilos de arquitectura
+
+.pull-left[
+
+## .fatinline[Monolíticos]
+
+### Por capas
+### Pipeline
+### Microkernel
+
+]
+
+--
+
+.pull-right[
+
+## .acidinline[Distribuídos]
+
+### Service-based
+### Event-driven
+### Service-oriented
+### Microservicios
+
+]
+
+???
+
+Monolítico: una única unidad de código
+Distribuídos: varias unidades/nodos conectadas con protocolos de acceso remoto
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas (_n-tiers_)
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture11.png" width="65%"/&gt;
+
+]
+
+???
+
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture11.png" width="65%"/&gt;
+
+- .large[Separation of concerns] 
+- .large[Layers of isolation]
+- .large[Partición de capas por criterios tecnológicos]
+
+]
+
+???
+
+Separation of concerns: Componentes en una capas solo saben de la lógica de esa capa
+
+Layers of isolation: Modificaciones en una capa no afectan a otras; capas independientes/desacopladas
+
+Partición por criterios tecnólogicos: Componentes, en lugar de agruparse por dominio (como clientes), se agrupan por su función técnica en la arquitectura (presentación, negocio)
+
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+### Pipeline (|)
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture12.png" width="65%"/&gt;
+
+]
+
+???
+
+Pipes &amp; filters transforman documentos/datos/mensajes de forma concatenada
+
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+### Pipeline (|)
+
+]
+
+.right-column[
+
+&lt;img src="images/TesisLuis_flowDataIngestion.png" width="75%"/&gt;
+
+
+&gt; Según &lt;a name=cite-rodriguez2021&gt;&lt;/a&gt;[[Rod21](https://www.tdx.cat/handle/10803/671588)], con respecto a la gestión de datos de entrada en streaming, el primer componente en el paso __5__ es un sistema de mensajería basado en [Apache Kafka](https://kafka.apache.org/), que asegura la __recepción, buffer y ruteo__ del flujo de datos en streaming. 
+
+- .large[herramientas ETL (_extract, transform, and load_)] 
+- .large[cadenas de productor-consumidor de datos]
+- .large[datos en streaming (telemetria, sensores, etc)]
+
+]
+
+???
+
+"The first component is the (Kafka) messaging system, which ensures reliable
+handling (receive, buffer, route) of the incoming flow of data. The message system
+emits and exchanges messages, which contain the metrics data payload,
+through a Kafka topic to which connector applications can subscribe in order
+to handle/process the data stream. One such connector application is the self-developed
+persistence component, which connects to the (Kafka) messaging system
+and persists the messages in the (Cassandra) database" (pg 89)
+
+Image credits: [[Rod21](https://www.tdx.cat/handle/10803/671588)]
+
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+### Pipeline
+### Microkernel
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture13.png" width="65%"/&gt;
+
+]
+
+???
+
+_Core system_ es la funcional mínima/básica del sistema.
+
+_Plug-ins_ son componentes independientes, _standalone_ que proporcionan funcionalidad adicional.
+
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+### Pipeline
+### Microkernel
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture14.png" width="65%"/&gt;
+
+]
+
+???
+
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+### Pipeline
+### Microkernel
+
+]
+
+.right-column[
+
+- .large[_Core system_ es extensible]
+
+- .large[_Plug-ins_ independientes, encapsulados y _standalone_, que se comunican con el sistema (REST, pipe, ...)]
+
+- .large[__VSCode__ _extensions_, __Jira__ _plugins_, __Chrome__ _extensions_, __Firefox__ _add-ons_, __Alexa__ _skills_, etc. ]
+
+]
+
+???
+
+The core system is formally defined as the minimal functionality required to run the system.
+
+Plug-ins son componentes independientes, _standalone_ que propof funcioanl adicional al  meant to enhance or extend the core system
+
+
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Service-based
+
+]
+
+.right-column[
+
+
+]
+
+---
+# Referencias
+
+&lt;a name=bib-richards2020&gt;&lt;/a&gt;[Richards, Mark and Neal
+Ford](#cite-richards2020) (2020). _Fundamentals of Software
+Architecture, 1st edition_. O'Really Media Inc. ISBN:
+978-1-492-04345-4.
+
+&lt;a name=bib-rodriguez2021&gt;&lt;/a&gt;[Rodríguez Pupo, Luis
+Enrique](#cite-rodriguez2021) (2021). "An Analytics Platform for
+Integrating and Computing Spatio-Temporal Metrics in Location-aware
+Games". DOI:
+[10.6035/14101.2021.357562](https://doi.org/10.6035%2F14101.2021.357562).
+URL:
+[https://www.tdx.cat/handle/10803/671588](https://www.tdx.cat/handle/10803/671588).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

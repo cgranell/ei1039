@@ -1,0 +1,43 @@
+---
+title: "HW1"
+description: |
+  Refelxion personal de las sesions arquitectrua de software
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objetivos de aprendizaje (contenido)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   
+
+## Objetivos de proceso (soft skills)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   Ser consciente de los procesos de apredizaje que realizan (Metacognition)
+-   Reflexionar sobre la calidad del trabajo realizado y dudas pendientes (Metacognition)
+
+## Entregra
+
+-   Se entrega de forma individual en el Aula Virtual. Se deberá subir un documento en formato PDF.
+
+-   Fecha límite: 29 sep, 23:59
+
+## Actividades
+
+Tras terminar las dos sesiones de teoría relativas a la arquitectura de software, donde hemos visto algunos conceptos básicos de arquitectura, como las dimensiones de una arquitecture software (caracteristicas, y estructura/estilo), el rol de un arquitecto de software vs diseñador/desarrollador, así como las tareas que lleva a cabo un arquitectro, ahora nos detenemos un momento para valorar lo que hemos aprendido, las dudas que aún quedan, y para qué lo hemos aprendido. Todas las preguntas siguientes hacen referencia únicamente a las dos sesiones de teoría TE1 y TE2:
+
+1.  ¿Cuál crees que ha sido el **objetivo(s)** de aprendizaje de estas dos sesiones?
+
+2.  ¿Qué es lo que **mejor** has entendido de lo que has trabajo, aquello que crees que tienes bastante claro?
+
+3.  ¿Cualés son las cosas **más importantes** (para ti) que has aprendido en las dos sesiones de teoría?
+
+4.  ¿Que **dudas** te han quedado? ¿Qué es aquello que te sigue causando **confusión** y te gustaría aclarar?
+
+### 

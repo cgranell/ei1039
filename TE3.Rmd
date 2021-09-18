@@ -1,7 +1,7 @@
 ---
 title: "TE3 Patrones creacionales"
 description: |
-  Introducción a los patrones de diseño <br/> Patrones creacionales.
+  Introducción a los patrones de diseño <br/> Patrones creacionales: Singleton y Factory.
 output: distill::distill_article
 ---
 
@@ -19,9 +19,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [45 min] **Actividad POGIL**: Singleton pattern
 
-    -   Grupos de 3-4 personas
+    -   Grupos de 4-5 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las *Role Cards* (AV)
+    -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
     -   Actividad POGIL (AV)
 
