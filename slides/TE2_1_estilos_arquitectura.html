@@ -18,7 +18,7 @@
 
 name: title
 class: left, top
-background-image: url(images/rawpixel/greenapartment.jpg)
+background-image: url(images/rawpixel/florence-cathedral.jpg)
 background-size: cover
 
 # .fancy[[TE2_1] Fundamentos de arquitectura]
@@ -28,15 +28,15 @@ background-size: cover
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 
-.whiteinline[Carlos Granell&amp;#183; Universitat Jaume I]
+.right[Carlos Granell&amp;#183; Universitat Jaume I]
 
-.whiteinline[EI1039 - Diseño de Software &amp;#183; Sep 2021]
+.right[EI1039 - Diseño de Software &amp;#183; Sep 2021]
 
 
 ???
 
-Green apartment building. Original public domain image from Wikimedia Commons.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3285587)
+Florence cathrdral. Gothic style. Original public domain image from Wikimedia Commons.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3286364)
 
 
 ---
@@ -98,7 +98,6 @@ class: center
 
 ## .acidinline[Distribuídos]
 
-### Service-based
 ### Event-driven
 ### Service-oriented
 ### Microservicios
@@ -255,6 +254,10 @@ Image credits: [[RF20](#bib-richards2020)]
 
 ???
 
+Core system es la minima funcionlidad required para el sistema básico.
+
+Plug-ins son componentes independientes que añaden funcionalidad adicional al core sytemm
+
 Image credits: [[RF20](#bib-richards2020)]
 
 ---
@@ -271,32 +274,131 @@ Image credits: [[RF20](#bib-richards2020)]
 
 - .large[_Core system_ es extensible]
 
-- .large[_Plug-ins_ independientes, encapsulados y _standalone_, que se comunican con el sistema (REST, pipe, ...)]
+- .large[_Plug-ins_ independientes, encapsulados y autónomos (_standalone_), que se comunican con el sistema (REST, pipe, ...)]
 
 - .large[__VSCode__ _extensions_, __Jira__ _plugins_, __Chrome__ _extensions_, __Firefox__ _add-ons_, __Alexa__ _skills_, etc. ]
 
 ]
-
-???
-
-The core system is formally defined as the minimal functionality required to run the system.
-
-Plug-ins son componentes independientes, _standalone_ que propof funcioanl adicional al  meant to enhance or extend the core system
-
 
 
 ---
 # .center[.acidinline[Estilos distribuídos]]
 
 .left-column[
-### Service-based
+### Event-driven
 
 ]
 
 .right-column[
 
+&lt;img src="images/FundamentalsSoftwareArquitecture15.png" width="75%"/&gt;
 
 ]
+
+???
+
+Productor emite un evento/tópico. Consumir se suscribe a eventos/tópicos. 
+
+Cola de eventos facilita mensajes asincronos.
+
+
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+
+]
+
+.right-column[
+
+.large[Broker topology]
+&lt;img src="images/FundamentalsSoftwareArquitecture16.png" width="75%"/&gt;
+
+]
+
+???
+
+No hay coordinación centralizada de eventos; 
+
+Broadcasting eventos a multiples suscriptores 
+
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+
+]
+
+.right-column[
+
+.large[Mediator topology]
+&lt;img src="images/FundamentalsSoftwareArquitecture17.png" width="75%"/&gt;
+
+]
+
+???
+
+
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+### Service-oriented
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture18.png" width="75%"/&gt;
+
+]
+
+???
+
+
+Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+### Service-oriented
+### Microservicios
+
+]
+
+.right-column[
+
+&lt;img src="images/FundamentalsSoftwareArquitecture19.png" width="75%"/&gt;
+
+]
+
+???
+
+
+Image credits: [[RF20](#bib-richards2020)]
+
+---
+class: center
+# Spoiler
+
+.large[Seminario conjunto de Arquitectura Software]
+
+
+&lt;br/&gt;
 
 ---
 # Referencias
