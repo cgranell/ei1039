@@ -76,7 +76,12 @@ class: inverse, center, middle
 
 --
 
-## como se estructura o organiza todo el backend e interfaces de usuario.
+## .acidinline[como se estructura o organiza todo el backend e interfaces de usuario.]
+
+--
+
+.large[Spoiler: Seminario conjunto de Arquitectura Software]
+
 
 ---
 class: center
@@ -345,8 +350,25 @@ Image credits: [[RF20](#bib-richards2020)]
 
 ???
 
-
 Image credits: [[RF20](#bib-richards2020)]
+
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+
+]
+
+.right-column[
+
+.large[Ejemplo: [NativeScript Task Dispatcher](https://github.com/GeoTecINIT/nativescript-task-dispatcher)], desarrollado por Alberto González (EI1048) y Miguel Matey &lt;a name=cite-gonzalez2021&gt;&lt;/a&gt;[[GM21](https://doi.org/10.5281/zenodo.4530103)]
+
+.large[Grafo de tareas cuyas dependencias se gestionan mediante eventos - [Ejemplo](https://github.com/GeoTecINIT/nativescript-task-dispatcher#quick-start)]
+
+
+]
 
 
 ---
@@ -388,20 +410,69 @@ Image credits: [[RF20](#bib-richards2020)]
 
 ???
 
-
 Image credits: [[RF20](#bib-richards2020)]
 
+
+
 ---
-class: center
-# Spoiler
+# .center[.acidinline[Estilos distribuídos]]
 
-.large[Seminario conjunto de Arquitectura Software]
+.left-column[
+### Event-driven
+### Service-oriented
+### Microservicios
+
+]
+
+.right-column[
+
+- .large[Domain-driven design (vs partición técnica)]
+
+- .large[Bounded context: cada microservicio modela un dominio o workflow]
+
+- .large[Data isolation: cada microservicio viene con su base de datos y esquema de datos]
+
+- .large[Despligue con virtualización/contenerización]
 
 
-&lt;br/&gt;
+]
+
+---
+# .center[.acidinline[Estilos distribuídos]]
+
+.left-column[
+### Event-driven
+### Service-oriented
+### Microservicios
+
+]
+
+.right-column[
+
+&lt;img src="images/TesisLuis_architectureMetricComputation.png" width="75%"/&gt;
+
+]
+
+
+- .large[Microservicios en [Akka](https://akka.io/) para computación de métricas basadas en mensajes [[Rod21](https://www.tdx.cat/handle/10803/671588)]]
+
+
+---
+class: inverse, center, middle
+
+# ¿Os veis como .acidinline[arquitectos de sofware] en el futuro?
+
 
 ---
 # Referencias
+
+&lt;a name=bib-gonzalez2021&gt;&lt;/a&gt;[GonzÃ¡lez-PÃ©rez, Alberto and Miguel
+Matey-Sanz](#cite-gonzalez2021) (2021). _nativescript-task-dispatcher:
+A Reactive Android-Based Task Scheduler and Dispatcher_. The documents
+in this repository are licensed under a Creative Commons Attribution
+4.0 International License. All contained code is licensed under the
+Apache License 2.0. DOI:
+[10.5281/zenodo.4530103](https://doi.org/10.5281%2Fzenodo.4530103).
 
 &lt;a name=bib-richards2020&gt;&lt;/a&gt;[Richards, Mark and Neal
 Ford](#cite-richards2020) (2020). _Fundamentals of Software
