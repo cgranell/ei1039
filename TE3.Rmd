@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión:** HW2
 
--   [20 min] **Presentación:** Introducción a los Patrones de Diseño
+-   [20 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
 
 -   [45 min] **Actividad POGIL**: Singleton pattern
 
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Actividad POGIL (AV)
 
--   [30] **Presentación**: Factory objects y Factory pattern
+-   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
 
     -   Mismos grupos y roles que en actividad anterior
 
