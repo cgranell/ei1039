@@ -1,6 +1,6 @@
 ---
-title: "[TE3_1] Patrones de Diseño"
-subtitle: "Conceptos"
+title: "[TE3_2] Patrones Creacionales"
+subtitle: "Usos y tipos"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2021" 
@@ -30,23 +30,24 @@ source("load_references.r")
 
 name: title
 class: left, top
-background-image: url(images/rawpixel/brick-pattern.jpg)
+background-image: url(images/rawpixel/the-creation.jpg)
 background-size: cover
 
-# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+# .fancy[`r rmarkdown::metadata$title`]
 
-### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+### &#183; `r rmarkdown::metadata$subtitle`
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-.whiteinline[.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]]
+.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
 
-.whiteinline[.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]]
+.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
 
 
 ???
 
-Black wooden brick textured background
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+
+Michelangelo Buonarroti's The Creation of Adam (circa 1511) famous painting. Original public domain image from Wikimedia Commons.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3848277)
 

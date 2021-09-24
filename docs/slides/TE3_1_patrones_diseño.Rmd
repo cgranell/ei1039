@@ -30,23 +30,23 @@ source("load_references.r")
 
 name: title
 class: left, top
-background-image: url(images/rawpixel/florence-cathedral.jpg)
+background-image: url(images/rawpixel/brick-pattern.jpg)
 background-size: cover
 
-# .fancy[`r rmarkdown::metadata$title`]
+# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
 
-### &#183; `r rmarkdown::metadata$subtitle`
+### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+.whiteinline[.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]]
 
-.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+.whiteinline[.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]]
 
 
 ???
 
-Florence cathedral. Gothic style. Original public domain image from Wikimedia Commons.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3286364)
+Black wooden brick textured background
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
 

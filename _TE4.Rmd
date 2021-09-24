@@ -1,7 +1,7 @@
 ---
-title: "TE3 Patrones creacionales"
+title: "TE3 Patrones estructurales"
 description: |
-  Introducción a los patrones de diseño <br/> Patrones creacionales: Singleton y Factory.
+  Facade.
 output: distill::distill_article
 ---
 
@@ -13,11 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [10 min] **Revisión:** HW2
-
--   [10 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
-
--   [10 min] **Presentación:** [Introducción a los Patrones Creacionales](slides/TE3_2_creacionales.html)
+-   [15 min] **Revisión:** HW3
 
 -   [45 min] **Actividad POGIL**: Singleton pattern
 
@@ -27,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Actividad POGIL (AV)
 
--   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_3_factory.html)
+-   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
 
     -   Mismos grupos y roles que en actividad anterior
 

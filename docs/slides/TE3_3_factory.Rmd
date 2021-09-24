@@ -1,6 +1,6 @@
 ---
-title: "[TE3_2] Patrones de Diseño"
-subtitle: "Factory objects y Factory pattern"
+title: "[TE3_3] Patrones Creacionales"
+subtitle: "Factory objects & Factory pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2021" 
@@ -30,7 +30,7 @@ source("load_references.r")
 
 name: title
 class: left, top
-background-image: url(images/rawpixel/florence-cathedral.jpg)
+background-image: url(images/rawpixel/the-creation.jpg)
 background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
@@ -47,6 +47,7 @@ background-size: cover
 
 ???
 
-Florence cathedral. Gothic style. Original public domain image from Wikimedia Commons.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3286364)
+
+Michelangelo Buonarroti's The Creation of Adam (circa 1511) famous painting. Original public domain image from Wikimedia Commons.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3848277)
 
