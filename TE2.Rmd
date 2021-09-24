@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Equipos de 3-4 personas
 
-    -   Asignación de roles. Todos se bajan una copia de las *Role Cards* (AV)
+    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards* (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4584908)
 
     -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4587389)
 
