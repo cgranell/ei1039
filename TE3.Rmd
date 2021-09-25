@@ -13,25 +13,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [10 min] **Revisión:** HW2
-
--   [10 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
-
--   [10 min] **Presentación:** [Introducción a los Patrones Creacionales](slides/TE3_2_creacionales.html)
+-   [30 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
 
 -   [45 min] **Actividad POGIL**: Singleton pattern
 
-    -   Grupos de 4-5 personas
+    -   Equipos de 4-5 personas
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
     -   Actividad POGIL (AV)
 
--   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_3_factory.html)
+-   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
 
-    -   Mismos grupos y roles que en actividad anterior
+    -   Mismos equipos y roles que en actividad anterior
 
-    -   Preguntas/quizzes para discutir en grupo
+    -   Preguntas para discutir en equipos
 
 -   [10 min] **Closing:** Intro HW3
 

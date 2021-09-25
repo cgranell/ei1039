@@ -1,5 +1,5 @@
 ---
-title: "[TE3_3] Patrones Creacionales"
+title: "[TE3_2] Patrones Creacionales"
 subtitle: "Factory objects & Factory pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"

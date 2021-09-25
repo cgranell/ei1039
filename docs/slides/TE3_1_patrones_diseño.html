@@ -23,7 +23,7 @@ background-size: cover
 
 # .whiteinline[.fancy[[TE3_1] Patrones de Diseño]]
 
-### .whiteinline[&amp;#183; Conceptos]
+### .whiteinline[&amp;#183; Concepto, catálogo y principios]
 
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
@@ -37,6 +37,318 @@ background-size: cover
 
 Black wooden brick textured background
 Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué son los patrones de diseño?
+
+--
+
+## .acidinline[Soluciones] habituales y bien testeadas a .fatinline[problemas recurrentes] en .coldinline[un contexo (diseño de software)]
+
+---
+class: left
+
+### .cold[Contexto] es la situación como conjunto de restricciones en la que se aplica el patrón
+
+--
+
+### .fat[Problema] es el objetivo a alcanzar
+
+--
+
+### .acid[Solución] es la implementación del patrón (clases, interfaces, y sus relaciones) para cumplir con el objetivo y las restricciones
+
+
+---
+background-image: url(images/rawpixel/home-layout-discussion.jpg)
+background-size: cover
+
+
+Business Team Discussion Meeting Team Concept.
+Image credits:  [Rawpixel.com](https://www.rawpixel.com/image/691263/)
+
+???
+
+Son como planos predefinidos que se pueden personalizar para resolver un problema de diseño recurrente en tu código.
+
+
+---
+class: inverse, center, middle
+
+# Catálogo de patrones de diseño (por propósito) &lt;a name=cite-gamma1994&gt;&lt;/a&gt;[[Gam+94](#bib-gamma1994)]
+
+---
+class:left
+
+### CREACIONALES proporcionan mecanismos de creación de objetos
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Factory Methods, Abstract Factory, Builder, Prototype, Singleton]
+
+--
+
+### ESTRUCTURALES explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Adapter, Bridge, Composite, Decorator, Facade, flyweight, Proxy]
+
+--
+
+### DE COMPORTAMIENTO se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Chain of responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor]
+
+???
+
+Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingrediante físicalmente (ensalada) o sin combinación (queso y vino)
+
+Una analogía para los de comportaminto es el pit/box en una carrera de F1: cada miembro del equipo tiene un rol asignado, pero juntos consiguen un objetivo común
+
+Algunos ya vistos en la asignatura de [Programación Avanzada](http://www3.uji.es/~belfern/Docencia/Presentaciones/ProgramacionAvanzada/)
+
+---
+class: inverse, center, middle
+
+# Y supongo que os preguntáis....😯
+
+---
+class: center, middle
+## ¿Puedo trabajar como programador sin conocer un solo patrón de diseño?
+
+--
+
+.large[Sí, puedes. A lo mejor los has utilizado o implementado sin saberlo]
+
+
+---
+class: center, middle
+## ¿Por qué tengo que dedicar tiempo a aprenderlos?
+
+--
+
+.large[Como ingenieros/as, proporcionamos soluciones a problemas. Cuanto mayor sea tu __juego de herramientas__ para resolver problemas, mejor ingeniero/a serás]
+
+
+---
+class: center, middle
+
+## Si aplico un patrón, ¿copio su código y listo?
+
+--
+
+.large[Los patrones no son código ya preparado como funciones o algoritmos. Son .acidinline[__soluciones conceptuales__] para resolver un problema frecuente de diseño en tu código]
+
+.center[.large[algoritmo &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"&gt;&lt;path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/&gt;&lt;/svg&gt; receta]]
+.center[.large[patrón &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"&gt;&lt;path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/&gt;&lt;/svg&gt; plano]]
+
+
+???
+Un algoritmo == una receta de cocina: ambos cuentan con pasos claros para alcanzar una meta. 
+
+Un patrón == un plano, ya que puedes observar el resultado y sus funciones, pero el orden exacto de la implementación depende de ti.
+
+---
+class: center, middle
+
+## Y entonces, ¿cómo implemento un patrón en mi código?
+
+--
+
+.large[Sigue los detalles del patrón pero la implementación depende de ti, para que encaje con las .coldinline[__restricciones__] y .fatinline[__objetivo__] de tu código]
+
+
+---
+class: center, middle
+
+## ¿Lo más difícil entonces es implementar una versión personalizada del patrón?
+
+--
+
+.large[No, esa es la parte "mecánica" (sin despreciar la dificultad que atañe escribir código)]
+
+---
+class: center, middle
+
+## ¿Qué es lo más difícil? 😮
+
+--
+
+.large[Reconocer si un patrón en particular __es o no es__ la .acidinline[__solución__] a tu .fatinline[__problema__] en un .coldinline[__contexto__]] determinado
+
+
+---
+class: center, middle
+
+## Y además los patrones definen un vocabulario común para comunicarte con tu equipo 
+
+--
+
+.large["Sí, claro, utiliza un _singleton_ para eso que quieres hacer"]
+
+---
+class: inverse, center, middle
+
+# Principios básicos de diseño de software
+
+.large[(presentes en casi todos los patrones de diseño)]
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Encapsula lo que varía y sepáralo de lo que no cambia
+
+.right[.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt;  Minimiza/aisla el efecto provocado por los cambios]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Programa a una interfaz, no a una implementación
+
+.right[.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Diseño flexible depende de abstracciones,]]
+.right[.large[no de clases concretas]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Favorece la composición sobre la herencia
+
+.right[.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; HAS-A puede ser mejor que IS-A]]
+
+???
+
+La herencia es probablemente la forma más obvia de reutilizar código entre clases. Tienes dos clases con el mismo código. Creas una clase base común para estas dos clases y colocas dentro el código similar. Fet!
+
+Puedes hacer más débil una dependencia haciendo que tu código dependa de interfaces o clases abstractas en lugar de clases concretas
+
+En vez de heredar un comportamiento, un objeto obtiene un comportamiento cuando _se compone_ con un objeto de ese comportamiento.
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+class: inverse, center, middle
+
+# Principios SOLID &lt;a name=cite-martin2002&gt;&lt;/a&gt;[[Mar02](http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html)]
+
+.large[cinco principios ideados para hacer que el diseño de software sea más comprensible, flexible y fácil de mantener]
+
+
+---
+class: left
+
+### .cold[S]ingle Responsability Principle - Principo de responsabilidad única
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Una clase solo debe tener una (buena) razón para cambiar]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Pon las cosas que cambian por las mismas razones en una clase]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Separa las cosas que cambian por diferentes razones en clases distintas]
+
+
+???
+Reduce complejidad: Si una clase hace demasiadas cosas, hay que cambiarla cada vez que una de esas cosas cambia
+
+---
+class: left
+
+### .cold[O]pen/Closed Principle - Principio de abierto/cerrado
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Las clases deben estar abiertas a la extensión pero cerradas
+a la modificación]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Si una clase está desarrollada, probada y revisada,  no cambies directamente el código de la clase (cerrada)]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Si necesitas nuevo comportamiento, crea subclases para ello (abierto)]
+
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Extender una clase permite añadir nuevo comportamiento sin descomponer clientes existentes de la clase original]
+
+???
+
+Abierta y cerrada no son mutuamente excluyentes. Una clase puede estar al mismo tiempo abierta (para la extensión) y cerrada (para la modificación). El código simple es tanto abierto y cerrado.
+
+---
+class: left
+
+### .cold[L]iskov Substitution Principle - Principio de sustitución de Liskov
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Al extender una clase, los objetos de las subclases deben poder utilizarse donde se requieran objetos de la clase padre, sin descomponer el código cliente]
+
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; La subclase debe permanecer compatible con el comportamiento de la clase padre]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Al sobrescribir un método, extiende el comportamiento base en lugar de sustituirlo por algo totalmente distinto]
+
+???
+
+Escribe abstracciones nítidas y bien definidas. 
+
+
+---
+class: left
+### .cold[I]interface Segregation Principle - Principio de segregación de la interfaz
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Mantén las interfaces pequeñas para que los usuarios no terminen dependiendo de cosas que no necesitan]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; No se debe forzar a los clientes a depender de métodos que no utilizan]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Si una interfaz es demasiado grande, conviene fraccionarla en varias interfaces más pequeñas]
+
+---
+class: left
+### .cold[D]ependency Inversion Principle - Principio de inversión de dependencia
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"/&gt;&lt;/svg&gt; Las clases de alto nivel no deben depender de clases de bajo nivel. Ambas deben depender de abstracciones]
+
+
+???
+
+Clases de bajo nivel implementan operaciones básicas como transferir datos por la red. 
+
+Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
+
+
+---
+# Resumen
+
+- .large[Soluciones conceptuales muy probadas y testeadas]
+
+- .large[Proporcionan un vocabulario común]
+
+- .large[No es siempre obvio que patrón utilizar]
+
+- .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
+
+---
+# Referencias
+
+&lt;a name=bib-gamma1994&gt;&lt;/a&gt;[Gamma, Erich, Richard Helm, et
+al.](#cite-gamma1994) (1994). _Design Patterns: Elements of Reusable
+Object-Oriented Software_. Addison-Wesley. ISBN: 978-0-201-63361-2.
+
+&lt;a name=bib-martin2002&gt;&lt;/a&gt;[Martin, Robert](#cite-martin2002) (2002).
+_Agile Software Development: Principles, Patterns, and Practices_.
+Pearson Education, 1st edition. ISBN: 978-0135974445. URL:
+[http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html](http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html).
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
