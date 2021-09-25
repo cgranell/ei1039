@@ -1,7 +1,7 @@
 ---
-title: "HW1"
+title: "HW2"
 description: |
-  Refelxion personal de las sesions arquitectrua de software
+  Refelxion personal de las sesions arquitectura de software
 output: distill::distill_article
 ---
 
