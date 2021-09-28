@@ -15,20 +15,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [30 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
 
--   [45 min] **Actividad POGIL**: Singleton pattern
+-   [30 min] **Actividad POGIL**: Singleton pattern
 
     -   Equipos de 4-5 personas
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4597610)
 
--   [30] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
+-   [40] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
 
     -   Mismos equipos y roles que en actividad anterior
 
     -   Preguntas para discutir en equipos
 
--   [10 min] **Closing:** Intro HW3
+-   [15 min] **Closing:** Intro HW3
 
 ## 

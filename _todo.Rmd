@@ -7,4 +7,14 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# TE1
+
+
+# TE2
+
+
+# TE3
+
+# Others
+
 Crear (entre el alumnado) fichas de los patrones con una estructura común: nombre, propósito, motivación (problema), situaciones en que el patrón se aplica, estructura de clases, ejemplos de código, etc
