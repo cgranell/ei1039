@@ -29,6 +29,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Preguntas para discutir en equipos
 
--   [10 min] **Closing:** Intro HW3
+-   [10 min] **Closing:** Intro [HW3](HW3.html)
 
 ## 

@@ -408,11 +408,11 @@ class: inverse, center, middle
 - `USSimpleKnifeFactory` y 
 - `EuropeSimpleKnifeFactory`
 
-.large[Ok, la creación de objetos se especializa, pero el resto de funcionalidad como `orderKnife` se mantiene rígida deja especializar los `Knife`]
+.large[Ok, la creación de objetos se especializa, pero el resto de funcionalidad como `orderKnife` resulta difícil de especializar]
 
 
 ---
-# Patrón Factory: Solución
+# Factory Method: Solución
 
 - .large[En vez del objeto Factory `EuropeSimpleKnifeFactory`, el patrón Factory Method crearía `EuropeKnifeStore` como subclase de `KnifeStore` (cliente).]
 
@@ -491,7 +491,7 @@ public class EuropeKnifeStore()
 ]
 
 ---
-# Patrón Factory: Estructura
+# Factory Method: Estructura
 
 
 .pull-left[
@@ -509,7 +509,7 @@ public class EuropeKnifeStore()
 
 
 ---
-# Patrón Factory: Estructura
+# Factory Method: Estructura
 
 
 .pull-left[
@@ -526,7 +526,7 @@ public class EuropeKnifeStore()
 
 
 ---
-# Patrón Factory: Aplicabilidad
+# Factory Method: Aplicabilidad
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando no sabes de antemano las dependencias y tipos exactos de los objetos de tu código] 
 
