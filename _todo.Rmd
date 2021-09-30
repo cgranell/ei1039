@@ -9,12 +9,33 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # TE1
 
+1 hora para introducir asignatura + 1 hora para material sobre fundamentos de arquitectura. Se interoduce arquitectura kata y se propone ejercio en HW1 
 
 # TE2
+
+Dos actividades POGIL, una de iniciacion a POGIL (buenas practicas) y otra de arquitectura kata. No da tiempo a presentacion "estilos de arquitectura" 
+
+## POGIL - Buenas practicas
+
+- Cuesta formar equipos. Pero una vez configurados, las cosas parece que funcionan. 
+- Los tiempos de ejecuacoin son razonables a los previstas.
+- Contextualizar mejor las respuestas para el caso de información, equipos de desarrollo, en vez de utilizar generalidades como "carrera profesional" etc. 
+
+
+## POGIL - Arquitectrua kata
+
+Creo que sobre una ctivida de este tipos ya uqe el HW1 y esta trata de lo mismo. Plantear 
+
+
+## Acciones
+
+- Que sepan que hay feedback. Neceistan un resumen de la actividades POGIL desarrolladas hasta ahora. 
 
 
 # TE3
 
-# Others
+# Otros
 
-Crear (entre el alumnado) fichas de los patrones con una estructura común: nombre, propósito, motivación (problema), situaciones en que el patrón se aplica, estructura de clases, ejemplos de código, etc
+- Crear (entre el alumnado) fichas de los patrones con una estructura común: nombre, propósito, motivación (problema), situaciones en que el patrón se aplica, estructura de clases, ejemplos de código, etc
+
+- En HW posteriores, proponer la autoevaciion de la solucion aportada con respecto a una solcuion oficial

@@ -100,19 +100,19 @@ class: inverse, center, middle
 ---
 class:left
 
-### CREACIONALES proporcionan mecanismos de creación de objetos
+### .coldinline[CREACIONALES] proporcionan mecanismos de creación de objetos
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Factory Methods, Abstract Factory, Builder, Prototype, Singleton]
-
---
-
-### ESTRUCTURALES explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Adapter, Bridge, Composite, Decorator, Facade, flyweight, Proxy]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Factory Method, Abstract Factory, Builder, Prototype, Singleton]
 
 --
 
-### DE COMPORTAMIENTO se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
+### .coldinline[ESTRUCTURALES] explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy]
+
+--
+
+### .coldinline[DE COMPORTAMIENTO] se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` Chain of responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor]
 
@@ -191,7 +191,7 @@ class: center, middle
 
 --
 
-.large[Reconocer si un patrón en particular __es o no es__ la .acidinline[__solución__] a tu .fatinline[__problema__] en un .coldinline[__contexto__]] determinado
+.large[Reconocer si un patrón en particular __es o no es__ la .acidinline[__solución__] a tu .fatinline[__problema__] en un .coldinline[__contexto__] determinado] 
 
 
 ---

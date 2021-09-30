@@ -1,0 +1,34 @@
+---
+title: "HW3"
+description: |
+  Implementación patron Factory Method
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objetivos de aprendizaje (contenido)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   Comprender la solución conceptual del patrón Factory Method
+-   Implementar el patrón Factory Method en un caso particular
+
+## Objetivos de proceso (soft skills)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   Evaluar e interpretar información para adoptar a un contexto determinado (*Information processing*)
+
+## Entrega
+
+-   Se entrega de forma individual en el Aula Virtual. Se deberá subir un documento en formato PDF.
+
+-   Fecha límite: 6 oct, 23:59
+
+## Actividades
+
+1.  Completa la codificación del **Factory Method** para el ejemplo de [`KnifeStore`](slides/TE3_factory.html), incluyendo las subclases `USKnifeStore` y `EuropeKnifeStore`\` . La tienda americana produce `SteakKnife` y `ChefKnife`. La tienda europea produce subtipos nuevos de productos: `EuropeChefKnife` y `EuropeSteakKnife`. Puedes copiar el código de las clases resultantes en un documento o bine copiar el link a un repositorio de código (como github) en abierto.
+2.  Crea el diagrama de clases resultante para tu implemetación según la estructura conceptual del Factory Method.

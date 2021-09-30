@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [05 min] **Opening**
+-   [10 min] **Opening:** reflexiones HW2
 
 -   [30 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseño.html)
 
@@ -23,12 +23,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4597610)
 
--   [40] **Presentación**: [Factory objects y Factory pattern](slides/TE3_2_factory.html)
+-   [40] **Presentación**: [Factory objects y Factory Method pattern](slides/TE3_2_factory.html)
 
     -   Mismos equipos y roles que en actividad anterior
 
     -   Preguntas para discutir en equipos
 
--   [15 min] **Closing:** Intro HW3
+-   [10 min] **Closing:** Intro HW3
 
 ## 
