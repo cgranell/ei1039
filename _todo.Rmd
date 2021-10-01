@@ -7,35 +7,89 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# ¿Por qué?
+
+Siguiendo la línea del método investigacion-acción para la mejora docente contínua. Ver artiíulo [Investigación práctica en educación: investigación-acción](https://upcommons.upc.edu/handle/2099/12000).
+
 # TE1
 
-1 hora para introducir asignatura + 1 hora para material sobre fundamentos de arquitectura. Se interoduce arquitectura kata y se propone ejercio en HW1 
+1 hora para introducir la asignatura + 1 hora sobre material sobre fundamentos de arquitectura. Se introduce arquitectura kata y se propone ejercicio en HW1
+
+## Acciones de mejora
+
+-   Replantear HW1? en base a la activida POGIL de arquitectrua kata
 
 # TE2
 
-Dos actividades POGIL, una de iniciacion a POGIL (buenas practicas) y otra de arquitectura kata. No da tiempo a presentacion "estilos de arquitectura" 
+Dos actividades POGIL, una de iniciación a buenas practicas de equipos/roles y otra de arquitectura kata. No da tiempo a la presentación "estilos de arquitectura". PROBLEMA de tiempo!!
 
 ## POGIL - Buenas practicas
 
-- Cuesta formar equipos. Pero una vez configurados, las cosas parece que funcionan. 
-- Los tiempos de ejecuacoin son razonables a los previstas.
-- Contextualizar mejor las respuestas para el caso de información, equipos de desarrollo, en vez de utilizar generalidades como "carrera profesional" etc. 
+-   Cuesta formar equipos. Pero una vez configurados, las cosas parece que funcionan.
+-   Los tiempos de ejecución reportadas por los equipos son razonables a los previstas.
+-   Contextualizar mejor las preguntas, por ejemplo, relacionar con la informática y con equipos de desarrollo software, en vez de utilizar generalidades como "carrera profesional" etc.
 
+## POGIL - Arquitectura kata
 
-## POGIL - Arquitectrua kata
+Creo que esta actividad es candidata a eliminar en próximas ediciones. Tal vez, replantear como HW1.
 
-Creo que sobre una ctivida de este tipos ya uqe el HW1 y esta trata de lo mismo. Plantear 
+## Acciones de mejora
 
-
-## Acciones
-
-- Que sepan que hay feedback. Neceistan un resumen de la actividades POGIL desarrolladas hasta ahora. 
-
+-   Que sepan que hay feedback. Necesitan resumenes frecuentas de las actividades POGIL desarrolladas hasta ahora.
+-   Ajustar planificación: ¿Dos actividades POGIL en la misma sesión parece demasiado?
+-   Actualziar tiempo estuimado POGIL kata: Modelo 1: 10 min, Modelo 2: 20 min
 
 # TE3
 
-# Otros
+Se plantean uan presentacion introducce a los patrones + actividad POGIL para SIngleton + presentación de Factory Method (con pregutnas a grupos). El HW asociado es uan conctinuaci de la presentacion de Factory Method
 
-- Crear (entre el alumnado) fichas de los patrones con una estructura común: nombre, propósito, motivación (problema), situaciones en que el patrón se aplica, estructura de clases, ejemplos de código, etc
 
-- En HW posteriores, proponer la autoevaciion de la solucion aportada con respecto a una solcuion oficial
+
+# TE4
+
+Intercalar preguntas durante la presentacion  de Facada, com opor ejemplo
+
+Q1: What are the two conditions required for you to use the facade design pattern?
+
+- You need a class to translate messages between two existing subsystems because one is expecting a specific interface to use but is provided with an interface that is incompatible.
+- You need to simplify the interaction with your subsystem for client classes. (C)
+- You need a class to act as an interface between your subsystem and a client class. (C)
+- You need a class to that will instantiate other classes within your system and provide these instances to a client class.
+
+Q2: What are the key design principles are used to implement the facade design pattern?
+
+- Information hiding, encapsulation, generalization, coupling
+- Inheritance, information hiding, separation of concerns, generalization
+- Encapsulation, information hiding, separation of concerns (C)
+- Encapsulation, implementing interfaces, information hiding, inheritance
+
+
+Facade puede esocndar un Interface. Platear como ejercio que esconda varias intrefaces?
+Puede combinar Singleton con Facade
+
+
+# Acciones para proximas ediciones
+
+-   Crear (entre el alumnado) fichas resumen de los patrones con una estructura común:
+
+    -   Nombre
+
+    -   Propósito
+
+    -   Problema
+
+    -   Estructura: solución conceptual vista como estructur de clase genérica
+
+    -   Aplicabilidad: situaciones en las cuales el patrón tiene sentido,
+
+    -   Ejemplos de código
+
+    -   Relaciones con otros patrones
+
+-   En HW posteriores, proponer la **autoevaluación** de la solución aportada con respecto a una solucion oficial, para explicar las diferencias entre la solución del alumno y la solución oficial. (ver [Presentación Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
+
+-   Para HW posteriores, prooner quixe o pregutnas de reflexiones sobre las actividades POGIL desarrollads en la sesión (forma de evlauar POGIL)
+
+-   Plantear competencias basicas y avanxadas y errore basicos/avanzados (ver [Presentacion Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
+
+-   Basado en las reflexiones personales de HW2, parece que el método POGIL es bien recibido por los estudiantes. Uff, menos mal!!
