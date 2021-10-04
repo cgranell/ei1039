@@ -1,6 +1,6 @@
 ---
-title: "[TE4_1] Patrones Estructurales"
-subtitle: "Adapter pattern"
+title: "[TE4_3] Patrones Estructurales"
+subtitle: "Proxy pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2021" 
@@ -56,21 +56,21 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
 
 ---
 class: inverse, center, middle
-background-image: url(images/DivingDesingPatterns04.png)
+background-image: url(images/DivingDesingPatterns08.png)
 background-size: contain
 
 
 ???
 
-Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/adapter)
+Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/proxy)
 
 
 ---
 class: inverse, center, middle
 
-# Adapter Pattern
+# Proxy Pattern
 
-## convierte interfaces incompatibles entre objetos en .coldinline[compatibles]
+## proporciona una .coldinline[interfaz sustituta] para acceder (indirectamente) a otro objeto
 
 --
 
@@ -85,20 +85,20 @@ class: inverse, center, middle
 
 
 ---
-# Adapter: Problema
+# Proxy: Problema
 
 
 ---
-# Adapter: Solución
+# Proxy: Solución
 
 
 ---
-# Adapter: Estructura
+# Proxy: Estructura
 
 
 .pull-left[
 
-<img src="images/DivingDesingPatterns05.png" width="100%"/>
+<img src="images/DivingDesingPatterns09.png" width="100%"/>
 ]
 
 .pull-right[
@@ -108,7 +108,7 @@ class: inverse, center, middle
 
 
 ---
-# Adapter: Aplicabilidad
+# Facade: Aplicabilidad
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
 
