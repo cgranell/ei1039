@@ -1,0 +1,117 @@
+---
+title: "[TE4_1] Patrones Estructurales"
+subtitle: "Adapter pattern"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: middle, center
+background-image: url(images/rawpixel/brooklyn-bridge.jpg)
+background-size: cover
+
+# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+
+### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+
+
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+
+
+???
+
+Brooklyn Bridge, New York City, United States. Original public domain image from Wikimedia Commons
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
+
+---
+class: left, bottom
+background-image: url(images/DivingDesingPatterns04.png)
+background-size: cover
+
+
+???
+
+Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/adapter)
+
+
+---
+class: inverse, center, middle
+
+# Adapter Pattern
+
+--
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+
+
+---
+# Adapter: Problema
+
+
+---
+# Adapter: Solución
+
+
+---
+# Adapter: Estructura
+
+
+.pull-left[
+
+<img src="images/DivingDesingPatterns03.png" width="100%"/>
+]
+
+.pull-right[
+
+
+]
+
+
+---
+# Adapter: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+
+

@@ -21,6 +21,8 @@ navbar:
           href: TE2.html
         - text: "TE3"
           href: TE3.html
+        - text: "TE4"
+          href: TE4.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github
