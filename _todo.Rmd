@@ -41,32 +41,29 @@ Creo que esta actividad es candidata a eliminar en próximas ediciones. Tal vez,
 
 # TE3
 
-Se plantean uan presentacion introducce a los patrones + actividad POGIL para SIngleton + presentación de Factory Method (con pregutnas a grupos). El HW asociado es uan conctinuaci de la presentacion de Factory Method
+Se plantean uan presentacion de introducción a los patrones + actividad POGIL para SIngleton + presentación de Factory Method (con preguntas a grupos). El HW asociado es una continuación de la presentacion de Factory Method.
 
-
+Otra vez falta de tiempo. La segunda presentación sobre Factory Method fue demasiado rápida. No es posible realizar tres actividades en una misma sesión (2 presentaciones + 1 POGIL o 2 POGIL + 1 presentación). Solución es incluir una actividad de cada tipo en cada sesión.
 
 # TE4
 
-Intercalar preguntas durante la presentacion  de Facada, com opor ejemplo
+Intercalar preguntas durante la presentacion de Facade, com opor ejemplo
 
 Q1: What are the two conditions required for you to use the facade design pattern?
 
-- You need a class to translate messages between two existing subsystems because one is expecting a specific interface to use but is provided with an interface that is incompatible.
-- You need to simplify the interaction with your subsystem for client classes. (C)
-- You need a class to act as an interface between your subsystem and a client class. (C)
-- You need a class to that will instantiate other classes within your system and provide these instances to a client class.
+-   You need a class to translate messages between two existing subsystems because one is expecting a specific interface to use but is provided with an interface that is incompatible.
+-   You need to simplify the interaction with your subsystem for client classes. (C)
+-   You need a class to act as an interface between your subsystem and a client class. (C)
+-   You need a class to that will instantiate other classes within your system and provide these instances to a client class.
 
 Q2: What are the key design principles are used to implement the facade design pattern?
 
-- Information hiding, encapsulation, generalization, coupling
-- Inheritance, information hiding, separation of concerns, generalization
-- Encapsulation, information hiding, separation of concerns (C)
-- Encapsulation, implementing interfaces, information hiding, inheritance
+-   Information hiding, encapsulation, generalization, coupling
+-   Inheritance, information hiding, separation of concerns, generalization
+-   Encapsulation, information hiding, separation of concerns (C)
+-   Encapsulation, implementing interfaces, information hiding, inheritance
 
-
-Facade puede esocndar un Interface. Platear como ejercio que esconda varias intrefaces?
-Puede combinar Singleton con Facade
-
+Facade puede esconder una Interface. Plantear como ejercicio que esconda varias interfaces? ¿Puedes combinar Singleton con Facade?
 
 # Acciones para proximas ediciones
 

@@ -61,8 +61,7 @@ background-size: contain
 
 
 ???
-
-Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/adapter)
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/adapter)
 
 
 ---
@@ -70,7 +69,7 @@ class: inverse, center, middle
 
 # Adapter Pattern
 
-## convierte interfaces incompatibles entre objetos en .coldinline[compatibles]
+## objetos con interfaces .heatinline[incompatibles] pasen a ser .coldinline[compatibles]
 
 --
 
@@ -87,33 +86,158 @@ class: inverse, center, middle
 ---
 # Adapter: Problema
 
+### Objetos con interfaces incompatibles no pueden comunicarse directamente
+
+### Salida de un sistema/objeto `r fontawesome::fa(name = "not-equal")` entrada de otro sistema/objeto
+
+
+---
+# Adapter: Problema
+
+.large[Desde tu código, deseas llamar a un servicio web con interfaces incompatibles (_payload_ en JSON)]
+
+--
+
+.pull-left[
+```{java }
+public class Client {
+  
+  public void doLocalAnalysis(XML data) {}
+
+}
+```
+]
+
+
+.pull-right[
+```{java }
+public class WebService {
+  
+  public int doBetterAnalysis(Json request) {}
+
+}
+```
+
+]
+
+
+---
+# Adapter: Problema
+
+.large[Aha!, modifico la clase cliente...]
+
+.pull-left[
+```{java }
+public class Client {
+  
+  public void doLocalAnalysis(XML data) {}
+  
+  public int doBetterAnalysisWS(XML data) { #<<
+    // Conversion de XML a JSON #<<
+    // Lamada al Web Service #<<
+  } #<<
+
+}
+```
+
+]
+
+.pull-right[
+```{java }
+public class WebService {
+  
+  public int doBetterAnalysis(Json request) {}
+
+}
+```
+
+]
+
+???
+
+Una solución rápida es cambiar la clase cliente para que pueda llamar al servico web externo directamente
+
+
+---
+class: middle, center
+# `r emo::ji("angry")`
+
+--
+
+### `r fontawesome::fa(name = "yin-yang")` Encapsula lo que varía y sepáralo de lo que no cambia
+
+
+### `r fontawesome::fa(name = "yin-yang")` Programa a una interfaz, no a una implementación
+
+
+### `r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero cerradas a la modificación
+
+
+???
+La solución rápida rompe principios básicos de diseño.
 
 ---
 # Adapter: Solución
+
+### Un _adaptador_ envuelve la interfaz de un objeto (`Service`), de forma que otro objeto (`Client`) pueda utilizarla
+
+### `Client` y `Service` están completamente _desacoplados_
+
+--
+
+> 1. .large[Crea una interfaz que utilizará el cliente `Client`]
+
+> 2. .large[Implementa dicha interfaz con una clase `Adapter`]
+
+> 3. .large[La clase `Adapter` se comunica con `Service`, siendo transparente para `Client`] 
 
 
 ---
 # Adapter: Estructura
 
 
-.pull-left[
+<img src="images/DivingDesingPatterns05.png" width="90%"/>
 
-<img src="images/DivingDesingPatterns05.png" width="100%"/>
-]
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/adapter)
 
-.pull-right[
+---
+# `r fontawesome::fa(name = "question")`
+
+## ¿Qué tipo de clase es `Adapter`?
+
+.large[__A__ Una clase `Wrapper`]
 
 
-]
+.large[__B__ Una clase `Superclass`]
 
+
+.large[__C__ Una clase `Interface`]
+
+
+.large[__D__ Una clase `Abstract`]
+
+???
+The adapter essentially encapsulates the adaptee and presents a new interface to the client class. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client
 
 ---
 # Adapter: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
-
---
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando incorporas clases existente de terceros (libreria, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
 
 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas transformación de datos, formatos, etc. entre objetos] 
+
+
+---
+# Resumen
+
+### El patrón Adapter....
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` envuelve la clase adaptada y expone una interfaz al cliente]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cambia indirectamente la interfaz de la clase adaptada a una que el cliente comprende, implementando la nueva interfaz]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` traduce indirectamente la solicitud del cliente en una que la clase adaptada espera]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` reutiliza una clase adaptada existente que tiene una interfaz incompatible]

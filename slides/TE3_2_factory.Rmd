@@ -507,6 +507,9 @@ public class EuropeKnifeStore()
 
 ]
 
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/factory-method)
+
 
 ---
 # Factory Method: Estructura
@@ -524,6 +527,8 @@ public class EuropeKnifeStore()
 .large[__ConcreteCreators__ (`EuropeKnifeStore`) sobreescriben el Factory Method de la superclase]
 ]
 
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/factory-method)
 
 ---
 # Factory Method: Aplicabilidad
