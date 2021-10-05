@@ -56,13 +56,16 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
 
 ---
 class: inverse, center, middle
-background-image: url(images/DivingDesingPatterns06.png)
-background-size: contain
+background-image: url(images/rawpixel/juneau-alaska.jpg)
+background-size: cover
 
 
 ???
 
-Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/facade)
+Los escaparates de las tiendas actúan como facade, proporcionando una interfaz más simple al comprador. También los comerciales de empresas, que esconden toda la complejidad de ofrecer un serivio o producto a un cliente
+
+The City and Borough of Juneau, commonly known as Juneau, is the capital city of Alaska. Located in the Gastineau Channel and the Alaskan panhandle
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/4022785)
 
 
 ---
@@ -70,7 +73,7 @@ class: inverse, center, middle
 
 # Facade Pattern
 
-## proporciona una .coldinline[interfaz simplificada] a un subsistema complejo de clases
+## proporciona .coldinline[una interfaz simplificada] a un subsistema complejo de clases
 
 --
 
@@ -87,25 +90,77 @@ class: inverse, center, middle
 ---
 # Facade: Problema
 
+### Código client interactúa con un subsistema complejo de objetos
+
+### Complejidad del subsistema es visible 
+
+### Código cliente está fuertemente acoplado a la implementación del subsistema 
+
+
+---
+background-image: url(images/HeadFirstDesingPatterns01.png)
+background-size: contain
+
+
+???
+
+Home Cinema example `r Cite(my_refs, "freeman2004")` 
+
+
+---
+background-image: url(images/HeadFirstDesingPatterns02.png)
+background-size: contain
+
+???
+
+Home Cinema example `r Cite(my_refs, "freeman2004")` 
 
 ---
 # Facade: Solución
+
+### Un _facade_ altera una interfaz para simplificar la interacción con un subsistema complejo
+
+### Un _facade_ es un punto de aceso único al subsistema sin añadir más funcionalidad
+
+--
+
+> 1. .large[Crea una interfaz, con funcionalidad limitada/necesaria para no interacturar con todo el subsistema]
+
+> 2. .large[Implementa dicha interfaz con una o más clases]
+
+> 3. .large[Crea la clase `Facade`, para acceder al subsistema]
+
 
 
 ---
 # Facade: Estructura
 
 
-.pull-left[
+<img src="images/DivingDesingPatterns07.png" width="75%"/>
 
-<img src="images/DivingDesingPatterns07.png" width="100%"/>
-]
-
-.pull-right[
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/facade)
 
 
-]
+---
+# `r fontawesome::fa(name = "question")`
 
+
+## ¿Cualés son las dos condiciones para usar un patrón Facade?
+
+.large[__A__ Necesitas una clase que encapsule la complejidad de un subsistema]
+
+
+.large[__B__ Necesitas simplificar la interacción con un subsistema para las clases cliente.]
+
+
+.large[__C__ Necesita una clase que actúe como interfaz entre un subsistema y las clases cliente]
+
+
+.large[__D__ Necesitas una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
+
+???
+0110 
 
 ---
 # Facade: Aplicabilidad
@@ -117,3 +172,18 @@ class: inverse, center, middle
 .large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
 
 
+
+---
+# Resumen
+
+### El patrón Facade....
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona acceso a una parte específica de la funcionalidad del subsistema]
+ 
+
+---
+# Referencias
+
+```{r print_refs1, echo=FALSE, results="asis"}
+PrintBibliography(my_refs, start = 1, end = 2)
+```

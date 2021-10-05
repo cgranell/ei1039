@@ -51,7 +51,7 @@ class: inverse, center, middle
 
 # Adapter Pattern
 
-## objetos con interfaces .heatinline[incompatibles] pasen a ser .coldinline[compatibles]
+## objetos con interfaces .heatinline[incompatibles] pasan a ser .coldinline[compatibles]
 
 --
 
@@ -167,7 +167,7 @@ La solución rápida rompe principios básicos de diseño.
 
 ### Un _adaptador_ envuelve la interfaz de un objeto (`Service`), de forma que otro objeto (`Client`) pueda utilizarla
 
-### `Client` y `Service` están completamente _desacoplados_
+### Un _adaptador_ se sitúa entre `Client` y `Service`, los cuales están completamente _desacoplados_
 
 --
 
@@ -204,7 +204,8 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__D__ Una clase `Abstract`]
 
 ???
-The adapter essentially encapsulates the adaptee and presents a new interface to the client class. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client
+Sí, solucion aquí: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cleitn. No es una interfaz en sí mismo
+
 
 ---
 # Adapter: Aplicabilidad
