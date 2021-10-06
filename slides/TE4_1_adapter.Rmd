@@ -218,17 +218,36 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__D__ Una clase `Abstract`]
 
 ???
-Sí, solucion aquí: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cleitn. No es una interfaz en sí mismo
+
 
 
 ---
 # Adapter: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando incorporas clases existente de terceros (libreria, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando incorporas clases existente de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
 
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas transformación de datos, formatos, etc. entre objetos] 
 
+
+
+---
+# `r fontawesome::fa(name = "question")`
+
+## Los beneficios del patrón `Adapter` son
+
+.large[__A__ Relaciona el cliente a una interfaz, no a una implementación]
+
+
+.large[__B__ La clase existente adaptada no cambia]
+
+
+.large[__C__ Limita la propagación de efectos secundarios ya qeu no se descompone el cliente]
+
+
+.large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
+
+???
 
 ---
 # Resumen

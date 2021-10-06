@@ -284,6 +284,8 @@ class: left
 ???
 Reduce complejidad: Si una clase hace demasiadas cosas, hay que cambiarla cada vez que una de esas cosas cambia
 
+[https://stackify.com/solid-design-principles/](https://stackify.com/solid-design-principles/)
+
 ---
 class: left
 
@@ -303,6 +305,8 @@ a la modificación]
 
 Abierta y cerrada no son mutuamente excluyentes. Una clase puede estar al mismo tiempo abierta (para la extensión) y cerrada (para la modificación). El código simple es tanto abierto y cerrado.
 
+[https://stackify.com/solid-design-open-closed-principle/](https://stackify.com/solid-design-open-closed-principle/)
+
 ---
 class: left
 
@@ -319,6 +323,8 @@ class: left
 
 Escribe abstracciones nítidas y bien definidas. 
 
+[https://stackify.com/solid-design-liskov-substitution-principle/](https://stackify.com/solid-design-liskov-substitution-principle/)
+
 
 ---
 class: left
@@ -329,6 +335,10 @@ class: left
 .large[`r fontawesome::fa(name = "arrow-circle-right")` No se debe forzar a los clientes a depender de métodos que no utilizan]
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` Si una interfaz es demasiado grande, conviene fraccionarla en varias interfaces más pequeñas]
+
+???
+
+[https://stackify.com/interface-segregation-principle/](https://stackify.com/interface-segregation-principle/)
 
 ---
 class: left
@@ -343,6 +353,7 @@ Clases de bajo nivel implementan operaciones básicas como transferir datos por 
 
 Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
 
+[https://stackify.com/dependency-inversion-principle/](https://stackify.com/dependency-inversion-principle/)
 
 ---
 # Resumen

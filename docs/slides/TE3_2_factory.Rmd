@@ -373,7 +373,7 @@ Beneficio: Código más fácil de modificar
 class: center, middle
 
 
-# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_dise%C3%B1o.html#29)]
+# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#29)]
 
 --
 

@@ -69,7 +69,7 @@ class: inverse, center, middle
 
 # Adapter Pattern
 
-## objetos con interfaces .heatinline[incompatibles] pasen a ser .coldinline[compatibles]
+## objetos con interfaces .heatinline[incompatibles] pasan a ser .coldinline[compatibles]
 
 --
 
@@ -181,7 +181,7 @@ La solución rápida rompe principios básicos de diseño.
 
 ### Un _adaptador_ envuelve la interfaz de un objeto (`Service`), de forma que otro objeto (`Client`) pueda utilizarla
 
-### `Client` y `Service` están completamente _desacoplados_
+### Un _adaptador_ se sitúa entre `Client` y `Service`, los cuales están completamente _desacoplados_
 
 --
 
@@ -218,16 +218,36 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__D__ Una clase `Abstract`]
 
 ???
-The adapter essentially encapsulates the adaptee and presents a new interface to the client class. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client
+
+
 
 ---
 # Adapter: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando incorporas clases existente de terceros (libreria, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando incorporas clases existente de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
 
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas transformación de datos, formatos, etc. entre objetos] 
 
+
+
+---
+# `r fontawesome::fa(name = "question")`
+
+## Los beneficios del patrón `Adapter` son
+
+.large[__A__ Relaciona el cliente a una interfaz, no a una implementación]
+
+
+.large[__B__ La clase existente adaptada no cambia]
+
+
+.large[__C__ Limita la propagación de efectos secundarios ya qeu no se descompone el cliente]
+
+
+.large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
+
+???
 
 ---
 # Resumen

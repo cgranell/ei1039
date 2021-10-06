@@ -90,7 +90,7 @@ class: inverse, center, middle
 ---
 # Facade: Problema
 
-### Código client interactúa con un subsistema complejo de objetos
+### Código cliente interactúa con un subsistema complejo de objetos
 
 ### Complejidad del subsistema es visible 
 
@@ -118,19 +118,17 @@ Home Cinema example `r Cite(my_refs, "freeman2004")`
 ---
 # Facade: Solución
 
-### Un _facade_ altera una interfaz para simplificar la interacción con un subsistema complejo
+### Un _facade_ crea una interfaz que simplifica la interacción con un subsistema complejo
 
-### Un _facade_ es un punto de aceso único al subsistema sin añadir más funcionalidad
+### Un _facade_ es un punto de aceso único al subsistema sin añadir más funcionalidad/comportamiento al subsistema
 
 --
 
-> 1. .large[Crea una interfaz, con funcionalidad limitada/necesaria para no interacturar con todo el subsistema]
+> 1. .large[Crea una interfaz (más simple que la del subsistema]
 
-> 2. .large[Implementa dicha interfaz con una o más clases]
+> 2. .large[Crea la clase `Facade` que implementa dicha interfaz]
 
-> 3. .large[Crea la clase `Facade`, para acceder al subsistema]
-
-
+> 3. .large[Delega la implementación de los métodos de la clase `Facade` al subsistema]
 
 ---
 # Facade: Estructura
@@ -146,32 +144,54 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 # `r fontawesome::fa(name = "question")`
 
 
-## ¿Cualés son las dos condiciones para usar un patrón Facade?
+## ¿Qué dos condiciones se requieren para usar un patrón `Facade`?
 
-.large[__A__ Necesitas una clase que encapsule la complejidad de un subsistema]
+.large[__A__ Necesita una clase que encapsule la complejidad de un subsistema]
 
 
-.large[__B__ Necesitas simplificar la interacción con un subsistema para las clases cliente.]
+.large[__B__ Necesita simplificar la interacción con un subsistema para las clases cliente]
 
 
 .large[__C__ Necesita una clase que actúe como interfaz entre un subsistema y las clases cliente]
 
 
-.large[__D__ Necesitas una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
+.large[__D__ Necesita una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
 
 ???
-0110 
+
 
 ---
 # Facade: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas simplificar una interfaz grande o varias interfaces complejas] 
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas disponer de un único objeto que representa un subsistema completo]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas estructurar un subsistema en capas lógicas, donde cada facade define un punto de acceso a un capa distinta (_domain-driven partition_)]
 
 
+---
+# `r fontawesome::fa(name = "question")`
+
+
+## ¿Qué principios definen la implementaion del patrón `Facade`?
+
+.large[__A__ Ocultación de información, encapsulación, generalización, desacoplamiento]
+
+
+.large[__B__ Herencia, ocultación de información, separación de intereses, generalización]
+
+
+.large[__C__ Desacoplamiento, ocultación de información, separación de intereses]
+
+
+.large[__D__ Encapsulación, implementación de interfaces, ocultación de información, herencia]
+
+???
 
 ---
 # Resumen
@@ -180,10 +200,11 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona acceso a una parte específica de la funcionalidad del subsistema]
  
+.large[`r fontawesome::fa(name = "arrow-circle-right")` TODO]
 
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 2)
+PrintBibliography(my_refs, start = 1, end = 1)
 ```

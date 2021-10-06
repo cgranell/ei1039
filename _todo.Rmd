@@ -47,21 +47,17 @@ Otra vez falta de tiempo. La segunda presentación sobre Factory Method fue dema
 
 # TE4
 
-Intercalar preguntas durante la presentacion de Facade, com opor ejemplo
+Adapter slides.
 
-Q1: What are the two conditions required for you to use the facade design pattern?
+Q1: Sí, solucion aquí: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo
 
--   You need a class to translate messages between two existing subsystems because one is expecting a specific interface to use but is provided with an interface that is incompatible.
--   You need to simplify the interaction with your subsystem for client classes. (C)
--   You need a class to act as an interface between your subsystem and a client class. (C)
--   You need a class to that will instantiate other classes within your system and provide these instances to a client class.
+Q2: 1111
 
-Q2: What are the key design principles are used to implement the facade design pattern?
+Facade slides
 
--   Information hiding, encapsulation, generalization, coupling
--   Inheritance, information hiding, separation of concerns, generalization
--   Encapsulation, information hiding, separation of concerns (C)
--   Encapsulation, implementing interfaces, information hiding, inheritance
+Q1: 0110
+
+Q2: 0010
 
 Facade puede esconder una Interface. Plantear como ejercicio que esconda varias interfaces? ¿Puedes combinar Singleton con Facade?
 
