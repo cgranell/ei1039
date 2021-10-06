@@ -73,9 +73,8 @@ class: inverse, center, middle
 
 # Facade Pattern
 
-## proporciona .coldinline[una interfaz simplificada] a un subsistema complejo de clases
 
---
+.large[Propósito]
 
 .large[Problema]
 
@@ -85,6 +84,12 @@ class: inverse, center, middle
 
 .large[Aplicabilidad]
 
+
+---
+class: center, middle
+# Facade: Propósito
+
+## proporciona .coldinline[una interfaz simplificada] a un subsistema complejo de clases
 
 
 ---
@@ -98,13 +103,11 @@ class: inverse, center, middle
 
 
 ---
+class: top, right 
 background-image: url(images/HeadFirstDesingPatterns01.png)
 background-size: contain
 
-
-???
-
-Home Cinema example `r Cite(my_refs, "freeman2004")` 
+Home Cinema `r Cite(my_refs, "freeman2004")` 
 
 
 ---
@@ -124,11 +127,11 @@ Home Cinema example `r Cite(my_refs, "freeman2004")`
 
 --
 
-> 1. .large[Crea una interfaz (más simple que la del subsistema]
+> 1. .large[Crea una interfaz (más simple que la del subsistema)]
 
 > 2. .large[Crea la clase `Facade` que implementa dicha interfaz]
 
-> 3. .large[Delega la implementación de los métodos de la clase `Facade` al subsistema]
+> 3. .large[Delega la implementación de la clase `Facade` al subsistema]
 
 ---
 # Facade: Estructura
@@ -141,10 +144,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 
 ---
-# `r fontawesome::fa(name = "question")`
-
-
-## ¿Qué dos condiciones se requieren para usar un patrón `Facade`?
+# `r fontawesome::fa(name = "question-circle")` ¿Qué dos condiciones se requieren para usar un patrón `Facade`?
 
 .large[__A__ Necesita una clase que encapsule la complejidad de un subsistema]
 
@@ -167,7 +167,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas disponer de un único objeto que representa un subsistema completo]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando hay muchas dependencias entre clientes y las clases del subsistema]
 
 --
 
@@ -175,10 +175,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 
 ---
-# `r fontawesome::fa(name = "question")`
-
-
-## ¿Qué principios definen la implementaion del patrón `Facade`?
+# `r fontawesome::fa(name = "question-circle")` ¿Qué principios definen la implementación del patrón `Facade`?
 
 .large[__A__ Ocultación de información, encapsulación, generalización, desacoplamiento]
 
@@ -198,9 +195,15 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 ### El patrón Facade....
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona acceso a una parte específica de la funcionalidad del subsistema]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona una interfaz simplificada a la funcionalidad del subsistema]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` delega las peticiones de los clientes a los objetos correspondientes del subsistema]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` TODO]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` desacopla clases clientes de la implementación del subsistema]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade.]
+
+
 
 ---
 # Referencias
