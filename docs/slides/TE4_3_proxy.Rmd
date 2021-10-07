@@ -56,13 +56,17 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
 
 ---
 class: inverse, center, middle
-background-image: url(images/DivingDesingPatterns08.png)
+background-image: url(images/rawpixel/dummies.jpg)
 background-size: contain
 
 
 ???
+Se utilizan maniquíes de prueba (dummies) en lugar de personaspara las pruebas de colisión de vehículos.
+Las tarjeta de crédito son una forma de pago aceptable en lugar de efectivo.
 
-Image credits: [Rawpixel.com](https://refactoring.guru/es/design-patterns/proxy)
+
+Controlled Impact Demonstration instrumented test dummies installed in plane. Original from NASA.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/440073/)
 
 
 ---
@@ -70,9 +74,7 @@ class: inverse, center, middle
 
 # Proxy Pattern
 
-## proporciona una .coldinline[interfaz sustituta] para acceder (indirectamente) a otro objeto
-
---
+.large[Propósito]
 
 .large[Problema]
 
@@ -82,38 +84,108 @@ class: inverse, center, middle
 
 .large[Aplicabilidad]
 
+---
+class: center, middle
+
+# Proxy: Propósito
+
+## gestiona y controla el acceso a un objeto mediante una .coldinline[interfaz sustituta]
 
 
 ---
 # Proxy: Problema
 
+### Acceso a un objeto que contiene y/o trata con información sensible
+
+### Acceso a un objeto que consume gran cantidad de recursos (almacenamiento cache)
+
+### Acceso a un objeto remoto en local
 
 ---
 # Proxy: Solución
 
+### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
 
----
-# Proxy: Estructura
-
-
-.pull-left[
-
-<img src="images/DivingDesingPatterns09.png" width="100%"/>
-]
-
-.pull-right[
-
-
-]
-
-
----
-# Facade: Aplicabilidad
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder el objeto
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` ] 
+> 1. .large[Crea la interfaz común (objeto y proxy)]
 
+> 2. .large[`Proxy` implementa la interfaz y guarda una referencia al objeto original]
+
+> 3. .large[Delega las peticiones al objeto original]
+
+
+
+---
+class: left, top
+background-image: url(images/DivingDesingPatterns09.png)
+background-size: contain
+
+# Proxy: 
+# Estructura
+
+
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/proxy)
+
+
+
+---
+# `r fontawesome::fa(name = "question-circle")` ¿Cualés son ciertas según el diagrama UML del patrón `Proxy`?
+
+.large[__A__ `Proxy` y `Service` son subtipos de `ServiceInterface`]
+
+
+.large[__B__ Logra polimorfismo implementando la interfaz `ServiceInterface`]
+
+
+.large[__C__ `Service` conoce `Proxy`, lo que significa que la clase `Service` tiene un atributo que se refiere a una instancia de `Proxy`]
+
+
+.large[__D__ No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
+
+???
+
+
+---
+# Proxy: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados (pedidos a centros logístico más cercanos)] (p.e., firewall)
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas un objeto que utliza muchos recursos, puedes crea una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas acceder a un objeto __remoto__ como si fuera local] (p.e. encapsula comunicación en red con el objeto remoto)
+
+---
+# `r fontawesome::fa(name = "question-circle")` Las responsabilidades del patrón `Proxy` son
+
+.large[__A__ Implementar las tareas de la clase `Service`]
+
+
+.large[__B__ Proteger a la clase `Service`, comprobadno las solicitudes del cliente y el acceso a dicha clase]
+
+
+.large[__C__ Envolver a la clase `Service`]
+
+
+.large[__D__ Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
+
+???
+
+---
+# Resumen
+
+### El patrón Proxy...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` "representa" al o "camufla" el objeto original]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
+ 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` verifica, controla o registra las peticiones de los clientes al objeto original]
 

@@ -131,7 +131,7 @@ Home Cinema example `r Cite(my_refs, "freeman2004")`
 
 > 2. .large[Crea la clase `Facade` que implementa dicha interfaz]
 
-> 3. .large[Delega la implementación de la clase `Facade` al subsistema]
+> 3. .large[Delega las peticiones a la clase `Facade` al subsistema]
 
 ---
 # Facade: Estructura
@@ -201,7 +201,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
  
 .large[`r fontawesome::fa(name = "arrow-circle-right")` desacopla clases clientes de la implementación del subsistema]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade.]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade]
 
 
 

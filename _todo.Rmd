@@ -61,6 +61,12 @@ Q2: 0010
 
 Facade puede esconder una Interface. Plantear como ejercicio que esconda varias interfaces? ¿Puedes combinar Singleton con Facade?
 
+Proxy slides
+
+Q1: 1100
+
+Q2. 0110
+
 # Acciones para proximas ediciones
 
 -   Crear (entre el alumnado) fichas resumen de los patrones con una estructura común:
