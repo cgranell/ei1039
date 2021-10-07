@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [25 min] **Revisión:** HW3
 
--   [30 min] Presentacion: [Adapter pattern](slides/TE4_1_adapter.html), [Facade pattern](slides/TE4_2_facade.html) and [Proxy pattern](slides/TE4_3_proxy.html)
+-   [30 min] **Presentación**: [Adapter pattern](slides/TE4_1_adapter.html), [Facade pattern](slides/TE4_2_facade.html) and [Proxy pattern](slides/TE4_3_proxy.html)
 
 -   [50 min] **Actividad POGIL**: Adapter-Facade-Proxy patterns
 
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4604142)
 
 -   [5 min] **Closing**
 

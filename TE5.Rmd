@@ -1,0 +1,28 @@
+---
+title: "TE5 Patrones estructurales"
+description: |
+  Composite y Decorator Patterns.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Organización clase
+
+-   [15 min] **Opening**
+
+-   [40 min] **Presentación**: Composite pattern y Decorator pattern
+
+-   [60 min] **Actividad POGIL**: Composite-Decorator patterns
+
+    -   Grupos de 4-5 personas
+
+    -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
+
+    -   Actividad POGIL (AV)
+
+-   [5 min] **Closing**
+
+## 

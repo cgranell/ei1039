@@ -244,7 +244,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__B__ La clase existente adaptada no cambia]
 
 
-.large[__C__ Limita la propagación de efectos secundarios ya qeu no se descompone el cliente]
+.large[__C__ Limita la propagación de efectos secundarios ya que no se descompone el cliente]
 
 
 .large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
