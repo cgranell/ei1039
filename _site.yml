@@ -15,13 +15,13 @@ navbar:
       href: syllabus.html
     - text: "Sesiones"
       menu:
-        - text: "TE1"
+        - text: "TE1 Arquitectura software"
           href: TE1.html
-        - text: "TE2"
+        - text: "TE2 Arquitectura software"
           href: TE2.html
-        - text: "TE3"
+        - text: "TE3 Singleton & Factory Method"
           href: TE3.html
-        - text: "TE4"
+        - text: "TE4 Adapter, Facade & Proxy"
           href: TE4.html
     - text: "Referencias"
       href: references.html
