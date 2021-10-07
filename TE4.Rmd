@@ -1,5 +1,5 @@
 ---
-title: "TE3 Patrones estructurales"
+title: "TE4 Patrones estructurales"
 description: |
   Adapter, Facade y Proxy Patterns.
 output: distill::distill_article
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [15 min] **Revisión:** HW3
+-   [25 min] **Revisión:** HW3
 
 -   [30 min] Presentacion: [Adapter pattern](slides/TE4_1_adapter.html), [Facade pattern](slides/TE4_2_facade.html) and [Proxy pattern](slides/TE4_3_proxy.html)
 
@@ -25,6 +25,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Actividad POGIL (AV)
 
--   [15 min] **Closing:** Intro HW3
+-   [5 min] **Closing**
 
 ## 
