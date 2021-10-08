@@ -17,7 +17,7 @@ Siguiendo la línea del método investigacion-acción para la mejora docente con
 
 ## Acciones de mejora
 
--   Replantear HW1? en base a la activida POGIL de arquitectrua kata
+-   Replantear HW1? en base a la actividad POGIL de arquitectrua kata
 
 # TE2
 
@@ -43,7 +43,15 @@ Creo que esta actividad es candidata a eliminar en próximas ediciones. Tal vez,
 
 Se plantean uan presentacion de introducción a los patrones + actividad POGIL para SIngleton + presentación de Factory Method (con preguntas a grupos). El HW asociado es una continuación de la presentacion de Factory Method.
 
-Otra vez falta de tiempo. La segunda presentación sobre Factory Method fue demasiado rápida. No es posible realizar tres actividades en una misma sesión (2 presentaciones + 1 POGIL o 2 POGIL + 1 presentación). Solución es incluir una actividad de cada tipo en cada sesión.
+Otra vez falta de tiempo. La segunda presentación sobre Factory Method fue demasiado rápida. No es posible realizar tres actividades en una misma sesión (2 presentaciones + 1 POGIL o 2 POGIL + 1 presentación). Solución es incluir una actividad de cada tipo en cada sesión. ¿En que orden? Me parece que mejor forma es primero presentacion, seguida de actividad POGIL
+
+## POGIL - Singleton
+
+Las preguntas son muy simples. pero el ejercicio de desarrollo hace que el timpo previsto se queda corto. Tal vez porque es la primera vez qeu paper rol de programador. Para la proxima edicion, la estructura de la sesion puede ser: presentación de Singleton + Factory methods, seguoid de actividad pogicl combinada para los dos patrones. Aun queda el problema de programar. Utilizar editor cloud? Para los scripts/clases de los actividades parece posible. De todoas forma, anticipar mecanismo para la programacion antes de la actividad, para que los estudiantes vengan preparados y no pierdan tiempo.
+
+## HW3 - Factory Method
+
+Errores comunes - diagrama UML no refleja las relaciones entre clases. Interfaz con todas sus implementaciones (implements) con flechas discontinuas y con la punta blanca sin relleno. Clase abstracta y sus implementaciones (extends) con flechas continuas con la punta blanca sin relleno. Composición con flecha discontinua con punta simple
 
 # TE4
 

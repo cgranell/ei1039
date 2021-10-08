@@ -15,6 +15,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [25 min] **Revisión:** HW3
 
+    > -   En general, implementación correcta.
+
+    > -   [Diagrama UML](slides/images/students/HW3-UML.png) no siempre se corresponde con el código propuesto: relaciones interfaz-implementación (`implements`), relaciones clase abstracta-implementación (`extends`), relaciones entre clases (dependencia, asociación)
+    > -  ¿Propósito [Factory Method](https://cgranell.github.io/ei1039/slides/TE3_2_factory.html#25)?  Una abstracción define un método de creación común, pero las subclases pueden modifican los objetos creados. Método de creación unificada, pero objetos resultados distintos.
+
 -   [30 min] **Presentación**: [Adapter pattern](slides/TE4_1_adapter.html), [Facade pattern](slides/TE4_2_facade.html) and [Proxy pattern](slides/TE4_3_proxy.html)
 
 -   [50 min] **Actividad POGIL**: Adapter-Facade-Proxy patterns
