@@ -55,25 +55,13 @@ Errores comunes - diagrama UML no refleja las relaciones entre clases. Interfaz 
 
 # TE4
 
-Adapter slides.
-
-Q1: Sí, solucion aquí: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo
-
-Q2: 1111
-
-Facade slides
-
-Q1: 0110
-
-Q2: 0010
+Se plantea como revisión + presentación contenido en la primera hora. Luego, actividad POGIL en la segunda hora. El ritmo de la clase ha ido mejor, aunque siempre acumulo retraso sy siempre lo paga la actividad POGIL.
 
 Facade puede esconder una Interface. Plantear como ejercicio que esconda varias interfaces? ¿Puedes combinar Singleton con Facade?
 
-Proxy slides
+# TE5
 
-Q1: 1100
-
-Q2. 0110
+Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la TE4. Corregidla en clase. Luego, presentacion de los patrones COmposite + Decorator., seguida de una actividad POGIL sobre el composite (mas otros patrones vistos anteriormente), y como HW, una actvidad sobre el Decorator.
 
 # Acciones para proximas ediciones
 

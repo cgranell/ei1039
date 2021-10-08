@@ -88,7 +88,7 @@ class: center, middle
 
 ### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
 
-### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder el objeto
+### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder al objeto
 
 --
 
@@ -129,16 +129,16 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/pr
 .large[__D__ No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
 
 ???
-
+1100
 
 ---
 # Proxy: Aplicabilidad
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados (pedidos a centros logístico más cercanos)] (p.e., firewall)
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados] (p.e. pedidos a centros logísticos más cercanos, firewall)
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Cuando necesitas un objeto que utliza muchos recursos, puedes crea una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Si un objeto utiliza muchos recursos, puedes crear una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
 
 --
 
@@ -159,6 +159,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/pr
 .large[__D__ Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
 
 ???
+0110
 
 ---
 # Resumen

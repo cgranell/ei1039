@@ -222,7 +222,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__D__ Una clase `Abstract`]
 
 ???
-
+1000: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo
 
 
 ---
@@ -250,6 +250,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
 
 ???
+1111
 
 ---
 # Resumen

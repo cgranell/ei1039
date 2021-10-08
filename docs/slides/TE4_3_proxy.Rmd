@@ -106,7 +106,7 @@ class: center, middle
 
 ### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
 
-### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder el objeto
+### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder al objeto
 
 --
 
@@ -147,16 +147,16 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/pr
 .large[__D__ No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
 
 ???
-
+1100
 
 ---
 # Proxy: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados (pedidos a centros logístico más cercanos)] (p.e., firewall)
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados] (p.e. pedidos a centros logísticos más cercanos, firewall)
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas un objeto que utliza muchos recursos, puedes crea una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Si un objeto utiliza muchos recursos, puedes crear una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
 
 --
 
@@ -177,6 +177,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/pr
 .large[__D__ Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
 
 ???
+0110
 
 ---
 # Resumen

@@ -158,7 +158,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 .large[__D__ Necesita una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
 
 ???
-
+0110
 
 ---
 # Facade: Aplicabilidad
@@ -189,6 +189,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 .large[__D__ Encapsulación, implementación de interfaces, ocultación de información, herencia]
 
 ???
+0010
 
 ---
 # Resumen
