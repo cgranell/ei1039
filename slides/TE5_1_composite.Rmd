@@ -1,0 +1,176 @@
+---
+title: "[TE5_1] Patrones Estructurales"
+subtitle: "Composite pattern"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: middle, center
+background-image: url(images/rawpixel/brooklyn-bridge.jpg)
+background-size: cover
+
+# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+
+### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+
+
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+
+
+???
+
+Brooklyn Bridge, New York City, United States. Original public domain image from Wikimedia Commons
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
+
+---
+class: inverse, center, middle
+background-image: url(images/DivingDesingPatterns10.png)
+background-size: contain
+
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/composite)
+
+
+---
+class: inverse, center, middle
+
+# Composite Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Composite: Propósito
+
+## compone objetos en estructuras anidadas (árbol) y trata los objetos de forma .coldinline[uniforme]
+
+
+---
+# Composite: Problema
+
+### Tenemos estructuras complejas de objetos que _pueden_ modelarse en forma de árbol (menús de un restaurante, playlist de canciones, hilos de comentarios, etc.)
+
+### Queremos aplicar las mismas operaciones sobre las composiciones de objetos y los objetos individuales
+
+### Queremos obviar las diferencias entre objetos, tratarlos de forma uniforme 
+
+---
+# Composite: Solución
+
+### Un _composite_ crea una interfaz (`interface` o `abstract class`) común para las composiciones de objetos (nodos) y los objetos individuales (hojas)
+
+### Un _composite_ usa polimorfirmo, ya que todas las clases que implementan la interfaz común tienen el mismo comportamiento (subtipos de la interfaz común)
+
+### El cliente usa la interfaz común para manipular cualquier objeto, sin tener que comprobar su  tipo
+
+
+---
+class: right, top
+background-image: url(images/DivingDesingPatterns11.png)
+background-size: contain
+
+# Composite: Estructura
+
+
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/composite)
+
+La agregación (tipo especializado de asociación) representa relaciones “uno a muchos”, “muchos a muchos” o “todo a parte” entre múltiples objetos. Aquí, jerarquías "todo-parte"
+
+`Component` puede ser interfaz o clase abstracta. Lo segundo permite definir comportamientos por defacto de los métodos base
+
+Recursividad: Un `Composite` contiene elementos `Component` y un `Component` pueden ser `Leaf` o `Composite`. 
+
+
+---
+class: top, right 
+background-image: url(images/HeadFirstDesingPatterns03.png)
+background-size: contain
+
+Menus `r Cite(my_refs, "freeman2004")` 
+
+---
+# `r fontawesome::fa(name = "question-circle")` ¿Cualés son ciertas según el diagrama UML del patrón `Composite`?
+
+
+.large[__A__ La clase `Composite` es capaz de agregar clases `Component`, lo que creará una estructura en forma de árbol.]
+
+
+.large[__B__ La clase `Leaf` hereda de la clase `Composite`, lo que permite que `Leaf` tenga el mismo comportamiento que `Composite`.
+]
+
+.large[__C__ Podemos usar declaraciones if-else para determinar el tipo de un objeto.]
+
+
+.large[__D__ Cada clase individual es un subtipo de una interfaz o superclase y podrá ajustarse a un conjunto de comportamientos compartidos.]
+
+???
+1001
+
+---
+# Composite: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando tengas que implementar una estructura de objetos que puede reprensentarse como un árbol]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando quieras que el código cliente trate objetos simples (hoja) y complejos (nodos) de la misma forma]
+
+
+---
+# Resumen
+
+### El patrón Composite...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` modela composiciones de objetos y objetos individuales en un jerarquía de todo-parte]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` tiene un diseño polimórfico, así los clientes pueden aplicar las mismas operaciones sobre toda o una parte de la jerarquía]
+ 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` explota la recursividad (_recursive composition_), ya que un `Composite` puede contener otros objectos `Composite` o `Leaf`]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` "rompe" el todo en partes, pero tanto el todo como las partes se adhieren a un tipo común]
+
+

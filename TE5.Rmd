@@ -11,9 +11,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [15 min] **Opening**
+-   [5 min] **Opening**
 
--   [40 min] **Presentación**: Composite pattern y Decorator pattern
+-   [20 min] **Revisión**: Actividad POGIL Adapter-Facade-Proxy patterns
+
+-   [30 min] **Presentación**: [Composite pattern](slides/TE5_1_composite.html) y Decorator pattern
 
 -   [60 min] **Actividad POGIL**: Composite-Decorator patterns
 
