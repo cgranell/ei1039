@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Revisión**: Actividad POGIL Adapter-Facade-Proxy patterns
 
--   [30 min] **Presentación**: [Composite pattern](slides/TE5_1_composite.html) y Decorator pattern
+-   [30 min] **Presentación**: [Composite pattern](slides/TE5_1_composite.html) y [Decorator pattern](slides/TE5_2_decorator.html)
 
 -   [60 min] **Actividad POGIL**: Composite-Decorator patterns
 

@@ -173,4 +173,9 @@ Menus `r Cite(my_refs, "freeman2004")`
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` "rompe" el todo en partes, pero tanto el todo como las partes se adhieren a un tipo común]
 
+---
+# Referencias
 
+```{r print_refs1, echo=FALSE, results="asis"}
+PrintBibliography(my_refs, start = 1, end = 1)
+```

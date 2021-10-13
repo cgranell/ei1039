@@ -56,23 +56,21 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
 
 ---
 class: inverse, center, middle
-background-image: url(images/rawpixel/dummies.jpg)
+background-image: url(images/rawpixel/coffee.jpg)
 background-size: contain
 
 
 ???
-Se utilizan maniquíes de prueba (dummies) en lugar de personaspara las pruebas de colisión de vehículos.
-Las tarjeta de crédito son una forma de pago aceptable en lugar de efectivo.
+Podemos añadir otros ingredientes como leche, crema o chocolatea a una taza de café. Los efectos de cada ingrediente no cambian la esencia del ingerdiente base: el café siempre actuará como estimulante debido a su contenido de cafeína. Esto no cambia si agregamos leche, si cambiamos el estilo de preparación o si se sirve a diferentes temperaturas. El café seguirá siendo un estimulante.
 
-
-Controlled Impact Demonstration instrumented test dummies installed in plane. Original from NASA.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/440073/)
+Aerial view of various coffee.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/392580/)
 
 
 ---
 class: inverse, center, middle
 
-# Proxy Pattern
+# Decorator Pattern
 
 .large[Propósito]
 
@@ -87,106 +85,122 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-# Proxy: Propósito
+# Decorator: Propósito
 
-## gestiona y controla el acceso a un objeto mediante una .coldinline[interfaz sustituta]
-
-
----
-# Proxy: Problema
-
-### Acceso a un objeto que contiene y/o trata con información sensible
-
-### Acceso a un objeto que consume gran cantidad de recursos (almacenamiento cache)
-
-### Acceso a un objeto remoto en local
-
----
-# Proxy: Solución
-
-### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
-
-### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder al objeto
-
---
-
-> 1. .large[Crea la interfaz común (objeto y proxy)]
-
-> 2. .large[`Proxy` implementa la interfaz y guarda una referencia al objeto original]
-
-> 3. .large[Delega las peticiones al objeto original]
-
+## añade responsabilidades (comportamientos) adicionales a un objeto .coldinline[dinámicamente]
 
 
 ---
-class: left, top
-background-image: url(images/DivingDesingPatterns09.png)
+# Decorator: Problema
+
+### Queremos ofrecer objetos con combinaciones flexibles de comportamientos
+
+### El comportamiento de un objeto viene definido por su clase
+
+### Herencia permite crear subclases con nuevos comportamientos, pero en tiempo de compilacion (estáticas)
+
+### Muchas combinaciones de comportamientos derivan en muchas implementaciones de clases...  
+
+---
+# Decorator: Solución
+
+### Un _decorator_ añade comportamientos a un objeto dinámicamente (en tiempo de ejecución)
+
+### Un _decorador_ utiliza agregación (HAS-A) en vez de herencia (IS-A) para combinar comportamientos
+
+### Un _decorador_ permite que la funcionalidad de un objeto aumente "apilando" objetos decoradores (_aggregation stack_)
+
+---
+# Decorator: Aggregation stack
+
+.left-column[
+
+<img src="images/coursera01.PNG" width="100%"/>
+
+]
+
+.right-column[
+
+.large[`Object A` es el objeto base]
+
+.large[`Object B` agrega (decora) `Object A`, augmentando el comportamiento del `Object A`]
+
+.large[Cada objeto decorador en la pila se agrega en una relación uno a uno con el objeto debajo de él en la pila]
+
+.large[Pila llamadas: C `r fontawesome::fa(name = "arrow-circle-right")` B `r fontawesome::fa(name = "arrow-circle-right")` A `r fontawesome::fa(name = "arrow-circle-right")` res_C(res_B(res_A))]
+]
+
+???
+La agregacion "HAS-A" permite construir una pila de objetos donde cada nivel de la pila contiene un objeto que conoce su propio comportamiento y aumenta el que está debajo de él en la pila. 
+
+---
+class: right, top
+background-image: url(images/DivingDesingPatterns12.png)
 background-size: contain
 
-# Composite: 
+# Decorator: 
 # Estructura
 
 
 ???
-Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/proxy)
-
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/decorator)
 
 
 ---
-# `r fontawesome::fa(name = "question-circle")` ¿Cualés son ciertas según el diagrama UML del patrón `Proxy`?
+# `r fontawesome::fa(name = "question-circle")` ¿Cualés son las razones para utilizar el patrón `Decorator`?
 
-.large[__A__ `Proxy` y `Service` son subtipos de `ServiceInterface`]
-
-
-.large[__B__ Logra polimorfismo implementando la interfaz `ServiceInterface`]
+.large[__A__ Permite construir una estructura de objetos en forma de árbol que puede tratarse como un tipo de objeto único y uniforme]
 
 
-.large[__C__ `Service` conoce `Proxy`, lo que significa que la clase `Service` tiene un atributo que se refiere a una instancia de `Proxy`]
+.large[__B__ Oculta un objeto complejo que requiere muchos recursos hasta que sea necesario crearlo]
 
 
-.large[__D__ No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
+.large[__C__ Reduce el número de clases necesarias para ofrecer una combinación de comportamientos]
+
+
+.large[__D__ Permite que los objetos agreguen dinámicamente comportamientos a otros objetos]
 
 ???
-1100
+0011
 
 ---
-# Proxy: Aplicabilidad
+# Decorator: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados] (p.e. pedidos a centros logísticos más cercanos, firewall)
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas asignar funcionalidades
+adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Si un objeto utiliza muchos recursos, puedes crear una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
 
---
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas acceder a un objeto __remoto__ como si fuera local] (p.e. encapsula comunicación en red con el objeto remoto)
 
 ---
-# `r fontawesome::fa(name = "question-circle")` Las responsabilidades del patrón `Proxy` son
+# `r fontawesome::fa(name = "question-circle")` ¿Cómo funciona un patrón `Decorator`? Elige una
 
-.large[__A__ Implementar las tareas de la clase `Service`]
-
-
-.large[__B__ Proteger a la clase `Service`, comprobadno las solicitudes del cliente y el acceso a dicha clase]
+.large[__A__ Construye un comportamiento apilando objetos]
 
 
-.large[__C__ Envolver a la clase `Service`]
+.large[__B__ Expande los métodos de una clase con herencia]
 
 
-.large[__D__ Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
+.large[__C__ Encapsula una clase para darle una interfaz diferente]
+
+
+.large[__D__ Agrega características a una clase con una nueva clase]
 
 ???
-0110
+1000
 
 ---
 # Resumen
 
-### El patrón Proxy...
+### El patrón Decorator...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` "representa" al o "camufla" el objeto original]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` agrega dinámicamente cualquier número de comportamientos a un objeto mediante el uso de la agregación como sustituto de la herencia]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` logra polimorfismo mediante la implementación de una única interfaz]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` verifica, controla o registra las peticiones de los clientes al objeto original]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` crea una pila de objetos por agregación, en una relación uno a uno entre los objetos apilados]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` combina agregación y polimorfismo para invocar recursivamente el mismo comportamiento en la pila, ejecutándorse hacia arriba desde el objeto `Concrete Component`]
 
