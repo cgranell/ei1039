@@ -55,13 +55,13 @@ Errores comunes - diagrama UML no refleja las relaciones entre clases. Interfaz 
 
 # TE4
 
-Se plantea como revisión + presentación contenido en la primera hora. Luego, actividad POGIL en la segunda hora. El ritmo de la clase ha ido mejor, aunque siempre acumulo retraso sy siempre lo paga la actividad POGIL.
+Se plantea como revisión + presentación contenido en la primera hora. Luego, actividad POGIL en la segunda hora. El ritmo de la clase ha ido mejor, aunque siempre acumulo retraso y siempre lo paga la actividad POGIL.
 
 Facade puede esconder una Interface. Plantear como ejercicio que esconda varias interfaces? ¿Puedes combinar Singleton con Facade?
 
 # TE5
 
-Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la TE4. Corregidla en clase. Luego, presentacion de los patrones COmposite + Decorator., seguida de una actividad POGIL sobre el composite (mas otros patrones vistos anteriormente), y como HW, una actvidad sobre el Decorator.
+Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la TE4. Corregir en clase. Luego, presentacion de los patrones Composite + Decorator, seguida de una actividad POGIL sobre el composite y cmo HW, una actvidad sobre el Decorator a parti de la solucion del composite desarrollada en la actividad POGIL.
 
 # Acciones para proximas ediciones
 

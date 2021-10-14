@@ -1,0 +1,62 @@
+---
+title: "HW4"
+description: |
+  Implementación patrón Decorator
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objetivos de aprendizaje (contenido)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   Comprender la solución conceptual del patrón Decorator
+-   Analizar la combinación de dos patrones como solución a un caso particular
+-   Implementar el patrón Decorator en combinación con el patrón Composite en un caso particular
+
+## Objetivos de proceso (soft skills)
+
+Después de completar esta actividad, los alumnos deberían poder:
+
+-   Evaluar e interpretar información para adoptarla a un contexto determinado (*Information processing*)
+-   Transmitir información compresible a través de materiales escritos (*Written communication*).
+-   Reflexionar sobre los errores cometidos (*Metacognition*)
+
+## Entrega
+
+-   Se entrega de forma individual en el Aula Virtual. Se deberá subir un documento en formato PDF. Puedes incluir un link en el propio documento al código creado se encuentra en un repositorio público.
+
+-   Fecha límite: 20 oct, 23:59
+
+## Actividades
+
+Los patrones Composite y Decorator tienen estructuras similares ya que ambos se basan en la recursividad para organizar un número de objetos. Un Decorator es como un Composite pero sólo tiene un componente hijo. Sin embargo, los dos patrones pueden colaborar para, por ejemplo, extender el comportamiento de un objeto específico del árbol Composite con un Decorator. Y de eso va esta actividad: implementar una solución que combine Composite y Decorador.
+
+Partimos de la implementación ya realizada de la aplicación `PLayLis`t con el patrón Composite. La solución oficial está en el AV (Recursos adicionales). Ahora, lo que queremos hacer es aplicar el patrón Decorator sobre una canción (hojas) para reproducir una canción en suporte "vinilo" o en "mp4" (decoradores concretos). Un extracto de la salida que produce un cliente, muy similar a `DemoComposite.java` , se muestra abajo. Observa como al utilizar un decorador u otro sobre una canción se añade el texto "On vinyl" o "On MP4" respectivamente. No es necesario que todas las canciones estén "decoradas".
+
+> `—–My Songs—–`
+>
+> `—–Sabina's hits—–`
+>
+> `Escuchando…Princesa BY Joaquín Sabina`
+>
+> `ON vinyl`
+>
+> `—–Sabina's hits—–`
+>
+> `Escuchando…Calle melancolía BY Joaquín Sabina`
+>
+> `—–My Songs—–`
+>
+> `—–Manolo Garcia's hits—–`
+>
+> `Escuchando…Pájaros de barro BY Manolo García`
+>
+> `ON MP4`
+
+1.  Primero, reflexiona y explica qué diferencia hay entre la solución de tu equipo y la solución oficial (en el AV) para la aplicación `PlayList` con el patrón Composite vista en la sesión TE5, indicando si son errores o no. En el caso de errores, explica por qué los has cometido (o mejor dicho: tu equipo) y por qué no los volverás (ni los demás miembros de tu equipo) a cometer.
+2.  Crea el diagrama de clases resultantes para tu implemetación que combine el patrón Composite y Decorator .
+3.  Implementa las clases necesarias (3 + la clase cliente) para aplicar el patrón Decorator a los nodos hoja (`Song`) para la nueva versión de la aplicación `PLayList.`

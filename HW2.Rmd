@@ -1,7 +1,7 @@
 ---
 title: "HW2"
 description: |
-  Refelxion personal de las sesions arquitectura de software
+  Reflexión personal de las sesiones de arquitectura de software
 output: distill::distill_article
 ---
 
@@ -19,8 +19,8 @@ Después de completar esta actividad, los alumnos deberían poder:
 
 Después de completar esta actividad, los alumnos deberían poder:
 
--   Ser consciente de los procesos de apredizaje que realizan (Metacognition)
--   Reflexionar sobre la calidad del trabajo realizado y dudas pendientes (Metacognition)
+-   Ser consciente de los procesos de aprendizaje que realizas (*Metacognition*)
+-   Reflexionar sobre la calidad del trabajo realizado y dudas pendientes (*Metacognition*)
 
 ## Entrega
 
