@@ -85,6 +85,10 @@ Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la 
 
 -   Para HW posteriores, prooner quixe o pregutnas de reflexiones sobre las actividades POGIL desarrollads en la sesión (forma de evlauar POGIL)
 
--   Plantear competencias basicas y avanxadas y errore basicos/avanzados (ver [Presentacion Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
+-   Plantear competencias basicas y avanzadas y errore basicos/avanzados (ver [Presentacion Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
 
 -   Basado en las reflexiones personales de HW2, parece que el método POGIL es bien recibido por los estudiantes. Uff, menos mal!!
+
+-   Plantear una sesion de seminario de "recent trends", al estido de lo que se comenta en este articulo <https://cacm.acm.org/magazines/2020/7/245690-your-wish-is-my-cmd/fulltext>, para la generacion de codigo automaticamente. ¿Como se relaciona con patrones? ¿y sobre la generacion de tests automaticos?
+
+-   Primera de la primera sesion se debe reducir a 15 min. Estudiantes deben lele la guai docente extensido y syllabus antes de la primera sesion. Asi, arqhitetur se reduce a uan unica sesion, y ganamos una sesión para introduce patrones de diseño y actividad pogil .
