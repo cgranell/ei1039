@@ -92,3 +92,9 @@ Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la 
 -   Plantear una sesion de seminario de "recent trends", al estido de lo que se comenta en este articulo <https://cacm.acm.org/magazines/2020/7/245690-your-wish-is-my-cmd/fulltext>, para la generacion de codigo automaticamente. ¿Como se relaciona con patrones? ¿y sobre la generacion de tests automaticos?
 
 -   Primera de la primera sesion se debe reducir a 15 min. Estudiantes deben lele la guai docente extensido y syllabus antes de la primera sesion. Asi, arqhitetur se reduce a uan unica sesion, y ganamos una sesión para introduce patrones de diseño y actividad pogil .
+
+-   Seminario conjunto de paradigmas/arquitecturas software. Plantear tipo debate entre dos equipos. Dado un caso de estudio concreto (aplicación bien conocida), plantear dos estilos arquitectónicos (a y B), para que cada equipo escoja una de ellos y defienda su postura, es decir, que el caso de estudio es mejor con la arquitectura A o es mejor con la B.
+
+-   [5 Design Patter every engineer should know](https://www.youtube.com/watch?v=FLmBqI3IKMA)
+
+-   [UI-desing patterns](http://ui-patterns.com/patterns)

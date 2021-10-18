@@ -25,6 +25,8 @@ navbar:
           href: TE4.html
         - text: "TE5 Composite & Decorator"
           href: TE5.html
+        - text: "TE6 Observer"
+          href: TE6.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github

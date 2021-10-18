@@ -1,0 +1,184 @@
+---
+title: "[TE6_1] Patrones de Comportamiento"
+subtitle: "Observer pattern"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: middle, center
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+
+### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+
+
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+
+
+???
+
+Jigsaw teamwork concept macro shot
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/385452)
+
+---
+class: inverse, center, middle
+background-image: url(images/rawpixel/coffee.jpg)
+background-size: contain
+
+
+???
+Podemos añadir otros ingredientes como leche, crema o chocolatea a una taza de café. Los efectos de cada ingrediente no cambian la esencia del ingerdiente base: el café siempre actuará como estimulante debido a su contenido de cafeína. Esto no cambia si agregamos leche, si cambiamos el estilo de preparación o si se sirve a diferentes temperaturas. El café seguirá siendo un estimulante.
+
+Aerial view of various coffee.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/392580/)
+
+
+---
+class: inverse, center, middle
+
+# Observer Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Observer: Propósito
+
+## añade responsabilidades (comportamientos) adicionales a un objeto .coldinline[dinámicamente]
+
+
+---
+# Observer: Problema
+
+### Queremos ofrecer objetos con combinaciones flexibles de comportamientos
+
+### El comportamiento de un objeto viene definido por su clase
+
+### Herencia permite crear subclases con nuevos comportamientos, pero en tiempo de compilacion (estáticas)
+
+### Muchas combinaciones de comportamientos derivan en muchas implementaciones de clases...  
+
+---
+# Observer: Solución
+
+### Un _decorator_ añade comportamientos a un objeto dinámicamente (en tiempo de ejecución)
+
+### Un _decorador_ utiliza agregación (HAS-A) en vez de herencia (IS-A) para combinar comportamientos
+
+### Un _decorador_ permite que la funcionalidad de un objeto aumente "apilando" objetos decoradores (_aggregation stack_)
+
+
+---
+class: right, top
+background-image: url(images/DivingDesingPatterns13.png)
+background-size: contain
+
+# Decorator: 
+# Observer
+
+
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
+
+
+---
+# `r fontawesome::fa(name = "question-circle")` ¿Cualés son las razones para utilizar el patrón `Decorator`?
+
+.large[__A__ Permite construir una estructura de objetos en forma de árbol que puede tratarse como un tipo de objeto único y uniforme]
+
+
+.large[__B__ Oculta un objeto complejo que requiere muchos recursos hasta que sea necesario crearlo]
+
+
+.large[__C__ Reduce el número de clases necesarias para ofrecer una combinación de comportamientos]
+
+
+.large[__D__ Permite que los objetos agreguen dinámicamente comportamientos a otros objetos]
+
+???
+0011
+
+---
+# Observer: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas asignar funcionalidades
+adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
+
+
+---
+# `r fontawesome::fa(name = "question-circle")` ¿Cómo funciona un patrón `Decorator`? Elige una
+
+.large[__A__ Construye un comportamiento apilando objetos]
+
+
+.large[__B__ Expande los métodos de una clase con herencia]
+
+
+.large[__C__ Encapsula una clase para darle una interfaz diferente]
+
+
+.large[__D__ Agrega características a una clase con una nueva clase]
+
+???
+1000
+
+---
+# Resumen
+
+### El patrón Observer...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` agrega dinámicamente cualquier número de comportamientos a un objeto mediante el uso de la agregación como sustituto de la herencia]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` logra polimorfismo mediante la implementación de una única interfaz]
+ 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` crea una pila de objetos por agregación, en una relación uno a uno entre los objetos apilados]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` combina agregación y polimorfismo para invocar recursivamente el mismo comportamiento en la pila, ejecutándorse hacia arriba desde el objeto `Concrete Component`]
+
