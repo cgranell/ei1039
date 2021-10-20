@@ -35,18 +35,19 @@ source("load_references.r")
 ```
 
 name: title
-class: middle, center
+class: top, left
 background-image: url(images/rawpixel/jigsaw.jpg)
 background-size: cover
 
-# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+# .fancy[`r rmarkdown::metadata$title`]
 
-### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+### &#183; `r rmarkdown::metadata$subtitle`
 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
+`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`
 
-.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
+`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`
 
 
 ???
@@ -56,15 +57,14 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/385452)
 
 ---
 class: inverse, center, middle
-background-image: url(images/rawpixel/coffee.jpg)
+background-image: url(images/newspaper-carriers.jpg)
 background-size: contain
 
 
 ???
-Podemos añadir otros ingredientes como leche, crema o chocolatea a una taza de café. Los efectos de cada ingrediente no cambian la esencia del ingerdiente base: el café siempre actuará como estimulante debido a su contenido de cafeína. Esto no cambia si agregamos leche, si cambiamos el estilo de preparación o si se sirve a diferentes temperaturas. El café seguirá siendo un estimulante.
 
-Aerial view of various coffee.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/392580/)
+A tribute to daily newspaper carriers
+Image credits: [DeseretNews](https://www.deseret.com/opinion/2021/1/10/22213897/tribute-to-daily-newspaper-carriers-paper-boy-route)
 
 
 ---
@@ -87,37 +87,44 @@ class: center, middle
 
 # Observer: Propósito
 
-## añade responsabilidades (comportamientos) adicionales a un objeto .coldinline[dinámicamente]
+## define un .coldinline[mecanismo de suscripción] para notificar a varios objetos (.coldinline[observadores]) sobre cualquier evento que sucede al objeto que están observando (.coldinline[sujeto])
 
 
 ---
 # Observer: Problema
 
-### Queremos ofrecer objetos con combinaciones flexibles de comportamientos
+### Algunos objetos clientes, pero no todos, dependen del estado de un objeto
 
-### El comportamiento de un objeto viene definido por su clase
+### No queremos que el cliente compruebe el estado del objeto reiteradamente (pull)
 
-### Herencia permite crear subclases con nuevos comportamientos, pero en tiempo de compilacion (estáticas)
+### No queremos que el objeto notifique a todos los clientes, estén o no interesados en su estado
 
-### Muchas combinaciones de comportamientos derivan en muchas implementaciones de clases...  
 
 ---
 # Observer: Solución
 
-### Un _decorator_ añade comportamientos a un objeto dinámicamente (en tiempo de ejecución)
+### Un _observer_ define una relación 1:N entre un __Sujeto__ (notificador) y muchos __Observadores__ (suscriptores). Cuando el sujeto cambio, se notifica a los suscriptores  
 
-### Un _decorador_ utiliza agregación (HAS-A) en vez de herencia (IS-A) para combinar comportamientos
+### Un _observer_ separa lo que no cambia (en el Sujeto) de lo variable (Observadores)
 
-### Un _decorador_ permite que la funcionalidad de un objeto aumente "apilando" objetos decoradores (_aggregation stack_)
+### Un _observer_ añade un mecanismo de suscripción al Sujeto
+
+.pull-left[
+.large[Sujeto `r fontawesome::fa(name = "equals")` notificador o publicador]
+]
+
+.pull-right[
+.large[Observador `r fontawesome::fa(name = "equals")` subscriptor]
+]
 
 
 ---
-class: right, top
+class: left, bottom
 background-image: url(images/DivingDesingPatterns13.png)
 background-size: contain
 
-# Decorator: 
-# Observer
+# Observer: 
+# Estructura
 
 
 ???
@@ -174,11 +181,10 @@ adicionales a objetos durante el tiempo de ejecución sin descomponer el código
 
 ### El patrón Observer...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` agrega dinámicamente cualquier número de comportamientos a un objeto mediante el uso de la agregación como sustituto de la herencia]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` facilita distribuir y gestionar notificaciones de cambios de una forma controlada]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` logra polimorfismo mediante la implementación de una única interfaz]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que varios objetos (observadors) se _suscriban_ a un objeto (observado)]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` crea una pila de objetos por agregación, en una relación uno a uno entre los objetos apilados]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que el objeto observdao notifique a los objetos observados cuando cambia su estado]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` combina agregación y polimorfismo para invocar recursivamente el mismo comportamiento en la pila, ejecutándorse hacia arriba desde el objeto `Concrete Component`]
 

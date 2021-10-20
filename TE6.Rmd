@@ -11,9 +11,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [10 min] **Opening**
+-   [5 min] **Opening**
+
+-   [10 min] **Revisión**: Entrega #1 proyecto común
 
 -   [20 min] **Revisión**: [HW4](HW4.html)
+
+    > -   Composite pattern: En la clase `Composite`, incluir [métodos](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) para gestionar el árbol.
+    
+    > -   Composite pattern: En el diagram UML propuesto, no olvidéis la relación de agregación porque permite la recursividad. 
+
+    > -   Composite & Decorator pattern: [Diagrama UML de la solución](slides/images/students/HW4-UML.png): La clase asbtracta Decorator implementa la interfaz común, y permite crear `Concrete Decorators`. Por lo tanto, no implementar un único Decorador (Base y Concreto) porque rompemos el [principio de abierto/cerado](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#33). Además, el poder del patrón Decorator está en la [pila de agregación](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#7), para concatenar un numero variables de decoradores en tiempo de ejecución.
 
 -   [30 min] **Presentación**: Observer pattern
 
@@ -25,6 +33,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Actividad POGIL (AV)
 
--   [10 min] **Closing:** Intro HW5
+-   [5 min] **Closing** 
 
 ## 

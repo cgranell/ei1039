@@ -4,6 +4,7 @@ description: |
   Asignatura EI1039
 output_dir: "docs"
 creative_commons: CC BY-NC-SA
+base_url: https://cgranell.github.io/ei1039
 navbar:
   logo:
     image: images/marca-uji-blanc.png
