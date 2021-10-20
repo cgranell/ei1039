@@ -17,7 +17,7 @@
 
 
 name: title
-class: top, left
+class: center, middle
 background-image: url(images/rawpixel/jigsaw.jpg)
 background-size: cover
 
@@ -25,7 +25,6 @@ background-size: cover
 
 ### &amp;#183; Observer pattern
 
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 Carlos Granell&amp;#183; Universitat Jaume I
 
@@ -35,7 +34,7 @@ EI1039 - Diseño de Software &amp;#183; Sep 2021
 ???
 
 Jigsaw teamwork concept macro shot
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/385452)
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
 
 ---
 class: inverse, center, middle
@@ -44,6 +43,7 @@ background-size: contain
 
 
 ???
+Nos suscribrimos para que nos avisen cuando hay algo nuevo, y no estar pendientes de las novedades.
 
 A tribute to daily newspaper carriers
 Image credits: [DeseretNews](https://www.deseret.com/opinion/2021/1/10/22213897/tribute-to-daily-newspaper-carriers-paper-boy-route)
@@ -75,11 +75,11 @@ class: center, middle
 ---
 # Observer: Problema
 
-### Algunos objetos clientes, pero no todos, dependen del estado de un objeto
+### Algunos objetos, pero no todos, dependen del estado de un objeto "importante"
 
-### No queremos que el cliente compruebe el estado del objeto reiteradamente (pull)
+### No queremos que un objeto compruebe reiteradamente el estado de ese objeto "importante"
 
-### No queremos que el objeto notifique a todos los clientes, estén o no interesados en su estado
+### No queremos que el objeto "importante" notifique a todos los clientes, estén o no interesados en su estado
 
 
 ---
@@ -101,6 +101,27 @@ class: center, middle
 
 
 ---
+background-image: url(images/DivingDesingPatterns14.png)
+background-size: contain
+
+# Observer: Suscripción
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
+
+---
+background-image: url(images/DivingDesingPatterns15.png)
+background-size: contain
+
+# Observer: Suscripción
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
+
+
+---
 class: left, bottom
 background-image: url(images/DivingDesingPatterns13.png)
 background-size: contain
@@ -110,53 +131,29 @@ background-size: contain
 
 
 ???
+
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
 
 
 ---
-# &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/&gt;&lt;/svg&gt; ¿Cualés son las razones para utilizar el patrón `Decorator`?
-
-.large[__A__ Permite construir una estructura de objetos en forma de árbol que puede tratarse como un tipo de objeto único y uniforme]
-
-
-.large[__B__ Oculta un objeto complejo que requiere muchos recursos hasta que sea necesario crearlo]
-
-
-.large[__C__ Reduce el número de clases necesarias para ofrecer una combinación de comportamientos]
-
-
-.large[__D__ Permite que los objetos agreguen dinámicamente comportamientos a otros objetos]
+class: left, bottom
+background-image: url(images/HeadFirstDesingPatterns04.png)
+background-size: contain
 
 ???
-0011
+
+Una estructura alternativa para el Sujeto es declarar una interfaz y luego implementar un Sujeto Concreto. La relació de composición ocurre entre el Sujeto y Observador Concreto.
+
 
 ---
 # Observer: Aplicabilidad
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Cuando necesitas asignar funcionalidades
-adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando los cambios en el estado de un objeto conllevan cambios en un grupo dinámico de objetos]
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
-
-
----
-# &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/&gt;&lt;/svg&gt; ¿Cómo funciona un patrón `Decorator`? Elige una
-
-.large[__A__ Construye un comportamiento apilando objetos]
-
-
-.large[__B__ Expande los métodos de una clase con herencia]
-
-
-.large[__C__ Encapsula una clase para darle una interfaz diferente]
-
-
-.large[__D__ Agrega características a una clase con una nueva clase]
-
-???
-1000
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando algunos objetos de tu aplicación
+deban observar a otros, pero sólo durante un tiempo limitado o en casos específicos]
 
 ---
 # Resumen
@@ -165,9 +162,9 @@ adicionales a objetos durante el tiempo de ejecución sin descomponer el código
 
 .large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; facilita distribuir y gestionar notificaciones de cambios de una forma controlada]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; permite que varios objetos (observadors) se _suscriban_ a un objeto (observado)]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; permite que varios objetos (observadores) se _suscriban_ a un objeto (observado)]
  
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; permite que el objeto observdao notifique a los objetos observados cuando cambia su estado]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; permite que el objeto observado notifique a los objetos observados cuando cambia su estado]
 
 
     </textarea>

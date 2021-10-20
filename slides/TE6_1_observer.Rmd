@@ -93,11 +93,11 @@ class: center, middle
 ---
 # Observer: Problema
 
-### Algunos objetos clientes, pero no todos, dependen del estado de un objeto
+### Algunos objetos, pero no todos, dependen del estado de un objeto "importante"
 
-### No queremos que el cliente compruebe el estado del objeto reiteradamente (pull)
+### No queremos que un objeto compruebe reiteradamente el estado de ese objeto "importante"
 
-### No queremos que el objeto notifique a todos los clientes, estén o no interesados en su estado
+### No queremos que el objeto "importante" notifique a todos los clientes, estén o no interesados en su estado
 
 
 ---
@@ -119,6 +119,27 @@ class: center, middle
 
 
 ---
+background-image: url(images/DivingDesingPatterns14.png)
+background-size: contain
+
+# Observer: Suscripción
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
+
+---
+background-image: url(images/DivingDesingPatterns15.png)
+background-size: contain
+
+# Observer: Suscripción
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
+
+
+---
 class: left, bottom
 background-image: url(images/DivingDesingPatterns13.png)
 background-size: contain
@@ -128,53 +149,29 @@ background-size: contain
 
 
 ???
+
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/observer)
 
 
 ---
-# `r fontawesome::fa(name = "question-circle")` ¿Cualés son las razones para utilizar el patrón `Decorator`?
-
-.large[__A__ Permite construir una estructura de objetos en forma de árbol que puede tratarse como un tipo de objeto único y uniforme]
-
-
-.large[__B__ Oculta un objeto complejo que requiere muchos recursos hasta que sea necesario crearlo]
-
-
-.large[__C__ Reduce el número de clases necesarias para ofrecer una combinación de comportamientos]
-
-
-.large[__D__ Permite que los objetos agreguen dinámicamente comportamientos a otros objetos]
+class: left, bottom
+background-image: url(images/HeadFirstDesingPatterns04.png)
+background-size: contain
 
 ???
-0011
+
+Una estructura alternativa para el Sujeto es declarar una interfaz y luego implementar un Sujeto Concreto. La relació de composición ocurre entre el Sujeto y Observador Concreto.
+
 
 ---
 # Observer: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas asignar funcionalidades
-adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando los cambios en el estado de un objeto conllevan cambios en un grupo dinámico de objetos]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
-
-
----
-# `r fontawesome::fa(name = "question-circle")` ¿Cómo funciona un patrón `Decorator`? Elige una
-
-.large[__A__ Construye un comportamiento apilando objetos]
-
-
-.large[__B__ Expande los métodos de una clase con herencia]
-
-
-.large[__C__ Encapsula una clase para darle una interfaz diferente]
-
-
-.large[__D__ Agrega características a una clase con una nueva clase]
-
-???
-1000
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando algunos objetos de tu aplicación
+deban observar a otros, pero sólo durante un tiempo limitado o en casos específicos]
 
 ---
 # Resumen
@@ -183,8 +180,8 @@ adicionales a objetos durante el tiempo de ejecución sin descomponer el código
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` facilita distribuir y gestionar notificaciones de cambios de una forma controlada]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que varios objetos (observadors) se _suscriban_ a un objeto (observado)]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que varios objetos (observadores) se _suscriban_ a un objeto (observado)]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que el objeto observdao notifique a los objetos observados cuando cambia su estado]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que el objeto observado notifique a los objetos observados cuando cambia su estado]
 
 

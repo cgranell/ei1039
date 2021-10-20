@@ -101,4 +101,4 @@ Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la 
 
 -   [UI-desing patterns](http://ui-patterns.com/patterns)
 
--   Add blog support to comment on HW adn POGIL activities
+-   Añadir soporte blog para describir feedback, comentarios y demas sobre HW y actividades POGIL
