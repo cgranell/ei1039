@@ -21,7 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
     
     > -   Composite pattern: En el diagram UML propuesto, no olvidéis la relación de agregación porque permite la recursividad. 
 
-    > -   Composite & Decorator pattern: [Diagrama UML de la solución](slides/images/students/HW4-UML.png): La clase asbtracta Decorator implementa la interfaz común, y permite crear `Concrete Decorators`. Por lo tanto, no implementar un único Decorador (Base y Concreto) porque rompemos el [principio de abierto/cerado](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#33). Además, el poder del patrón Decorator está en la [pila de agregación](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#7), para concatenar un numero variables de decoradores en tiempo de ejecución.
+    > -   Composite & Decorator pattern: [Diagrama UML de la solución](slides/images/students/HW4-UML.png): La clase asbtracta Decorator implementa la interfaz común, y permite crear `Concrete Decorators`. Por lo tanto, no implementar un único Decorador (Base y Concreto) porque rompemos el [principio de abierto/cerado](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#33). Además, el poder del patrón Decorator está en la [pila de agregación](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#7), para concatenar un número variables de decoradores en tiempo de ejecución.
+    
+    > -   Decorator pattern: Un error común ha sido extender (herencia) la clase `Song` (nodo hoja) para instanciar decoradores concretos, sin definir una clase abstracta para los decoradores. Con ello, no cumplimos el propósito del patrón Decorator en cuanto añadir responsabilidades a un objeto [dinámicamente](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#4).
 
 -   [30 min] **Presentación**: [Observer pattern](slides/TE6_1_observer.html)
 
@@ -31,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4626159)
 
 -   [5 min] **Closing** 
 
