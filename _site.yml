@@ -28,6 +28,10 @@ navbar:
           href: TE5.html
         - text: "TE6 Observer"
           href: TE6.html
+        - text: "TE7 Template Method & Strategy"
+          href: TE7.html
+        - text: "TE8 Visitor, Command & Iterator"
+          href: TE8.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github

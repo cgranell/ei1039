@@ -1,0 +1,29 @@
+---
+title: "TE8 Patrones de comportamiento"
+description: |
+  Visitor, Command y Iterator Patterns.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Organización clase
+
+-   [5 min] **Opening**
+
+-   [20 min] **Revisión**: HW5
+
+-   [40 min] **Presentación**: [Visitor pattern](), [Command pattern]() y [Iterator pattern]()
+
+-   [50 min] **Actividad POGIL**: Visitor-Command-Iterator patterns
+
+    -   Grupos de 4-5 personas
+
+    -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
+
+    -   Actividad POGIL (AV)
+
+-   [5 min] **Closing** 
+

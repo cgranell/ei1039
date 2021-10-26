@@ -27,4 +27,3 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Closing:** Intro [HW4](HW4.html)
 
-## 
