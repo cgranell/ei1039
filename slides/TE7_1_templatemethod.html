@@ -38,13 +38,24 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
 
 ---
 class: inverse, center, middle
-background-image: url(images/DivingDesingPatterns16.png)
-background-size: contain
 
+.pull-left[
+![](images/rawpixel/coffee-cup.jpg)
+
+]
+
+.pull-right[
+![](images/rawpixel/tea.jpg)
+
+
+]
 
 ???
+Blue coffee cup.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283192)
 
-Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+Tea steeping in a red mug with lemons and honey on a blue towel and black table
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283040)
 
 
 ---
@@ -67,7 +78,7 @@ class: center, middle
 
 # Template Method: Propósito
 
-## define los .coldinline[pasos de un algoritmo] en la superclase y delega a las subclases la implementación de algunos de estos pasos
+## define los .coldinline[pasos de un algoritmo] en la superclase y delega a las subclases la implementación de algunos de estos pasos .coldinline[de forma estática]
 
 
 ---
@@ -81,17 +92,19 @@ class: center, middle
 ---
 # Template Method: Solución
 
-### Un _template method_ encapsula (generaliza) los pasos de un algoritmo en una clase `abstract`
 
-### Differencia entre pasos comunes y que necesitan especialización
+### `AbstractClass`
 
-### La clase abstracta tiene un (`final`) método que describe los pasos del algoritmo (plantilla) 
-
-- .large[Los pasos comunes se implementan en la superclase]
-
-- .large[Los pasos que requieren especialización, se definen como abstractos en la superclase y se implementan en las subclases]
+-   .large[Implementa el método plantilla (`final`) con los pasos de un algoritmo]
+-   .large[Declara métodos abstractos que son pasos delegados a las subclases]
+-   .large[Implementa métodos (primitivas) que son pasos comunes]
+-   .large[Define ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
 
 
+### `ConcreteClass`
+
+-   .large[Implementa los métodos abstractos de la superclase]
+-   .large[Implemetna los métodos gancho, si es necesario]
 
 
 ---
@@ -188,7 +201,7 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando tenemos algoritmos con secuencias de pasos predefinidas]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
 
 --
 
@@ -200,15 +213,12 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 ### El patrón Method Template...
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; crea un _plantilla_ genérica de un algoritmo]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; define esa _plantilla_ como un método `final` en la superclase]
-
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; define (en la superclase) métodos `abstract` para pasos que necesitan especialización]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; diferencia  entre los pasos comunes y los que necesitan especialización]
  
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; implementa (en la superclase) primativas comunes]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cambia partes de un algoritmo (estáticamente) mediante herencia y sobreescribiendo métodos]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; define (en la superclase) ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
 
 ---
 # Referencias

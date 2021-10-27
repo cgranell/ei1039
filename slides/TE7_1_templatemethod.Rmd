@@ -56,13 +56,24 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
 
 ---
 class: inverse, center, middle
-background-image: url(images/DivingDesingPatterns16.png)
-background-size: contain
 
+.pull-left[
+![](images/rawpixel/coffee-cup.jpg)
+
+]
+
+.pull-right[
+![](images/rawpixel/tea.jpg)
+
+
+]
 
 ???
+Blue coffee cup.
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283192)
 
-Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+Tea steeping in a red mug with lemons and honey on a blue towel and black table
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283040)
 
 
 ---
@@ -85,7 +96,7 @@ class: center, middle
 
 # Template Method: Propósito
 
-## define los .coldinline[pasos de un algoritmo] en la superclase y delega a las subclases la implementación de algunos de estos pasos
+## define los .coldinline[pasos de un algoritmo] en la superclase y delega a las subclases la implementación de algunos de estos pasos .coldinline[de forma estática]
 
 
 ---
@@ -99,17 +110,19 @@ class: center, middle
 ---
 # Template Method: Solución
 
-### Un _template method_ encapsula (generaliza) los pasos de un algoritmo en una clase `abstract`
 
-### Differencia entre pasos comunes y que necesitan especialización
+### `AbstractClass`
 
-### La clase abstracta tiene un (`final`) método que describe los pasos del algoritmo (plantilla) 
-
-- .large[Los pasos comunes se implementan en la superclase]
-
-- .large[Los pasos que requieren especialización, se definen como abstractos en la superclase y se implementan en las subclases]
+-   .large[Implementa el método plantilla (`final`) con los pasos de un algoritmo]
+-   .large[Declara métodos abstractos que son pasos delegados a las subclases]
+-   .large[Implementa métodos (primitivas) que son pasos comunes]
+-   .large[Define ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
 
 
+### `ConcreteClass`
+
+-   .large[Implementa los métodos abstractos de la superclase]
+-   .large[Implemetna los métodos gancho, si es necesario]
 
 
 ---
@@ -206,7 +219,7 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos con secuencias de pasos predefinidas]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
 
 --
 
@@ -218,15 +231,12 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 ### El patrón Method Template...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` crea un _plantilla_ genérica de un algoritmo]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` define esa _plantilla_ como un método `final` en la superclase]
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` define (en la superclase) métodos `abstract` para pasos que necesitan especialización]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` diferencia  entre los pasos comunes y los que necesitan especialización]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` implementa (en la superclase) primativas comunes]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cambia partes de un algoritmo (estáticamente) mediante herencia y sobreescribiendo métodos]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` define (en la superclase) ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
 
 ---
 # Referencias

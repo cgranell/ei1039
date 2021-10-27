@@ -1,0 +1,174 @@
+---
+title: "[TE7_2] Patrones de Comportamiento"
+subtitle: "Strategy pattern"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+# .fancy[`r rmarkdown::metadata$title`]
+
+### &#183; `r rmarkdown::metadata$subtitle`
+
+
+`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`
+
+`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`
+
+
+???
+
+Jigsaw teamwork concept macro shot
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
+
+---
+class: inverse, center, middle
+background-image: url(images/DivingDesingPatterns16.png)
+background-size: contain
+
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+
+
+---
+class: inverse, center, middle
+
+# Strategy Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Strategy: Propósito
+
+## define .coldinline[una familia de algoritmos], encapsula cada uno, y los hace intercambiables .coldinline[en tiempo de ejecución]
+
+
+---
+# Strategy: Problema
+
+### Tenemos diferentes algoritmos para resolver un mismo problema
+
+### Queremos evitar el acoplamiento _descontrolado_ entre clientes y las implementaciones de cada algoritmo
+
+> .large[Existe acoplamiento (_coupling_) si al cambiar un módulo en un programa requiere cambiar otro módulo. Acoplamiento impacta negativamente en la mantenibilidad del sistema]
+
+???
+
+Cuanto mayor sea el número de módulos que deben cambiarse para ampliar o adaptar un sistema, más difícil será implementar estos cambios sin descomponer algún código. El acoplamiento ocurre cuando (el código de un) módulo usa el código de otro, por ejemplo llamando a una función. Es prácticamente imposible evitar el acoplamiento. Sin embargo, puede controlarse. 
+
+[Programar a una interfaz, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#29) reduce el acoplamiento porque definir una interfaz que sirve como hub de comunicación es una buena estrategia para romper dependencias entre clases y módulos.
+
+---
+# Strategy: Solución
+
+### `Strategy` 
+
+-   .large[Declara una interfaz común para todos los algoritmos]
+
+### `ConcreteStrategies`
+
+-   .large[Implementa un algoritmo concreto (_estrategia_) según la interfaz común]
+
+### `Context`
+
+-   .large[Almacena una referencia a la interfaz común (`Strategy`)]
+-   .large[Define y expone a clientes un único método para ejecutar la estrategia seleccionada]
+
+
+---
+class: left, top
+background-image: url(images/DivingDesingPatterns18.png)
+background-size: contain
+
+# Estructura
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/strategy)
+
+---
+# Ejemplos reales
+
+-   .large[Elegir diferentes algoritmos de búsqueda]
+-   .large[Guardar archivos en diferentes formatos]
+-   .large[Comprimir archivos usando diferentes algoritmos de compresión]
+-   .large[Elegir entre diferentes algoritmos de panificación de rutas]
+-   .large[Proporcionar diferentes estrategias de validación para campos de entrada]
+-   .large[Elegir entre diferentes algoritmos de enrutamiento para administrar el tráfico de red]
+-   .large[Aplicar distintos tipos de descuentos a un pedido]
+
+???
+Las [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) de Java utilizan y [simplifican el patron Strategy](https://medium.com/analytics-vidhya/simplify-strategy-using-lambda-expression-40195d1445ea) 
+
+---
+# Strategy: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando se utilizan variantes de un algoritmo y queremos cambiar de un algoritmo a otro dinámicamente]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos numerosos `if-else` para seleccionar variantes de un mismo algoritmo (¡reemplazandola por una única llamada a un método!)]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos esconder detalles irrelevantes de la implementación de los algoritmos a los clientes]
+
+
+---
+# Resumen
+
+### El patrón Strategy...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` encapsula lo que varía (algoritmos) en clases separadas]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` reduce acoplamiento, sustituyendo herencia por composición]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona un mecanismo dinámico para cambiar algoritmos enteros mediante composición y delegación]
+
+
+

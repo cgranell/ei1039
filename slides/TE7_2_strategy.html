@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>[TE7_2] Patrones de Comportamiento</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Carlos Granell" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+# .fancy[[TE7_2] Patrones de Comportamiento]
+
+### &amp;#183; Strategy pattern
+
+
+Carlos Granell&amp;#183; Universitat Jaume I
+
+EI1039 - Diseño de Software &amp;#183; Sep 2021
+
+
+???
+
+Jigsaw teamwork concept macro shot
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
+
+---
+class: inverse, center, middle
+background-image: url(images/DivingDesingPatterns16.png)
+background-size: contain
+
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+
+
+---
+class: inverse, center, middle
+
+# Strategy Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Strategy: Propósito
+
+## define .coldinline[una familia de algoritmos], encapsula cada uno, y los hace intercambiables .coldinline[en tiempo de ejecución]
+
+
+---
+# Strategy: Problema
+
+### Tenemos diferentes algoritmos para resolver un mismo problema
+
+### Queremos evitar el acoplamiento _descontrolado_ entre clientes y las implementaciones de cada algoritmo
+
+&gt; .large[Existe acoplamiento (_coupling_) si al cambiar un módulo en un programa requiere cambiar otro módulo. Acoplamiento impacta negativamente en la mantenibilidad del sistema]
+
+???
+
+Cuanto mayor sea el número de módulos que deben cambiarse para ampliar o adaptar un sistema, más difícil será implementar estos cambios sin descomponer algún código. El acoplamiento ocurre cuando (el código de un) módulo usa el código de otro, por ejemplo llamando a una función. Es prácticamente imposible evitar el acoplamiento. Sin embargo, puede controlarse. 
+
+[Programar a una interfaz, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#29) reduce el acoplamiento porque definir una interfaz que sirve como hub de comunicación es una buena estrategia para romper dependencias entre clases y módulos.
+
+---
+# Strategy: Solución
+
+### `Strategy` 
+
+-   .large[Declara una interfaz común para todos los algoritmos]
+
+### `ConcreteStrategies`
+
+-   .large[Implementa un algoritmo concreto (_estrategia_) según la interfaz común]
+
+### `Context`
+
+-   .large[Almacena una referencia a la interfaz común (`Strategy`)]
+-   .large[Define y expone a clientes un único método para ejecutar la estrategia seleccionada]
+
+
+---
+class: left, top
+background-image: url(images/DivingDesingPatterns18.png)
+background-size: contain
+
+# Estructura
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/strategy)
+
+---
+# Ejemplos reales
+
+-   .large[Elegir diferentes algoritmos de búsqueda]
+-   .large[Guardar archivos en diferentes formatos]
+-   .large[Comprimir archivos usando diferentes algoritmos de compresión]
+-   .large[Elegir entre diferentes algoritmos de panificación de rutas]
+-   .large[Proporcionar diferentes estrategias de validación para campos de entrada]
+-   .large[Elegir entre diferentes algoritmos de enrutamiento para administrar el tráfico de red]
+-   .large[Aplicar distintos tipos de descuentos a un pedido]
+
+???
+Las [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) de Java utilizan y [simplifican el patron Strategy](https://medium.com/analytics-vidhya/simplify-strategy-using-lambda-expression-40195d1445ea) 
+
+---
+# Strategy: Aplicabilidad
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando se utilizan variantes de un algoritmo y queremos cambiar de un algoritmo a otro dinámicamente]
+
+--
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando tenemos numerosos `if-else` para seleccionar variantes de un mismo algoritmo (¡reemplazandola por una única llamada a un método!)]
+
+--
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando queremos esconder detalles irrelevantes de la implementación de los algoritmos a los clientes]
+
+
+---
+# Resumen
+
+### El patrón Strategy...
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; encapsula lo que varía (algoritmos) en clases separadas]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; reduce acoplamiento, sustituyendo herencia por composición]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; proporciona un mecanismo dinámico para cambiar algoritmos enteros mediante composición y delegación]
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
