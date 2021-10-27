@@ -1,0 +1,237 @@
+---
+title: "[TE7_1] Patrones de Comportamiento"
+subtitle: "Template method pattern"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+# .fancy[`r rmarkdown::metadata$title`]
+
+### &#183; `r rmarkdown::metadata$subtitle`
+
+
+`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`
+
+`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`
+
+
+???
+
+Jigsaw teamwork concept macro shot
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
+
+---
+class: inverse, center, middle
+background-image: url(images/DivingDesingPatterns16.png)
+background-size: contain
+
+
+???
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+
+
+---
+class: inverse, center, middle
+
+# Template Method Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Template Method: Propósito
+
+## define los .coldinline[pasos de un algoritmo] en la superclase y delega a las subclases la implementación de algunos de estos pasos
+
+
+---
+# Template Method: Problema
+
+### Dos (o más) objetos tienen muchas similitudes, pero su implementación es independiente (no reutilización)
+
+### Un cambio común a los objetos implica duplicación (innecesaria)  
+
+
+---
+# Template Method: Solución
+
+### Un _template method_ encapsula (generaliza) los pasos de un algoritmo en una clase `abstract`
+
+### Differencia entre pasos comunes y que necesitan especialización
+
+### La clase abstracta tiene un (`final`) método que describe los pasos del algoritmo (plantilla) 
+
+- .large[Los pasos comunes se implementan en la superclase]
+
+- .large[Los pasos que requieren especialización, se definen como abstractos en la superclase y se implementan en las subclases]
+
+
+
+
+---
+class: left, top
+background-image: url(images/DivingDesingPatterns17.png)
+background-size: contain
+
+# Estructura
+
+???
+
+- El método de plantilla es `final` para que las subclases no puedan cambiar el orden de los pasos.
+- La clase base implementa todos los métodos que deifne pasos comunes para que las subclases no necesiten definirlos.
+- La clase base crea métodos abstractos que deben implementar las subclases.
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
+
+
+---
+class: right, top
+background-image: url(images/HeadFirstDesingPatterns05.png)
+background-size: contain
+
+# `r Cite(my_refs, "freeman2004")` 
+
+???
+Si tenemos una secuencia de pasos bien definida, template method es un buen candidato
+
+---
+background-image: url(images/HeadFirstDesingPatterns06.png)
+background-size: contain
+
+???
+
+Diferenciamos los pasos comunes de los que requieren especialización por receta (algoritmo) concreta
+
+`r Cite(my_refs, "freeman2004")` 
+
+---
+background-image: url(images/HeadFirstDesingPatterns07.png)
+background-size: contain
+
+???
+
+Aun podemos generalizar más los pasos del algoritmo: `brew()` y `addCondiments` hacen practicamente lo mismo, aunque difieren en la implementación. Los hacemos `abstract` en la clase base para que las subclases los implementen.
+
+`r Cite(my_refs, "freeman2004")` 
+
+---
+background-image: url(images/HeadFirstDesingPatterns08.png)
+background-size: contain
+
+???
+
+Implementación concreta de los métodos abstractos de la superclase.
+
+`r Cite(my_refs, "freeman2004")` 
+
+---
+background-image: url(images/HeadFirstDesingPatterns09.png)
+background-size: contain
+
+???
+
+Esquema final de la superclase abstracta.
+
+`r Cite(my_refs, "freeman2004")` 
+
+
+---
+class: right, middle
+background-image: url(images/HeadFirstDesingPatterns10.png)
+background-size: contain
+
+# Hooks?
+
+???
+
+Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin implementación o una por defecto. Las subclases pueden o no implementarlo. En cualquier caso, los hooks permiten extender el algortimo en puntos bien definidos
+
+`r Cite(my_refs, "freeman2004")` 
+
+---
+# Ejemplos reales
+
+- .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por vuestra implementación del servlet]
+
+- .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ para puede ser implementados por los test cases concretos]
+
+---
+# Template Method: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos muy similares]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos con secuencias de pasos predefinidas]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
+
+
+---
+# Resumen
+
+### El patrón Method Template...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` crea un _plantilla_ genérica de un algoritmo]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` define esa _plantilla_ como un método `final` en la superclase]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` define (en la superclase) métodos `abstract` para pasos que necesitan especialización]
+ 
+.large[`r fontawesome::fa(name = "arrow-circle-right")` implementa (en la superclase) primativas comunes]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` define (en la superclase) ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
+
+---
+# Referencias
+
+```{r print_refs1, echo=FALSE, results="asis"}
+PrintBibliography(my_refs, start = 1, end = 1)
+```
+

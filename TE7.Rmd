@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Opening**
 
--   [40 min] **Presentación**: [Template Method pattern]() y [Strategy pattern]()
+-   [40 min] **Presentación**: [Template Method pattern](slides/TE7_1_templatemethod.html) y [Strategy pattern]()
 
 -   [50 min] **Actividad POGIL**: Template Method-Strategy patterns
 
