@@ -235,7 +235,7 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` diferencia  entre los pasos comunes y los que necesitan especialización]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cambia partes de un algoritmo (estáticamente) mediante herencia y sobreescribiendo métodos]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cambia partes de un algoritmo (estáticamente) mediante herencia y sobrecarga de métodos (_overriding_)]
 
 
 ---
