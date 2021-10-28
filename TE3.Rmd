@@ -11,9 +11,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [10 min] **Opening:** reflexiones HW2
+-   [10 min] **Opening**: reflexiones HW2
 
--   [30 min] **Presentación:** [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseno.html)
+-   [30 min] **Presentación**: [Introducción a los Patrones de Diseño](slides/TE3_1_patrones_diseno.html)
 
 -   [30 min] **Actividad POGIL**: Singleton pattern
 
@@ -29,6 +29,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Preguntas para discutir en equipos
 
--   [10 min] **Closing:** Intro [HW3](HW3.html)
+-   [10 min] **Closing**: Intro [HW3](HW3.html)
 
 ## 
