@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   Actividad POGIL (AV)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4631216)
 
 -   [10 min] **Closing**: Intro [HW5](HW5.html)
 
