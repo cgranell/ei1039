@@ -30,7 +30,7 @@ navbar:
           href: TE6.html
         - text: "TE7 Template Method & Strategy"
           href: TE7.html
-        - text: "TE8 Visitor, Command & Iterator"
+        - text: "TE8 Command, Visitor & Iterator"
           href: TE8.html
     - text: "Referencias"
       href: references.html

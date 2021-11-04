@@ -1,7 +1,7 @@
 ---
 title: "TE8 Patrones de comportamiento"
 description: |
-  Visitor, Command y Iterator Patterns.
+  Command, Visitor y Iterator Patterns.
 output: distill::distill_article
 ---
 
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Revisión**: HW5
 
--   [40 min] **Presentación**: [Visitor pattern](), [Command pattern]() y [Iterator pattern]()
+-   [40 min] **Presentación**: [Command pattern](slides/TE8_1_command.html), [Visitor pattern](), y [Iterator pattern]()
 
 -   [50 min] **Actividad POGIL**: Visitor-Command-Iterator patterns
 

@@ -67,6 +67,11 @@ Empezar los primeros 15 minutos con la terminación de la actividad POGIL de la 
 
 La actividad POGIL funcioana bien! Solo tengo 4 grupos, y la interaccion dentro de cada grupo funciona Tal vez, la actividad parece lo suficiente interesante para que exista discussion entre los miembros. Voy a mostart la solución en la propia clase, a diferencia de actividades POGIL en sesiones anteriores. Feedback earlier!
 
+# TE7
+
+Tengo que encontrar un mecanismo para que el codigo qeu escriben los estydiantes en una actividad POGIL de progrmación lo pueden registrar y yo evaluarlo de alguna forma, para que ellos reciban feedback y que sepan que lo miro. [GitHub Codespace](shttps://code.visualstudio.com/docs/remote/codespaces), [vscode cloud](https://www.vscodecloud.com/), github gist for java?, etc.
+
+
 # Acciones para proximas ediciones
 
 -   Crear (entre el alumnado) fichas resumen de los patrones con una estructura común:
@@ -104,3 +109,6 @@ La actividad POGIL funcioana bien! Solo tengo 4 grupos, y la interaccion dentro 
 -   [UI-desing patterns](http://ui-patterns.com/patterns)
 
 -   Añadir soporte blog para describir feedback, comentarios y demas sobre HW y actividades POGIL
+
+-   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html) 
+ución 
