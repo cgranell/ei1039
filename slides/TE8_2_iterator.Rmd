@@ -83,7 +83,7 @@ class: center, middle
 
 # Iterator: Propósito
 
-## proporciona una forma de acceder a un objeto agregado .coldinline[sin exponer su estructura interna]
+## proporciona una forma de acceder a una agregación .coldinline[sin exponer su estructura interna]
 
 
 ---
@@ -145,20 +145,20 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 # Ejemplos reales
 
-- .large[Iteración `r fontawesome::fa(name = "equal")` repetición, implementado como recursión o bucles. El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de Iterators...]
+- .large[Iteración `r fontawesome::fa(name = "equals")` repetición, recursión o bucles. El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de Iterators...]
 
 ---
 # Iterator: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos encapsular la estructura de datos de una colección y propporcionar a cambio método para recorrer la colección]
-
---
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos reducir el codigo relacia a recorrer colecciones]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
 
 --
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos hacer cosas que una llamada "estándard" a un método de una clase no nos permite (hacer/deshacer, planificar, almacenar, serializar, etc) ]
 
 
 ---
@@ -168,8 +168,8 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` contibuye a la reutilzacion de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
+.large[`r fontawesome::fa(name = "arrow-circle-right")` contribuye a la reutilización de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
 
 
-
+.large[`r fontawesome::fa(name = "arrow-circle-right")` separa el mecanismo para recorrer la colección de otras funciones de mantenimiento o similares]
 
