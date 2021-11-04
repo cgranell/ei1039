@@ -25,5 +25,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4634646)
 
--   [10 min] **Closing**. Intro [HW6](hw6.html) 
+-   [10 min] **Closing**. Intro [HW6](HW6.html) 
 

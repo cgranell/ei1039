@@ -66,7 +66,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 class: inverse, center, middle
 
-# Iterator Pattern
+# `r rmarkdown::metadata$subtitle` Pattern
 
 .large[Propósito]
 
@@ -81,13 +81,13 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-# Iterator: Propósito
+# `r rmarkdown::metadata$subtitle`: Propósito
 
 ## proporciona una forma de acceder a una agregación .coldinline[sin exponer su estructura interna]
 
 
 ---
-# Iterator: Problema
+# `r rmarkdown::metadata$subtitle`: Problema
 
 ### Un sistema tiene estructuras de datos diferentes (grafos, árboles, listas, etc.) que se recorren para obtener resultados similares
 
@@ -97,7 +97,7 @@ class: center, middle
 
 
 ---
-# Command: Solución
+# `r rmarkdown::metadata$subtitle`: Solución
 
 ### Lo que _cambia_: la forma de iterar diferentes colecciones de objetos 
 
@@ -113,7 +113,7 @@ class: center, middle
 -   .large[Sabe la posición actual de recurrido de la colección]
 
 ---
-# Command: Solución
+# Iterator: Solución
 
 ### `IterableCollection`
 
@@ -148,7 +148,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 - .large[Iteración `r fontawesome::fa(name = "equals")` repetición, recursión o bucles. El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de Iterators...]
 
 ---
-# Iterator: Aplicabilidad
+# `r rmarkdown::metadata$subtitle`: Aplicabilidad
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
 
@@ -164,7 +164,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 # Resumen
 
-### El patrón Iterator...
+### El patrón `r rmarkdown::metadata$subtitle`...
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
 
