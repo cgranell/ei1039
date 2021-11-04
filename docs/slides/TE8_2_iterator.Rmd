@@ -1,0 +1,175 @@
+---
+title: "[TE8_2] Patrones de Comportamiento"
+subtitle: "Iterator"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2021" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+# .fancy[`r rmarkdown::metadata$title`]
+
+### &#183; `r rmarkdown::metadata$subtitle`
+
+
+`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`
+
+`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`
+
+
+???
+
+Jigsaw teamwork concept macro shot
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/678830)
+
+---
+class: inverse, center, middle
+background-image: url(images/DivingDesingPatterns21.png)
+background-size: cover
+
+
+???
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/iterator)
+
+---
+class: inverse, center, middle
+
+# Iterator Pattern
+
+.large[Propósito]
+
+.large[Problema]
+
+.large[Solución]
+
+.large[Estructura]
+
+.large[Aplicabilidad]
+
+---
+class: center, middle
+
+# Iterator: Propósito
+
+## proporciona una forma de acceder a un objeto agregado .coldinline[sin exponer su estructura interna]
+
+
+---
+# Iterator: Problema
+
+### Un sistema tiene estructuras de datos diferentes (grafos, árboles, listas, etc.) que se recorren para obtener resultados similares
+
+### Código duplicado para iterar o recorrer la colección
+
+### Planificar o almacenar una llamada a un método¡?
+
+
+---
+# Command: Solución
+
+### Lo que _cambia_: la forma de iterar diferentes colecciones de objetos 
+
+
+### `Iterator`
+
+-   .large[Declara una interfaz para acceder y recorrer elementos]
+
+
+### `ConcreteIterator`
+
+-   .large[Implementa la interfaz `Iterator`]
+-   .large[Sabe la posición actual de recurrido de la colección]
+
+---
+# Command: Solución
+
+### `IterableCollection`
+
+-   .large[Declara una interfaz para crear un objeto `Iterator`]
+
+
+### `ConcreteCollection`
+
+-   .large[Devuelve la instancia del iterador concreto]
+
+
+---
+class: left, top
+background-image: url(images/DivingDesingPatterns20.png)
+background-size: contain
+
+# Estructura
+
+???
+
+- las coleciones tienen al menos dos funciones: mantenimiento y recorrido. 
+- El mantenimiento incluye métodos para agregar y eliminar elementos
+- El recorrido se refiere a acceder a los elementos y conocer el orden de acceso 
+- Iterator separa el mecanismo para recorrer la coleción de otras funciones de mantenimiento o similares.
+
+Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/iterator)
+
+
+---
+# Ejemplos reales
+
+- .large[Iteración `r fontawesome::fa(name = "equal")` repetición, implementado como recursión o bucles. El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de Iterators...]
+
+---
+# Iterator: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos encapsular la estructura de datos de una colección y propporcionar a cambio método para recorrer la colección]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos reducir el codigo relacia a recorrer colecciones]
+
+--
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
+
+
+---
+# Resumen
+
+### El patrón Iterator...
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
+
+.large[`r fontawesome::fa(name = "arrow-circle-right")` contibuye a la reutilzacion de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
+
+
+
+
