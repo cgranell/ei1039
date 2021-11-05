@@ -113,7 +113,7 @@ class: center, middle
 
 ### `Invoker`
 
--   .large[Pide llevar a cabo una (o muchas) operación/accion como una petición al `Command`]
+-   .large[Pide llevar a cabo una (o muchas) operación/acción como una petición al `Command`]
 
 ### `Receiver`
 

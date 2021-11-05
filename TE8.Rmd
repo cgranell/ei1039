@@ -19,8 +19,8 @@ knitr::opts_chunk$set(echo = FALSE)
     
     > - Algunas dificultades con dos estrategias: [Diagrama UML](slides/images/students/HW5-UML.png)
     
-    >       - Cada `Strategy`-`ConcreteStrategy` son bloques independientes. 
-    >       - La seleción de estrategias se encapsula en la clase `Context`
+    >       - Cada Strategy-ConcreteStrategy son bloques independientes. 
+    >       - La seleción de estrategias se encapsula en la clase Context.
     
 
 -   [40 min] **Presentación**: [Command pattern](slides/TE8_1_command.html) y [Iterator pattern](slides/TE8_2_iterator.html)
