@@ -134,7 +134,7 @@ background-size: contain
 
 ???
 
-- las coleciones tienen al menos dos funciones: mantenimiento y recorrido. 
+- las coleciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
 - El mantenimiento incluye métodos para agregar y eliminar elementos
 - El recorrido se refiere a acceder a los elementos y conocer el orden de acceso 
 - Iterator separa el mecanismo para recorrer la coleción de otras funciones de mantenimiento o similares.
@@ -145,7 +145,9 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 # Ejemplos reales
 
-- .large[Iteración `r fontawesome::fa(name = "equals")` repetición, recursión o bucles. El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de Iterators...]
+- .large[Iteración `r fontawesome::fa(name = "equals")` repetición, recursión o bucles] 
+
+- .large[El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de [Iterators](https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/util/Iterator.java)]
 
 ---
 # `r rmarkdown::metadata$subtitle`: Aplicabilidad
