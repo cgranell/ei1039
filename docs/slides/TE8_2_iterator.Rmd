@@ -93,8 +93,6 @@ class: center, middle
 
 ### Código duplicado para iterar o recorrer la colección
 
-### Planificar o almacenar una llamada a un método¡?
-
 
 ---
 # `r rmarkdown::metadata$subtitle`: Solución
@@ -157,10 +155,6 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 --
 
 .large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
-
---
-
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos hacer cosas que una llamada "estándard" a un método de una clase no nos permite (hacer/deshacer, planificar, almacenar, serializar, etc) ]
 
 
 ---
