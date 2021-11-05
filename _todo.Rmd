@@ -71,6 +71,7 @@ La actividad POGIL funcioana bien! Solo tengo 4 grupos, y la interaccion dentro 
 
 Tengo que encontrar un mecanismo para que el codigo qeu escriben los estydiantes en una actividad POGIL de progrmación lo pueden registrar y yo evaluarlo de alguna forma, para que ellos reciban feedback y que sepan que lo miro. [GitHub Codespace](shttps://code.visualstudio.com/docs/remote/codespaces), [vscode cloud](https://www.vscodecloud.com/), github gist for java?, etc.
 
+HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasificadores  (joan/pardo); o como un metood setMetric() en al la interfac del Classifier (MA Prosper)?
 
 # Acciones para proximas ediciones
 

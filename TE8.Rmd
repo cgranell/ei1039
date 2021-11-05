@@ -1,7 +1,7 @@
 ---
 title: "TE8 Patrones de comportamiento"
 description: |
-  Command, Visitor y Iterator Patterns.
+  Command y Iterator Patterns.
 output: distill::distill_article
 ---
 
@@ -14,6 +14,14 @@ knitr::opts_chunk$set(echo = FALSE)
 -   [5 min] **Opening**
 
 -   [20 min] **Revisión**: HW5
+
+    > - Ningun problema con una estrategia
+    
+    > - Algunas dificultades con dos estrategias: [Diagrama UML](slides/images/students/HW5-UML.png)
+    
+    >       - Cada `Strategy`-`ConcreteStrategy` son bloques independientes. 
+    >       - La seleción de estrategias se encapsula en la clase `Context`
+    
 
 -   [40 min] **Presentación**: [Command pattern](slides/TE8_1_command.html) y [Iterator pattern](slides/TE8_2_iterator.html)
 
