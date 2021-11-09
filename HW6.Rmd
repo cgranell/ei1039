@@ -39,8 +39,8 @@ El funcionamiento real del robot BeeBot no funciona de forma interactiva, es dec
 1. Como primer paso, idea e implementa una forma de mantener la secuencia de comandos sin ejecutarlos inmediatamente. Deberás añadir una clase que soporte el histórico de comandos y modificar el código de algunas clases existente para que cada tecla presionada no conlleve la ejecución del comando asociado sino que lo almacena en una estructura de datos adecuada.
 
 
-2. Ahora que tienes la secuencia de comandos (teclas presionadas) almacenada, idea e implementa una solución (comando) para recrear el otro botón especial de BeeBot que permite "borrar" la última (y solo la última) tecla naranja presionada. 
+2. Ahora que tienes la secuencia de comandos (teclas presionadas) almacenada, idea e implementa una solución para recrear el otro botón especial de BeeBot que permite "borrar" la última (y solo la última) tecla naranja presionada. 
 
 
-3. Ahora sí que está todo listo para que implementes el comportamiento real del botón especial verde “GO” del BeeBot (como un comando) que ejecuta la secuencia ordenada de teclas naranjas (comandos) almacenados. 
+3. Ahora sí que está todo listo para que implementes el comportamiento real del botón especial verde “GO” del BeeBot que ejecuta la secuencia ordenada de teclas naranjas (comandos) almacenados. 
 
