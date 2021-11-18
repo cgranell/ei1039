@@ -32,6 +32,9 @@ navbar:
           href: TE7.html
         - text: "TE8 Command & Iterator"
           href: TE8.html
+        - text: "SE2 MVC, MVP & MVVM"
+          href:
+
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github

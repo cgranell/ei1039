@@ -111,5 +111,7 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   Añadir soporte blog para describir feedback, comentarios y demas sobre HW y actividades POGIL
 
+-   Nombrar (name) las slides clave de cada presentacion: inicio, estructurara, participantes
+
 -   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html) 
 ución 

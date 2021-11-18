@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>[SE2] Patrones UI</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Carlos Granell" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+name: title
+class: right, top
+background-image: url(https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fhn-images%2F0*7LesGFlzQzpGiP8m&amp;w=3840&amp;q=75)
+background-size: contain
+
+# .fancy[[SE2] Patrones UI]
+
+Carlos Granell&amp;#183; Universitat Jaume I
+
+EI1039 - Diseño de Software &amp;#183; Sep 2021
+
+???
+Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
+
+
+---
+class: inverse, center, middle
+
+.acid[Model-View-Controller (MVC)]
+
+--
+
+.heat[Model-View-Presenter (MVP)]
+
+--
+
+.cold[Model-View-ViewModel (MVVM)]
+
+
+---
+# .acidinline[MVC] Inicios
+
+.left-column[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Trygve_Reenskaug_%282010%29.jpg" alt="Trygve Reenskaug" width="100%" /&gt;
+&lt;p class="caption"&gt;Trygve Reenskaug&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+.right-column[
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt;  [Formulada](http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html) en 1978/79]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Como un lenguaje compartido para describir problemas y sus soluciones ("Pattern Language")]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Uso en la era pre-Web para GUI (Smalltalk, Mac OS, Window... ]
+]
+
+
+---
+# .acidinline[MVC] Componentes 
+
+### .acidinline[M]odel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; It includes all the data and its related logic
+
+### .acidinline[V]iew &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Present data to the user or handles user interaction
+
+### .acidinline[C]ontroller &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; An interface between Model and View components
+
+
+
+---
+# .acidinline[MVC] Patrón de diseño o de arquitectura
+
+.pull-left[
+
+ ### .center[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; MVC como patrón de diseño si soluciona problemas específicos]
+]
+
+.pull-right[
+
+### .center[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; MVC como patrón de arquitectura si afecta a toda (la arquitectura de) la aplicación]
+
+]
+
+
+---
+# .acidinline[MVC] Como patrón de diseño 
+
+
+&lt;div class="figure"&gt;
+&lt;img src="images/HeadFirstDesingPatterns14.png" alt="MVC by Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC by Head First Design Patterns&lt;/p&gt;
+&lt;/div&gt;
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+### .acidinline[V]iew-.acidinline[C]ontroller &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Strategy`](https://cgranell.github.io/ei1039/slides/TE7_2_strategy.html#title)
+
+-   .large[La vista es un objeto configurado con una estrategia, el controlador] 
+
+-   .large[La vista se encarga únicamente del aspecto visual y delega el resto al controlador, que se encarga de interactuar con el modelo] 
+
+-   .large[La vista no conoce nada de la interacción entre el controlador y el modelo. Esta desacoplada] 
+
+
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+&lt;div class="figure"&gt;
+&lt;img src="images/HeadFirstDesingPatterns15.png" alt="MVC-Strategy by Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Strategy by Head First Design Patterns&lt;/p&gt;
+&lt;/div&gt;
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+### .acidinline[V]iew &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Composite`](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#title)
+
+-   .large[La vista consiste en un conjunto de ventanas, paneles, botones, etiquetas, etc.]
+
+-   .large[Cada elemento visual es o bien un _Composite_ (un frame) o bien un _Leaf_ (un botón)]
+] 
+
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+&lt;div class="figure"&gt;
+&lt;img src="images/HeadFirstDesingPatterns16.png" alt="MVC-Composite by Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Composite by Head First Design Patterns&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+### .acidinline[V]iew-.acidinline[M]odel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Observer`](https://cgranell.github.io/ei1039/slides/TE6_1_observer.html#title)
+
+-   .large[El modelo implementa el patrón `Observer`]
+
+-   .large[La vista (y controlador) es un observador del modelo]
+
+-   .large[El modelo está completamente desacoplado: no depende de la vista ni del controlador]
+
+-   .large[Permite cambiar la vista sin afectar al modelo]
+
+
+---
+# .acidinline[MVC] Como patrón (compuesto) de diseño 
+
+&lt;div class="figure"&gt;
+&lt;img src="images/HeadFirstDesingPatterns17.png" alt="MVC-Observer by Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Observer by Head First Design Patterns&lt;/p&gt;
+&lt;/div&gt;
+
+---
+# .acidinline[MVC] Beneficios 
+
+-   .large[MVC architecture will separate the user interface from business logic and business logic]
+-   .large[Components are reusable]
+-   .large[Easy to maintain]
+-   .large[Different components of the application in MVC can be independently deployed and maintained]
+-   .large[This architecture help to test components independently]
+
+
+
+---
+# .acidinline[MVC] Como patrón de arquitectura
+
+
+### Web MVC
+
+### Web Frameworks
+
+
+---
+background-image: url(https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh)
+background-size: contain
+# Web MVC
+
+
+
+???
+Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
+
+---
+# Web .acidinline[MVC]
+
+.pull-left[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh" alt="Web MVC" width="100%" /&gt;
+&lt;p class="caption"&gt;Web MVC&lt;/p&gt;
+&lt;/div&gt;
+
+
+]
+
+.pull-right[
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Controller gestiona la petición inicial, no la View]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; La View amasa HTML, JS y CSS en vez de presentr info y capturar entrada de datos]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; The HTML/JS would contain logic like button click handlers that would dispatch an action back to the controller via an XMLHttpRequest]
+]
+
+---
+background-image: url(https://hackernoon.com/hn-images/0*dTPUy_vSyQPHe-kX)
+background-size: contain
+# Web Frameworks
+
+
+
+???
+Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
+
+
+---
+# Web Frameworks
+
+
+.pull-left[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://hackernoon.com/hn-images/0*dTPUy_vSyQPHe-kX" alt="Modern Web Frameworks" width="100%" /&gt;
+&lt;p class="caption"&gt;Modern Web Frameworks&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+.pull-right[
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; ....]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; ....]
+
+
+
+]
+
+???
+Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
+
+
+
+
+---
+class: inverse, center, middle
+
+.heat[Model-View-Presenter (MVP)]
+
+--
+
+.cold[Model-View-ViewModel (MVVM)]
+
+
+---
+# .heatinline[MVP] Model-View-.heatinline[Presenter]
+
+
+---
+class: inverse, center, middle
+
+.cold[Model-View-ViewModel (MVVM)]
+
+
+---
+# .coldinline[MVVM] Model-View-.coldinline[ViewModel]
+
+
+---
+# MVC &amp; Modern frameworks
+
+???
+
+https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
+
+https://www.monocubed.com/10-most-popular-web-frameworks/
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
