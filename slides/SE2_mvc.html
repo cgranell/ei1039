@@ -17,15 +17,27 @@
 
 
 name: title
-class: right, top
-background-image: url(https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fhn-images%2F0*7LesGFlzQzpGiP8m&amp;w=3840&amp;q=75)
-background-size: contain
+class: left, top
+
+.left-column[
 
 # .fancy[[SE2] Patrones UI]
+
+### &amp;#183; MVC y variantes
 
 Carlos Granell&amp;#183; Universitat Jaume I
 
 EI1039 - Diseño de Software &amp;#183; Sep 2021
+
+]
+
+.right-column[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fhn-images%2F0*7LesGFlzQzpGiP8m&amp;w=3840&amp;q=75" alt="MVC from hackernoon.com" width="100%" /&gt;
+&lt;p class="caption"&gt;MVC from hackernoon.com&lt;/p&gt;
+&lt;/div&gt;
+]
 
 ???
 Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
@@ -51,8 +63,8 @@ class: inverse, center, middle
 .left-column[
 
 &lt;div class="figure"&gt;
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Trygve_Reenskaug_%282010%29.jpg" alt="Trygve Reenskaug" width="100%" /&gt;
-&lt;p class="caption"&gt;Trygve Reenskaug&lt;/p&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Trygve_Reenskaug_%282010%29.jpg" alt="Trygve Reenskaug from Wikipedia" width="100%" /&gt;
+&lt;p class="caption"&gt;Trygve Reenskaug from Wikipedia&lt;/p&gt;
 &lt;/div&gt;
 
 ]
@@ -63,55 +75,70 @@ class: inverse, center, middle
 
 .large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Como un lenguaje compartido para describir problemas y sus soluciones ("Pattern Language")]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Uso en la era pre-Web para GUI (Smalltalk, Mac OS, Window... ]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Uso predominante en la era pre-Web para GUI (Smalltalk, Mac OS, Windows...) ]
 ]
 
 
 ---
 # .acidinline[MVC] Componentes 
 
-### .acidinline[M]odel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; It includes all the data and its related logic
+## .acidinline[M]odel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; datos y su lógica
 
-### .acidinline[V]iew &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Present data to the user or handles user interaction
+## .acidinline[V]iew &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; presentación de datos e interacción del usuario
 
-### .acidinline[C]ontroller &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; An interface between Model and View components
-
+## .acidinline[C]ontroller &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; El pegamiento (interfaz) entre `Model` y `View`
 
 
 ---
-# .acidinline[MVC] Patrón de diseño o de arquitectura
+# .acidinline[MVC] Componentes 
+
+&lt;div class="figure"&gt;
+&lt;img src="images/HeadFirstDesingPatterns14.png" alt="MVC from Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC from Head First Design Patterns&lt;/p&gt;
+&lt;/div&gt;
+
+---
+# .acidinline[MVC] ¿Patrón de diseño o de arquitectura?
+
+--
 
 .pull-left[
 
- ### .center[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; MVC como patrón de diseño si soluciona problemas específicos]
+## .center[MVC como patrón de diseño .acidinline[si soluciona problemas específicos]]
 ]
+
+--
 
 .pull-right[
 
-### .center[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; MVC como patrón de arquitectura si afecta a toda (la arquitectura de) la aplicación]
+## .center[MVC como patrón de arquitectura .acidinline[si afecta a toda (la arquitectura de) la aplicación]]
 
 ]
 
+???
+
+¿Qué gorra nos ponemos? ¿La de arquitecto, como al principio del curso? ¿o la de diseñador/programador, como en la parte de patrones de diseño?. MVC admite una, la otra, o ambas a la vez. 
 
 ---
-# .acidinline[MVC] Como patrón de diseño 
+# .acidinline[MVC] Como patrón (.acidinline[compuesto]) de diseño 
 
 
 &lt;div class="figure"&gt;
-&lt;img src="images/HeadFirstDesingPatterns14.png" alt="MVC by Head First Design Patterns" width="90%" /&gt;
-&lt;p class="caption"&gt;MVC by Head First Design Patterns&lt;/p&gt;
+&lt;img src="images/HeadFirstDesingPatterns14.png" alt="MVC from Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC from Head First Design Patterns&lt;/p&gt;
 &lt;/div&gt;
+
 
 ---
 # .acidinline[MVC] Como patrón (compuesto) de diseño 
 
 ### .acidinline[V]iew-.acidinline[C]ontroller &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Strategy`](https://cgranell.github.io/ei1039/slides/TE7_2_strategy.html#title)
 
--   .large[La vista es un objeto configurado con una estrategia, el controlador] 
+-   .large[`View` es un objeto configurado con una estrategia; el `Controller` proporciona la estrategia] 
 
--   .large[La vista se encarga únicamente del aspecto visual y delega el resto al controlador, que se encarga de interactuar con el modelo] 
+-   .large[`View` se encarga solo del aspecto visual y delega el resto al `Controller`, que se encarga de interactuar con el `Model`] 
 
--   .large[La vista no conoce nada de la interacción entre el controlador y el modelo. Esta desacoplada] 
+-   .large[`View` está desacoplado, no conoce nada de la interacción entre el `Controller` y `Model`] 
 
 
 
@@ -119,8 +146,8 @@ class: inverse, center, middle
 # .acidinline[MVC] Como patrón (compuesto) de diseño 
 
 &lt;div class="figure"&gt;
-&lt;img src="images/HeadFirstDesingPatterns15.png" alt="MVC-Strategy by Head First Design Patterns" width="90%" /&gt;
-&lt;p class="caption"&gt;MVC-Strategy by Head First Design Patterns&lt;/p&gt;
+&lt;img src="images/HeadFirstDesingPatterns15.png" alt="MVC-Strategy from Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Strategy from Head First Design Patterns&lt;/p&gt;
 &lt;/div&gt;
 
 ---
@@ -128,7 +155,7 @@ class: inverse, center, middle
 
 ### .acidinline[V]iew &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Composite`](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#title)
 
--   .large[La vista consiste en un conjunto de ventanas, paneles, botones, etiquetas, etc.]
+-   .large[`View` consiste en un conjunto de ventanas, paneles, botones, etiquetas, etc.]
 
 -   .large[Cada elemento visual es o bien un _Composite_ (un frame) o bien un _Leaf_ (un botón)]
 ] 
@@ -138,8 +165,8 @@ class: inverse, center, middle
 # .acidinline[MVC] Como patrón (compuesto) de diseño 
 
 &lt;div class="figure"&gt;
-&lt;img src="images/HeadFirstDesingPatterns16.png" alt="MVC-Composite by Head First Design Patterns" width="90%" /&gt;
-&lt;p class="caption"&gt;MVC-Composite by Head First Design Patterns&lt;/p&gt;
+&lt;img src="images/HeadFirstDesingPatterns16.png" alt="MVC-Composite from Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Composite from Head First Design Patterns&lt;/p&gt;
 &lt;/div&gt;
 
 
@@ -149,42 +176,45 @@ class: inverse, center, middle
 
 ### .acidinline[V]iew-.acidinline[M]odel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [`Observer`](https://cgranell.github.io/ei1039/slides/TE6_1_observer.html#title)
 
--   .large[El modelo implementa el patrón `Observer`]
+-   .large[`Model` implementa el patrón `Observer`]
 
--   .large[La vista (y controlador) es un observador del modelo]
+-   .large[`View` (y `Controller`) es un observador del `Model`]
 
--   .large[El modelo está completamente desacoplado: no depende de la vista ni del controlador]
+-   .large[`Model` está completamente desacoplado: no depende de la `View` ni del `Controller`]
 
--   .large[Permite cambiar la vista sin afectar al modelo]
+-   .large[Permite cambiar la `View` sin afectar al `Model`]
 
 
 ---
 # .acidinline[MVC] Como patrón (compuesto) de diseño 
 
 &lt;div class="figure"&gt;
-&lt;img src="images/HeadFirstDesingPatterns17.png" alt="MVC-Observer by Head First Design Patterns" width="90%" /&gt;
-&lt;p class="caption"&gt;MVC-Observer by Head First Design Patterns&lt;/p&gt;
+&lt;img src="images/HeadFirstDesingPatterns17.png" alt="MVC-Observer from Head First Design Patterns" width="90%" /&gt;
+&lt;p class="caption"&gt;MVC-Observer from Head First Design Patterns&lt;/p&gt;
 &lt;/div&gt;
 
 ---
-# .acidinline[MVC] Beneficios 
+# .acidinline[MVC] proporciona 
 
--   .large[MVC architecture will separate the user interface from business logic and business logic]
--   .large[Components are reusable]
--   .large[Easy to maintain]
--   .large[Different components of the application in MVC can be independently deployed and maintained]
--   .large[This architecture help to test components independently]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; _separation of concerns_]
 
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; componentes _reutizables_]
 
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; componentes que pueden _desplegarse_ independientemente]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; componentes que pueden _testearse_ independientemente]
 
 ---
 # .acidinline[MVC] Como patrón de arquitectura
 
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
-### Web MVC
+.center[.large[Además de afectar a toda la aplicación, MVC entra en un escenario más complejo con la introducción de la Web (__Web MVC__) y los frameworks modernos (__Web &amp; mobile frameworks__)]]
 
-### Web Frameworks
+???
+¿Cambiamos de gorra o nos ponemos las dos a la vez?
 
+Web framework = a software platform for developing web applications and websites.
 
 ---
 background-image: url(https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh)
@@ -197,13 +227,13 @@ background-size: contain
 Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
 
 ---
-# Web .acidinline[MVC]
+# Web MVC
 
 .pull-left[
 
 &lt;div class="figure"&gt;
-&lt;img src="https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh" alt="Web MVC" width="100%" /&gt;
-&lt;p class="caption"&gt;Web MVC&lt;/p&gt;
+&lt;img src="https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh" alt="Web MVC from hackernoon.com" width="100%" /&gt;
+&lt;p class="caption"&gt;Web MVC from hackernoon.com&lt;/p&gt;
 &lt;/div&gt;
 
 
@@ -211,12 +241,15 @@ Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-fr
 
 .pull-right[
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Controller gestiona la petición inicial, no la View]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `Controller` gestiona la petición inicial, no la `View`]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; La View amasa HTML, JS y CSS en vez de presentr info y capturar entrada de datos]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; La `View` "amasa" HTML, JS y CSS (_templating_) para el _browser_ en vez de presentar datos y manejar entradas de datos]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; The HTML/JS would contain logic like button click handlers that would dispatch an action back to the controller via an XMLHttpRequest]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; HTML/JS tiene lógica (_button click handlers_) que lanza acciones al `Controller` via peticiones HTTP]
 ]
+
+???
+https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 
 ---
 background-image: url(https://hackernoon.com/hn-images/0*dTPUy_vSyQPHe-kX)
@@ -236,26 +269,26 @@ Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-fr
 .pull-left[
 
 &lt;div class="figure"&gt;
-&lt;img src="https://hackernoon.com/hn-images/0*dTPUy_vSyQPHe-kX" alt="Modern Web Frameworks" width="100%" /&gt;
-&lt;p class="caption"&gt;Modern Web Frameworks&lt;/p&gt;
+&lt;img src="https://hackernoon.com/hn-images/0*dTPUy_vSyQPHe-kX" alt="Modern Web Frameworks from hackernoon.com" width="100%" /&gt;
+&lt;p class="caption"&gt;Modern Web Frameworks from hackernoon.com&lt;/p&gt;
 &lt;/div&gt;
 
 ]
 
 .pull-right[
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; ....]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [Single-Page Applications (SPA)](https://en.wikipedia.org/wiki/Single-page_application) precarga recursos una sola vez  para UX más fluida]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; ....]
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Nuevas SPA (_static bundles_) se sirven con baja latencia]
 
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; SPA realiza peticiones HTTP para obtener recursos via `API Controller`]
 
 
 ]
 
 ???
-Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
-
-
+https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 
 
 ---
@@ -263,14 +296,46 @@ class: inverse, center, middle
 
 .heat[Model-View-Presenter (MVP)]
 
---
+---
+# .heatinline[MVP] Model-View-.heatinline[Presenter]
 
-.cold[Model-View-ViewModel (MVVM)]
+
+&lt;div class="figure"&gt;
+&lt;img src="https://miro.medium.com/max/1400/0*CNMHroWFQUOEC-PI.png" alt="MVC-MVP from medium.com" width="100%" /&gt;
+&lt;p class="caption"&gt;MVC-MVP from medium.com&lt;/p&gt;
+&lt;/div&gt;
+
+???
+https://medium.com/@tinmegali/model-view-presenter-mvp-in-android-part-1-441bfd7998fe
 
 
 ---
 # .heatinline[MVP] Model-View-.heatinline[Presenter]
 
+.pull-left[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://miro.medium.com/max/1400/0*nryKBiuwZthT--SA.png" alt="MVP-Android from medium.com" width="100%" /&gt;
+&lt;p class="caption"&gt;MVP-Android from medium.com&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+.pull-right[
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `Model` y `View` igual; `Presenter` es el nuevo `Controller`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `Presenter` actúa de mediador entre `View` y `Model`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; 1:1 mapping entre `Presenter` y `View`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Mayor separación entre `View` y `Model` facilita Unit tests]
+
+
+]
+
+???
+https://medium.com/@tinmegali/model-view-presenter-mvp-in-android-part-1-441bfd7998fe
 
 ---
 class: inverse, center, middle
@@ -281,18 +346,94 @@ class: inverse, center, middle
 ---
 # .coldinline[MVVM] Model-View-.coldinline[ViewModel]
 
+&lt;div class="figure"&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/87/MVVMPattern.png" alt="MVVM from Wikipedia" width="100%" /&gt;
+&lt;p class="caption"&gt;MVVM from Wikipedia&lt;/p&gt;
+&lt;/div&gt;
+
 
 ---
-# MVC &amp; Modern frameworks
+# .coldinline[MVVM] Model-View-.coldinline[ViewModel]
+
+
+.pull-left[
+
+&lt;div class="figure"&gt;
+&lt;img src="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/images/hh830877.1afe20bab0052f5ab0fc400bf3b6f3f7(en-us,pandp.10).png" alt="MVVM from MSDN" width="100%" /&gt;
+&lt;p class="caption"&gt;MVVM from MSDN&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+.pull-right[
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `ViewModel` es el nuevo `Presenter`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `ViewModel` ofrece el modelo exacto que le gusta al `View`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `ViewModel` tiene un _binder_ para sincronizacion automática entre propiedades enlazadas (_bounded_) del `View` con `ViewModel`]
+
+.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; `ViewModel` se mantiene sincronizado con `Model`]
+]
 
 ???
+https://docs.microsoft.com/en-us/previous-versions/msp-n-p/hh848246(v=pandp.10)?redirectedfrom=MSDN
+
+---
+# Modern Web (&amp; mobile) frameworks
+
+### .acidinline[(Push-based) MVC] &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [Spring MVC](https://vuejs.org/), [Ruby on Rails](http://rubyonrails.org/), [Django](https://www.djangoproject.com/)...
+
+
+### .heatinline[MVP] &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [Lavarel](https://laravel.com/), ...
+
+
+### .coldinline[MVVM] &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; [VueJS](https://vuejs.org/), KnockoutJS, [EmberJS](https://emberjs.com/), [Angular](https://angular.io/)...
+
+
+---
+class:center, middle
+
+# Ten en cuenta que 
+
+--
+
+.large[Los frameworks modernos ya no se ajustan fielmente a las tres capas clásicas (M,V,C), ni resulta fácil clasificarlos dentro de las variantes MVC] 
+
+--
+
+.large[Surgen más capas ([Middleware](https://laravel.com/docs/8.x/middleware), [Requests](https://laravel.com/docs/8.x/requests),...) por complejidad y necesidades crecientes] 
+
+--
+
+### Organiza y estructura tus apps de forma que soluciones tus problemas
+
+
+???
+
+MVC frameworks observe a push-based architecture, also known as ‘action-based.’ They adopt actions that do the necessary processing and then accordingly ‘push’ the data to a view layer to furnish the outcome.  Some examples of frameworks are 
 
 https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 
 https://www.monocubed.com/10-most-popular-web-frameworks/
 
 
+---
+# Recursos
 
+-   .large[[Wikipedia: Model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)]
+
+-   .large[[Wikipedia: Model–view–presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)]
+
+-   .large[[From MVC to Modern Web Frameworks](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)]
+
+-   .large[[The MVC, MVP, and MVVM Smackdown](https://academy.realm.io/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/)]
+
+-   .large[Model View Presenter (MVP) in Android, [Part 1](https://medium.com/@tinmegali/model-view-presenter-mvp-in-android-part-1-441bfd7998fe), [Part 2](https://medium.com/@tinmegali?p=a15e35891095), [Part 3](https://medium.com/@tinmegali/model-view-presenter-mvp-no-android-parte-3-f0b0a6966579)]
+
+-   .large[[MVP for Android: how to organize the presentation layer](http://antonioleiva.com/mvp-android/)]
+
+-   .large[[10 Popular Web Frameworks for Web App Development in 2021](https://www.monocubed.com/10-most-popular-web-frameworks/)]
 
 
 
