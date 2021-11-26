@@ -34,7 +34,8 @@ navbar:
           href: TE8.html
         - text: "SE2 MVC, MVP & MVVM"
           href: slides/SE2_mvc.html
-
+        - text: "SE3 UI Desing"
+          href: SE3.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github
