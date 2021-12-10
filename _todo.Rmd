@@ -115,3 +115,8 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html) 
 ución 
+
+- Seminario de presentacion publica
+https://aenui.org/actas/pdf/JENUI_2019_019.pdf
+https://aenui.org/actas/pdf/JENUI_2013_002.pdf
+https://aenui.org/actas/pdf/JENUI_2011_025.pdf
