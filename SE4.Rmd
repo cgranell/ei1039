@@ -1,0 +1,33 @@
+---
+title: "SE4"
+description: |
+  "Ensayo" de la presentación del proyecto
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objetivo
+
+Reconocer, analizar y aplicar habilidades para una comunicación eficaz.
+
+## Instrucciones 
+
+La presentación del proyecto se centra en gran medida en la competencia de **comunicación oral efectiva**. Por lo tanto, los criterios de evaluación de la presentación final del proyecto giran en gran medida en torno a las habilidades relacionadas con la comunicación oral de los miembros de cada equipo.
+
+En este seminario, por cada equipo, un miembro tomará el rol de presentador para exponer oralemnte por unos cinco minutos el comienzo de la presentación final del proyecto comun. El contenido de esos cinco minutos versarán sobre los siguiente aspectos (que son un extracto de los que se pedirá para la presentación final)
+
+-   motivación, 
+-   propuesta básica (de partida, común para todos; valor metodológico), 
+-   propuesta específica del equipo, haciendo énfasis en el valor añadido (por el equipo) con respecto a la propuesta básica (nuevas funciones, valor para el usuario, impacto en el uso de tecnologías...)
+
+
+Al finalizar la presentación, el resto de miembros del equipo opinará (siempre de forma constructiva y con respecto) sobre *qué se ha hecho bien* y *qué se ha hecho menos bien* en la presentación, teniendo en cuenta los siguientes aspectos:
+
+-   **Lenguaje verbal**: el lenguaje utilizado debe ser acorde al dominio del tema, utilizando los términos adecuados, pronunciación clara, volumen de voz suficiente, velocidad del discurso, equilibrio discurso-diapositivas, contacto visual con la audiencia. La falta de ensayo puede llevar a cometer errores comunes como el uso excesivo de muletillas, repetición de contenidos o lectura de transparencias.
+-   **Temporización**: el tiempo total empleado se ajusta el tiempo previsto, el tiempo se distribuye entre los diferentes aspecto (los tres de arriba) del trabajo. 
+-   **Expresión corporal**: el lenguaje corporal debe transmitir seguridad y convicción, manteniéndose en sintonía con el discurso, se muestra una actitud de interés, postura correcta. 
+
+

@@ -36,6 +36,8 @@ navbar:
           href: slides/SE2_mvc.html
         - text: "SE3 UI Desing"
           href: SE3.html
+        - text: "SE4 Ensayo presentacion"
+          href: SE4.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github
