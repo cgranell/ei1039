@@ -130,3 +130,14 @@ ución
 https://aenui.org/actas/pdf/JENUI_2019_019.pdf
 https://aenui.org/actas/pdf/JENUI_2013_002.pdf
 https://aenui.org/actas/pdf/JENUI_2011_025.pdf
+
+- [The state of research on software engineering competencies: A systematic mapping study](https://doi.org/10.1016/j.jss.2021.111183)
+- [Research state of the art on GoF design patterns: A mapping study](https://doi.org/10.1016/j.jss.2013.03.063)
+- [Designing and implementing an environment for software start-up education: Patterns and anti-patterns](https://doi.org/10.1016/j.jss.2018.08.060)
+- [The state of the art on design patterns: A systematic mapping of the literature](https://doi.org/10.1016/j.jss.2016.11.030)
+- [What can violations of good practices tell about the relationship between GoF patterns and run-time quality attributes?](https://doi.org/10.1016/j.infsof.2018.07.014)
+- [Study of advanced separation of concerns approaches using the GoF design patterns: A quantitative and qualitative comparison](https://doi.org/10.1016/j.infsof.2014.04.015)
+- [A study on correlations between architectural smells and design patterns](https://doi.org/10.1016/j.jss.2021.110984)
+
+
+
