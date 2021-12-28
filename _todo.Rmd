@@ -75,6 +75,10 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 # Acciones para proximas ediciones
 
+-   Reestructurar la web como el curso de RRP. Añadir estilos como en https://emitanaka.org/ y https://jhelvy.github.io/distillery/showcase.html. ¿Alguna forma de comunicar los patrones de diseño o su aplicación como una documento dinámico, al estilo de https://distill.pub/2020/communicating-with-interactive-articles/? ¿Podria ser un ejercicio a los alumnos?
+
+-   Trasladar a la docencia los avances científicos más reciente en diseño de patrones. Eliminar algunas actividades POGIL (un par, por ejemplo) para utilizar  sesiones magistrales de avances, novedades y tendencias mas recientes. No es necesario que sean seguidads. 
+
 -   Crear (entre el alumnado) fichas resumen de los patrones con una estructura común:
 
     -   Nombre
@@ -93,25 +97,31 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   En HW posteriores, proponer la **autoevaluación** de la solución aportada con respecto a una solucion oficial, para explicar las diferencias entre la solución del alumno y la solución oficial. (ver [Presentación Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
 
--   Para HW posteriores, prooner quixe o pregutnas de reflexiones sobre las actividades POGIL desarrollads en la sesión (forma de evlauar POGIL)
+-   Para HW posteriores, proponer quizz o preguntas de reflexiones sobre las actividades POGIL desarrolladas en la sesión (forma de evaluar POGIL)
 
--   Plantear competencias basicas y avanzadas y errore basicos/avanzados (ver [Presentacion Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
+-   Plantear competencias basicas y avanzadas y erróres basicos/avanzados (ver [Presentacion Merche](https://docs.google.com/presentation/d/e/2PACX-1vSuYiPuPinyEdonBrkUgJr8wPz4D_lZxYPvmnS3zPfhUYg5VvYxLF8sXbZL9IzUu0q0ADoPdIfSqhry/pub?slide=id.gee5a1a6ddf_0_4))
 
 -   Basado en las reflexiones personales de HW2, parece que el método POGIL es bien recibido por los estudiantes. Uff, menos mal!!
 
 -   Plantear una sesion de seminario de "recent trends", al estido de lo que se comenta en este articulo <https://cacm.acm.org/magazines/2020/7/245690-your-wish-is-my-cmd/fulltext>, para la generacion de codigo automaticamente. ¿Como se relaciona con patrones? ¿y sobre la generacion de tests automaticos?
 
--   Primera de la primera sesion se debe reducir a 15 min. Estudiantes deben lele la guai docente extensido y syllabus antes de la primera sesion. Asi, arqhitetur se reduce a uan unica sesion, y ganamos una sesión para introduce patrones de diseño y actividad pogil .
+-   Primera parte de la primera sesion se debe reducir a 15 min. Estudiantes deben leer la guía docente extendida  y syllabus antes de la primera sesion. Asi, arqhitecture software se reduce a una única sesión, y ganamos una sesión para introducer patrones de diseño y actividad pogil.
 
--   Seminario conjunto de paradigmas/arquitecturas software. Plantear tipo debate entre dos equipos. Dado un caso de estudio concreto (aplicación bien conocida), plantear dos estilos arquitectónicos (a y B), para que cada equipo escoja una de ellos y defienda su postura, es decir, que el caso de estudio es mejor con la arquitectura A o es mejor con la B.
+- ¿Son las actividades POGIL necesarioas en todas las clases?
 
--   [5 Design Patter every engineer should know](https://www.youtube.com/watch?v=FLmBqI3IKMA)
+-   Seminario conjunto de paradigmas/arquitecturas software. Plantear tipo debate entre dos equipos. Dado un caso de estudio concreto (aplicación bien conocida), plantear dos estilos arquitectónicos (A y B), para que cada equipo escoja una de ellos y defienda su postura, es decir, que el caso de estudio es mejor con la arquitectura A o es mejor con la B.
+
+-   [5 Design Patterns every engineer should know](https://www.youtube.com/watch?v=FLmBqI3IKMA)
 
 -   [UI-desing patterns](http://ui-patterns.com/patterns)
 
 -   Añadir soporte blog para describir feedback, comentarios y demas sobre HW y actividades POGIL
 
--   Nombrar (name) las slides clave de cada presentacion: inicio, estructurara, participantes
+-   Añadir contracto de aprendizaje para la primera sesion, con el fin de que los estundate se comprometan a realziar los HW
+
+-   Encontrar modo de corregir y proporcionar feedback a los HW y actividades POGIL. Por ejempñlo, los howeworks se puede realziar todos en Guithub, con una estructura dada (ejemplo de repo mio), que combine ficheros readme y codigo. Los ficheros readme pueden incluir refelxiones tambien.  
+
+-   Nombrar (name) las slides clave de cada presentacion: inicio, estructura, participantes
 
 -   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html) 
 ución 
