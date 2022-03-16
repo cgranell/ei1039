@@ -71,13 +71,17 @@ La actividad POGIL funcioana bien! Solo tengo 4 grupos, y la interaccion dentro 
 
 Tengo que encontrar un mecanismo para que el codigo qeu escriben los estydiantes en una actividad POGIL de progrmación lo pueden registrar y yo evaluarlo de alguna forma, para que ellos reciban feedback y que sepan que lo miro. [GitHub Codespace](shttps://code.visualstudio.com/docs/remote/codespaces), [vscode cloud](https://www.vscodecloud.com/), github gist for java?, etc.
 
-HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasificadores  (joan/pardo); o como un metood setMetric() en al la interfac del Classifier (MA Prosper)?
+HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasificadores (joan/pardo); o como un metood setMetric() en al la interfac del Classifier (MA Prosper)?
 
 # Acciones para proximas ediciones
 
--   Reestructurar la web como el curso de RRP. Añadir estilos como en https://emitanaka.org/ y https://jhelvy.github.io/distillery/showcase.html. ¿Alguna forma de comunicar los patrones de diseño o su aplicación como una documento dinámico, al estilo de https://distill.pub/2020/communicating-with-interactive-articles/? ¿Podria ser un ejercicio a los alumnos?
+-   Reestructurar la web como el curso de RRP. Añadir estilos como en <https://emitanaka.org/> y <https://jhelvy.github.io/distillery/showcase.html>. De este último website, me ha gustado el siguiente estilo <https://www.fizzics.ie/> para la web RRP. Para simplificar, utilizo un estilo muy simple para las asignturas de grado (EI1039) y master (Data Science), como este <https://cdu-data-science-team.github.io/team-blog/> o <https://sean.rbind.io/>, para cambiar únicamente el color de cabecera (y links, etc) en cada curso académico.
 
--   Trasladar a la docencia los avances científicos más reciente en diseño de patrones. Eliminar algunas actividades POGIL (un par, por ejemplo) para utilizar  sesiones magistrales de avances, novedades y tendencias mas recientes. No es necesario que sean seguidads. 
+-   ¿Alguna forma de comunicar los patrones de diseño o su aplicación como una documento dinámico, al estilo de <https://distill.pub/2020/communicating-with-interactive-articles/>? ¿Podria ser un ejercicio a los alumnos?
+
+-   Trasladar a la docencia los avances científicos más reciente en diseño de patrones. Eliminar algunas actividades POGIL (un par, por ejemplo) para utilizar sesiones magistrales de avances, novedades y tendencias más recientes. No es necesario que sean seguidadas. Pero esa presentacion de tendencias debe conectarse con el conocimiento previo anterior.
+
+-   Modelo 5E (que sale en la presentacio decharlas.es de Hector Ruiz, <https://www.youtube.com/watch?v=KJ3xQZDNjK4&t=15s>) conecta bien con modelo POGIL)
 
 -   Crear (entre el alumnado) fichas resumen de los patrones con una estructura común:
 
@@ -105,9 +109,13 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   Plantear una sesion de seminario de "recent trends", al estido de lo que se comenta en este articulo <https://cacm.acm.org/magazines/2020/7/245690-your-wish-is-my-cmd/fulltext>, para la generacion de codigo automaticamente. ¿Como se relaciona con patrones? ¿y sobre la generacion de tests automaticos?
 
--   Primera parte de la primera sesion se debe reducir a 15 min. Estudiantes deben leer la guía docente extendida  y syllabus antes de la primera sesion. Asi, arqhitecture software se reduce a una única sesión, y ganamos una sesión para introducer patrones de diseño y actividad pogil.
+-   Primera parte de la primera sesion se debe reducir a 15 min. Estudiantes deben leer la guía docente extendida y syllabus antes de la primera sesion. Asi, arqhitecture software se reduce a una única sesión, y ganamos una sesión para introducer patrones de diseño y actividad pogil.
 
-- ¿Son las actividades POGIL necesarioas en todas las clases?
+-   ¿Son las actividades POGIL necesarias en todas las clases?
+
+-   Partir de los proyectos del curso 2021/22, para plantear ejercicios más realistas de patrones en POGIL HW.
+
+-   Modifcar la descricpon del proyecto para que quede mucho mas claro cuales son las actividades a realizar por parte de la EI1039. Por ejemplo, que los estudiante justifiquen (¿como?, seguir ejemplo de Ernest...) el uso de patrones que implementan, pero tambien que identifiquen patrones que utilizan de forma indirectas por las distitnas herramientas qeu utli, u otros potenciales patrones en la reservars. MInimo 3 patrones individauels, o 2 si uno de ellos es compuesto. 
 
 -   Seminario conjunto de paradigmas/arquitecturas software. Plantear tipo debate entre dos equipos. Dado un caso de estudio concreto (aplicación bien conocida), plantear dos estilos arquitectónicos (A y B), para que cada equipo escoja una de ellos y defienda su postura, es decir, que el caso de estudio es mejor con la arquitectura A o es mejor con la B.
 
@@ -119,25 +127,28 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   Añadir contracto de aprendizaje para la primera sesion, con el fin de que los estundate se comprometan a realziar los HW
 
--   Encontrar modo de corregir y proporcionar feedback a los HW y actividades POGIL. Por ejempñlo, los howeworks se puede realziar todos en Guithub, con una estructura dada (ejemplo de repo mio), que combine ficheros readme y codigo. Los ficheros readme pueden incluir refelxiones tambien.  
+-   Encontrar modo de corregir y proporcionar feedback a los HW y actividades POGIL. Por ejemplo, los howeworks se pueden realizar todos en Github, con una estructura dada (ejemplo de repo mio), que combine ficheros readme y codigo. Los ficheros readme pueden incluir reflexiones tambien.
 
--   Nombrar (name) las slides clave de cada presentacion: inicio, estructura, participantes
+-   Nombrar (name) las slides clave de cada presentacion: inicio, estructura, participantes, etc, segun la organización para explicar un patron
 
--   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html) 
-ución 
+-   Slides teoria: "solución" debe ser "participantes"; "estructura" debe ser "solución conceptual". Ver [Tackling Design Patterns](https://www.cs.up.ac.za/cs/lmarshall/TDP/TDP.html)
 
-- Seminario de presentacion publica
-https://aenui.org/actas/pdf/JENUI_2019_019.pdf
-https://aenui.org/actas/pdf/JENUI_2013_002.pdf
-https://aenui.org/actas/pdf/JENUI_2011_025.pdf
+-   Seminario de presentacion publica <https://aenui.org/actas/pdf/JENUI_2019_019.pdf> <https://aenui.org/actas/pdf/JENUI_2013_002.pdf> <https://aenui.org/actas/pdf/JENUI_2011_025.pdf>
 
-- [The state of research on software engineering competencies: A systematic mapping study](https://doi.org/10.1016/j.jss.2021.111183)
-- [Research state of the art on GoF design patterns: A mapping study](https://doi.org/10.1016/j.jss.2013.03.063)
-- [Designing and implementing an environment for software start-up education: Patterns and anti-patterns](https://doi.org/10.1016/j.jss.2018.08.060)
-- [The state of the art on design patterns: A systematic mapping of the literature](https://doi.org/10.1016/j.jss.2016.11.030)
-- [What can violations of good practices tell about the relationship between GoF patterns and run-time quality attributes?](https://doi.org/10.1016/j.infsof.2018.07.014)
-- [Study of advanced separation of concerns approaches using the GoF design patterns: A quantitative and qualitative comparison](https://doi.org/10.1016/j.infsof.2014.04.015)
-- [A study on correlations between architectural smells and design patterns](https://doi.org/10.1016/j.jss.2021.110984)
+-   Articulos de investigación recientes sobre patrones y similares. Pueden ser parte del seminario de aspectos avanzados, o parte de un HW, o reflexión en grupo.
 
+    -   [The state of research on software engineering competencies: A systematic mapping study](https://doi.org/10.1016/j.jss.2021.111183)
 
+    -   [Research state of the art on GoF design patterns: A mapping study](https://doi.org/10.1016/j.jss.2013.03.063)
 
+    -   [Designing and implementing an environment for software start-up education: Patterns and anti-patterns](https://doi.org/10.1016/j.jss.2018.08.060)
+
+    -   [The state of the art on design patterns: A systematic mapping of the literature](https://doi.org/10.1016/j.jss.2016.11.030)
+
+    -   [What can violations of good practices tell about the relationship between GoF patterns and run-time quality attributes?](https://doi.org/10.1016/j.infsof.2018.07.014)
+
+    -   [Study of advanced separation of concerns approaches using the GoF design patterns: A quantitative and qualitative comparison](https://doi.org/10.1016/j.infsof.2014.04.015)
+
+    -   [A study on correlations between architectural smells and design patterns](https://doi.org/10.1016/j.jss.2021.110984)
+
+    -   [how Google practices software engineering](https://arxiv.org/ftp/arxiv/papers/1702/1702.01715.pdf)
