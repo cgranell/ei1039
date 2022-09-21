@@ -115,7 +115,7 @@ HW5: Reformular el ejercicio para que las metricas sea un argumento a los clasif
 
 -   Partir de los proyectos del curso 2021/22, para plantear ejercicios más realistas de patrones en POGIL HW.
 
--   Modifcar la descricpon del proyecto para que quede mucho mas claro cuales son las actividades a realizar por parte de la EI1039. Por ejemplo, que los estudiante justifiquen (¿como?, seguir ejemplo de Ernest...) el uso de patrones que implementan, pero tambien que identifiquen patrones que utilizan de forma indirectas por las distitnas herramientas qeu utli, u otros potenciales patrones en la reservars. MInimo 3 patrones individauels, o 2 si uno de ellos es compuesto. 
+
 
 -   Seminario conjunto de paradigmas/arquitecturas software. Plantear tipo debate entre dos equipos. Dado un caso de estudio concreto (aplicación bien conocida), plantear dos estilos arquitectónicos (A y B), para que cada equipo escoja una de ellos y defienda su postura, es decir, que el caso de estudio es mejor con la arquitectura A o es mejor con la B.
 
