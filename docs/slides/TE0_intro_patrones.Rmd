@@ -271,10 +271,3 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
 
 - .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
 
----
-# Referencias
-
-```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 2)
-```
-
