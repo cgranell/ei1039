@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>[TE0] Patrones de Diseño</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Carlos Granell" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+name: title
+class: left, top
+background-image: url(images/rawpixel/brick-pattern.jpg)
+background-size: cover
+
+# .whiteinline[.fancy[[TE0] Patrones de Diseño]]
+
+### .whiteinline[&amp;#183; Concepto, catálogo y principios]
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+
+.whiteinline[.right[Carlos Granell&amp;#183; Universitat Jaume I]]
+
+.whiteinline[.right[EI1039 - Diseño de Software &amp;#183; Sep 2022]]
+
+
+???
+
+Black wooden brick textured background
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué son los patrones de diseño?
+
+--
+
+## .acidinline[Soluciones] habituales y bien testeadas a .fatinline[problemas recurrentes] en .coldinline[un contexto (diseño de software)]
+
+---
+class: left
+
+### .cold[Contexto] es la situación/conjunto de restricciones en la que se aplica el patrón
+
+--
+
+### .fat[Problema] es el objetivo a alcanzar
+
+--
+
+### .acid[Solución] es la implementación del patrón (clases, interfaces, y sus relaciones) para cumplir con el objetivo y las restricciones
+
+
+---
+background-image: url(images/rawpixel/home-layout-discussion.jpg)
+background-size: cover
+
+
+???
+
+Business Team Discussion Meeting Team Concept.
+Image credits:  [Rawpixel.com](https://www.rawpixel.com/image/691263/)
+
+Son como planos predefinidos que se pueden personalizar para resolver un problema de diseño recurrente en tu código.
+
+
+---
+class: inverse, center, middle
+
+# Catálogo de patrones de diseño (por propósito) 
+
+---
+class:left
+
+### .coldinline[CREACIONALES] proporcionan mecanismos de creación de objetos
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Factory Method, Abstract Factory, Builder, Prototype, Singleton]
+
+--
+
+### .coldinline[ESTRUCTURALES] explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy]
+
+--
+
+### .coldinline[DE COMPORTAMIENTO] se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Chain of responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor]
+
+???
+
+Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingrediante físicalmente (ensalada) o sin combinación (queso y vino)
+
+Una analogía para los de comportaminto es el pit/box en una carrera de F1: cada miembro del equipo tiene un rol asignado, pero juntos consiguen un objetivo común
+
+Algunos ya vistos en la asignatura de [Programación Avanzada](http://www3.uji.es/~belfern/Docencia/Presentaciones/ProgramacionAvanzada/)
+
+---
+class: inverse, center, middle
+
+# Y supongo que os preguntáis....😯
+
+---
+class: center, middle
+## ¿Puedo trabajar como programador sin conocer un solo patrón de diseño?
+
+--
+
+.large[Sí, puedes. A lo mejor los has utilizado o implementado sin saberlo]
+
+
+---
+class: center, middle
+## ¿Por qué tengo que dedicar tiempo a aprenderlos?
+
+--
+
+.large[Como ingenieros/as, proporcionamos soluciones a problemas. Cuanto mayor sea tu __juego de herramientas__ para resolver problemas, mejor ingeniero/a serás]
+
+
+---
+class: center, middle
+
+## Si aplico un patrón, ¿copio su código y listo?
+
+--
+
+.large[Los patrones no son código ya preparado como funciones o algoritmos. Son .acidinline[__soluciones conceptuales__] para resolver un problema frecuente de diseño en tu código]
+
+.center[.large[patrón <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M48 192h352c17.69 0 32-14.32 32-32s-14.31-31.1-32-31.1h-352c-17.69 0-32 14.31-32 31.1S30.31 192 48 192zM400 320h-352c-17.69 0-32 14.31-32 31.1s14.31 32 32 32h352c17.69 0 32-14.32 32-32S417.7 320 400 320z"/></svg> plano]]
+
+
+???
+Un algoritmo == una receta de cocina: ambos cuentan con pasos claros para alcanzar una meta. 
+
+Un patrón == un plano, ya que puedes observar el resultado y sus funciones, pero el orden exacto de la implementación depende de ti.
+
+---
+class: center, middle
+
+## Y entonces, ¿cómo implemento un patrón en mi código?
+
+--
+
+.large[Sigue los detalles del patrón pero la implementación depende de ti, para que encaje con las .coldinline[__restricciones__] y .fatinline[__objetivo__] de tu código]
+
+
+---
+class: center, middle
+
+## ¿Lo más difícil entonces es implementar una versión personalizada del patrón?
+
+--
+
+.large[No, esa es la parte "mecánica" (sin despreciar la dificultad que atañe escribir código)]
+
+---
+class: center, middle
+
+## ¿Qué es lo más difícil? 😮
+
+--
+
+.large[Reconocer si un patrón en particular __es o no es__ la .acidinline[__solución__] a tu .fatinline[__problema__] en un .coldinline[__contexto__] determinado] 
+
+
+---
+class: center, middle
+
+## Y además los patrones definen un vocabulario común para comunicarte con tu equipo 
+
+--
+
+.large["Sí, claro, utiliza un _singleton_ para eso que quieres hacer"]
+
+---
+class: inverse, center, middle
+
+# Principios básicos de diseño de software
+
+.large[(presentes en casi todos los patrones de diseño)]
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Encapsula lo que varía y sepáralo de lo que no cambia
+
+.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg>  Minimiza/aisla el efecto provocado por los cambios]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Programa a una interfaz, no a una implementación
+
+.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Diseño flexible depende de abstracciones,]]
+.right[.large[no de clases concretas]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Favorece la composición sobre la herencia
+
+.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> HAS-A puede ser mejor que IS-A]]
+
+???
+
+La herencia es probablemente la forma más obvia de reutilizar código entre clases. Tienes dos clases con el mismo código. Creas una clase base común para estas dos clases y colocas dentro el código similar. Fet!
+
+Puedes hacer más débil una dependencia haciendo que tu código dependa de interfaces o clases abstractas en lugar de clases concretas
+
+En vez de heredar un comportamiento, un objeto obtiene un comportamiento cuando _se compone_ con un objeto de ese comportamiento.
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+# Resumen
+
+- .large[Soluciones conceptuales muy probadas y testeadas]
+
+- .large[Proporcionan un vocabulario común]
+
+- .large[No es siempre obvio que patrón utilizar]
+
+- .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
+
+---
+# Referencias
+
+NULL
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

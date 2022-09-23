@@ -1,0 +1,280 @@
+---
+title: "[TE0] Patrones de Diseño"
+subtitle: "Concepto, catálogo y principios"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2022" 
+description: "EI1039 - Diseño de Software"
+
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
+
+name: title
+class: left, top
+background-image: url(images/rawpixel/brick-pattern.jpg)
+background-size: cover
+
+# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+
+### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+.whiteinline[.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]]
+
+.whiteinline[.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]]
+
+
+???
+
+Black wooden brick textured background
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+
+
+---
+class: inverse, center, middle
+
+# ¿Qué son los patrones de diseño?
+
+--
+
+## .acidinline[Soluciones] habituales y bien testeadas a .fatinline[problemas recurrentes] en .coldinline[un contexto (diseño de software)]
+
+---
+class: left
+
+### .cold[Contexto] es la situación/conjunto de restricciones en la que se aplica el patrón
+
+--
+
+### .fat[Problema] es el objetivo a alcanzar
+
+--
+
+### .acid[Solución] es la implementación del patrón (clases, interfaces, y sus relaciones) para cumplir con el objetivo y las restricciones
+
+
+---
+background-image: url(images/rawpixel/home-layout-discussion.jpg)
+background-size: cover
+
+
+???
+
+Business Team Discussion Meeting Team Concept.
+Image credits:  [Rawpixel.com](https://www.rawpixel.com/image/691263/)
+
+Son como planos predefinidos que se pueden personalizar para resolver un problema de diseño recurrente en tu código.
+
+
+---
+class: inverse, center, middle
+
+# Catálogo de patrones de diseño (por propósito) `r Cite(my_refs, "gamma1994")`
+
+---
+class:left
+
+### .coldinline[CREACIONALES] proporcionan mecanismos de creación de objetos
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Factory Method, Abstract Factory, Builder, Prototype, Singleton]
+
+--
+
+### .coldinline[ESTRUCTURALES] explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy]
+
+--
+
+### .coldinline[DE COMPORTAMIENTO] se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Chain of responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor]
+
+???
+
+Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingrediante físicalmente (ensalada) o sin combinación (queso y vino)
+
+Una analogía para los de comportaminto es el pit/box en una carrera de F1: cada miembro del equipo tiene un rol asignado, pero juntos consiguen un objetivo común
+
+Algunos ya vistos en la asignatura de [Programación Avanzada](http://www3.uji.es/~belfern/Docencia/Presentaciones/ProgramacionAvanzada/)
+
+---
+class: inverse, center, middle
+
+# Y supongo que os preguntáis....`r emo::ji("stunned")`
+
+---
+class: center, middle
+## ¿Puedo trabajar como programador sin conocer un solo patrón de diseño?
+
+--
+
+.large[Sí, puedes. A lo mejor los has utilizado o implementado sin saberlo]
+
+
+---
+class: center, middle
+## ¿Por qué tengo que dedicar tiempo a aprenderlos?
+
+--
+
+.large[Como ingenieros/as, proporcionamos soluciones a problemas. Cuanto mayor sea tu __juego de herramientas__ para resolver problemas, mejor ingeniero/a serás]
+
+
+---
+class: center, middle
+
+## Si aplico un patrón, ¿copio su código y listo?
+
+--
+
+.large[Los patrones no son código ya preparado como funciones o algoritmos. Son .acidinline[__soluciones conceptuales__] para resolver un problema frecuente de diseño en tu código]
+
+.center[.large[patrón `r fontawesome::fa(name = "equals")` plano]]
+
+
+???
+Un algoritmo == una receta de cocina: ambos cuentan con pasos claros para alcanzar una meta. 
+
+Un patrón == un plano, ya que puedes observar el resultado y sus funciones, pero el orden exacto de la implementación depende de ti.
+
+---
+class: center, middle
+
+## Y entonces, ¿cómo implemento un patrón en mi código?
+
+--
+
+.large[Sigue los detalles del patrón pero la implementación depende de ti, para que encaje con las .coldinline[__restricciones__] y .fatinline[__objetivo__] de tu código]
+
+
+---
+class: center, middle
+
+## ¿Lo más difícil entonces es implementar una versión personalizada del patrón?
+
+--
+
+.large[No, esa es la parte "mecánica" (sin despreciar la dificultad que atañe escribir código)]
+
+---
+class: center, middle
+
+## ¿Qué es lo más difícil? `r emo::ji("wow")`
+
+--
+
+.large[Reconocer si un patrón en particular __es o no es__ la .acidinline[__solución__] a tu .fatinline[__problema__] en un .coldinline[__contexto__] determinado] 
+
+
+---
+class: center, middle
+
+## Y además los patrones definen un vocabulario común para comunicarte con tu equipo 
+
+--
+
+.large["Sí, claro, utiliza un _singleton_ para eso que quieres hacer"]
+
+---
+class: inverse, center, middle
+
+# Principios básicos de diseño de software
+
+.large[(presentes en casi todos los patrones de diseño)]
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### `r fontawesome::fa(name = "yin-yang")` Encapsula lo que varía y sepáralo de lo que no cambia
+
+.right[.large[`r fontawesome::fa(name = "circle-arrow-right")`  Minimiza/aisla el efecto provocado por los cambios]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### `r fontawesome::fa(name = "yin-yang")` Programa a una interfaz, no a una implementación
+
+.right[.large[`r fontawesome::fa(name = "circle-arrow-right")` Diseño flexible depende de abstracciones,]]
+.right[.large[no de clases concretas]]
+
+
+???
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+background-image: url(images/rawpixel/balance.jpg)
+background-size: cover
+
+### `r fontawesome::fa(name = "yin-yang")` Favorece la composición sobre la herencia
+
+.right[.large[`r fontawesome::fa(name = "circle-arrow-right")` HAS-A puede ser mejor que IS-A]]
+
+???
+
+La herencia es probablemente la forma más obvia de reutilizar código entre clases. Tienes dos clases con el mismo código. Creas una clase base común para estas dos clases y colocas dentro el código similar. Fet!
+
+Puedes hacer más débil una dependencia haciendo que tu código dependa de interfaces o clases abstractas en lugar de clases concretas
+
+En vez de heredar un comportamiento, un objeto obtiene un comportamiento cuando _se compone_ con un objeto de ese comportamiento.
+
+Stones Wooden Table Group of Objects Concept
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
+
+
+---
+# Resumen
+
+- .large[Soluciones conceptuales muy probadas y testeadas]
+
+- .large[Proporcionan un vocabulario común]
+
+- .large[No es siempre obvio que patrón utilizar]
+
+- .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
+
+---
+# Referencias
+
+```{r print_refs1, echo=FALSE, results="asis"}
+PrintBibliography(my_refs, start = 1, end = 2)
+```
+

@@ -16,6 +16,10 @@ navbar:
       href: seminarios.html
     - text: "Sesiones"
       menu:
+        - text: "TE0 Intro patrones"
+          href: slides/TE0_intro_patrones.html
+        - text: "TE1 Arquitectura software"
+          href: TE1.html
         - text: "TE1 Arquitectura software"
           href: TE1.html
         - text: "TE2 Arquitectura software"
