@@ -1,5 +1,5 @@
 ---
-title: "[TE0] Patrones de Diseño"
+title: "[TE1] Patrones de Diseño"
 subtitle: "Concepto, catálogo y principios"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
@@ -95,7 +95,7 @@ Son como planos predefinidos que se pueden personalizar para resolver un problem
 ---
 class: inverse, center, middle
 
-# Catálogo de patrones de diseño (por propósito) `r Cite(my_refs, "gamma1994")`
+# Catálogo de patrones de diseño (por propósito)  `r cite("gamma1994")`
 
 ---
 class:left
@@ -270,4 +270,12 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
 - .large[No es siempre obvio que patrón utilizar]
 
 - .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
+
+
+---
+# References
+
+```{r print_refs1, echo=FALSE, results="asis"}
+print(start = 1, end = 1)
+```
 

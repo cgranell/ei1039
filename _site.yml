@@ -13,15 +13,20 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "Seminarios"
-      href: seminarios.html
+      menu:
+        - text: "SE2 MVC, MVP & MVVM"
+          href: slides/SE2_mvc.html
+        - text: "SE3 UI Desing"
+          href: SE3.html
+        - text: "SE4 Ensayo presentacion"
+          href: SE4.html
+
     - text: "Sesiones"
       menu:
-        - text: "TE0 Intro patrones"
-          href: slides/TE0_intro_patrones.html
-        - text: "TE1 Arquitectura software"
+        - text: "TE1 Introducción a los patrones"
           href: TE1.html
-        - text: "TE1 Arquitectura software"
-          href: TE1.html
+        - text: "TE1 Fundamentos de arquitectura"
+          href: TE1old.html
         - text: "TE2 Arquitectura software"
           href: TE2.html
         - text: "TE3 Singleton & Factory Method"
@@ -36,12 +41,6 @@ navbar:
           href: TE7.html
         - text: "TE8 Command & Iterator"
           href: TE8.html
-        - text: "SE2 MVC, MVP & MVVM"
-          href: slides/SE2_mvc.html
-        - text: "SE3 UI Desing"
-          href: SE3.html
-        - text: "SE4 Ensayo presentacion"
-          href: SE4.html
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github

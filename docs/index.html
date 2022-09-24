@@ -116,8 +116,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-09-23"/>
-  <meta property="article:created" itemprop="dateCreated" content="2022-09-23"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-09-24"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-09-24"/>
   <meta name="article:author" content="Carlos Granell"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -138,7 +138,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","bibliography","link-citations","description","site"]}},"value":[{"type":"character","attributes":{},"value":["EI1039 - Dise&ntilde;o de software"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Carlos Granell"]},{"type":"character","attributes":{},"value":["http://carlosgranell.eu"]},{"type":"character","attributes":{},"value":["Universitat Jaume I"]},{"type":"character","attributes":{},"value":["http://geotec.uji.es/"]},{"type":"character","attributes":{},"value":["0000-0003-1004-9695"]}]}]},{"type":"character","attributes":{},"value":["2022-09-23"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["Ampliación de la Guía Docente EI1039 para el curso académico 2022/2023\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","bibliography","link-citations","description","site"]}},"value":[{"type":"character","attributes":{},"value":["EI1039 - Dise&ntilde;o de software"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Carlos Granell"]},{"type":"character","attributes":{},"value":["http://carlosgranell.eu"]},{"type":"character","attributes":{},"value":["Universitat Jaume I"]},{"type":"character","attributes":{},"value":["http://geotec.uji.es/"]},{"type":"character","attributes":{},"value":["0000-0003-1004-9695"]}]}]},{"type":"character","attributes":{},"value":["2022-09-24"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["Ampliación de la Guía Docente EI1039 para el curso académico 2022/2023\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2130,7 +2130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"EI1039 - Dise&ntilde;o de software","description":"Ampliación de la Guía Docente EI1039 para el curso académico 2022/2023","authors":[{"author":"Carlos Granell","authorURL":"http://carlosgranell.eu","affiliation":"Universitat Jaume I","affiliationURL":"http://geotec.uji.es/","orcidID":"0000-0003-1004-9695"}],"publishedDate":"2022-09-23T00:00:00.000+02:00","citationText":"Granell, 2022"}
+{"title":"EI1039 - Dise&ntilde;o de software","description":"Ampliación de la Guía Docente EI1039 para el curso académico 2022/2023","authors":[{"author":"Carlos Granell","authorURL":"http://carlosgranell.eu","affiliation":"Universitat Jaume I","affiliationURL":"http://geotec.uji.es/","orcidID":"0000-0003-1004-9695"}],"publishedDate":"2022-09-24T00:00:00.000+02:00","citationText":"Granell, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2146,7 +2146,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="seminarios.html">Seminarios</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Seminarios
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="slides/SE2_mvc.html">SE2 MVC, MVP &amp; MVVM</a>
+<a href="SE3.html">SE3 UI Desing</a>
+<a href="SE4.html">SE4 Ensayo presentacion</a>
+</div>
+</div>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
 Sesiones
@@ -2154,9 +2165,8 @@ Sesiones
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="slides/TE0_intro_patrones.html">TE0 Intro patrones</a>
-<a href="TE1.html">TE1 Arquitectura software</a>
-<a href="TE1.html">TE1 Arquitectura software</a>
+<a href="TE1.html">TE1 Introducción a los patrones</a>
+<a href="TE1old.html">TE1 Fundamentos de arquitectura</a>
 <a href="TE2.html">TE2 Arquitectura software</a>
 <a href="TE3.html">TE3 Singleton &amp; Factory Method</a>
 <a href="TE4.html">TE4 Adapter, Facade &amp; Proxy</a>
@@ -2164,9 +2174,6 @@ Sesiones
 <a href="TE6.html">TE6 Observer</a>
 <a href="TE7.html">TE7 Template Method &amp; Strategy</a>
 <a href="TE8.html">TE8 Command &amp; Iterator</a>
-<a href="slides/SE2_mvc.html">SE2 MVC, MVP &amp; MVVM</a>
-<a href="SE3.html">SE3 UI Desing</a>
-<a href="SE4.html">SE4 Ensayo presentacion</a>
 </div>
 </div>
 <a href="references.html">Referencias</a>
@@ -2191,7 +2198,7 @@ Sesiones
 <div class="d-byline">
   Carlos Granell <a href="http://carlosgranell.eu" class="uri">http://carlosgranell.eu</a> (Universitat Jaume I)<a href="http://geotec.uji.es/" class="uri">http://geotec.uji.es/</a>
   
-<br/>2022-09-23
+<br/>2022-09-24
 </div>
 
 <div class="d-article">
@@ -2244,6 +2251,17 @@ Sesiones
 <li><p>Viernes (en aula): Comentamos las actividades previas, junto con mini-presentaciones y actividades en clase.</p></li>
 </ul>
 <p>La asignatura también consta de sesiones de seminarios (SE) donde explorarás temas adicionales al diseño de patrones, como arquitectura de software e interfaces de usuario, relacionados con el proyecto común a desarrollar.</p>
+<ul>
+<li><p><strong>Seminario 1</strong> (<em>30 septiembre</em>) - MVC y variantes + interfaces de usuario</p></li>
+<li><p><strong>Seminario 2</strong> (<em>21 octubre</em>) - Caso de estudio: Software architecture patterns</p></li>
+<li><p><strong>Seminario 3</strong> (<em>27-28 octubre</em>): Conjunto con EI1048</p>
+<ul>
+<li><p>Jueves: Paradigmas de arquitectura</p></li>
+<li><p>Viernes: Charla empresa, en turno de mañana</p></li>
+</ul></li>
+<li><p><strong>Seminario 4</strong> (<em>25 noviembre</em>) - Caso de estudio: patrones en web frameworks</p></li>
+<li><p><strong>Seminario 5</strong> (<em>16 diciembre</em>) - Comunicación oral del proyecto</p></li>
+</ul>
 <p>Las asignaturas <a href="https://ujiapps.uji.es/sia/rest/publicacion/2022/estudio/225/asignatura/EI1039">EI1039 (Diseño de software)</a> y <a href="https://ujiapps.uji.es/sia/rest/publicacion/2022/estudio/225/asignatura/EI1048">EI1048 (Paradigmas de Software)</a> están muy relacionadas, ya que son dos caras de la misma moneda a la hora de diseñar y desarrollar aplicaciones avanzadas. Para facilitar el aprendizaje de las competencias de ambas asignaturas, el profesorado nos hemos organizado para proponerte un proyecto común que viene detallado en un documento separado colgado en el Aula Virtual de las dos asignaturas. Las clases de laboratorio (LA) de la EI1039 son de trabajo (en grupo) para la consecución del proyecto común.</p>
 <h2 id="materiales-y-contenido">Materiales y contenido</h2>
 <p>Los materiales del curso están disponibles en el <a href="https://aulavirtual.uji.es/course/view.php?id=75377">Aula Virtual</a>. Las actividades previas a título indivual se entregan a través de las tareas correspondientes en el Aula Virtual de la asignatura. Voy a utilizar el Aula Virtual para proporcionarte feedback sobre las actividades propuestas, para anuncios de la asignatura y, en definitiva, para cualquier tipo de comunicación oficial. Agradecería enormemente que todas las comunicaciones entre nosotros relativas a la asignatura fueran canalizadas a través del Aula Virtual, y no a través de mi correo personal.</p>

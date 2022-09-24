@@ -1,7 +1,7 @@
 ---
 title: "TE1"
 description: |
-  Introducción de la asignatura y logística <br/> Fundamentos de arquitectura: características y compromisos.
+  Presentación de la asignatura y logística <br/> Descripción del proyecto común <br/> Introducción a los patrones de diseño.
 output: distill::distill_article
 ---
 
@@ -11,24 +11,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html) (y EI1048)!
+-   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html) (y EI1048), logística y presentación de la asignatura
 
--   [20 min] **Presentación:** Proyecto común de EI1039/EI1048
+-   [20 min] **Presentación:** Proyecto común de EI1039/EI1048, con hincapié en aspectos de la EI1039
 
--   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE1_1_fundamentos_arquitectura.html)
+-   [25 min] **Presentación**: [Patrones de Diseño: Concepto, catálogo y principios](slides/TE1_intro_patrones.html)
 
-    -   Definición de *arquitectura de software*
+    -   Definición de patrón de diseño
 
-    -   Tareas de un arquitecto de software
+    -   Categorías de patrones: creacionales, estructurales, y de comportamiento
 
-    -   Arquitecto *vs* diseñador/desarrollador
+    -   Principios comunes a los patrones
 
--   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE1_2_caracteristicas_arquitectura.html)
+-   [15 min] **Video**: [Patrones de diseño software: Repaso completo en 10 minutos (by Antonio Leiva)](https://www.youtube.com/watch?v=6BHOeDL8vls)
 
-    -   Definición de características de arquitectura; dimensiones (operacionales, estructurales, horizontales)
-
-    -   Identificación de las características relevantes para un sistema
-
-    -   Todo en arquitectura de software tiene compromisos
-
--   [10 min] **Closing**: Intro [HW1](HW1.html)
+-   [10 min] **Closing**: Actividad 2.1

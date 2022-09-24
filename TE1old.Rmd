@@ -1,0 +1,34 @@
+---
+title: "TE1"
+description: |
+  Introducción de la asignatura y logística <br/> Fundamentos de arquitectura: características y compromisos.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Organización clase
+
+-   [40 min] **Opening**: [Bienvenidos a la EI1039](index.html) (y EI1048)!
+
+-   [20 min] **Presentación:** Proyecto común de EI1039/EI1048
+
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE1_1_fundamentos_arquitectura.html)
+
+    -   Definición de *arquitectura de software*
+
+    -   Tareas de un arquitecto de software
+
+    -   Arquitecto *vs* diseñador/desarrollador
+
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE1_2_caracteristicas_arquitectura.html)
+
+    -   Definición de características de arquitectura; dimensiones (operacionales, estructurales, horizontales)
+
+    -   Identificación de las características relevantes para un sistema
+
+    -   Todo en arquitectura de software tiene compromisos
+
+-   [10 min] **Closing**: Intro [HW1](HW1.html)
