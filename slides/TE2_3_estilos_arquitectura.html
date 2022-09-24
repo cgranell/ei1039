@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>[TE2_1] Fundamentos de arquitectura</title>
+    <title>[TE2_3] Fundamentos de arquitectura</title>
     <meta charset="utf-8" />
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -21,7 +21,7 @@ class: left, top
 background-image: url(images/rawpixel/florence-cathedral.jpg)
 background-size: cover
 
-# .fancy[[TE2_1] Fundamentos de arquitectura]
+# .fancy[[TE2_3] Fundamentos de arquitectura]
 
 ### &amp;#183; Estilos de arquitectura
 
@@ -30,7 +30,7 @@ background-size: cover
 
 .right[Carlos Granell&amp;#183; Universitat Jaume I]
 
-.right[EI1039 - Diseño de Software &amp;#183; Sep 2021]
+.right[EI1039 - Diseño de Software &amp;#183; Sep 2022]
 
 
 ???
@@ -47,7 +47,7 @@ class: center
 
 ???
 
-Image credits: &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]
+Image credits: .small[&lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -65,7 +65,7 @@ Image credits: &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards20
 
 ### Released January 2020
 
-.large[Capítulos 9 - 18 [[RF20](#bib-richards2020)]]
+.large[Capítulos 9 - 18 .small[[[RF20](#bib-richards2020)]]]
 
 ]
 
@@ -130,7 +130,7 @@ Distribuídos: varias unidades/nodos conectadas con protocolos de acceso remoto
 
 ???
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -179,7 +179,7 @@ Partición por criterios tecnólogicos: Componentes, en lugar de agruparse por d
 
 Pipes &amp; filters transforman documentos/datos/mensajes de forma concatenada
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -196,7 +196,7 @@ Image credits: [[RF20](#bib-richards2020)]
 &lt;img src="images/TesisLuis_flowDataIngestion.png" width="75%"/&gt;
 
 
-&gt; Según &lt;a name=cite-rodriguez2021&gt;&lt;/a&gt;[[Rod21](https://www.tdx.cat/handle/10803/671588)], con respecto a la gestión de datos de entrada en streaming, el primer componente en el paso __5__ es un sistema de mensajería basado en [Apache Kafka](https://kafka.apache.org/), que asegura la __recepción, buffer y ruteo__ del flujo de datos en streaming. 
+&gt; Según .small[&lt;a name=cite-rodriguez2021&gt;&lt;/a&gt;[[Rod21](https://www.tdx.cat/handle/10803/671588)]], con respecto a la gestión de datos de entrada en streaming, el primer componente en el paso __5__ es un sistema de mensajería basado en [Apache Kafka](https://kafka.apache.org/), que asegura la __recepción, buffer y ruteo__ del flujo de datos en streaming. 
 
 - .large[herramientas ETL (_extract, transform, and load_)] 
 - .large[cadenas de productor-consumidor de datos]
@@ -214,7 +214,7 @@ to handle/process the data stream. One such connector application is the self-de
 persistence component, which connects to the (Kafka) messaging system
 and persists the messages in the (Cassandra) database" (pg 89)
 
-Image credits: [[Rod21](https://www.tdx.cat/handle/10803/671588)]
+Image credits: .small[[[Rod21](https://www.tdx.cat/handle/10803/671588)]]
 
 
 ---
@@ -239,7 +239,7 @@ _Core system_ es la funcional mínima/básica del sistema.
 
 _Plug-ins_ son componentes independientes, _standalone_ que proporcionan funcionalidad adicional.
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 ---
 # .center[.fatinline[Estilos monolíticos]]
@@ -263,7 +263,7 @@ Core system es la minima funcionlidad required para el sistema básico.
 
 Plug-ins son componentes independientes que añaden funcionalidad adicional al core sytemm
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 ---
 # .center[.fatinline[Estilos monolíticos]]
@@ -307,7 +307,7 @@ Productor emite un evento/tópico. Consumir se suscribe a eventos/tópicos.
 Cola de eventos facilita mensajes asincronos.
 
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 ---
 # .center[.acidinline[Estilos distribuídos]]
@@ -330,7 +330,7 @@ No hay coordinación centralizada de eventos;
 
 Broadcasting eventos a multiples suscriptores 
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -350,7 +350,7 @@ Image credits: [[RF20](#bib-richards2020)]
 
 ???
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -363,7 +363,7 @@ Image credits: [[RF20](#bib-richards2020)]
 
 .right-column[
 
-.large[Ejemplo: [NativeScript Task Dispatcher](https://github.com/GeoTecINIT/nativescript-task-dispatcher)], desarrollado por Alberto González (EI1048) y Miguel Matey &lt;a name=cite-gonzalez2021&gt;&lt;/a&gt;[[GM21](https://doi.org/10.5281/zenodo.4530103)]
+.large[Ejemplo: [NativeScript Task Dispatcher](https://github.com/GeoTecINIT/nativescript-task-dispatcher)], desarrollado por Alberto González y Miguel Matey .small[&lt;a name=cite-gonzalez2021&gt;&lt;/a&gt;&lt;a name=cite-gonzalez2022&gt;&lt;/a&gt;[[GM21](https://doi.org/10.5281/zenodo.4530103); [Gon+22](https://doi.org/https://doi.org/10.1016/j.pmcj.2022.101550)]]
 
 .large[Grafo de tareas cuyas dependencias se gestionan mediante eventos - [Ejemplo](https://github.com/GeoTecINIT/nativescript-task-dispatcher#quick-start)]
 
@@ -389,7 +389,7 @@ Image credits: [[RF20](#bib-richards2020)]
 ???
 
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 ---
@@ -410,7 +410,7 @@ Image credits: [[RF20](#bib-richards2020)]
 
 ???
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: .small[[[RF20](#bib-richards2020)]]
 
 
 
@@ -454,7 +454,7 @@ Image credits: [[RF20](#bib-richards2020)]
 ]
 
 
-- .large[Microservicios en [Akka](https://akka.io/) para computación de métricas basadas en mensajes [[Rod21](https://www.tdx.cat/handle/10803/671588)]]
+- .large[Microservicios en [Akka](https://akka.io/) para computación de métricas basadas en mensajes .small[[[Rod21](https://www.tdx.cat/handle/10803/671588)]]]
 
 
 ---
@@ -466,26 +466,25 @@ class: inverse, center, middle
 ---
 # Referencias
 
-&lt;a name=bib-gonzalez2021&gt;&lt;/a&gt;[GonzÃ¡lez-PÃ©rez, Alberto and Miguel
-Matey-Sanz](#cite-gonzalez2021) (2021). _nativescript-task-dispatcher:
-A Reactive Android-Based Task Scheduler and Dispatcher_. The documents
-in this repository are licensed under a Creative Commons Attribution
-4.0 International License. All contained code is licensed under the
-Apache License 2.0. DOI:
-[10.5281/zenodo.4530103](https://doi.org/10.5281%2Fzenodo.4530103).
-
 &lt;a name=bib-richards2020&gt;&lt;/a&gt;[Richards, Mark and Neal
 Ford](#cite-richards2020) (2020). _Fundamentals of Software
-Architecture, 1st edition_. O'Really Media Inc. ISBN:
-978-1-492-04345-4.
+Architecture, 1st edition_. ISBN: 978-1-492-04345-4.
+
+&lt;a name=bib-gonzalez2021&gt;&lt;/a&gt;[González-Pérez, Alberto and Miguel
+Matey-Sanz](#cite-gonzalez2021) (2021). _nativescript-task-dispatcher:
+A Reactive Android-Based Task Scheduler and Dispatcher_.
 
 &lt;a name=bib-rodriguez2021&gt;&lt;/a&gt;[Rodríguez Pupo, Luis
 Enrique](#cite-rodriguez2021) (2021). "An Analytics Platform for
 Integrating and Computing Spatio-Temporal Metrics in Location-aware
-Games". DOI:
-[10.6035/14101.2021.357562](https://doi.org/10.6035%2F14101.2021.357562).
-URL:
+Games". URL:
 [https://www.tdx.cat/handle/10803/671588](https://www.tdx.cat/handle/10803/671588).
+
+&lt;a name=bib-gonzalez2022&gt;&lt;/a&gt;[González-Pérez, Alberto, Miguel
+Matey-Sanz, et al.](#cite-gonzalez2022) (2022). "Using mobile devices
+as scientific measurement instruments: Reliable android task
+scheduling". In: _Pervasive and Mobile Computing_ 81, p. 101550. ISSN:
+1574-1192.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -534,6 +533,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

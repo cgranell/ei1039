@@ -1,7 +1,9 @@
 ---
 title: "TE2"
 description: |
-  Fundamentos de arquitectura: características <br/>Fundamentos de arquitectura: estilos.
+  Fundamentos de arquitectura: conceptos, roles y compromisos <br/>
+  Fundamentos de arquitectura: características <br/>
+  Fundamentos de arquitectura: estilos
 output: distill::distill_article
 ---
 
@@ -13,30 +15,28 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [05 min] **Opening**
 
--   [10 min] **Revisión**: HW1
+-   [10 min] **Revisión**: Actividad 2.1
 
--   [10 min] **Revisión**: Dudas del [proyecto común de EI1039/EI1048](https://aulavirtual.uji.es/mod/resource/view.php?id=4597584)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE2_1_fundamentos_arquitectura.html)
 
--   [20 min] **Actividad POGIL**: Buenas prácticas para el aprendizaje
+    -   Definición de *arquitectura de software*
 
-    -   POGIL en EI1039 (más interacción y participación, mejor aprendizaje)
+    -   Tareas de un arquitecto de software
 
-    -   Equipos de 3-4 personas
+    -   Arquitecto *vs* diseñador/desarrollador
 
-    -   Asignación de roles. Todos se bajan una copia de las [*Role Cards* (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4584908)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE2_2_caracteristicas_arquitectura.html)
 
-    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4587389)
+    -   Definición de características de arquitectura; dimensiones (operacionales, estructurales, horizontales)
 
--   [30 min] **Actividad POGIL**: Arquitectura kata
+    -   Identificación de las características relevantes para un sistema
 
-    -   Mismo equipo que anterior actividad
+    -   Todo en arquitectura de software tiene compromisos
 
-    -   Asignación de roles (rotan)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: Estilos de arquitectura](slides/TE2_3_estilos_arquitectura.html)
 
-    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4592587)
+    -   Estilos monolíticos vs. distribuidos
 
--   [25 min] **Presentación**: [Estilos de arquitectura](slides/TE2_1_estilos_arquitectura.html)
-
--   [10 min] **Closing**: Intro [HW2](HW2.html)
+-   [10 min] **Closing**: Actividad 3.1
 
 ## 

@@ -1,9 +1,9 @@
 ---
-title: "[TE1_1] Fundamentos de arquitectura"
+title: "[TE2_1] Fundamentos de arquitectura"
 subtitle: "Conceptos y roles"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 output:
   xaringan::moon_reader:
@@ -95,13 +95,13 @@ class: center, top
 
 ### Released January 2020
 
-.large[Capítulos 1 y 2 `r Cite(my_refs, "richards2020")`]
+.large[Capítulos 1 y 2 `r cite("richards2020")`]
 
 ]
 
 
 ---
-# .center[Arquitectura de software `r Cite(my_refs, "fowler2003")`]
+# .center[Arquitectura de software `r cite("fowler2003")`]
 
 >  .large[Architecture is about the important stuff. Whatever that is.]
 
@@ -116,7 +116,7 @@ class: center, top
 
 
 ---
-# .center[Arquitectura de software `r Cite(my_refs, "richards2020")`]
+# .center[Arquitectura de software `r cite("richards2020")`]
 
 
 > .large[Arquitectura de software es algo difícil de definir, depende del escenario/proyecto, y de todo lo que se considera importante para el éxito del proyecto.]
@@ -124,13 +124,13 @@ class: center, top
 
 ---
 class: center
-# Dimensiones arquitectura `r Cite(my_refs, "richards2020")`
+# Dimensiones arquitectura `r cite("richards2020")`
 
 <img src="images/FundamentalsSoftwareArquitecture01.png" width="70%"/>
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 class: inverse, center, middle
@@ -147,7 +147,7 @@ class: center
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -166,7 +166,7 @@ class: center
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 class: inverse, center, middle
@@ -184,7 +184,7 @@ class: center
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 class: inverse, center, middle
@@ -201,7 +201,7 @@ class: center
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -233,7 +233,7 @@ class: center
 ???
 
 Pirámide del conocimiento. Un desarrollador, al principio de su carrera, se centra en la parte alta de la pirámide, para adquirir experiencia y conocimiento técnico, y también para manternerse actualizado sobre lo que sabe. 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -245,7 +245,7 @@ class: center
 ???
 
 Pirámide del conocimiento: profundidad vs. amplitud técnica. Lo que uno sabe es _technical depth_, y lo mucho que uno abarca o sabe es _technical breadth_. 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 class: center, middle
@@ -273,7 +273,7 @@ class: center
 ???
 
 Pirámide del conocimiento: El arquitecto se especializa en algunas áreas de interés del proyecto. Sacrifica profundidad técnica en aras de tener una visión más amplia.
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 # .center[¿Qué tareas se esperan de un arquitecto?]
@@ -319,5 +319,5 @@ Image credits: `r Cite(my_refs, "richards2020")`
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 2)
+print(start = 1, end = 2)
 ```

@@ -1,9 +1,9 @@
 ---
-title: "[TE2_1] Fundamentos de arquitectura"
+title: "[TE2_3] Fundamentos de arquitectura"
 subtitle: "Estilos de arquitectura"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -59,7 +59,7 @@ class: center
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -77,7 +77,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 
 ### Released January 2020
 
-.large[Capítulos 9 - 18 `r Cite(my_refs, "richards2020")`]
+.large[Capítulos 9 - 18 `r cite("richards2020")`]
 
 ]
 
@@ -142,7 +142,7 @@ Distribuídos: varias unidades/nodos conectadas con protocolos de acceso remoto
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -191,7 +191,7 @@ Partición por criterios tecnólogicos: Componentes, en lugar de agruparse por d
 
 Pipes & filters transforman documentos/datos/mensajes de forma concatenada
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -208,7 +208,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 <img src="images/TesisLuis_flowDataIngestion.png" width="75%"/>
 
 
-> Según `r Cite(my_refs, "rodriguez2021")`, con respecto a la gestión de datos de entrada en streaming, el primer componente en el paso __5__ es un sistema de mensajería basado en [Apache Kafka](https://kafka.apache.org/), que asegura la __recepción, buffer y ruteo__ del flujo de datos en streaming. 
+> Según `r cite("rodriguez2021")`, con respecto a la gestión de datos de entrada en streaming, el primer componente en el paso __5__ es un sistema de mensajería basado en [Apache Kafka](https://kafka.apache.org/), que asegura la __recepción, buffer y ruteo__ del flujo de datos en streaming. 
 
 - .large[herramientas ETL (_extract, transform, and load_)] 
 - .large[cadenas de productor-consumidor de datos]
@@ -226,7 +226,7 @@ to handle/process the data stream. One such connector application is the self-de
 persistence component, which connects to the (Kafka) messaging system
 and persists the messages in the (Cassandra) database" (pg 89)
 
-Image credits: `r Cite(my_refs, "rodriguez2021")`
+Image credits: `r cite("rodriguez2021")`
 
 
 ---
@@ -251,7 +251,7 @@ _Core system_ es la funcional mínima/básica del sistema.
 
 _Plug-ins_ son componentes independientes, _standalone_ que proporcionan funcionalidad adicional.
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 # .center[.fatinline[Estilos monolíticos]]
@@ -275,7 +275,7 @@ Core system es la minima funcionlidad required para el sistema básico.
 
 Plug-ins son componentes independientes que añaden funcionalidad adicional al core sytemm
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 # .center[.fatinline[Estilos monolíticos]]
@@ -319,7 +319,7 @@ Productor emite un evento/tópico. Consumir se suscribe a eventos/tópicos.
 Cola de eventos facilita mensajes asincronos.
 
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 ---
 # .center[.acidinline[Estilos distribuídos]]
@@ -342,7 +342,7 @@ No hay coordinación centralizada de eventos;
 
 Broadcasting eventos a multiples suscriptores 
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -362,7 +362,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -375,7 +375,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 
 .right-column[
 
-.large[Ejemplo: [NativeScript Task Dispatcher](https://github.com/GeoTecINIT/nativescript-task-dispatcher)], desarrollado por Alberto González (EI1048) y Miguel Matey `r Cite(my_refs, "gonzalez2021")`
+.large[Ejemplo: [NativeScript Task Dispatcher](https://github.com/GeoTecINIT/nativescript-task-dispatcher)], desarrollado por Alberto González y Miguel Matey `r cite(c("gonzalez2021", "gonzalez2022"))`
 
 .large[Grafo de tareas cuyas dependencias se gestionan mediante eventos - [Ejemplo](https://github.com/GeoTecINIT/nativescript-task-dispatcher#quick-start)]
 
@@ -401,7 +401,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 ???
 
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 ---
@@ -422,7 +422,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 
 ???
 
-Image credits: `r Cite(my_refs, "richards2020")`
+Image credits: `r cite("richards2020")`
 
 
 
@@ -466,7 +466,7 @@ Image credits: `r Cite(my_refs, "richards2020")`
 ]
 
 
-- .large[Microservicios en [Akka](https://akka.io/) para computación de métricas basadas en mensajes `r Cite(my_refs, "rodriguez2021")`]
+- .large[Microservicios en [Akka](https://akka.io/) para computación de métricas basadas en mensajes `r cite("rodriguez2021")`]
 
 
 ---
@@ -479,5 +479,5 @@ class: inverse, center, middle
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 3)
+print(start = 1, end = 4)
 ```

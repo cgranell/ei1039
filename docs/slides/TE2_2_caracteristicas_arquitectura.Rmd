@@ -1,36 +1,50 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>[TE1_2] Fundamentos de arquitectura</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Carlos Granell" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
+---
+title: "[TE2_2] Fundamentos de arquitectura"
+subtitle: "Características"
+author: "Carlos Granell"
+institute: "Universitat Jaume I"
+date: "Sep 2022" 
+description: "EI1039 - Diseño de Software"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/cgc-xaringan-style.css"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
 
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
 
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
+```
 
-
+```{r, load_refs, include=FALSE, cache=FALSE}
+source("load_references.r")
+```
 
 name: title
 class: left, top
 background-image: url(images/rawpixel/greenapartment.jpg)
 background-size: cover
 
-# .fancy[[TE1_2] Fundamentos de arquitectura]
+# .fancy[`r rmarkdown::metadata$title`]
 
-### &amp;#183; Características
+### &#183; `r rmarkdown::metadata$subtitle`
 
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-.whiteinline[Carlos Granell&amp;#183; Universitat Jaume I]
+.whiteinline[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
 
-.whiteinline[EI1039 - Diseño de Software &amp;#183; Sep 2021]
+.whiteinline[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]
 
 
 ???
@@ -61,7 +75,9 @@ class: center, top
 
 .pull-right[
 
-### Requisitos no funcionales -&gt; .heatinline[características de la arquitectura]
+### Requisitos no funcionales 
+
+### .heatinline[`r fontawesome::fa(name = "circle-arrow-right")` características de la arquitectura]
 
 ]
 
@@ -74,7 +90,7 @@ class: center, top
 
 .pull-left[
 
-&lt;img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/&gt;
+<img src="images/FundamentalsSoftwareArchitecture00.jpg" width="95%"/>
 
 
 ]
@@ -85,7 +101,7 @@ class: center, top
 
 ### Released January 2020
 
-.large[Capítulos 4 y 5 &lt;a name=cite-richards2020&gt;&lt;/a&gt;[[RF20](#bib-richards2020)]]
+.large[Capítulos 4 y 5 `r cite("richards2020")`]
 
 ]
 
@@ -156,7 +172,7 @@ Continuity/continuidad = Recoverability/recuperabilidad
 .left-column[
 ### Operacionales
 ### Estructurales
-### Transverales
+### Transversales
 ]
 
 .right-column[
@@ -376,7 +392,7 @@ See [Neal Ford's architectural katas](http://nealford.com/katas/list.html)
   
 ???
 
-Example from [[RF20](#bib-richards2020)] on page 69
+Example from `r cite("richards2020")` on page 69
 
 ---
 class: center
@@ -389,7 +405,7 @@ class: center
 .pull-left[
 ### .heatinline[Escalabilidad]
 
-&lt;img src="images/FundamentalsSoftwareArquitecture09.png" width="75%"/&gt;
+<img src="images/FundamentalsSoftwareArquitecture09.png" width="75%"/>
 ]
 
 --
@@ -397,142 +413,17 @@ class: center
 .pull-right[
 ### .heatinline[Elasticidad]
 
-&lt;img src="images/FundamentalsSoftwareArquitecture10.png" width="75%"/&gt;
+<img src="images/FundamentalsSoftwareArquitecture10.png" width="75%"/>
 
 ]
 
 ???
 
-Image credits: [[RF20](#bib-richards2020)]
+Image credits: `r cite("richards2020")`
 
 ---
 # Referencias
 
-&lt;a name=bib-richards2020&gt;&lt;/a&gt;[Richards, Mark and Neal
-Ford](#cite-richards2020) (2020). _Fundamentals of Software
-Architecture, 1st edition_. O'Really Media Inc. ISBN:
-978-1-492-04345-4.
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "solarized-light",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9"
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+```{r print_refs1, echo=FALSE, results="asis"}
+print(start = 1, end = 1)
+```
