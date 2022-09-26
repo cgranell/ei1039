@@ -121,6 +121,22 @@ class: center, top
 
 
 ---
+# .center[Arquitectura de software `r cite("tai2022")`]
+
+>  .large[Software architecture can be seen as the centrepiece sitting between the business goals and the software system that supports the business to meet these goals.]
+
+--
+
+.center[<img src="images/SoftwareArchitecture01-Tai.png" width="70%"/>]
+
+
+???
+
+An architect would create just enough design for implementation to satisfy business needs. The idea here is that as the world changes, so do the business requirements. This should be an iterative process. he software architecture should support the business to adopt changes by evolving with the requirements.
+
+Image credits: `r cite("tai2022")`
+
+---
 # .center[Arquitectura de software `r cite("richards2020")`]
 
 
