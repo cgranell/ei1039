@@ -107,6 +107,18 @@ class: center, top
 
 
 ---
+background-image: url(images/SoftwareArchitecture02-Tai.png)
+background-size: cover
+
+???
+
+Software Architecture “-ilities”: I probably won’t be able to see quality attributes by just looking at the high-level design diagram with some lines connecting to some boxes
+
+Image credits: `r cite("tai2022")`
+
+
+
+---
 # .center[Características]
 
 .left-column[
@@ -189,17 +201,14 @@ Continuity/continuidad = Recoverability/recuperabilidad
 ---
 class: inverse, center, middle
 
-# Entiendo, pero... 
 
---
-
-# ¡la mayoría de estas características no vienen _explícitamente_ escritas en los requisitos! 
+# ¡La mayoría de estas características no vienen _explícitamente_ escritas en los requisitos! 
 
 
 ---
 class: inverse, center, middle
 
-# ¿Cómo separo las que son relevantes de las que no lo son?
+# ¿Cómo sé las que son relevantes de las que no lo son?
 
 
 ---
@@ -214,7 +223,7 @@ background-size: cover
 
 ???
 
-Cada característica que incorpores complicará el diseño global del sistema. Mantén la lista corta!  
+Cada característica que añades complicará el diseño global del sistema. Mantén la lista corta!  
 
 Helpful Tips Information Knowledge Concept.
 Image credits: [Rawpixel.com](https://www.rawpixel.com/image/1033876)
@@ -257,12 +266,7 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/1033876)
 ---
 class: inverse, center, middle
 
-# Vale, vale. Pillo los _tips_. 
-
---
-
-# Pero como decía, ¿cómo extraigo las características relevantes? 
-
+# Pero, ¿cómo extraigo las características relevantes? 
 
 ---
 class: left, top
@@ -425,5 +429,5 @@ Image credits: `r cite("richards2020")`
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-print(start = 1, end = 1)
+print(start = 1, end = 2)
 ```
