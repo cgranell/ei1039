@@ -92,7 +92,7 @@ class: inverse, center, middle
 
 --
 
-.large[Spoiler: Seminario conjunto de Arquitectura Software]
+.large[Spoiler: Seminarios 2, 3 y 4]
 
 
 ---
@@ -113,7 +113,7 @@ class: center
 
 .pull-right[
 
-## .acidinline[Distribuídos]
+## .acidinline[Distribuidos]
 
 ### Event-driven
 ### Service-oriented
@@ -157,7 +157,7 @@ Image credits: `r cite("richards2020")`
 
 <img src="images/FundamentalsSoftwareArquitecture11.png" width="65%"/>
 
-- .large[Separation of concerns] 
+- .large[**Separation of concerns**] 
 - .large[Layers of isolation]
 - .large[Partición de capas por criterios tecnológicos]
 
@@ -165,11 +165,34 @@ Image credits: `r cite("richards2020")`
 
 ???
 
-Separation of concerns: Componentes en una capas solo saben de la lógica de esa capa
+Separation of concerns: Componentes en una capas solo saben de la lógica de esa capa. At the class level, not to mix abstraction levels in the same method; not to mix responsibilities in the same method and class.
 
 Layers of isolation: Modificaciones en una capa no afectan a otras; capas independientes/desacopladas
 
 Partición por criterios tecnólogicos: Componentes, en lugar de agruparse por dominio (como clientes), se agrupan por su función técnica en la arquitectura (presentación, negocio)
+
+
+---
+# .center[.fatinline[Estilos monolíticos]]
+
+.left-column[
+### Por capas
+
+]
+
+.right-column[
+
+.large[Layered Architectures are consequence of applying **separation of concerns** to application structure `r cite("nogueira2022")`]
+
+- Model View Controller (MVC) 
+- Model View Presenter (MVP) 
+- Hexagonal Architecture 
+- Onion Architecture 
+- Clean Architecture
+
+]
+
+???
 
 
 ---
@@ -183,7 +206,7 @@ Partición por criterios tecnólogicos: Componentes, en lugar de agruparse por d
 
 .right-column[
 
-<img src="images/FundamentalsSoftwareArquitecture12.png" width="65%"/>
+<img src="images/FundamentalsSoftwareArquitecture12.png" width="75%"/>
 
 ]
 
@@ -212,7 +235,7 @@ Image credits: `r cite("richards2020")`
 
 - .large[herramientas ETL (_extract, transform, and load_)] 
 - .large[cadenas de productor-consumidor de datos]
-- .large[datos en streaming (telemetria, sensores, etc)]
+- .large[datos en streaming (telemetría, sensores, etc)]
 
 ]
 
@@ -241,7 +264,7 @@ Image credits: `r cite("rodriguez2021")`
 
 .right-column[
 
-<img src="images/FundamentalsSoftwareArquitecture13.png" width="65%"/>
+<img src="images/FundamentalsSoftwareArquitecture13.png" width="75%"/>
 
 ]
 
@@ -265,15 +288,15 @@ Image credits: `r cite("richards2020")`
 
 .right-column[
 
-<img src="images/FundamentalsSoftwareArquitecture14.png" width="65%"/>
+<img src="images/FundamentalsSoftwareArquitecture14.png" width="75%"/>
 
 ]
 
 ???
 
-Core system es la minima funcionlidad required para el sistema básico.
+Core system es la mínima funcionalidad requirida para el sistema básico.
 
-Plug-ins son componentes independientes que añaden funcionalidad adicional al core sytemm
+Plug-ins son componentes independientes que añaden funcionalidad adicional al core system
 
 Image credits: `r cite("richards2020")`
 
@@ -299,7 +322,7 @@ Image credits: `r cite("richards2020")`
 
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -308,7 +331,7 @@ Image credits: `r cite("richards2020")`
 
 .right-column[
 
-<img src="images/FundamentalsSoftwareArquitecture15.png" width="75%"/>
+<img src="images/FundamentalsSoftwareArquitecture15.png" width="70%"/>
 
 ]
 
@@ -316,13 +339,48 @@ Image credits: `r cite("richards2020")`
 
 Productor emite un evento/tópico. Consumir se suscribe a eventos/tópicos. 
 
-Cola de eventos facilita mensajes asincronos.
+Cola de eventos facilita mensajes asíncronos.
+
+The core purpose of event-driven architecture (EDA) is that a software design pattern which has a system of loosely coupled microservices which is used event based, both the many events are being published by system and these events are being consumed their subscribes.
+
+It is an architecture for distributed systems, that promotes asynchronous message communication rather than a request/response pattern.
 
 
 Image credits: `r cite("richards2020")`
 
+
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
+
+.left-column[
+### Event-driven
+
+]
+
+.right-column[
+
+-   .large[Evento: tipo de mensaje que describe lo que está occuriendo en el sistema]
+
+-   .large[Productor emite un evento. Consumidor se suscribe a eventos] 
+
+-   .large[EDA promueve **comunicacion asíncronoa de mensajes** (cola eventos) en vez de request/response]
+
+-   .large[EDA como microservicios basados en eventos asíncronos]
+
+]
+
+???
+
+The core purpose of event-driven architecture (EDA) is that a software design pattern which has a system of loosely coupled microservices which is used event based, both the many events are being published by system and these events are being consumed their subscribes.
+
+It is an architecture for distributed systems, that promotes asynchronous message communication rather than a request/response pattern.
+
+
+Image credits: `r cite("richards2020")`
+
+
+---
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -332,6 +390,7 @@ Image credits: `r cite("richards2020")`
 .right-column[
 
 .large[Broker topology]
+<br/><br/>
 <img src="images/FundamentalsSoftwareArquitecture16.png" width="75%"/>
 
 ]
@@ -346,7 +405,7 @@ Image credits: `r cite("richards2020")`
 
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -356,6 +415,7 @@ Image credits: `r cite("richards2020")`
 .right-column[
 
 .large[Mediator topology]
+<br/><br/>
 <img src="images/FundamentalsSoftwareArquitecture17.png" width="75%"/>
 
 ]
@@ -366,7 +426,7 @@ Image credits: `r cite("richards2020")`
 
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -384,7 +444,7 @@ Image credits: `r cite("richards2020")`
 
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -405,7 +465,7 @@ Image credits: `r cite("richards2020")`
 
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -450,7 +510,7 @@ Image credits: `r cite("richards2020")`
 ]
 
 ---
-# .center[.acidinline[Estilos distribuídos]]
+# .center[.acidinline[Estilos distribuidos]]
 
 .left-column[
 ### Event-driven
@@ -472,12 +532,12 @@ Image credits: `r cite("richards2020")`
 ---
 class: inverse, center, middle
 
-# ¿Os veis como .acidinline[arquitectos de sofware] en el futuro?
+# ¿te ves como .acidinline[arquitecto de software] en el futuro?
 
 
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-print(start = 1, end = 4)
+print(start = 1, end = 5)
 ```
