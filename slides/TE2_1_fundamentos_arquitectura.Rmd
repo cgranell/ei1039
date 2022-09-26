@@ -21,6 +21,11 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
                       fig.retina = 3)
+
+# devtools::install_github("hadley/emo")
+# devtools::install_github("rstudio/fontawesome")
+# library(emo)
+library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
@@ -137,11 +142,11 @@ class: inverse, center, middle
 
 # Estructura 
 
-## tipo de estilo(s) de arquitectura, i.e. por capas, microservicios, etc.
+## Estilo(s) de arquitectura, i.e. por capas, microservicios, etc.
 
 ---
 class: center
-# Dimensiones arquitectura
+# Dimensiones arquitectura - estructura
 
 <img src="images/FundamentalsSoftwareArquitecture02.png" width="70%"/>
 
@@ -160,7 +165,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Dimensiones arquitectura
+# Dimensiones arquitectura - características
 
 <img src="images/FundamentalsSoftwareArquitecture03.png" width="70%"/>
 
@@ -173,12 +178,12 @@ class: inverse, center, middle
 
 # Decisiones de la arquitectura 
 
-## reglas/restricciones del sistema, i.e., que se puede y no se puede hacer
+## reglas/restricciones (tajantes) del sistema, i.e. que se puede y no se puede hacer
 
 
 ---
 class: center
-# Dimensiones arquitectura
+# Dimensiones arquitectura - decisiones
 
 <img src="images/FundamentalsSoftwareArquitecture04.png" width="70%"/>
 
@@ -195,7 +200,7 @@ class: inverse, center, middle
 
 ---
 class: center
-# Dimensiones arquitectura
+# Dimensiones arquitectura - principios
 
 <img src="images/FundamentalsSoftwareArquitecture05.png" width="70%"/>
 
@@ -203,6 +208,14 @@ class: center
 
 Image credits: `r cite("richards2020")`
 
+---
+class: inverse, center, middle
+
+# ¿Qué tareas desempeña un/a arquitecto/a de software?
+
+???
+
+Las tareas de un programador o analista son más conocidas. Incluso, hay especializaciones de programador, como programador back-end, front-end, of full-stack. ¿Qué lleva a cabo un *Software Architect*?
 
 ---
 background-image: url(images/rawpixel/architect.jpg)
@@ -210,41 +223,46 @@ background-size: cover
 
 ???
 
+Analogy: The building architect creates the blueprint of the building. The engineers build it physically and make it work according to the blueprint. Yet, this is a poor analogy to define what Software Architecture is because the building analogy makes people focus too much on the static aspects of the system. Source: `r cite("tai2022")`
+
 Home Decor Renovation Style Architecture Building
 Image by [rawpixel.com](https://www.rawpixel.com/image/65068)
 
-
-
 ---
-class: inverse, center, middle
-
-# ¿Qué tareas se esperan de un/a arquitecto/a de software?
+background-image: url(images/rawpixel/nyc.jpg)
+background-size: cover
 
 ???
 
-Las tareas de un programador o analista son más conociendo. Incluso, hay especializaciones de programador, como programador back-end, front-end, of full-stack 
+Analogy (continue): The creation of a city is a better analogy since it involves both static elements like roads, buildings and bridges, and dynamic elements like traffic flows and people living in the city. The architect is the person who comes up with the design of the city, the plan of how it should be built, and how everything is going to fit together. The city architect has a vision of how the city would **evolve**. Source: `r cite("tai2022")`
+
+New York city
+Image by [rawpixel.com](https://www.rawpixel.com/image/5959681)
+
 
 ---
 class: center
-# Arquitecto vs. diseñador/desarrollador
+# Arquitecto vs. Desarrollador
 
 <img src="images/FundamentalsSoftwareArquitecture06.png" width="60%"/>
 
 ???
 
 Pirámide del conocimiento. Un desarrollador, al principio de su carrera, se centra en la parte alta de la pirámide, para adquirir experiencia y conocimiento técnico, y también para manternerse actualizado sobre lo que sabe. 
+
 Image credits: `r cite("richards2020")`
 
 
 ---
 class: center
-# Arquitecto vs. diseñador/desarrollador
+# Arquitecto vs. Desarrollador
 
 <img src="images/FundamentalsSoftwareArquitecture07.png" width="55%"/>
 
 ???
 
 Pirámide del conocimiento: profundidad vs. amplitud técnica. Lo que uno sabe es _technical depth_, y lo mucho que uno abarca o sabe es _technical breadth_. 
+
 Image credits: `r cite("richards2020")`
 
 ---
@@ -253,20 +271,36 @@ class: center, middle
 .pull-left[
 ## Arquitecto   
 
-.acid[breadth] >>> .coldinline[depth]
+.acid[breadth] .large[`r fontawesome::fa(name = "equals")`] .cold[depth]
+
+.large[Architect should know what **should be done** to create a platform/product **in the right way**] `r cite("francis2022")`
 
 ]
 
 .pull-right[
-## diseñador/desarrollador  
 
-.cold[depth] >>> .acidinline[breadth]
+## Desarrollador  
+
+.cold[depth] .large[`r paste(rep(fontawesome::fa(name = "greater-than"), 3), sep=",", collapse="")`] .acid[breadth]
+
+.large[Developer knows what **can be done** to create a platform/product] `r cite("francis2022")`
 
 ]
 
+--
+
+<br/>
+
+.large[A Software Architect needs a .acidinline[broad], and at the same time, .coldinline[deep] knowledge of almost everything in order to accomplish the business goals] `r cite("tai2022")`
+
+???
+
+Source: [What it takes to become a software architect](https://ayltai.medium.com/what-it-takes-to-become-a-software-architect-fa7788962c8c)
+
+
 ---
 class: center
-# Arquitecto = .acidinline[breadth] >>> .coldinline[depth]
+# Arquitecto `r fontawesome::fa(name = "circle-arrow-right")` .acidinline[breadth] `r fontawesome::fa(name = "equals")` .coldinline[depth]
 
 <img src="images/FundamentalsSoftwareArquitecture08.png" width="55%"/>
 
@@ -276,7 +310,7 @@ Pirámide del conocimiento: El arquitecto se especializa en algunas áreas de in
 Image credits: `r cite("richards2020")`
 
 ---
-# .center[¿Qué tareas se esperan de un arquitecto?]
+# .center[¿Qué roles desempeña un arquitecto?]
 
 ### .acidinline[GUÍA]: decisiones de arquitectura, principios de diseño, estructura...
 
@@ -304,13 +338,13 @@ Image credits: `r cite("richards2020")`
 # .center[Resumen]
 
 
-> .large[Everything in software architecture is a trade-off.]
+> .large[Everything in software architecture is a **trade-off**.]
 
 .right[First Law of Software Architecture]
 
 <br/>
 
-> .large[Why is more important than how.]
+> .large[**Why** is more important than how.]
 
 .right[Second Law of Software Architecture]
 
@@ -319,5 +353,5 @@ Image credits: `r cite("richards2020")`
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-print(start = 1, end = 2)
+print(start = 1, end = 4)
 ```
