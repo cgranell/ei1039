@@ -27,7 +27,7 @@ navbar:
           href: TE1.html
         - text: "TE2 Fundamentos de arquitectura"
           href: TE2.html
-        - text: "TE3 Singleton & Factory Method"
+        - text: "TE3 SOLID Principles, Singleton & Factory Method"
           href: TE3.html
         - text: "TE4 Adapter, Facade & Proxy"
           href: TE4.html
