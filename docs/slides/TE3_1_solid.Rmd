@@ -1,6 +1,6 @@
 ---
 title: "[TE3_1] Principios SOLID"
-subtitle: "con ejemplos"
+subtitle: "Guía rápida"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2022" 
@@ -61,35 +61,9 @@ class: inverse, center, middle
 
 # ¿Qué son los patrones de diseño?
 
-## .acidinline[Soluciones] habituales y bien testeadas a .fatinline[problemas recurrentes] en .coldinline[un contexo (diseño de software)]
-
-
----
-class:left
-
-### .coldinline[CREACIONALES] proporcionan mecanismos de creación de objetos
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Factory Method, Abstract Factory, Builder, Prototype, Singleton]
-
---
-
-### .coldinline[ESTRUCTURALES] explican cómo ensamblar (o como están conectados) objetos y clases en estructuras más grandes (como el maridaje culinario). 
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy]
-
---
-
-### .coldinline[DE COMPORTAMIENTO] se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos (como equipo F1).
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Chain of responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor]
-
-???
-
-Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingrediante físicalmente (ensalada) o sin combinación (queso y vino)
-
-Una analogía para los de comportaminto es el pit/box en una carrera de F1: cada miembro del equipo tiene un rol asignado, pero juntos consiguen un objetivo común
-
-Algunos ya vistos en la asignatura de [Programación Avanzada](http://www3.uji.es/~belfern/Docencia/Presentaciones/ProgramacionAvanzada/)
+## .acidinline[Soluciones habituales y bien testeadas a]
+## .fatinline[problemas recurrentes (dependencias, fragilidad, etc.)]
+## .coldinline[en un contexo (diseño de software orientado a objetos)]
 
 ---
 class: inverse, center, middle
@@ -99,6 +73,7 @@ class: inverse, center, middle
 .large[(presentes en casi todos los patrones de diseño)]
 
 ---
+name: principle-encapsulate
 background-image: url(images/rawpixel/balance.jpg)
 background-size: cover
 
@@ -114,6 +89,7 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
 
 
 ---
+name: principle-interface
 background-image: url(images/rawpixel/balance.jpg)
 background-size: cover
 
@@ -130,6 +106,7 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
 
 
 ---
+name: principle-composition
 background-image: url(images/rawpixel/balance.jpg)
 background-size: cover
 
@@ -150,15 +127,52 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
 
 
 ---
-class: inverse, center, middle
+class: bottom, center
+background-image: url(images/rawpixel/airquality.jpg)
+background-size: cover
 
-# Principios SOLID `r cite(c("martin2002", "martin2014"))`
-
-.large[**5** principios ideados para hacer que el diseño de software sea más comprensible, flexible y fácil de mantener]
+# .whiteinline[¿Cómo reconecéis el aire de baja calidad?]
 
 ???
 
-¿Reconecéis código malo? ¿Que pasa cuando se modifica código malo? Síntomas de código malo son dependencia, fragilidad
+¿Cómo reconocemos que el aire de de baja calidad? ¿Que síntomas observamos?
+
+Pollution collage element, torn paper design
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/6792062/)
+
+
+---
+class: bottom, center
+background-image: url(images/rawpixel/sw-code.jpg)
+background-size: cover
+
+# .whiteinline[¿Cómo reconecéis código "malo"?]
+
+???
+
+¿Qué pasa cuando se modifica código malo? Síntomas del código malo: dependencia, fragilidad, rigidez, falta de reutilización o inmobilidad, viscosidad
+
+
+Software developer programming code on black background
+Image credits: [Rawpixel.com](https://www.rawpixel.com/image/593170)
+
+---
+class: inverse, center, middle
+
+# Principios 
+# .cold[SOLID]
+
+.large[**5** principios del diseño orientado a objetos para que el software sea más comprensible, flexible y fácil de mantener `r cite("martin2002")`]
+
+--
+
+.large[y reducir la **complejidad** de sistemas/aplicaciones a medida que crecen]
+
+???
+
+Receta contra los sintomas del código malo.
+
+Principios SOLID introducidos por Robert Martin en 2000: [Design Principles and Design Patterns](http://staff.cs.utu.fi/~jounsmed/doos_06/material/DesignPrinciplesAndPatterns.pdf)
 
 ---
 name: srp
@@ -166,15 +180,26 @@ class: left
 
 ### .cold[S]ingle Responsability Principle - Principo de responsabilidad única
 
+.large[`r fontawesome::fa(name = "yin-yang")` Una clase debería tener un único propósito]
+
 .large[`r fontawesome::fa(name = "yin-yang")` Una clase solo debe tener una (buena) razón para cambiar]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Pon las cosas que cambian por las mismas razones en una clase]
+--
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Separa las cosas que cambian por diferentes razones en clases distintas]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una clase hace demasiadas tareas, hay que cambiarla cada vez que una de esas tareas cambia]
 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño encapsulación](#principle-encapsulate)]
+
+-   .large[Junta las tareas que cambian *por las mismas razones* en una clase]
+
+-   .large[Separa las tareas que cambian *por diferentes razones* en clases distintas]
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Reduce complejidad, fácil entender qué hace una clase]
 
 ???
 Reduce complejidad: Si una clase hace demasiadas cosas, hay que cambiarla cada vez que una de esas cosas cambia
+
+Easier to understand: Classes, software components and microservices that have only one responsibility are much easier to explain, understand and implement than the ones that provide a solution for everything. This reduces the number of bugs, improves your development speed, and makes your life as a software developer a lot easier
 
 [https://stackify.com/solid-design-principles/](https://stackify.com/solid-design-principles/)
 
@@ -187,16 +212,22 @@ class: left
 .large[`r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero cerradas
 a la modificación]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una clase está desarrollada, probada y revisada,  no cambies directamente el código de la clase (cerrada)]
+--
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si necesitas nuevo comportamiento, crea subclases para ello (abierto)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` **Cerrada a la modificación**: Si una clase está desarrollada, probada y revisada, *no* la reescribas para añadir nuevas funcionalidades]
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` **Abierta a la extensión**: Si necesitas nuevo comportamiento, *crea subclases*]
 
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Extender una clase permite añadir nuevo comportamiento sin descomponer clientes existentes de la clase original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño interfaz](#principle-interface)]
+
+-   .large[Extender una clase permite añadir nuevo comportamiento sin descomponer clientes existentes de la clase original]
 
 ???
 
 Abierta y cerrada no son mutuamente excluyentes. Una clase puede estar al mismo tiempo abierta (para la extensión) y cerrada (para la modificación). El código simple es tanto abierto y cerrado.
+
+Of course, the one exception to the rule is when fixing bugs in existing code.
 
 [https://stackify.com/solid-design-open-closed-principle/](https://stackify.com/solid-design-open-closed-principle/)
 
@@ -206,16 +237,21 @@ class: left
 
 ### .cold[L]iskov Substitution Principle - Principio de sustitución de Liskov
 
-.large[`r fontawesome::fa(name = "yin-yang")` Al extender una clase, los objetos de las subclases deben poder utilizarse donde se requieran objetos de la clase padre, sin descomponer el código cliente]
+.large[`r fontawesome::fa(name = "yin-yang")` Si la clase A es un subtipo de la clase B, deberíamos poder reemplazar B por A sin descomponer el comportamiento de nuestro programa]
 
+--
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` La subclase debe permanecer compatible con el comportamiento de la clase padre]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Principio de diseño del sentido común]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Al sobrescribir un método, extiende el comportamiento base en lugar de sustituirlo por algo totalmente distinto]
+-   .large[Escribe abstracciones claras y bien definidas]
+
+-   .large[Subclases deben ser compatibles con (el comportamiento) de la clase padre]
+
+-   .large[Al sobrescribir un método, extiende el comportamiento base en lugar de sustituirlo por algo totalmente distinto]
 
 ???
 
-Escribe abstracciones nítidas y bien definidas. 
+Escribe abstracciones nítidas, claras y bien definidas. 
 
 [https://stackify.com/solid-design-liskov-substitution-principle/](https://stackify.com/solid-design-liskov-substitution-principle/)
 
@@ -224,13 +260,15 @@ Escribe abstracciones nítidas y bien definidas.
 name: isp
 class: left
 
-### .cold[I]interface Segregation Principle - Principio de segregación de la interfaz
+### .cold[I]nterface Segregation Principle - Principio de segregación de la interfaz
 
-.large[`r fontawesome::fa(name = "yin-yang")` Mantén las interfaces pequeñas para que los usuarios no terminen dependiendo de cosas que no necesitan]
+.large[`r fontawesome::fa(name = "yin-yang")` Mantén las interfaces pequeñas para no forzar a las clases implementar métodos que no necesitan]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` No se debe forzar a los clientes a depender de métodos que no utilizan]
+--
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una interfaz es demasiado grande, conviene fraccionarla en varias interfaces más pequeñas]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` No forzar a clientes (implementaciones) a depender de métodos que no utilizan]
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una interfaz es demasiado grande, sepárala en varias interfaces más pequeñas, pero *funcionalmente* más concisas]
 
 ???
 
@@ -242,7 +280,15 @@ class: left
 
 ### .cold[D]ependency Inversion Principle - Principio de inversión de dependencia
 
-.large[`r fontawesome::fa(name = "yin-yang")` Las clases de alto nivel no deben depender de clases de bajo nivel. Ambas deben depender de abstracciones]
+.large[`r fontawesome::fa(name = "yin-yang")` Clases de alto nivel (componentes, servicios) no deben depender de clases de bajo nivel.]
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` **Desacoplamiento** de módulos/componentes/clases]
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño composición](#principle-composition)]
+
+-   .large[Componentes deben depender de abstracciones, no de implementaciones] 
 
 
 ???
@@ -251,23 +297,24 @@ Clases de bajo nivel implementan operaciones básicas como transferir datos por 
 
 Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
 
+El uso del operador `new` crea depoendice fuertes entre clases
+
+
 [https://stackify.com/dependency-inversion-principle/](https://stackify.com/dependency-inversion-principle/)
 
 ---
-# Resumen
+# .cold[SOLID] con ejemplos
 
-- .large[Soluciones conceptuales muy probadas y testeadas]
+.large[`r cite("milington2022")` Ejemplos claros y sencillos en Java para entender los principios SOLID]
 
-- .large[Proporcionan un vocabulario común]
+.large[`r cite(c("oloruntoba2020", "soysal2022"))` Más ejemplos]
 
-- .large[No es siempre obvio que patrón utilizar]
-
-- .large[No abuses de los patrones si existe una solución más sencilla y eficiente]
+.large[`r cite("martin2014")` Charla de Robert Martín (creador principios) in Yale]
 
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 2)
+PrintBibliography(my_refs, start = 1, end = 5)
 ```
 
