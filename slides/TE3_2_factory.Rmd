@@ -567,6 +567,6 @@ name: aplicability
 .large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando quieras ofrecer a los usuarios de tu código una forma de extender sus componentes internos] 
 
 - .large[¡Me dicen que quieren abrir en Singapure! Ok, veámos:]
-  - .large[Extiendo la clase base ``Knife` con los nuevos subtipos que necesito]
+  - .large[Extiendo la clase base `Knife` con los nuevos subtipos que necesito]
   - .large[Creo `SingapureKnifeStore` que sobreescribe el Factory Method para crear los nuevos productos]
 
