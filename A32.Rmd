@@ -30,5 +30,5 @@ Después de completar esta actividad, los alumnos deberían poder:
 
 ## Actividades
 
-1.  Completa la codificación del **Factory Method** para el ejemplo de `KnifeStore`, incluyendo las subclases `USKnifeStore` y `EuropeKnifeStore`\` . La tienda americana produce `SteakKnife` y `ChefKnife`. La tienda europea produce subtipos nuevos de productos: `EuropeChefKnife` y `EuropeSteakKnife`. Puedes copiar el código de las clases resultantes en un documento o bien copiar el link a un repositorio de código (como github) en abierto.
+1.  Completa la codificación del **Factory Method** para el ejemplo de `KnifeStore`, incluyendo las subclases `USKnifeStore` y `EuropeKnifeStore` . La tienda americana produce `SteakKnife` y `ChefKnife`. La tienda europea produce subtipos nuevos de productos: `EuropeChefKnife` y `EuropeSteakKnife`. Puedes copiar el código de las clases resultantes en un documento o bien copiar el link a un repositorio de código (como github) en abierto.
 2.  Crea el diagrama de clases resultante para tu implementación según la [estructura conceptual](slides/TE3_2_factory.html#structure) del **Factory Method**.
