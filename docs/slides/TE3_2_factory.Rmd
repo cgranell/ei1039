@@ -1,9 +1,9 @@
 ---
-title: "[TE3_2] Patrones Creacionales"
-subtitle: "Factory objects & Factory Method pattern"
+title: "[TE3_2] Factory objects & <br/> Factory Method pattern"
+subtitle: "Patrones creacionales"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -43,7 +43,7 @@ background-size: cover
 
 ### &#183; `r rmarkdown::metadata$subtitle`
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 .right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
@@ -86,7 +86,7 @@ class: right, bottom
 background-image: url(images/rawpixel/knife.jpg)
 background-size: cover
 
-.large[Eres el programador de una tienda online que vende cuchillos (_knifes_)...]
+.large[Vas a diseñar una tienda online que vende tipos de cuchillos (_knifes_)...]
 
 ???
 
@@ -98,7 +98,7 @@ Image credits: [Rawpixel.com](https://www.rawpixel.com/image/432907)
 .pull-left[
 ### Clase abstracta `Knife`
 
-```{java }
+```{r engine='java'}
 public abstract class Knife {
     String name;
 
@@ -126,19 +126,19 @@ public abstract class Knife {
 --
 
 .pull-right[
-### Subclases como variantes de `Knife`
+### Implementaciones de `Knife`
 
-```{java}
+```{r engine='java'}
 public class ChefKnife extends Knife {
 
     public ChefKnife() {
-        name = "Chefs knife";
+        name = "Chef knife";
     }
     
 }
 ```
 
-```{java}
+```{r engine='java'}
 public class SteakKnife extends Knife {
 
     public SteakKnife() {
@@ -155,7 +155,7 @@ public class SteakKnife extends Knife {
 
 .pull-left[
 
-```{java }
+```{r engine="java"}
 
 public class KnifeStore() {
   
@@ -183,16 +183,16 @@ public class KnifeStore() {
 
 ### Clase `KnifeStore` 
 
-.large[_Produce_ `Knife`s de dos tipos ("productos")]
+.large[Produce `Knife`s de dos tipos ("productos")]
 
-.large[_Concrete instantiation_: `if-else + new`]
+.large[Instanciación concreta con `new` (+ `if-else`)]
 ]
 
 ---
 
 .pull-left[
   
-```{java }
+```{r engine='java'}
 
 public class KnifeStore() {
   
@@ -206,7 +206,7 @@ public class KnifeStore() {
     } else if (type.equals("bread")) { #<<
       knife = new BreadKnife(); #<<
     } else if (type.equals("paring")) { #<<
-      knife = new PairingKnife(); #<<
+      knife = new ParingKnife(); #<<
     } #<<
       
       
@@ -223,11 +223,13 @@ public class KnifeStore() {
 
 .pull-right[
 
+### Clase `KnifeStore` 
+
 .large[La tienda `KnifeStore` crece y ofrece nuevos "productos"]
 
-.large[Añadir o quitar `if-else + new` funciona...]
+.large[Añadir o quitar tipos con cuchillos con `new + if-else` funciona...]
 
-.large[pero con 50 tipos de `Knife`... `r emo::ji("angry")`]
+.large[...pero con 50 tipos de `Knife`... `r emo::ji("angry")`]
 
 
 ]
@@ -236,10 +238,14 @@ public class KnifeStore() {
 class: center, middle
 
 
-# `r fontawesome::fa(name = "exclamation-circle")` [SOLID - Open/Close principle](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_dise%C3%B1o.html#33)
+# `r fontawesome::fa(name = "circle-exclamation")` [SOLID - Open/Close principle](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#ocp)
 
 .large[`r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero __cerradas
 a la modificación__]
+
+--
+
+.large[`r fontawesome::fa(name = "circle-exclamation")` `KnifeStore` no está cerrada a la modificación]
 
 
 ???
@@ -251,18 +257,18 @@ _Concrete instantiation_ crea problemas ya que cada nuevo subtipo de `Knife` imp
 class: center, middle
 
 
-# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Encapsula lo que varía y sepáralo de lo que no cambia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_dise%C3%B1o.html#28)]
+# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Encapsula lo que varía y sepáralo de lo que no cambia](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#principle-encapsulate)]
 
 --
 
-.large[Saca lo que varía (creación de objetos `Knife`) del `orderKnife()` y encapsula ese código en un __Factory object / Simple Factory__] 
+.large[Saca lo que varía (creación de objetos `Knife`) del método `orderKnife()` y encapsula ese código en un __Factory object (Simple Factory)__] 
 
 
 ---
 
 .pull-left[
 
-```{java }
+```{r engine="java"}
 
 public class SimpleKnifeFactory() {
   
@@ -288,7 +294,9 @@ public class SimpleKnifeFactory() {
 
 .large[Gestiona los detalles de la creación de objetos]
 
-.large[Encapsula lo cambiante: `if-else` + `new`]
+.large[Encapsula lo que varía en `SimpleKnifeFactory`]
+
+.large[Encapsula lo que no cambia en `KnifeStore`]
 
 ]
 
@@ -297,7 +305,7 @@ public class SimpleKnifeFactory() {
 
 .pull-left[
   
-```{java }
+```{r engine="java"}
 
 public class KnifeStore() {
 
@@ -333,7 +341,7 @@ public class KnifeStore() {
 
 .large[`orderKnife()` se convierte en  __cliente__ del Factory, y solo pide "productos" del tipo base `Knife`]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Menos __acoplamiento__ entre clases]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Menos __acoplamiento__ entre clases]
 
 ]
 
@@ -352,20 +360,20 @@ class: left
 
 .pull-right[
 
-.large[`r fontawesome::fa(name = "question-circle")` ¿Quién es el cliente, la fábrica y el producto?]
+.large[`r fontawesome::fa(name = "circle-question")` ¿Quién es el cliente, la fábrica y el producto?]
 
 
-.large[`r fontawesome::fa(name = "question-circle")` ¿En qué situaciones es ideal el Factory object?]
+.large[`r fontawesome::fa(name = "circle-question")` ¿En qué situaciones es ideal el `Factory object`?]
 
 
-.large[`r fontawesome::fa(name = "question-circle")` ¿Qué beneficios aporta?]
+.large[`r fontawesome::fa(name = "circle-question")` ¿Qué beneficios aporta?]
 ]
 
 ???
 
 Analogía: Un Apple Shop no produce iPhones, sino que los recibe de una Factory
 
-Situación: Si muchos clientes instancian el mismo conjunto de clases ("productos"), es decir, los mismos objetos se requiere por otros componentes de un programa/aplicación.
+Situación: Si muchos clientes instancian el mismo conjunto de clases ("productos"), es decir, los mismos objetos se requieren por otros componentes de un programa/aplicación.
 
 Beneficio: Código más fácil de modificar
 
@@ -373,22 +381,25 @@ Beneficio: Código más fácil de modificar
 class: center, middle
 
 
-# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#29)]
+# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#principle-interface)]
 
 --
 
-.large[El client `KnifeStore` no maneja clases concretas de `Knife`, sino la clase base `Knife` (una "generalización")] 
+.large[El client `KnifeStore` no maneja clases concretas de `Knife` ("implementaciones"), sino la clase base `Knife` (una "generalización")] 
 
 
 ???
 
 * "interfaz" se refiere tanto a una interfaz como clase abstracta
+
 ---
 class: inverse, center, middle
 
 # Patrón Factory Method
 
 --
+
+.large[Propósito]
 
 .large[Problema]
 
@@ -398,10 +409,21 @@ class: inverse, center, middle
 
 .large[Aplicabilidad]
 
+
+
 ---
+name: purpose
+class: center, middle
+
+# Factory Method: Propósito
+
+## proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas
+
+---
+name: problem
 # Factory Method: Problema
 
-.large[Ahora, `KnifeStore` no solo está en US, sino que se expande a Europa. Pero cada región tiene sus preferencias locales sobre los tipos de `Knife`]
+.large[Ahora, `KnifeStore` no solo está en US, sino que se expande a Europa. Cada región tiene sus preferencias locales sobre los tipos de `Knife`]
 
 .large[¿Especializamos `SimpleKnifeFactory` según la cultura local?]
 
@@ -412,11 +434,12 @@ class: inverse, center, middle
 
 
 ---
+name: solution
 # Factory Method: Solución
 
-- .large[En vez del objeto Factory `EuropeSimpleKnifeFactory`, el patrón Factory Method crearía `EuropeKnifeStore` como subclase de `KnifeStore` (cliente).]
+- .large[En vez del objeto Factory `EuropeSimpleKnifeFactory`, el patrón Factory Method crea `EuropeKnifeStore` como subclase de `KnifeStore` (cliente).]
 
-- .large[Cada subclase decide cómo se crean los objetos ("productos"), sobreescribien el método fábrica]
+- .large[Cada subclase decide cómo se crean los objetos ("productos"), y sobreescriben el **método fábrica**]
 
 - .large[Programa a una interfaz* para crear objetos]
 
@@ -424,7 +447,7 @@ class: inverse, center, middle
 
 .pull-left[
   
-```{java }
+```{r engine="java"}
 
 public abstract class KnifeStore() { #<<
 
@@ -461,7 +484,7 @@ public abstract class KnifeStore() { #<<
 
 .pull-left[
   
-```{java }
+```{r engine="java"}
 
 public class EuropeKnifeStore() 
        extends KnifeStore { 
@@ -491,6 +514,7 @@ public class EuropeKnifeStore()
 ]
 
 ---
+name: structure
 # Factory Method: Estructura
 
 
@@ -503,7 +527,7 @@ public class EuropeKnifeStore()
 
 .large[__Product__ (`Knife`) declara la interfaz común de objetos]
 
-.large[__ConcreteProducts__ (`EuropeChefKnife`) implementaciones de la interfaz]
+.large[__ConcreteProducts__ (`EuropeChefKnife`) son implementaciones de la interfaz]
 
 ]
 
@@ -522,7 +546,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 .pull-right[
 
-.large[__Creator__ (`KnifeStore`) declara el factory method que devuelve un objeto del mismo tipo que la interfaz del __Product__]
+.large[__Creator__ (`KnifeStore`) declara el factory method (*abstract*) que devuelve un objeto del mismo tipo que la interfaz __Product__]
 
 .large[__ConcreteCreators__ (`EuropeKnifeStore`) sobreescriben el Factory Method de la superclase]
 ]
@@ -531,17 +555,18 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/factory-method)
 
 ---
+name: aplicability
 # Factory Method: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando no sabes de antemano las dependencias y tipos exactos de los objetos de tu código] 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando no sabes de antemano las dependencias y tipos exactos de los objetos de tu código] 
 
-- .large[Factory Method separa el código de creación de "producto" del código que hace uso del producto]
+- .large[Factory Method separa el código de creación de "productos" del código que hace uso del producto]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando quieras ofrecer a los usuarios de tu código, una forma de extender sus componentes internos] 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando quieras ofrecer a los usuarios de tu código una forma de extender sus componentes internos] 
 
-- .large[¡Me dicen que quieren abir en Singapure! Ok, veámos:]
+- .large[¡Me dicen que quieren abrir en Singapure! Ok, veámos:]
   - .large[Extiendo la clase base ``Knife` con los nuevos subtipos que necesito]
   - .large[Creo `SingapureKnifeStore` que sobreescribe el Factory Method para crear los nuevos productos]
 
