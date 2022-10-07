@@ -17,6 +17,11 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"
 ---
+name: title
+class: left, top
+background-image: url(images/rawpixel/the-creation.jpg)
+background-size: cover
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -30,14 +35,21 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: left, top
-background-image: url(images/rawpixel/the-creation.jpg)
-background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
