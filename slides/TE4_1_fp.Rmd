@@ -1,6 +1,6 @@
 ---
 title: "[TE4_1] Functional thinking"
-subtitle: "for better developing and testing"
+subtitle: ""
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2022" 
@@ -27,6 +27,13 @@ knitr::opts_chunk$set(collapse = TRUE,
 # devtools::install_github("rstudio/fontawesome")
 library(emo)
 library(fontawesome) # from github: https://github.com/rstudio/fontawesome
+
+library(xaringanExtra)
+library(purrr)
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
 ```
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
@@ -35,272 +42,283 @@ source("load_references.r")
 
 name: title
 class: left, top
-background-image: url(images/rawpixel/brick-pattern.jpg)
+background-image: url(https://danlebrero.com/images/blog/books/grokking-simplicity/grokking-simplicity.jpg)
 background-size: cover
 
-# .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
+# .fancy[`r rmarkdown::metadata$title`]
 
-### .whiteinline[&#183; `r rmarkdown::metadata$subtitle`]
+### `r rmarkdown::metadata$subtitle`
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-.whiteinline[.right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]]
+.whiteinline[.left[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]]
 
-.whiteinline[.right[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]]
+.whiteinline[.left[`r rmarkdown::metadata$description` &#183; `r rmarkdown::metadata$date`]]
 
 
 ???
 
-Black wooden brick textured background
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+Image credits: [danlebrero.com](https://danlebrero.com/2021/09/15/grokking-simplicity-summary/)
+
+
+---
+class: left
+
+### Paradigmas de programación 
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Programación Procedural]
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Programación Orientada a Objetos]
+
+>   .large[Organizar el acceso a los datos]
+
+--
+
+-   .large[`r fontawesome::fa(name = "lightbulb")` **encapsulación**: variables, objetos, ...]
+
+--
+
+-   .large[`r fontawesome::fa(name = "lightbulb")` **herencia**: objetos complejos se crean extendiendo otros más simples]
+
+
+---
+class: left
+
+### Paradigmas de programación 
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Programación Funcional]
+
+>   .large[Sin efectos laterales! *No side  effects!*]
+
+--
+
+-   .large[`r fontawesome::fa(name = "lightbulb")` **acciones vs cálculos**: código organizado en las partes que pueden tener efectos laterales y en las partes que no los tienen]
+
+--
+
+-   .large[`r fontawesome::fa(name = "lightbulb")` técnicas para **procesar colecciones de datos** (arrays, lists,...): "todos a la vez" en vez de elemento a elemento]
+
+  - Esta idea funciona mejor si se apoya en la primera (**no side effects!**)
+
+???
+
+Techniques are most effective when items can be processed independently, free of side effects, so they work better thanks to **no side effects**.
+
+---
+name: map-function
+class: left
+
+# `map` en R
+
+
+```{r}
+# Cada vector es un planeta. 
+# Elementos de cada vector representan el radio (km) de las lunas del planeta.
+moons <-
+  list(
+    earth = 1737.1,
+    mars = c(11.3, 6.2),
+    neptune = 
+      c(60.4, 81.4, 156, 174.8, 194, 34.8, 420, 2705.2, 340, 62, 44, 42, 40, 60)
+  )
+```
+
+--
+
+
+```{r echo=TRUE}
+length(moons)
+
+```
+
+--
+
+```{r echo=TRUE}
+length(moons$earth)
+length(moons$mars)
+length(moons$neptune)
+```
+
+
+???
+
+[https://dcl-prog.stanford.edu/purrr-basics.html](https://dcl-prog.stanford.edu/purrr-basics.html) from [Functional Programming](https://dcl-prog.stanford.edu/)
+
+
+---
+class: left
+
+# `map` en R
+
+
+```{r out.width ='30%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map-step-1.png')
+```
+
+
+---
+class: left
+
+# `map` en R
+
+
+```{r out.width ='60%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map-step-2.png')
+```
+
+
+---
+class: left
+
+# `map` en R
+
+
+```{r out.width ='60%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map.png')
+
+```
+
+
+---
+class: left
+
+# `map` en R
+
+
+```{r out.width ='80%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map-output.png')
+```
+
+
+---
+class: left
+
+# `map` en R
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Aplicamos `length()` a cada elemento de `moons`]
+
+
+```{r out.width ='80%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map-length.png')
+```
+
+
+---
+class: left
+
+# `map` en R
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cada invocación de `length()` produce un entero, luego el resultado es una lista de enteros]
+
+
+```{r out.width ='80%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/length-list.png')
+```
+
+
+---
+class: left
+
+# `map` en R
+
+```{r}
+map(moons, length)
+```
+
+
+---
+class: left
+
+# `map` en R
+
+
+.panelset.sideways[
+
+.panel[.panel-name[`sort()`]
+```{r }
+sort(moons$neptune)
+```
+]
+
+.panel[.panel-name[`map()` + `sort`]
+```{r}
+map(moons, sort)
+
+```
+]
+
+.panel[.panel-name[`sort(decreasing)`]
+```{r }
+sort(moons$neptune, decreasing = TRUE)
+```
+]
+
+
+.panel[.panel-name[`map()` + `sort` + `decreasing`]
+```{r}
+map(moons, sort, decreasing = TRUE)
+
+```
+]
+
+]
+
+---
+class: left
+
+# `map` en R
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Al añadir más argumentos a `map()`, se pasan automáticamente a la función]
+
+
+```{r out.width ='80%', fig.align='center', echo=FALSE}
+knitr::include_graphics('https://dcl-prog.stanford.edu/images/map-extra-arg.png')
+```
+
 
 
 ---
 class: inverse, center, middle
 
-# ¿Qué son los patrones de diseño?
-
-## .acidinline[Soluciones habituales y bien testeadas a]
-## .fatinline[problemas recurrentes (dependencias, fragilidad, etc.)]
-## .coldinline[en un contexo (diseño de software orientado a objetos)]
+# ¿Por qué son tan eficcientes estas funciones (`map()`, etc.)? 
 
 ---
 class: inverse, center, middle
 
-# Principios básicos de diseño de software
+# .cold[Sin efectos laterales!]
 
-.large[(presentes en casi todos los patrones de diseño)]
-
----
-name: principle-encapsulate
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### `r fontawesome::fa(name = "yin-yang")` Encapsula lo que varía y sepáralo de lo que no cambia
-
-.right[.large[`r fontawesome::fa(name = "circle-arrow-right")`  Minimiza/aisla el efecto provocado por los cambios]]
-
-
-???
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-name: principle-interface
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### `r fontawesome::fa(name = "yin-yang")` Programa a una interfaz, no a una implementación
-
-.right[.large[`r fontawesome::fa(name = "circle-arrow-right")` Diseño flexible depende de abstracciones,]]
-.right[.large[no de clases concretas]]
-
-
-???
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-name: principle-composition
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### `r fontawesome::fa(name = "yin-yang")` Favorece la composición sobre la herencia
-
-.right[.large[`r fontawesome::fa(name = "circle-arrow-right")` HAS-A puede ser mejor que IS-A]]
-
-???
-
-La herencia es probablemente la forma más obvia de reutilizar código entre clases. Tienes dos clases con el mismo código. Creas una clase base común para estas dos clases y colocas dentro el código similar. Fet!
-
-Puedes hacer más débil una dependencia haciendo que tu código dependa de interfaces o clases abstractas en lugar de clases concretas
-
-En vez de heredar un comportamiento, un objeto obtiene un comportamiento cuando _se compone_ con un objeto de ese comportamiento.
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-class: bottom, center
-background-image: url(images/rawpixel/airquality.jpg)
-background-size: cover
-
-# .whiteinline[¿Cómo reconecéis el aire de baja calidad?]
-
-???
-
-¿Cómo reconocemos que el aire de de baja calidad? ¿Que síntomas observamos?
-
-Pollution collage element, torn paper design
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/6792062/)
-
-
----
-class: bottom, center
-background-image: url(images/rawpixel/sw-code.jpg)
-background-size: cover
-
-# .whiteinline[¿Cómo reconecéis código "malo"?]
-
-???
-
-¿Qué pasa cuando se modifica código malo? Síntomas del código malo: dependencia, fragilidad, rigidez, falta de reutilización o inmobilidad, viscosidad
-
-
-Software developer programming code on black background
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/593170)
+# .cold[*No side  effects!*]
 
 ---
 class: inverse, center, middle
 
-# Principios 
-# .cold[SOLID]
 
-.large[**5** principios del diseño orientado a objetos para que el software sea más comprensible, flexible y fácil de mantener `r cite("martin2002")`]
-
---
-
-.large[y reducir la **complejidad** de sistemas/aplicaciones a medida que crecen]
-
-???
-
-Receta contra los sintomas del código malo.
-
-Principios SOLID introducidos por Robert Martin en 2000: [Design Principles and Design Patterns](http://staff.cs.utu.fi/~jounsmed/doos_06/material/DesignPrinciplesAndPatterns.pdf)
+# ¿Principio o idea clave de la programación funcional?
 
 ---
-name: srp
-class: left
-
-### .cold[S]ingle Responsability Principle - Principo de responsabilidad única
-
-.large[`r fontawesome::fa(name = "yin-yang")` Una clase debería tener un único propósito]
-
-.large[`r fontawesome::fa(name = "yin-yang")` Una clase solo debe tener una (buena) razón para cambiar]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una clase hace demasiadas tareas, hay que cambiarla cada vez que una de esas tareas cambia]
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño encapsulación](#principle-encapsulate)]
-
--   .large[Junta las tareas que cambian *por las mismas razones* en una clase]
-
--   .large[Separa las tareas que cambian *por diferentes razones* en clases distintas]
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Reduce complejidad, fácil entender qué hace una clase]
-
-???
-Reduce complejidad: Si una clase hace demasiadas cosas, hay que cambiarla cada vez que una de esas cosas cambia
-
-Easier to understand: Classes, software components and microservices that have only one responsibility are much easier to explain, understand and implement than the ones that provide a solution for everything. This reduces the number of bugs, improves your development speed, and makes your life as a software developer a lot easier
-
-[https://stackify.com/solid-design-principles/](https://stackify.com/solid-design-principles/)
-
----
-name: ocp
-class: left
-
-### .cold[O]pen/Closed Principle - Principio de abierto/cerrado
-
-.large[`r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero cerradas
-a la modificación]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` **Cerrada a la modificación**: Si una clase está desarrollada, probada y revisada, *no* la reescribas para añadir nuevas funcionalidades]
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` **Abierta a la extensión**: Si necesitas nuevo comportamiento, *crea subclases*]
+class: inverse, center, middle
 
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño interfaz](#principle-interface)]
+# .cold[Saber diferenciar entre ACCIONES y CÁLCULOS]
 
--   .large[Extender una clase permite añadir nuevo comportamiento sin descomponer clientes existentes de la clase original]
 
 ???
 
-Abierta y cerrada no son mutuamente excluyentes. Una clase puede estar al mismo tiempo abierta (para la extensión) y cerrada (para la modificación). El código simple es tanto abierto y cerrado.
+> código siempre se organiza en acciones, cálculos y datos
 
-Of course, the one exception to the rule is when fixing bugs in existing code.
-
-[https://stackify.com/solid-design-open-closed-principle/](https://stackify.com/solid-design-open-closed-principle/)
-
----
-name: lsp
-class: left
-
-### .cold[L]iskov Substitution Principle - Principio de sustitución de Liskov
-
-.large[`r fontawesome::fa(name = "yin-yang")` Si la clase A es un subtipo de la clase B, deberíamos poder reemplazar B por A sin descomponer el comportamiento de nuestro programa]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Principio de diseño del sentido común]
-
--   .large[Escribe abstracciones claras y bien definidas]
-
--   .large[Subclases deben ser compatibles con (el comportamiento) de la clase padre]
-
--   .large[Al sobrescribir un método, extiende el comportamiento base en lugar de sustituirlo por algo totalmente distinto]
-
-???
-
-Escribe abstracciones nítidas, claras y bien definidas. 
-
-[https://stackify.com/solid-design-liskov-substitution-principle/](https://stackify.com/solid-design-liskov-substitution-principle/)
+.right[cualquier programador funcional]
 
 
 ---
-name: isp
-class: left
+class: inverse, center, middle
 
-### .cold[I]nterface Segregation Principle - Principio de segregación de la interfaz
-
-.large[`r fontawesome::fa(name = "yin-yang")` Mantén las interfaces pequeñas para no forzar a las clases implementar métodos que no necesitan]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` No forzar a clientes (implementaciones) a depender de métodos que no utilizan]
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una interfaz es demasiado grande, sepárala en varias interfaces más pequeñas, pero *funcionalmente* más concisas]
-
-???
-
-[https://stackify.com/interface-segregation-principle/](https://stackify.com/interface-segregation-principle/)
-
----
-name: dip
-class: left
-
-### .cold[D]ependency Inversion Principle - Principio de inversión de dependencia
-
-.large[`r fontawesome::fa(name = "yin-yang")` Clases de alto nivel (componentes, servicios) no deben depender de clases de bajo nivel.]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` **Desacoplamiento** de módulos/componentes/clases]
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño composición](#principle-composition)]
-
--   .large[Componentes deben depender de abstracciones, no de implementaciones] 
+# Si comprendes estos principios clave para organizar los efectos laterales, los podrás aplicar a CUALQUIER lenguaje de programación
 
 
-???
 
-Clases de bajo nivel implementan operaciones básicas como transferir datos por la red. 
-
-Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
-
-El uso del operador `new` crea depoendice fuertes entre clases
-
-
-[https://stackify.com/dependency-inversion-principle/](https://stackify.com/dependency-inversion-principle/)
 
 ---
 # .cold[SOLID] con ejemplos

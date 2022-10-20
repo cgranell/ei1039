@@ -6,6 +6,8 @@
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
     <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
   </head>
   <body>
@@ -16,274 +18,311 @@
 
 
 
+
+
 name: title
 class: left, top
-background-image: url(images/rawpixel/brick-pattern.jpg)
+background-image: url(https://danlebrero.com/images/blog/books/grokking-simplicity/grokking-simplicity.jpg)
 background-size: cover
 
-# .whiteinline[.fancy[[TE4_1] Functional thinking]]
+# .fancy[[TE4_1] Functional thinking]
 
-### .whiteinline[&amp;#183; for better developing and testing]
+### 
 
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 
 
-.whiteinline[.right[Carlos Granell&amp;#183; Universitat Jaume I]]
+.whiteinline[.left[Carlos Granell&amp;#183; Universitat Jaume I]]
 
-.whiteinline[.right[EI1039 - Diseño de Software &amp;#183; Sep 2022]]
+.whiteinline[.left[EI1039 - Diseño de Software &amp;#183; Sep 2022]]
 
 
 ???
 
-Black wooden brick textured background
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/578505/)
+Image credits: [danlebrero.com](https://danlebrero.com/2021/09/15/grokking-simplicity-summary/)
+
+
+---
+class: left
+
+### Paradigmas de programación 
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Programación Procedural]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Programación Orientada a Objetos]
+
+&gt;   .large[Organizar el acceso a los datos]
+
+--
+
+-   .large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg> **encapsulación**: variables, objetos, ...]
+
+--
+
+-   .large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg> **herencia**: objetos complejos se crean extendiendo otros más simples]
+
+
+---
+class: left
+
+### Paradigmas de programación 
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Programación Funcional]
+
+&gt;   .large[Sin efectos laterales! *No side  effects!*]
+
+--
+
+-   .large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg> **acciones vs cálculos**: código organizado en las partes que pueden tener efectos laterales y en las partes que no los tienen]
+
+--
+
+-   .large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg> técnicas para **procesar colecciones de datos** (arrays, lists,...): "todos a la vez" en vez de elemento a elemento]
+
+  - Esta idea funciona mejor si se apoya en la primera (**no side effects!**)
+
+???
+
+Techniques are most effective when items can be processed independently, free of side effects, so they work better thanks to **no side effects**.
+
+---
+name: map-function
+class: left
+
+# `map` en R
+
+
+
+```r
+# Cada vector es un planeta. 
+# Elementos de cada vector representan el radio (km) de las lunas del planeta.
+moons &lt;-
+  list(
+    earth = 1737.1,
+    mars = c(11.3, 6.2),
+    neptune = 
+      c(60.4, 81.4, 156, 174.8, 194, 34.8, 420, 2705.2, 340, 62, 44, 42, 40, 60)
+  )
+```
+
+--
+
+
+
+```r
+length(moons)
+## [1] 3
+```
+
+--
+
+
+```r
+length(moons$earth)
+## [1] 1
+length(moons$mars)
+## [1] 2
+length(moons$neptune)
+## [1] 14
+```
+
+
+???
+
+[https://dcl-prog.stanford.edu/purrr-basics.html](https://dcl-prog.stanford.edu/purrr-basics.html) from [Functional Programming](https://dcl-prog.stanford.edu/)
+
+
+---
+class: left
+
+# `map` en R
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map-step-1.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map-step-2.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map-output.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Aplicamos `length()` a cada elemento de `moons`]
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map-length.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Cada invocación de `length()` produce un entero, luego el resultado es una lista de enteros]
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/length-list.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: left
+
+# `map` en R
+
+
+```r
+map(moons, length)
+## $earth
+## [1] 1
+## 
+## $mars
+## [1] 2
+## 
+## $neptune
+## [1] 14
+```
+
+
+---
+class: left
+
+# `map` en R
+
+
+.panelset.sideways[
+
+.panel[.panel-name[`sort()`]
+
+```r
+sort(moons$neptune)
+##  [1]   34.8   40.0   42.0   44.0   60.0   60.4   62.0   81.4  156.0  174.8
+## [11]  194.0  340.0  420.0 2705.2
+```
+]
+
+.panel[.panel-name[`map()` + `sort`]
+
+```r
+map(moons, sort)
+## $earth
+## [1] 1737.1
+## 
+## $mars
+## [1]  6.2 11.3
+## 
+## $neptune
+##  [1]   34.8   40.0   42.0   44.0   60.0   60.4   62.0   81.4  156.0  174.8
+## [11]  194.0  340.0  420.0 2705.2
+```
+]
+
+.panel[.panel-name[`sort(decreasing)`]
+
+```r
+sort(moons$neptune, decreasing = TRUE)
+##  [1] 2705.2  420.0  340.0  194.0  174.8  156.0   81.4   62.0   60.4   60.0
+## [11]   44.0   42.0   40.0   34.8
+```
+]
+
+
+.panel[.panel-name[`map()` + `sort` + `decreasing`]
+
+```r
+map(moons, sort, decreasing = TRUE)
+## $earth
+## [1] 1737.1
+## 
+## $mars
+## [1] 11.3  6.2
+## 
+## $neptune
+##  [1] 2705.2  420.0  340.0  194.0  174.8  156.0   81.4   62.0   60.4   60.0
+## [11]   44.0   42.0   40.0   34.8
+```
+]
+
+]
+
+---
+class: left
+
+# `map` en R
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Al añadir más argumentos a `map()`, se pasan automáticamente a la función]
+
+
+&lt;img src="https://dcl-prog.stanford.edu/images/map-extra-arg.png" width="80%" style="display: block; margin: auto;" /&gt;
+
 
 
 ---
 class: inverse, center, middle
 
-# ¿Qué son los patrones de diseño?
-
-## .acidinline[Soluciones habituales y bien testeadas a]
-## .fatinline[problemas recurrentes (dependencias, fragilidad, etc.)]
-## .coldinline[en un contexo (diseño de software orientado a objetos)]
+# ¿Por qué son tan eficcientes estas funciones (`map()`, etc.)? 
 
 ---
 class: inverse, center, middle
 
-# Principios básicos de diseño de software
+# .cold[Sin efectos laterales!]
 
-.large[(presentes en casi todos los patrones de diseño)]
-
----
-name: principle-encapsulate
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Encapsula lo que varía y sepáralo de lo que no cambia
-
-.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg>  Minimiza/aisla el efecto provocado por los cambios]]
-
-
-???
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-name: principle-interface
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Programa a una interfaz, no a una implementación
-
-.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Diseño flexible depende de abstracciones,]]
-.right[.large[no de clases concretas]]
-
-
-???
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-name: principle-composition
-background-image: url(images/rawpixel/balance.jpg)
-background-size: cover
-
-### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Favorece la composición sobre la herencia
-
-.right[.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> HAS-A puede ser mejor que IS-A]]
-
-???
-
-La herencia es probablemente la forma más obvia de reutilizar código entre clases. Tienes dos clases con el mismo código. Creas una clase base común para estas dos clases y colocas dentro el código similar. Fet!
-
-Puedes hacer más débil una dependencia haciendo que tu código dependa de interfaces o clases abstractas en lugar de clases concretas
-
-En vez de heredar un comportamiento, un objeto obtiene un comportamiento cuando _se compone_ con un objeto de ese comportamiento.
-
-Stones Wooden Table Group of Objects Concept
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/69379/)
-
-
----
-class: bottom, center
-background-image: url(images/rawpixel/airquality.jpg)
-background-size: cover
-
-# .whiteinline[¿Cómo reconecéis el aire de baja calidad?]
-
-???
-
-¿Cómo reconocemos que el aire de de baja calidad? ¿Que síntomas observamos?
-
-Pollution collage element, torn paper design
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/6792062/)
-
-
----
-class: bottom, center
-background-image: url(images/rawpixel/sw-code.jpg)
-background-size: cover
-
-# .whiteinline[¿Cómo reconecéis código "malo"?]
-
-???
-
-¿Qué pasa cuando se modifica código malo? Síntomas del código malo: dependencia, fragilidad, rigidez, falta de reutilización o inmobilidad, viscosidad
-
-
-Software developer programming code on black background
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/593170)
+# .cold[*No side  effects!*]
 
 ---
 class: inverse, center, middle
 
-# Principios 
-# .cold[SOLID]
 
-.large[**5** principios del diseño orientado a objetos para que el software sea más comprensible, flexible y fácil de mantener .small[&lt;a name=cite-martin2002&gt;&lt;/a&gt;[[Mar02](http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html)]]]
-
---
-
-.large[y reducir la **complejidad** de sistemas/aplicaciones a medida que crecen]
-
-???
-
-Receta contra los sintomas del código malo.
-
-Principios SOLID introducidos por Robert Martin en 2000: [Design Principles and Design Patterns](http://staff.cs.utu.fi/~jounsmed/doos_06/material/DesignPrinciplesAndPatterns.pdf)
+# ¿Principio o idea clave de la programación funcional?
 
 ---
-name: srp
-class: left
-
-### .cold[S]ingle Responsability Principle - Principo de responsabilidad única
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Una clase debería tener un único propósito]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Una clase solo debe tener una (buena) razón para cambiar]
-
---
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Si una clase hace demasiadas tareas, hay que cambiarla cada vez que una de esas tareas cambia]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> [Principo de diseño encapsulación](#principle-encapsulate)]
-
--   .large[Junta las tareas que cambian *por las mismas razones* en una clase]
-
--   .large[Separa las tareas que cambian *por diferentes razones* en clases distintas]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Reduce complejidad, fácil entender qué hace una clase]
-
-???
-Reduce complejidad: Si una clase hace demasiadas cosas, hay que cambiarla cada vez que una de esas cosas cambia
-
-Easier to understand: Classes, software components and microservices that have only one responsibility are much easier to explain, understand and implement than the ones that provide a solution for everything. This reduces the number of bugs, improves your development speed, and makes your life as a software developer a lot easier
-
-[https://stackify.com/solid-design-principles/](https://stackify.com/solid-design-principles/)
-
----
-name: ocp
-class: left
-
-### .cold[O]pen/Closed Principle - Principio de abierto/cerrado
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Las clases deben estar abiertas a la extensión pero cerradas
-a la modificación]
-
---
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> **Cerrada a la modificación**: Si una clase está desarrollada, probada y revisada, *no* la reescribas para añadir nuevas funcionalidades]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> **Abierta a la extensión**: Si necesitas nuevo comportamiento, *crea subclases*]
+class: inverse, center, middle
 
 
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> [Principo de diseño interfaz](#principle-interface)]
+# .cold[Saber diferenciar entre ACCIONES y CÁLCULOS]
 
--   .large[Extender una clase permite añadir nuevo comportamiento sin descomponer clientes existentes de la clase original]
 
 ???
 
-Abierta y cerrada no son mutuamente excluyentes. Una clase puede estar al mismo tiempo abierta (para la extensión) y cerrada (para la modificación). El código simple es tanto abierto y cerrado.
+&gt; código siempre se organiza en acciones, cálculos y datos
 
-Of course, the one exception to the rule is when fixing bugs in existing code.
-
-[https://stackify.com/solid-design-open-closed-principle/](https://stackify.com/solid-design-open-closed-principle/)
-
----
-name: lsp
-class: left
-
-### .cold[L]iskov Substitution Principle - Principio de sustitución de Liskov
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Si la clase A es un subtipo de la clase B, deberíamos poder reemplazar B por A sin descomponer el comportamiento de nuestro programa]
-
---
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Principio de diseño del sentido común]
-
--   .large[Escribe abstracciones claras y bien definidas]
-
--   .large[Subclases deben ser compatibles con (el comportamiento) de la clase padre]
-
--   .large[Al sobrescribir un método, extiende el comportamiento base en lugar de sustituirlo por algo totalmente distinto]
-
-???
-
-Escribe abstracciones nítidas, claras y bien definidas. 
-
-[https://stackify.com/solid-design-liskov-substitution-principle/](https://stackify.com/solid-design-liskov-substitution-principle/)
+.right[cualquier programador funcional]
 
 
 ---
-name: isp
-class: left
+class: inverse, center, middle
 
-### .cold[I]nterface Segregation Principle - Principio de segregación de la interfaz
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Mantén las interfaces pequeñas para no forzar a las clases implementar métodos que no necesitan]
-
---
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> No forzar a clientes (implementaciones) a depender de métodos que no utilizan]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Si una interfaz es demasiado grande, sepárala en varias interfaces más pequeñas, pero *funcionalmente* más concisas]
-
-???
-
-[https://stackify.com/interface-segregation-principle/](https://stackify.com/interface-segregation-principle/)
-
----
-name: dip
-class: left
-
-### .cold[D]ependency Inversion Principle - Principio de inversión de dependencia
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 128C238.3 128 224 142.4 224 160S238.3 192 256 192s31.97-14.38 31.97-32S273.7 128 256 128zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 384c-17.68 0-31.97-14.38-31.97-32S238.3 320 256 320s31.97 14.38 31.97 32S273.7 384 256 384zM256 256c-53.04 0-96.03 43-96.03 96S202.1 448 256 448c-106.1 0-192.1-86-192.1-192S149.9 64 256 64c53.04 0 96.03 43 96.03 96S309 256 256 256z"/></svg> Clases de alto nivel (componentes, servicios) no deben depender de clases de bajo nivel.]
-
---
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> **Desacoplamiento** de módulos/componentes/clases]
-
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> [Principo de diseño composición](#principle-composition)]
-
--   .large[Componentes deben depender de abstracciones, no de implementaciones] 
+# Si comprendes estos principios clave para organizar los efectos laterales, los podrás aplicar a CUALQUIER lenguaje de programación
 
 
-???
 
-Clases de bajo nivel implementan operaciones básicas como transferir datos por la red. 
-
-Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
-
-El uso del operador `new` crea depoendice fuertes entre clases
-
-
-[https://stackify.com/dependency-inversion-principle/](https://stackify.com/dependency-inversion-principle/)
 
 ---
 # .cold[SOLID] con ejemplos
@@ -297,13 +336,13 @@ El uso del operador `new` crea depoendice fuertes entre clases
 ---
 # Referencias
 
-&lt;a name=bib-martin2002&gt;&lt;/a&gt;[Martin, Robert](#cite-martin2002) (2002).
-_Agile Software Development: Principles, Patterns, and Practices_.
-Pearson Education, 1st edition. ISBN: 978-0135974445. URL:
-[http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html](http://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html).
 
-&lt;a name=bib-martin2014&gt;&lt;/a&gt;[\-\-\-](#cite-martin2014) (2014). _SOLID
-Principles of Objetc Oriented &amp; AGILE Design (video)_. URL:
+```
+## Warning in `[[.BibEntry`(x, ind): subscript out of bounds
+```
+
+&lt;a name=bib-martin2014&gt;&lt;/a&gt;[Martin, Robert](#cite-martin2014) (2014).
+_SOLID Principles of Objetc Oriented &amp; AGILE Design (video)_. URL:
 [https://www.youtube.com/watch?v=TMuno5RZNeE](https://www.youtube.com/watch?v=TMuno5RZNeE).
 
 &lt;a name=bib-milington2022&gt;&lt;/a&gt;[Milignton, Sam](#cite-milington2022)
