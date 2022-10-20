@@ -759,7 +759,7 @@ class: left
 ### Resumen
 
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` En FP, datos y cálculos prevalecen sobre acciones]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` En PF, datos y cálculos prevalecen sobre acciones]
 
 -   lecturas de datos mutables son acciones.
 -   lecturas de datos inmutables son cálculos.
