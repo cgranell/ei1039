@@ -42,6 +42,10 @@ background-size: cover
 Image credits: [danlebrero.com](https://danlebrero.com/2021/09/15/grokking-simplicity-summary/)
 
 
+[How Functional Programming Can Make You A Better Developer](https://www.youtube.com/watch?v=EqO4TcNLjl0)
+
+[Book notes: Grokking Simplicity](https://danlebrero.com/2021/09/15/grokking-simplicity-summary/)
+
 ---
 class: left
 
@@ -69,7 +73,7 @@ class: left
 
 ### Paradigmas de programación 
 
-.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Programación Funcional]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Programación Funcional .small[&lt;a name=cite-normand2021&gt;&lt;/a&gt;[[Nor21](#bib-normand2021)]] ]
 
 &gt;   .large[Sin efectos laterales! *No side  effects!*]
 
@@ -317,46 +321,492 @@ class: inverse, center, middle
 
 
 ---
+class: center, middle
+
+# Si comprendes esta idea para gestionar los efectos laterales, la podrás aplicar a CUALQUIER lenguaje de programación
+
+---
 class: inverse, center, middle
 
-# Si comprendes estos principios clave para organizar los efectos laterales, los podrás aplicar a CUALQUIER lenguaje de programación
-
-
+# Acciones, cálculos y datos
 
 
 ---
-# .cold[SOLID] con ejemplos
+background-image: url(https://drek4537l1klr.cloudfront.net/normand/Figures/f0006-01.jpg)
+background-size: contain
 
-.large[.small[&lt;a name=cite-milington2022&gt;&lt;/a&gt;[[Mil22](https://www.baeldung.com/solid-principles)]] Ejemplos claros y sencillos en Java para entender los principios SOLID]
+???
+Image credits: [https://livebook.manning.com/book/grokking-simplicity/chapter-1/1](https://livebook.manning.com/book/grokking-simplicity/chapter-1/1)
 
-.large[.small[&lt;a name=cite-oloruntoba2020&gt;&lt;/a&gt;&lt;a name=cite-soysal2022&gt;&lt;/a&gt;[[Olo21](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design); [Soy22](https://betterprogramming.pub/solid-principles-with-almost-real-life-examples-in-java-b292a4e2c18b)]] Más ejemplos]
+---
+background-image: url(https://drek4537l1klr.cloudfront.net/normand/Figures/f0007-01.jpg)
+background-size: contain
 
-.large[.small[&lt;a name=cite-martin2014&gt;&lt;/a&gt;[[Mar14](https://www.youtube.com/watch?v=TMuno5RZNeE)]] Charla de Robert Martín (creador principios) in Yale]
+
+???
+Image credits: [https://livebook.manning.com/book/grokking-simplicity/chapter-1/1](https://livebook.manning.com/book/grokking-simplicity/chapter-1/1)
+
+
+---
+background-image: url(https://drek4537l1klr.cloudfront.net/normand/Figures/f0008-01.jpg)
+background-size: contain
+
+
+???
+Image credits: [https://livebook.manning.com/book/grokking-simplicity/chapter-1/1](https://livebook.manning.com/book/grokking-simplicity/chapter-1/1)
+
+
+---
+name: actions
+class: middle
+
+# Acciones 
+
+&gt; .large[Dependen de cuántas veces o cuándo se ejecutan]
+
+## Aka
+
+&gt; .large[Funciones con efectos laterales, funciones impuras]
+
+## Ejemplos
+
+&gt; .large[Enviar un correo, leer de una base de datos]
+
+
+???
+
+Si envío un correo electrónico urgente hoy, es muy diferente a enviarlo la próxima semana. Y enviar el mismo correo electrónico 10 veces es diferente de enviarlo 1 vez o ninguna.]
+
+
+---
+name: calculations
+class: middle
+
+# Cálculos
+
+&gt; .large[Producen la misma salida dada la misma entrada. No dependen de cuándo ni cuántas veces se invocan] 
+
+## Aka
+
+&gt; .large[Funciones puras] 
+
+## Ejemplos
+
+&gt; .large[Comprobar si dirección email es correcta, concatenación de cadenas]
+
+---
+name: data
+class: middle
+
+# Datos
+
+&gt; .large[Son hechos sobre algo. Inertes, no son ejectables]
+
+&gt; .large[Deben interpretarse para ser útiles]
+
+## Ejemplos
+
+&gt; .large[Dirección de correo de un usuario, la ubicación devuelta por un servicio de geocoding]
+
+
+???
+
+Ejemplo: el recibo de un restaurante: el gerente del restaurante puede usarlo para determinar qué alimentos son populares. Y puede ser utilizado por el cliente para realizar un seguimiento de su presupuesto para salir a cenar.
+
+
+---
+class: inverse, center, middle
+
+## .cold[En PF, se prefieren los datos a los cálculos y los cálculos a las acciones]
+
+
+---
+class: inverse, center, middle
+
+# Extraer cálculos de acciones
+
+
+---
+background-image: url(https://drek4537l1klr.cloudfront.net/normand/Figures/f0062-01.jpg)
+background-size: contain
+
+# Megamart.com
+
+---
+# Megamart.com
+
+
+```javascript
+var shopping_cart = [];
+var shopping_cart_total = 0;
+```
+
+
+
+```javascript
+function add_item_to_cart(name, price) {
+
+  shopping_cart.push({
+    name: name,
+    price: price
+    });
+  calc_cart_total();
+}
+```
+
+
+
+```javascript
+function calc_cart_total() {
+  shopping_cart_total = 0;
+  for(var i = 0; i &lt; shopping_cart.length; i++) {
+    var item = shopping_cart[i];
+    shopping_cart_total += item.price;
+  }
+  set_cart_total_dom();
+  update_shipping_icons(); /* lo vemos luego */
+  update_tax_dom();        /* lo vemos luego */
+}
+```
+
+
+---
+background-image: url(https://drek4537l1klr.cloudfront.net/normand/Figures/f0063-01.jpg)
+background-size: contain
+# Megamart.com
+
+---
+# Megamart.com
+
+
+```javascript
+function update_shipping_icons() {
+  var buy_buttons = get_buy_buttons_dom();
+    for(var i = 0; i &lt; buy_buttons.length; i++) {
+      var button = buy_buttons[i];
+      var item = button.item;
+      if(item.price + shopping_cart_total &gt;= 20)
+        button.show_free_shipping_icon();
+      else
+        button.hide_free_shipping_icon();
+    }
+}
+```
+
+
+```javascript
+function update_tax_dom() {
+    set_tax_dom(shopping_cart_total * 0.10);
+}
+```
+
+
+---
+# Todo el código anterior son acciones
+
+.panelset.sideways[
+
+.panel[.panel-name[`variables`]
+
+### Acciones: Son mutables
+
+
+```javascript
+var shopping_cart = [];
+var shopping_cart_total = 0;
+```
+]
+
+.panel[.panel-name[`add_item_to_cart`]
+
+### Acción: modifica var globales
+
+
+```javascript
+function add_item_to_cart(name, price) {
+  shopping_cart.push({
+    name: name,
+    price: price
+  });
+  calc_cart_total();
+}
+```
+
+]
+
+
+.panel[.panel-name[`update_shipping_icons`]
+
+### Acción: lee del DOM; modifica el DOM
+
+```javascript
+function update_shipping_icons() {
+  var buy_buttons = get_buy_buttons_dom();
+  for(var i = 0; i &lt; buy_buttons.length; i++) {
+    var button = buy_buttons[i];
+    var item = button.item;
+    if(item.price + shopping_cart_total &gt;= 20)
+      button.show_free_shipping_icon();
+    else
+      button.hide_free_shipping_icon();
+  }
+}
+```
+
+]
+
+
+.panel[.panel-name[`update_tax_dom`]
+
+### Acción: modifica el DOM
+
+
+```javascript
+function update_tax_dom() {
+  set_tax_dom(shopping_cart_total * 0.10);
+}
+```
+]
+
+.panel[.panel-name[`calc_cart_total`]
+
+### Acción: modifica var global
+
+
+```javascript
+function calc_cart_total() {
+  shopping_cart_total = 0;
+  for(var i = 0; i &lt; shopping_cart.length; i++) {
+    var item = shopping_cart[i];
+    shopping_cart_total += item.price;
+  }
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+```
+]
+]
+
+---
+class: center, middle
+
+# ¿Es código testeable y reutizable?
+
+
+---
+# Extraemos cálculos de acciones 
+
+.panelset.sideways[
+
+.panel[.panel-name[`Original`]
+
+### `calc_cart_total()`
+
+
+```javascript
+
+function calc_cart_total() {
+  shopping_cart_total = 0;
+  for(var i = 0; i &lt; shopping_cart.length; i++) {
+    var item = shopping_cart[i];
+    shopping_cart_total += item.price;
+  }
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+```
+]
+
+
+.panel[.panel-name[Paso 1]
+
+### Aislar código que *calcula* en nueva función
+
+
+```javascript
+function calc_cart_total() {
+* calc_total();
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+
+
+*function calc_total() {
+* shopping_cart_total = 0;
+* for(var i = 0; i &lt; shopping_cart.length; i++) {
+*   var item = shopping_cart[i];
+*   shopping_cart_total += item.price;
+* }
+*} 
+```
+
+]
+
+
+.panel[.panel-name[Paso 2]
+
+### Identificar inputs/outputs *explícitos y implícitos*
+
+
+```javascript
+function calc_cart_total() {
+  calc_total();
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+
+
+function calc_total() {  
+* shopping_cart_total = 0; # Output implícito
+* for(var i = 0; i &lt; shopping_cart.length; i++) { # Input implícito
+*   var item = shopping_cart[i]; # Input implícito
+*   shopping_cart_total += item.price; # Output implícito
+  }
+}  
+```
+
+]
+
+.panel[.panel-name[Paso 3]
+
+### Convertir outputs *implícitos* en *explícitos*
+
+
+```javascript
+function calc_cart_total() {
+* shopping_cart_total = calc_total();
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+
+
+function calc_total() {  
+* var total = 0; # Output explícito
+  for(var i = 0; i &lt; shopping_cart.length; i++) { # Input implícito
+    var item = shopping_cart[i]; # Input implícito
+*   total += item.price; # Output explícito
+  }
+* return total; # Output explícito
+}  
+```
+
+]
+
+.panel[.panel-name[Paso 4]
+
+### Convertir inputs *implícitos* en *explícitos*
+
+
+```javascript
+function calc_cart_total() {
+* shopping_cart_total = calc_total(shopping_cart);
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+
+
+*function calc_total(cart) {  # Input explícito
+  var total = 0; # Output explícito 
+* for(var i = 0; i &lt; cart.length; i++) { # Input explícito
+*   var item = cart[i]; # Input explícito
+    total += item.price; # Output explícito 
+  }
+  return total; # Output explícito
+}  
+```
+
+]
+
+.panel[.panel-name[Fin]
+
+### `calc_total()` ya es un cálculo!
+
+
+```javascript
+function calc_cart_total() {
+  shopping_cart_total = calc_total(shopping_cart); 
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
+}
+
+
+*function calc_total(cart) {
+  var total = 0; 
+  for(var i = 0; i &lt; cart.length; i++) {
+    var item = cart[i]; 
+    total += item.price; 
+  }
+  return total; 
+}  
+```
+]
+
+
+]
+
+---
+class: left
+
+### Resumen: extracción de cálculos a partir de acciones
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Funciones que son acciones tienen inputs/outputs implícitos]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Cálculos no tienen inputs y/o outputs implícitos]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Variables compartidas son inputs/outputs implícitos]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Inputs implícitos se pueden reemplazar por argumentos]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Outputs implícitos se pueden reemplazar por valores de salida]
+
+---
+
+### Resumen
+
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> En FP, datos y cálculos prevalecen sobre acciones]
+
+-   lecturas de datos mutables son acciones.
+-   lecturas de datos inmutables son cálculos.
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Los cálculos son fáciles de **testear**]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Lisp, Haskell, Clojure...son lenguajes funcionales]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Java, JS, Python... no son lenguajes funcionales puros, pero adoptan ideas de PF que puedes poner en práctica]
+
+--
+
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Y ahora ya sabes por qué `map()` y similares son funciones puras]
+
 
 ---
 # Referencias
 
-
-```
-## Warning in `[[.BibEntry`(x, ind): subscript out of bounds
-```
-
-&lt;a name=bib-martin2014&gt;&lt;/a&gt;[Martin, Robert](#cite-martin2014) (2014).
-_SOLID Principles of Objetc Oriented &amp; AGILE Design (video)_. URL:
-[https://www.youtube.com/watch?v=TMuno5RZNeE](https://www.youtube.com/watch?v=TMuno5RZNeE).
-
-&lt;a name=bib-milington2022&gt;&lt;/a&gt;[Milignton, Sam](#cite-milington2022)
-(2022). _A Solid Guide to SOLID: Principles_. URL:
-[https://www.baeldung.com/solid-principles](https://www.baeldung.com/solid-principles).
-
-&lt;a name=bib-oloruntoba2020&gt;&lt;/a&gt;[Oloruntoba,
-Samuel](#cite-oloruntoba2020) (2021). _SOLID: The First 5 Principles of
-Object Oriented Design_. URL:
-[https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design).
-
-&lt;a name=bib-soysal2022&gt;&lt;/a&gt;[Soysal, Berke](#cite-soysal2022) (2022).
-_SOLID Principles With (almost) Real-Life Examples in Java_. URL:
-[https://betterprogramming.pub/solid-principles-with-almost-real-life-examples-in-java-b292a4e2c18b](https://betterprogramming.pub/solid-principles-with-almost-real-life-examples-in-java-b292a4e2c18b).
+&lt;a name=bib-normand2021&gt;&lt;/a&gt;[Normand, Eric](#cite-normand2021) (2021).
+_Grokking Simplicity: Taming complex software with functional
+thinking_. ISBN: 978-1617296208.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
