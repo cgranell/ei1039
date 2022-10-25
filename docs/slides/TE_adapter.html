@@ -10,7 +10,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c45f5f4043bb4aa69f78dba62d53bee5","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x774db75d42d48e5824334083372181e","expires":14}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -30,6 +30,11 @@
     <textarea id="source">
 
 
+name: title
+class: middle, center
+background-image: url(images/rawpixel/brooklyn-bridge.jpg)
+background-size: cover
+
 
 
 <style>.shareagain-bar {
@@ -43,10 +48,7 @@
 
 
 
-name: title
-class: middle, center
-background-image: url(images/rawpixel/brooklyn-bridge.jpg)
-background-size: cover
+
 
 # .whiteinline[.fancy[[TE5_1] Patrones Estructurales]]
 
@@ -102,15 +104,15 @@ class: center, middle
 name: problem
 # Adapter: Problema
 
-,large[Objetos con interfaces incompatibles no pueden comunicarse directamente]
+### Objetos con interfaces incompatibles no pueden comunicarse directamente
 
-.large[Salida de un sistema/objeto <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432 336c0 17.69-14.31 32.01-32 32.01H187.8l-65.15 97.74C116.5 474.1 106.3 480 95.97 480c-6.094 0-12.25-1.75-17.72-5.375c-14.72-9.812-18.69-29.66-8.875-44.38l41.49-62.23H48c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h105.5l63.1-96H48c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h212.2l65.18-97.77c9.781-14.69 29.62-18.66 44.37-8.875c14.72 9.812 18.69 29.66 8.875 44.38l-41.51 62.27H400c17.69 0 32 14.31 32 31.99s-14.31 32.01-32 32.01h-105.6l-63.1 96H400C417.7 304 432 318.3 432 336z"/></svg> entrada de otro sistema/objeto]
+### Salida de un sistema/objeto <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M432 336c0 17.69-14.31 32.01-32 32.01H187.8l-65.15 97.74C116.5 474.1 106.3 480 95.97 480c-6.094 0-12.25-1.75-17.72-5.375c-14.72-9.812-18.69-29.66-8.875-44.38l41.49-62.23H48c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h105.5l63.1-96H48c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h212.2l65.18-97.77c9.781-14.69 29.62-18.66 44.37-8.875c14.72 9.812 18.69 29.66 8.875 44.38l-41.51 62.27H400c17.69 0 32 14.31 32 31.99s-14.31 32.01-32 32.01h-105.6l-63.1 96H400C417.7 304 432 318.3 432 336z"/></svg> entrada de otro sistema/objeto
 
 
 ---
 # Adapter: Problema
 
-.large[Desde tu código, deseas llamar a un servicio web con interfaces incompatibles (_payload_ en JSON)]
+.large[En tu código, deseas llamar a un servicio web con interfaces incompatibles (_payload_ en JSON)]
 
 --
 
@@ -140,6 +142,7 @@ public class WebService {
 
 
 ---
+name: solution
 # Adapter: Problema
 
 .large[Aha!, modifico la clase cliente...]
@@ -175,7 +178,7 @@ public class WebService {
 
 ???
 
-Una solución rápida es cambiar la clase cliente para que pueda llamar al servico web externo directamente
+Una solución rápida es cambiar la clase cliente para que pueda llamar al servicio web externo directamente
 
 
 ---
@@ -213,6 +216,7 @@ La solución rápida rompe principios básicos de diseño.
 
 
 ---
+name: structure
 # Adapter: Estructura
 
 
@@ -241,6 +245,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 
 
 ---
+name: aplicability
 # Adapter: Aplicabilidad
 
 .large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> Cuando incorporas clases existente de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
@@ -268,6 +273,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 1111
 
 ---
+name: summary
 # Resumen
 
 ### El patrón Adapter....

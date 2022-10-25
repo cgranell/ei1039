@@ -1,7 +1,7 @@
 ---
 title: "TE5 Patrones estructurales"
 description: |
-  Composite y Decorator Patterns.
+  Adapter, Facade y Proxy Patterns.
 output: distill::distill_article
 ---
 
@@ -11,19 +11,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [5 min] **Opening**
+-   [05 min] **Opening**
 
--   [25 min] **Revisión**: Actividad POGIL Adapter-Facade-Proxy patterns
+-   [10 min] **Revisión:** 
 
--   [30 min] **Presentación**: [Composite pattern](slides/TE5_1_composite.html) y [Decorator pattern](slides/TE5_2_decorator.html)
+  
+-   [30 min] **Presentación**: [Adapter pattern](slides/TE_adapter.html), [Facade pattern](slides/TE4_2_facade.html) and [Proxy pattern](slides/TE4_3_proxy.html)
 
--   [50 min] **Actividad POGIL**: Composite pattern
+-   [50 min] **Actividad POGIL**: Adapter-Facade-Proxy patterns
 
     -   Grupos de 4-5 personas
 
     -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
 
-    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4618929)
+    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4604142)
 
--   [10 min] **Closing**: Intro [HW4](HW4.html)
+-   [5 min] **Closing**
 

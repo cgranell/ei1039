@@ -1,7 +1,7 @@
 ---
 title: "SE3"
 description: |
-  Diseño de  Interfaces de usuarios
+  Paradigmas de arquitectura
 output: distill::distill_article
 ---
 
@@ -9,63 +9,37 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Objetivo
-
-Evaluar herramientas para  el diseño de interfaces de usuario
 
 ## Introducción 
 
-El diseño de interfaces de usuario no se puede sintetizar en un seminario, y me temo que tampoco en un curso entero. Cubre un área de conocimiento cada vez más extensa, con multitud de aspectos interdisciplinares como color, usabilidad, percepción, tipografía, accesibilidad, diseño gráfico, layout, animación, etc. que implica prácticamente un programa de estudio entero (un año!) para profundizar en el diseño e implementación de interfaces de usuario.
-
-Este seminaro toma un enfoque más práctico. Pero antes de empezar, se recomienda la lectura del siguiente artículo de Carlos Salgado sobre [Scketchs, mockups, wireframes y prototipos](http://mosaic.uoc.edu/2015/09/15/proceso-de-desarrollo-de-un-proyecto-digital/#related-articles) para introduce las etapas del diseño del interfaces de una web, aplicación informática o app, y asi podrás reconocer el rol que desempeñan cada una de las herramientas que se listan a continuación.
-
-## Herramientas
-
--   [Justinmind - App prototyping](https://www.justinmind.com/prototyping-tool/mobile-app)
--   [Justinmind - Web prototyping](https://www.justinmind.com/prototyping-tool/website)
--   [Fluid UI](https://www.fluidui.com/)
--   [Proto.io](https://proto.io/)
--   [Framer](https://www.framer.com/)
--   [Balsamiq](https://balsamiq.com/wireframes/)
--   [Moqups](https://moqups.com/)
--   La herramienta que propongas...
-
-## Metodología de trabajo
-
-Cada equipo elegirá una herramienta de diseño entre las disponibles arriba (u otra que no aparezca en el listado), la estudiará, la probará para el diseño del interfaz de su proyecto, y elaborará una presentación atendiendo a los criterios que se proponen a continuación. El resultado deberá exponerse públicamente en la sesión de seminario. Cada presentación se limita a un maximo de **8 minutos**, más entre 2-3 minutos adicionales para atender preguntas de la audiencia.
-
-Para elaborar la presentación se recomienda considerar los siguientes aspectos:
-
-1.    **Tipo de herramienta**: ¿Scketchs, mockups, wireframes y prototipo?
- 
-1.    **Características destacables**: ¿Qué permite hacer? ¿En qué contexto resulta útil?
-
-1.    **Facilidad de uso**: ¿Es intuitiva? ¿Documentación disponible? ¿Hay una comunidad activa?
-
-1.    **Aspectos legales**: ¿Open source? ¿Gratuito? ¿Software propietario? ¿Versión de evaluación gratuita descargable?
-
-1.    **Caso de uso**: Diseño de interfaz de usuario aplicada al proyecto de la asignatura con la herramienta seleccionada
-
-1.    **Comentarios finales y análisis crítico de la herramienta**: ¿La recomendaríais?
+Seminario conjunto de las asignaturas EI1048 y EI1039, cuyo tema será "Paradigmas/Arquitecturas de software".
 
 
-## Criterios de evaluación
+## Objetivo
 
-La nota del seminario será el resultado de evaluar 4 aspectos:
+- Reflexionar sobre el concepto de patrón de arquitectura como solución general adaptable a tareas particulares.
 
--   [30%] Interés y consistencia de los argumentos aportados en la presentación.
+- Argumentar las ventajas e inconvenientes de patrones de arquitecturas, como base para elegir la solución más adecuada para un problema dado.
 
--   [30%] Calidad del material de la presentación, incluyendo el orden lógico u organización de los contenidos, el uso adecuado de recursos gráficos (esquemas, imágenes, gráficos, etc.), la claridad, simplicidad y estética de las diapositivas, etc.
+- Contraargumentar los argumentos del otro grupo.
 
--   [30%] Calidad del discurso oral en términos de dominio del tema, precisión, claridad, coherencia y velocidad del discurso, uso del tiempo, respuestas a las preguntas que se formulen, etc.
+## Metodología
 
--   [10%] Intervenciones (preguntas, comentarios) en presentaciones de otros equipos.
+El seminario se articula en formato de debate entre dos grupos. Los asistentes a cada sesión de seminarios se dividirán aleatoriamente en dos grupos (sin relación con los equipos de prácticas). A cada grupo se le asignará al azar una pareja de arquitecturas al inicio de la sesión de seminario, y deberá defender su uso durante el debate. Las reglas del debate se detallan abajo, y se explicarán al principio del seminario.
 
+Como preparación para el debate, todos los alumnos deberán investigar las siguientes parejas de patrones/paradigmas de arquitectura de software:
 
-## Recursos adicionales
+- Lambda Architecture y Kappa Architecture
 
--   [UX Magazine](https://uxmag.com/)
--   [Revista Mosaic](http://mosaic.uoc.edu/)
--   [Blog - Diseño de Interfaces](http://multimedia.uoc.edu/blogs/dii/es/)
+- Clean Architecture y Hexagonal Architecture
 
+Entre los aspectos a investigar de cada patrón debéis considerar los siguientes:
+
+- Necesidad o problema general que resuelve, si es posible, apoyado por ejemplos ilustrativos de aplicaciones o plataformas comerciales actuales.
+
+- Puntos fuertes o ventajas de cada patrón, y de la pareja en su conjunto, y ejemplos de escenarios de aplicación que se beneficiarían del uso del patrón.
+
+- Puntos débiles o limitaciones de cada patrón, y de la pareja en conjunto, y ejemplos de escenarios de aplicación en los que no sería recomendable el uso del patrón.
+
+- Justificación técnica de fortalezas y debilidades
 

@@ -88,30 +88,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>EI1039 - Curso 2022/2023: SE4</title>
+  <title>EI1039 - Curso 2022/2023: SE1</title>
 
-  <meta property="description" itemprop="description" content="&quot;Ensayo&quot; de la presentación del proyecto"/>
+  <meta property="description" itemprop="description" content="Diseño de  Interfaces de usuarios"/>
 
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EI1039 - Curso 2022/2023: SE4"/>
+  <meta property="og:title" content="EI1039 - Curso 2022/2023: SE1"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="&quot;Ensayo&quot; de la presentación del proyecto"/>
+  <meta property="og:description" content="Diseño de  Interfaces de usuarios"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="EI1039 - Curso 2022/2023"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EI1039 - Curso 2022/2023: SE4"/>
-  <meta property="twitter:description" content="&quot;Ensayo&quot; de la presentación del proyecto"/>
+  <meta property="twitter:title" content="EI1039 - Curso 2022/2023: SE1"/>
+  <meta property="twitter:description" content="Diseño de  Interfaces de usuarios"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["SE4"]},{"type":"character","attributes":{},"value":["\"Ensayo\" de la presentación del proyecto\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["SE1"]},{"type":"character","attributes":{},"value":["Diseño de  Interfaces de usuarios\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2095,7 +2095,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"SE4","description":"\"Ensayo\" de la presentación del proyecto","authors":[]}
+{"title":"SE1","description":"Diseño de  Interfaces de usuarios","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2118,9 +2118,10 @@ Seminarios
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="slides/SE1_mvc.html">SE1 MVC, MVP &amp; MVVM</a>
-<a href="SE3.html">SE3 UI Desing</a>
-<a href="SE4.html">SE4 Ensayo presentacion</a>
+<a href="slides/SE1_mvc.html">SE1 MVC &amp; variants</a>
+<a href="SE2.html">SE2 Caso de estudio - Software Architecture patterns</a>
+<a href="SE3.html">SE3 Paradigmas de arquitectura (conjunto)</a>
+<a href="SE5.html">SE5 Ensayo presentacion</a>
 </div>
 </div>
 <div class="nav-dropdown">
@@ -2134,8 +2135,8 @@ Sesiones
 <a href="TE2.html">TE2 Fundamentos de arquitectura</a>
 <a href="TE3.html">TE3 SOLID Principles, Singleton &amp; Factory Method</a>
 <a href="slides/TE4_1_fp.html">TE4 Functional Thinking</a>
-<a href="TE4.html">TE4 Adapter, Facade &amp; Proxy</a>
-<a href="TE5.html">TE5 Composite &amp; Decorator</a>
+<a href="TE5.html">TE5 Adapter, Facade &amp; Proxy</a>
+<a href="TE5old.html">TE5 Composite &amp; Decorator</a>
 <a href="TE6.html">TE6 Observer</a>
 <a href="TE7.html">TE7 Template Method &amp; Strategy</a>
 <a href="TE8.html">TE8 Command &amp; Iterator</a>
@@ -2154,10 +2155,10 @@ Sesiones
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>SE4</h1>
+<h1>SE1</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>“Ensayo” de la presentación del proyecto</p></p>
+<p><p>Diseño de Interfaces de usuarios</p></p>
 </div>
 
 
@@ -2167,25 +2168,54 @@ Sesiones
 <h3>Contents</h3>
 <ul>
 <li><a href="#objetivo" id="toc-objetivo">Objetivo</a></li>
-<li><a href="#instrucciones" id="toc-instrucciones">Instrucciones</a></li>
+<li><a href="#introducción" id="toc-introducción">Introducción</a></li>
+<li><a href="#herramientas" id="toc-herramientas">Herramientas</a></li>
+<li><a href="#metodología-de-trabajo" id="toc-metodología-de-trabajo">Metodología de trabajo</a></li>
+<li><a href="#criterios-de-evaluación" id="toc-criterios-de-evaluación">Criterios de evaluación</a></li>
+<li><a href="#recursos-adicionales" id="toc-recursos-adicionales">Recursos adicionales</a></li>
 </ul>
 </nav>
 </div>
 <h2 id="objetivo">Objetivo</h2>
-<p>Reconocer, analizar y aplicar habilidades para una comunicación eficaz.</p>
-<h2 id="instrucciones">Instrucciones</h2>
-<p>La presentación del proyecto se centra en gran medida en la competencia de <strong>comunicación oral efectiva</strong>. Por lo tanto, los criterios de evaluación de la presentación final del proyecto giran en gran medida en torno a las habilidades relacionadas con la comunicación oral de los miembros de cada equipo.</p>
-<p>En este seminario, por cada equipo, un miembro tomará el rol de presentador para exponer oralemnte por unos cinco minutos el comienzo de la presentación final del proyecto comun. El contenido de esos cinco minutos versarán sobre los siguiente aspectos (que son un extracto de los que se pedirá para la presentación final)</p>
+<p>Evaluar herramientas para el diseño de interfaces de usuario</p>
+<h2 id="introducción">Introducción</h2>
+<p>El diseño de interfaces de usuario no se puede sintetizar en un seminario, y me temo que tampoco en un curso entero. Cubre un área de conocimiento cada vez más extensa, con multitud de aspectos interdisciplinares como color, usabilidad, percepción, tipografía, accesibilidad, diseño gráfico, layout, animación, etc. que implica prácticamente un programa de estudio entero (un año!) para profundizar en el diseño e implementación de interfaces de usuario.</p>
+<p>Este seminaro toma un enfoque más práctico. Pero antes de empezar, se recomienda la lectura del siguiente artículo de Carlos Salgado sobre <a href="http://mosaic.uoc.edu/2015/09/15/proceso-de-desarrollo-de-un-proyecto-digital/#related-articles">Scketchs, mockups, wireframes y prototipos</a> para introduce las etapas del diseño del interfaces de una web, aplicación informática o app, y asi podrás reconocer el rol que desempeñan cada una de las herramientas que se listan a continuación.</p>
+<h2 id="herramientas">Herramientas</h2>
 <ul>
-<li>motivación,</li>
-<li>propuesta básica (de partida, común para todos; valor metodológico),</li>
-<li>propuesta específica del equipo, haciendo énfasis en el valor añadido (por el equipo) con respecto a la propuesta básica (nuevas funciones, valor para el usuario, impacto en el uso de tecnologías…)</li>
+<li><a href="https://www.justinmind.com/prototyping-tool/mobile-app">Justinmind - App prototyping</a></li>
+<li><a href="https://www.justinmind.com/prototyping-tool/website">Justinmind - Web prototyping</a></li>
+<li><a href="https://www.fluidui.com/">Fluid UI</a></li>
+<li><a href="https://proto.io/">Proto.io</a></li>
+<li><a href="https://www.framer.com/">Framer</a></li>
+<li><a href="https://balsamiq.com/wireframes/">Balsamiq</a></li>
+<li><a href="https://moqups.com/">Moqups</a></li>
+<li>La herramienta que propongas…</li>
 </ul>
-<p>Al finalizar la presentación, el resto de miembros del equipo opinará (siempre de forma constructiva y con respecto) sobre <em>qué se ha hecho bien</em> y <em>qué se ha hecho menos bien</em> en la presentación, teniendo en cuenta los siguientes aspectos:</p>
+<h2 id="metodología-de-trabajo">Metodología de trabajo</h2>
+<p>Cada equipo elegirá una herramienta de diseño entre las disponibles arriba (u otra que no aparezca en el listado), la estudiará, la probará para el diseño del interfaz de su proyecto, y elaborará una presentación atendiendo a los criterios que se proponen a continuación. El resultado deberá exponerse públicamente en la sesión de seminario. Cada presentación se limita a un maximo de <strong>8 minutos</strong>, más entre 2-3 minutos adicionales para atender preguntas de la audiencia.</p>
+<p>Para elaborar la presentación se recomienda considerar los siguientes aspectos:</p>
+<ol type="1">
+<li><p><strong>Tipo de herramienta</strong>: ¿Scketchs, mockups, wireframes y prototipo?</p></li>
+<li><p><strong>Características destacables</strong>: ¿Qué permite hacer? ¿En qué contexto resulta útil?</p></li>
+<li><p><strong>Facilidad de uso</strong>: ¿Es intuitiva? ¿Documentación disponible? ¿Hay una comunidad activa?</p></li>
+<li><p><strong>Aspectos legales</strong>: ¿Open source? ¿Gratuito? ¿Software propietario? ¿Versión de evaluación gratuita descargable?</p></li>
+<li><p><strong>Caso de uso</strong>: Diseño de interfaz de usuario aplicada al proyecto de la asignatura con la herramienta seleccionada</p></li>
+<li><p><strong>Comentarios finales y análisis crítico de la herramienta</strong>: ¿La recomendaríais?</p></li>
+</ol>
+<h2 id="criterios-de-evaluación">Criterios de evaluación</h2>
+<p>La nota del seminario será el resultado de evaluar 4 aspectos:</p>
 <ul>
-<li><strong>Lenguaje verbal</strong>: el lenguaje utilizado debe ser acorde al dominio del tema, utilizando los términos adecuados, pronunciación clara, volumen de voz suficiente, velocidad del discurso, equilibrio discurso-diapositivas, contacto visual con la audiencia. La falta de ensayo puede llevar a cometer errores comunes como el uso excesivo de muletillas, repetición de contenidos o lectura de transparencias.</li>
-<li><strong>Temporización</strong>: el tiempo total empleado se ajusta el tiempo previsto, el tiempo se distribuye entre los diferentes aspecto (los tres de arriba) del trabajo.</li>
-<li><strong>Expresión corporal</strong>: el lenguaje corporal debe transmitir seguridad y convicción, manteniéndose en sintonía con el discurso, se muestra una actitud de interés, postura correcta.</li>
+<li><p>[30%] Interés y consistencia de los argumentos aportados en la presentación.</p></li>
+<li><p>[30%] Calidad del material de la presentación, incluyendo el orden lógico u organización de los contenidos, el uso adecuado de recursos gráficos (esquemas, imágenes, gráficos, etc.), la claridad, simplicidad y estética de las diapositivas, etc.</p></li>
+<li><p>[30%] Calidad del discurso oral en términos de dominio del tema, precisión, claridad, coherencia y velocidad del discurso, uso del tiempo, respuestas a las preguntas que se formulen, etc.</p></li>
+<li><p>[10%] Intervenciones (preguntas, comentarios) en presentaciones de otros equipos.</p></li>
+</ul>
+<h2 id="recursos-adicionales">Recursos adicionales</h2>
+<ul>
+<li><a href="https://uxmag.com/">UX Magazine</a></li>
+<li><a href="http://mosaic.uoc.edu/">Revista Mosaic</a></li>
+<li><a href="http://multimedia.uoc.edu/blogs/dii/es/">Blog - Diseño de Interfaces</a></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

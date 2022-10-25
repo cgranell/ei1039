@@ -1,0 +1,23 @@
+---
+title: "SE2"
+description: |
+  Caso de estudio - Software Architecture patterns
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introducción 
+
+El seminario aborda el caso de estudio de **la transición o migración de la arquitectura software de airbnb**, a partir de la [transcripción de una presentación de Jessica Tai](https://www.infoq.com/presentations/airbnb-culture-soa/) en el QCon Plus (Nov 2021). 
+
+## Objetivo
+
+- Argumentar sobre las ventajas e inconvenientes de patrones de arquitectura software para el caso de estudio
+
+## Metodología
+
+El seminario se articula en formato de debate *simplificado* entre dos grupos. Los asistentes a cada sesión de seminarios se dividirán aleatoriamente en dos grupos (sin relación con los equipos de prácticas). A cada grupo se le asignará al azar una de las arquitectecturas de software planteadoas en el caso de estudio, y deberá defender su uso durante el debate.
+
