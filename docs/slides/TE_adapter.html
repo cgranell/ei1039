@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>[TE5_1] Patrones Estructurales</title>
+    <title>[TE5] Patrones Estructurales</title>
     <meta charset="utf-8" />
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -10,7 +10,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x774db75d42d48e5824334083372181e","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d6824aa5a3ed4808b4424db8b9ce3555","expires":14}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -50,7 +50,7 @@ background-size: cover
 
 
 
-# .whiteinline[.fancy[[TE5_1] Patrones Estructurales]]
+# .whiteinline[.fancy[[TE5] Patrones Estructurales]]
 
 ### .whiteinline[&amp;#183; Adapter pattern]
 
@@ -143,6 +143,7 @@ public class WebService {
 
 ---
 name: solution
+
 # Adapter: Problema
 
 .large[Aha!, modifico la clase cliente...]
@@ -197,7 +198,7 @@ class: middle, center
 
 
 ???
-La solución rápida rompe principios básicos de diseño.
+La solución rápida rompe los principios básicos de diseño.
 
 ---
 # Adapter: Solución
@@ -217,6 +218,7 @@ La solución rápida rompe principios básicos de diseño.
 
 ---
 name: structure
+
 # Adapter: Estructura
 
 
@@ -258,16 +260,16 @@ name: aplicability
 ---
 # <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 400c-18 0-32-14-32-32s13.1-32 32-32c17.1 0 32 14 32 32S273.1 400 256 400zM325.1 258L280 286V288c0 13-11 24-24 24S232 301 232 288V272c0-8 4-16 12-21l57-34C308 213 312 206 312 198C312 186 301.1 176 289.1 176h-51.1C225.1 176 216 186 216 198c0 13-11 24-24 24s-24-11-24-24C168 159 199 128 237.1 128h51.1C329 128 360 159 360 198C360 222 347 245 325.1 258z"/></svg> Los beneficios del patrón `Adapter` son
 
-.large[__A__ Relaciona el cliente a una interfaz, no a una implementación]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M381.5 435.7l-160-384C216.6 39.78 204.9 32.01 192 32.01S167.4 39.78 162.5 51.7l-160 384c-6.797 16.31 .9062 35.05 17.22 41.84c16.38 6.828 35.08-.9219 41.84-17.22l31.8-76.31h197.3l31.8 76.31c5.109 12.28 17.02 19.7 29.55 19.7c4.094 0 8.266-.7969 12.3-2.484C380.6 470.7 388.3 452 381.5 435.7zM119.1 320L192 147.2l72 172.8H119.1z"/></svg> Relaciona el cliente a una interfaz, no a una implementación]
 
 
-.large[__B__ La clase existente adaptada no cambia]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M257.1 242.4C276.1 220.1 288 191.6 288 160c0-70.58-57.42-128-128-128H32c-17.67 0-32 14.33-32 32v384c0 17.67 14.33 32 32 32l160-.0049c70.58 0 128-57.42 128-128C320 305.3 294.6 264.8 257.1 242.4zM64 96.01h96c35.3 0 64 28.7 64 64s-28.7 64-64 64H64V96.01zM192 416H64v-128h128c35.3 0 64 28.7 64 64S227.3 416 192 416z"/></svg> La clase existente adaptada no cambia]
 
 
-.large[__C__ Limita la propagación de efectos secundarios ya que no se descompone el cliente]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 359.8c22.46 0 31.1 19.53 31.1 31.99c0 23.14-66.96 88.23-164.5 88.23c-137.1 0-219.4-117.8-219.4-224c0-103.8 79.87-223.1 219.4-223.1c99.47 0 164.5 66.12 164.5 88.23c0 12.27-9.527 32.01-32.01 32.01c-31.32 0-45.8-56.25-132.5-56.25c-97.99 0-155.4 84.59-155.4 159.1c0 74.03 56.42 160 155.4 160C306.5 416 320.5 359.8 352 359.8z"/></svg> Limita la propagación de efectos secundarios ya que no se descompone el cliente]
 
 
-.large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 32.01L32 32.01c-17.67 0-32 14.33-32 32v384c0 17.67 14.33 32 32 32l128-.0073c123.5 0 224-100.5 224-224S283.5 32.01 160 32.01zM160 416H64v-320h96c88.22 0 160 71.78 160 159.1S248.2 416 160 416z"/></svg> Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
 
 ???
 1111

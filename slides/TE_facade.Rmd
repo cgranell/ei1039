@@ -1,9 +1,9 @@
 ---
-title: "[TE4_2] Patrones Estructurales"
+title: "[TE5] Patrones Estructurales"
 subtitle: "Facade pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -17,6 +17,11 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"
 ---
+
+name: title
+class: middle, center
+background-image: url(images/rawpixel/brooklyn-bridge.jpg)
+background-size: cover
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -34,10 +39,6 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 source("load_references.r")
 ```
 
-name: title
-class: middle, center
-background-image: url(images/rawpixel/brooklyn-bridge.jpg)
-background-size: cover
 
 # .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
 
@@ -73,7 +74,6 @@ class: inverse, center, middle
 
 # Facade Pattern
 
-
 .large[Propósito]
 
 .large[Problema]
@@ -86,13 +86,20 @@ class: inverse, center, middle
 
 
 ---
+name: purpose
 class: center, middle
+
 # Facade: Propósito
 
 ## proporciona .coldinline[una interfaz simplificada] a un subsistema complejo de clases
 
+???
+
+Un ejemplo es el [caso de estudio de airbnb](https://cgranell.github.io/ei1039/SE2.html). Las fachadas mediante servicios *macro* proporcionan una interfaz simplificada a un conjunto de microservicios, canalizando las comunicaciones entre microservicios a través de (las interfaces de) los servicios macro.
 
 ---
+name: problem
+
 # Facade: Problema
 
 ### Código cliente interactúa con un subsistema complejo de objetos
@@ -107,7 +114,7 @@ class: top, right
 background-image: url(images/HeadFirstDesingPatterns01.png)
 background-size: contain
 
-Home Cinema `r Cite(my_refs, "freeman2004")` 
+Home Cinema `r cite("freeman2004")` 
 
 
 ---
@@ -116,9 +123,11 @@ background-size: contain
 
 ???
 
-Home Cinema example `r Cite(my_refs, "freeman2004")` 
+Home Cinema example `r cite("freeman2004")` 
 
 ---
+name: solution
+
 # Facade: Solución
 
 ### Un _facade_ crea una interfaz que simplifica la interacción con un subsistema complejo
@@ -134,6 +143,7 @@ Home Cinema example `r Cite(my_refs, "freeman2004")`
 > 3. .large[Delega las peticiones a la clase `Facade` al subsistema]
 
 ---
+name: structure
 # Facade: Estructura
 
 
@@ -144,18 +154,18 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 
 ---
-# `r fontawesome::fa(name = "question-circle")` ¿Qué dos condiciones se requieren para usar un patrón `Facade`?
+# `r fontawesome::fa(name = "circle-question")` ¿Qué dos condiciones se requieren para usar un patrón `Facade`?
 
-.large[__A__ Necesita una clase que encapsule la complejidad de un subsistema]
-
-
-.large[__B__ Necesita simplificar la interacción con un subsistema para las clases cliente]
+.large[`r fontawesome::fa(name = "a")` Necesita una clase que encapsule la complejidad de un subsistema]
 
 
-.large[__C__ Necesita una clase que actúe como interfaz entre un subsistema y las clases cliente]
+.large[`r fontawesome::fa(name = "b")` Necesita simplificar la interacción con un subsistema para las clases cliente]
 
 
-.large[__D__ Necesita una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
+.large[`r fontawesome::fa(name = "c")` Necesita una clase que actúe como interfaz entre un subsistema y las clases cliente]
+
+
+.large[`r fontawesome::fa(name = "d")` Necesita una clase que cree una instancia de otras clases de un subsistema y proporcione esas instancias a una clase cliente]
 
 ???
 0110
@@ -163,30 +173,30 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 ---
 # Facade: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas simplificar una interfaz grande o varias interfaces complejas] 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas simplificar una interfaz grande o varias interfaces complejas] 
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando hay muchas dependencias entre clientes y las clases del subsistema]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando hay muchas dependencias entre clientes y las clases del subsistema]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas estructurar un subsistema en capas lógicas, donde cada facade define un punto de acceso a un capa distinta (_domain-driven partition_)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas estructurar un subsistema en capas lógicas, donde cada facade define un punto de acceso a un capa distinta (_domain-driven partition_)]
 
 
 ---
-# `r fontawesome::fa(name = "question-circle")` ¿Qué principios definen la implementación del patrón `Facade`?
+# `r fontawesome::fa(name = "circle-question")` ¿Qué principios definen la implementación del patrón `Facade`?
 
-.large[__A__ Ocultación de información, encapsulación, generalización, desacoplamiento]
-
-
-.large[__B__ Herencia, ocultación de información, separación de intereses, generalización]
+.large[`r fontawesome::fa(name = "a")` Ocultación de información, encapsulación, generalización, desacoplamiento]
 
 
-.large[__C__ Desacoplamiento, ocultación de información, separación de intereses]
+.large[`r fontawesome::fa(name = "b")` Herencia, ocultación de información, separación de responsabilidades, generalización]
 
 
-.large[__D__ Encapsulación, implementación de interfaces, ocultación de información, herencia]
+.large[`r fontawesome::fa(name = "c")` Desacoplamiento, ocultación de información, separación de responsabilidades]
+
+
+.large[`r fontawesome::fa(name = "d")` Encapsulación, implementación de interfaces, ocultación de información, herencia]
 
 ???
 0010
@@ -194,15 +204,15 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 ---
 # Resumen
 
-### El patrón Facade....
+### El patrón `Facade`...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona una interfaz simplificada a la funcionalidad del subsistema]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` proporciona una interfaz simplificada a la funcionalidad del subsistema]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` delega las peticiones de los clientes a los objetos correspondientes del subsistema]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` delega las peticiones de los clientes a los objetos correspondientes del subsistema]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` desacopla clases clientes de la implementación del subsistema]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` desacopla clases clientes de la implementación del subsistema]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade]
 
 
 
@@ -210,5 +220,5 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 1)
+print(start = 1, end = 1)
 ```

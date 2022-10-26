@@ -1,5 +1,5 @@
 ---
-title: "[TE5_1] Patrones Estructurales"
+title: "[TE5] Patrones Estructurales"
 subtitle: "Adapter pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
@@ -144,6 +144,7 @@ public class WebService {
 
 ---
 name: solution
+
 # Adapter: Problema
 
 .large[Aha!, modifico la clase cliente...]
@@ -196,7 +197,7 @@ class: middle, center
 
 
 ???
-La solución rápida rompe principios básicos de diseño.
+La solución rápida rompe los principios básicos de diseño.
 
 ---
 # Adapter: Solución
@@ -216,6 +217,7 @@ La solución rápida rompe principios básicos de diseño.
 
 ---
 name: structure
+
 # Adapter: Estructura
 
 
@@ -257,16 +259,16 @@ name: aplicability
 ---
 # `r fontawesome::fa(name = "circle-question")` Los beneficios del patrón `Adapter` son
 
-.large[__A__ Relaciona el cliente a una interfaz, no a una implementación]
+.large[`r fontawesome::fa(name = "a")` Relaciona el cliente a una interfaz, no a una implementación]
 
 
-.large[__B__ La clase existente adaptada no cambia]
+.large[`r fontawesome::fa(name = "b")` La clase existente adaptada no cambia]
 
 
-.large[__C__ Limita la propagación de efectos secundarios ya que no se descompone el cliente]
+.large[`r fontawesome::fa(name = "c")` Limita la propagación de efectos secundarios ya que no se descompone el cliente]
 
 
-.large[__D__ Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
+.large[`r fontawesome::fa(name = "d")` Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
 
 ???
 1111
