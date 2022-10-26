@@ -35,6 +35,18 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
@@ -202,6 +214,8 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 0010
 
 ---
+name: summary
+
 # Resumen
 
 ### El patrón `Facade`...

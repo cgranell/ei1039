@@ -230,16 +230,16 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 # `r fontawesome::fa(name = "circle-question")` ¿Qué tipo de clase es `Adapter`?
 
 
-.large[__A__ Una clase `Wrapper`]
+.large[`r fontawesome::fa(name = "a")` Una clase `Wrapper`]
 
 
-.large[__B__ Una clase `Superclass`]
+.large[`r fontawesome::fa(name = "b")` Una clase `Superclass`]
 
 
-.large[__C__ Una clase `Interface`]
+.large[`r fontawesome::fa(name = "c")` Una clase `Interface`]
 
 
-.large[__D__ Una clase `Abstract`]
+.large[`r fontawesome::fa(name = "d")` Una clase `Abstract`]
 
 ???
 1000: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo
@@ -247,6 +247,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 
 ---
 name: aplicability
+
 # Adapter: Aplicabilidad
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando incorporas clases existente de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
@@ -275,6 +276,7 @@ name: aplicability
 
 ---
 name: summary
+
 # Resumen
 
 ### El patrón Adapter....

@@ -1,9 +1,9 @@
 ---
-title: "[TE4_3] Patrones Estructurales"
+title: "[TE5] Patrones Estructurales"
 subtitle: "Proxy pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,12 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: middle, center
+background-image: url(images/rawpixel/brooklyn-bridge.jpg)
+background-size: cover
+
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -30,14 +36,23 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: middle, center
-background-image: url(images/rawpixel/brooklyn-bridge.jpg)
-background-size: cover
 
 # .whiteinline[.fancy[`r rmarkdown::metadata$title`]]
 
@@ -85,6 +100,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Proxy: Propósito
@@ -93,6 +109,8 @@ class: center, middle
 
 
 ---
+name: problem
+
 # Proxy: Problema
 
 ### Acceso a un objeto que contiene y/o trata con información sensible
@@ -102,11 +120,13 @@ class: center, middle
 ### Acceso a un objeto remoto en local
 
 ---
+name: solution
+
 # Proxy: Solución
 
 ### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
 
-### Un _proxy_ delega  las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder al objeto
+### Un _proxy_ delega las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder a dicho objeto
 
 --
 
@@ -119,6 +139,7 @@ class: center, middle
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns09.png)
 background-size: contain
@@ -133,60 +154,64 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/pr
 
 
 ---
-# `r fontawesome::fa(name = "question-circle")` ¿Cualés son ciertas según el diagrama UML del patrón `Proxy`?
+# `r fontawesome::fa(name = "circle-question")` ¿Cualés son ciertas según el diagrama UML del patrón `Proxy`?
 
-.large[__A__ `Proxy` y `Service` son subtipos de `ServiceInterface`]
-
-
-.large[__B__ Logra polimorfismo implementando la interfaz `ServiceInterface`]
+.large[`r fontawesome::fa(name = "a")` `Proxy` y `Service` son subtipos de `ServiceInterface`]
 
 
-.large[__C__ `Service` conoce `Proxy`, lo que significa que la clase `Service` tiene un atributo que se refiere a una instancia de `Proxy`]
+.large[`r fontawesome::fa(name = "b")` Logra polimorfismo implementando la interfaz `ServiceInterface`]
 
 
-.large[__D__ No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
+.large[`r fontawesome::fa(name = "c")` `Service` conoce `Proxy`, lo que significa que la clase `Service` tiene un atributo que se refiere a una instancia de `Proxy`]
+
+
+.large[`r fontawesome::fa(name = "d")` No logra polimorfirmo porque `Proxy` y `Service` implementan `ServiceInterface`]
 
 ???
 1100
 
 ---
+name: aplicability 
+
 # Proxy: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados] (p.e. pedidos a centros logísticos más cercanos, firewall)
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas controlar el acceso a un objeto, ya sea por __protección__, registro, o para redirigir peticiones a los objetos adecuados] (p.e. pedidos a centros logísticos más cercanos, firewall)
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Si un objeto utiliza muchos recursos, puedes crear una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Si un objeto utiliza muchos recursos, puedes crear una versión __virtual__ (ligera) para retrasar su instanciación hasta que se necesite realmente] (p.e., ahorro memoria)
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` Cuando necesitas acceder a un objeto __remoto__ como si fuera local] (p.e. encapsula comunicación en red con el objeto remoto)
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas acceder a un objeto __remoto__ como si fuera local] (p.e. encapsula comunicación en red con el objeto remoto)
 
 ---
-# `r fontawesome::fa(name = "question-circle")` Las responsabilidades del patrón `Proxy` son
+# `r fontawesome::fa(name = "circle-question")` Las responsabilidades del patrón `Proxy` son
 
-.large[__A__ Implementar las tareas de la clase `Service`]
-
-
-.large[__B__ Proteger a la clase `Service`, comprobadno las solicitudes del cliente y el acceso a dicha clase]
+.large[`r fontawesome::fa(name = "a")` Implementar las tareas de la clase `Service`]
 
 
-.large[__C__ Envolver a la clase `Service`]
+.large[`r fontawesome::fa(name = "b")` Proteger a la clase `Service`, comprobadno las solicitudes del cliente y el acceso a dicha clase]
 
 
-.large[__D__ Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
+.large[`r fontawesome::fa(name = "c")` Envolver a la clase `Service`]
+
+
+.large[`r fontawesome::fa(name = "d")` Proporcionar al cliente una nueva interfaz, que es diferente de la interfaz de `Service`]
 
 ???
 0110
 
 ---
+name: summary
+
 # Resumen
 
 ### El patrón Proxy...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` "representa" al o "camufla" el objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` "representa" al o "camufla" el objeto original]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` verifica, controla o registra las peticiones de los clientes al objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` verifica, controla o registra las peticiones de los clientes al objeto original]
 
