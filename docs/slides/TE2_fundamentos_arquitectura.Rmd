@@ -1,5 +1,5 @@
 ---
-title: "[TE2_1] Fundamentos de arquitectura"
+title: "[TE2] Fundamentos de arquitectura"
 subtitle: "Conceptos y roles"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"

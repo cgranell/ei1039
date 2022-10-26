@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión**: Actividad 2.1
 
--   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE2_1_fundamentos_arquitectura.html)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: conceptos y roles](slides/TE2_fundamentos_arquitectura.html)
 
     -   Definición de *arquitectura de software*
 
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Arquitecto *vs* diseñador/desarrollador
 
--   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE2_2_caracteristicas_arquitectura.html)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: características](slides/TE2_caracteristicas_arquitectura.html)
 
     -   Definición de características de arquitectura; dimensiones (operacionales, estructurales, horizontales)
 
@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Todo en arquitectura de software tiene compromisos
 
--   [25 min] **Presentación**: [Fundamentos de arquitectura: Estilos de arquitectura](slides/TE2_3_estilos_arquitectura.html)
+-   [25 min] **Presentación**: [Fundamentos de arquitectura: Estilos de arquitectura](slides/TE2_estilos_arquitectura.html)
 
     -   Estilos monolíticos vs. distribuidos
 

@@ -1,5 +1,5 @@
 ---
-title: "[TE3_2] Factory objects & <br/> Factory Method pattern"
+title: "[TE3] Factory objects & <br/> Factory Method pattern"
 subtitle: "Patrones creacionales"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"

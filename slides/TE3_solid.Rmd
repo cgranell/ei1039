@@ -1,5 +1,5 @@
 ---
-title: "[TE3_1] Principios SOLID"
+title: "[TE3] Principios SOLID"
 subtitle: "Guía rápida"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"

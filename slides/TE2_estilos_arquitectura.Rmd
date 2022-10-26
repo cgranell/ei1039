@@ -1,5 +1,5 @@
 ---
-title: "[TE2_3] Fundamentos de arquitectura"
+title: "[TE2] Fundamentos de arquitectura"
 subtitle: "Estilos de arquitectura"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
