@@ -118,7 +118,7 @@ class:left
 
 ???
 
-Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingrediante físicalmente (ensalada) o sin combinación (queso y vino)
+Analogía para los estructural es el maridaje culinario: juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingredientes físicalmente (ensalada) o sin combinación (queso y vino)
 
 Una analogía para los de comportaminto es el pit/box en una carrera de F1: cada miembro del equipo tiene un rol asignado, pero juntos consiguen un objetivo común
 

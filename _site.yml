@@ -32,7 +32,7 @@ navbar:
         - text: "TE3 SOLID Principles, Singleton & Factory Method"
           href: TE3.html
         - text: "TE4 Functional Thinking"
-          href: slides/TE4_1_fp.html
+          href: slides/TE4_fp.html
         - text: "TE5 Adapter, Facade & Proxy"
           href: TE5.html
         - text: "TE5 Composite & Decorator"

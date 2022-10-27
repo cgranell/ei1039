@@ -1,6 +1,6 @@
 ---
 title: "[TE2] Fundamentos de arquitectura"
-subtitle: "Características"
+subtitle: "Características de arquitectura"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2022" 
@@ -134,7 +134,7 @@ Image credits: `r cite("tai2022")`
 - .large[Reliability/Fiabilidad]: Sistema a prueba de fallos
 - .large[Robustness/Robustez]: Habilidad para manejar condiciones límite y de error (fallo hw)
 - .large[Scalability/Escalabilidad]: Capacidad para gestionar un numero creciente de usuarios/solicitudes sin degradar rendimiento
-- .large[Elasticity/Elasticidad]: Capacidad para getionar picos masivos de usuarios/solicitudes
+- .large[Elasticity/Elasticidad]: Capacidad para gestionar picos masivos de usuarios/solicitudes
 ]
 
 ???

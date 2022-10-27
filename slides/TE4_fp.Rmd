@@ -1,6 +1,6 @@
 ---
-title: "[TE4_1] Functional thinking"
-subtitle: ""
+title: "[TE4] Functional thinking"
+subtitle: "Functional programming"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
 date: "Sep 2022" 

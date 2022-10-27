@@ -250,7 +250,7 @@ public class KnifeStore() {
 class: center, middle
 
 
-# `r fontawesome::fa(name = "circle-exclamation")` [SOLID - Open/Close principle](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#ocp)
+# `r fontawesome::fa(name = "circle-exclamation")` [SOLID - Open/Close principle](https://cgranell.github.io/ei1039/slides/TE3_solid.html#ocp)
 
 .large[`r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero __cerradas
 a la modificación__]
@@ -269,7 +269,7 @@ _Concrete instantiation_ crea problemas ya que cada nuevo subtipo de `Knife` imp
 class: center, middle
 
 
-# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Encapsula lo que varía y sepáralo de lo que no cambia](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#principle-encapsulate)]
+# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Encapsula lo que varía y sepáralo de lo que no cambia](https://cgranell.github.io/ei1039/slides/TE3_solid.html#principle-encapsulate)]
 
 --
 
@@ -393,7 +393,7 @@ Beneficio: Código más fácil de modificar
 class: center, middle
 
 
-# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_solid.html#principle-interface)]
+# .coldinline[`r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz*, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_solid.html#principle-interface)]
 
 --
 
