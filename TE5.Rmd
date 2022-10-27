@@ -13,16 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Revisión**: Seminarios
 
-  
--   [50 min] **Presentación**: [Adapter pattern](slides/TE5_adapter.html), [Facade pattern](slides/TE5_facade.html) and [Proxy pattern](slides/TE5_proxy.html)
+-   [40 min] **Presentación**: [Adapter pattern](slides/TE5_adapter.html) and [Facade pattern](slides/TE5_facade.html)
 
--   [50 min] **Actividad POGIL**: Adapter-Facade-Proxy patterns
+-   [40 min] **Actividad*: Adapter-Facade patterns
 
-    -   Grupos de 4-5 personas
-
-    -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
-
-    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4604142)
+-   [20 min] **Presentación**: [Proxy pattern](slides/TE5_proxy.html)
 
 -   [5 min] **Closing**
 
