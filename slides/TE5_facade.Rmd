@@ -144,7 +144,7 @@ name: solution
 
 ### Un _facade_ crea una interfaz que simplifica la interacción con un subsistema complejo
 
-### Un _facade_ es un punto de aceso único al subsistema sin añadir más funcionalidad/comportamiento al subsistema
+### Un _facade_ es un punto de acceso único al subsistema sin añadir más funcionalidad/comportamiento al subsistema
 
 --
 

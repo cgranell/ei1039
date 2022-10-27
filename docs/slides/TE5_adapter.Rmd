@@ -182,18 +182,18 @@ Una solución rápida es cambiar la clase cliente para que pueda llamar al servi
 
 
 ---
-class: middle, center
-# `r emo::ji("angry")`
+class: middle
+# .center[`r emo::ji("angry")`]
 
 --
 
-### `r fontawesome::fa(name = "yin-yang")` Encapsula lo que varía y sepáralo de lo que no cambia
+### `r fontawesome::fa(name = "yin-yang")` [Encapsula lo que varía y sepáralo de lo que no cambia](https://cgranell.github.io/ei1039/slides/TE3_solid.html#principle-encapsulate)
 
 
-### `r fontawesome::fa(name = "yin-yang")` Programa a una interfaz, no a una implementación
+### `r fontawesome::fa(name = "yin-yang")` [Programa a una interfaz, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_solid.html#principle-interface)
 
 
-### `r fontawesome::fa(name = "yin-yang")` Las clases deben estar abiertas a la extensión pero cerradas a la modificación
+### `r fontawesome::fa(name = "yin-yang")` [Clases abiertas a la extensión pero cerradas a la modificación](https://cgranell.github.io/ei1039/slides/TE3_solid.html#ocp) (SOLID)
 
 
 ???

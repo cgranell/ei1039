@@ -117,16 +117,16 @@ name: problem
 
 ### Acceso a un objeto que consume gran cantidad de recursos (almacenamiento cache)
 
-### Acceso a un objeto remoto en local
+### Acceso a un objeto remoto en modo local
 
 ---
 name: solution
 
 # Proxy: Solución
 
-### Un _proxy_ crea una nueva clase con la misma intefaz que la del objeto original (mismos métodos).
+### Un _proxy_ crea una nueva clase con la misma interfaz que la del objeto original.
 
-### Un _proxy_ delega las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder a dicho objeto
+### Un _proxy_ delega las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder a dicho objeto ( y sus métodos).
 
 --
 
@@ -186,12 +186,12 @@ name: aplicability
 .large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas acceder a un objeto __remoto__ como si fuera local] (p.e. encapsula comunicación en red con el objeto remoto)
 
 ---
-# `r fontawesome::fa(name = "circle-question")` Las responsabilidades del patrón `Proxy` son
+# `r fontawesome::fa(name = "circle-question")` Las responsabilidades del `Proxy` son
 
 .large[`r fontawesome::fa(name = "a")` Implementar las tareas de la clase `Service`]
 
 
-.large[`r fontawesome::fa(name = "b")` Proteger a la clase `Service`, comprobadno las solicitudes del cliente y el acceso a dicha clase]
+.large[`r fontawesome::fa(name = "b")` Proteger a la clase `Service`, comprobando las solicitudes del cliente y el acceso a dicha clase]
 
 
 .large[`r fontawesome::fa(name = "c")` Envolver a la clase `Service`]
@@ -209,7 +209,7 @@ name: summary
 
 ### El patrón Proxy...
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` "representa" al o "camufla" el objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` "representa" o "camufla" el objeto original]
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
  
