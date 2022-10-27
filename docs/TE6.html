@@ -88,30 +88,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>EI1039 - Curso 2022/2023: TE6 Patrones de comportamiento</title>
+  <title>EI1039 - Curso 2022/2023: TE6 Patrones estructurales/comportamiento</title>
 
-  <meta property="description" itemprop="description" content="Observer Pattern."/>
+  <meta property="description" itemprop="description" content="Composite y Decorator Patterns. &lt;br/&gt;&#10;Observer Pattern."/>
 
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EI1039 - Curso 2022/2023: TE6 Patrones de comportamiento"/>
+  <meta property="og:title" content="EI1039 - Curso 2022/2023: TE6 Patrones estructurales/comportamiento"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Observer Pattern."/>
+  <meta property="og:description" content="Composite y Decorator Patterns. &lt;br/&gt;&#10;Observer Pattern."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="EI1039 - Curso 2022/2023"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EI1039 - Curso 2022/2023: TE6 Patrones de comportamiento"/>
-  <meta property="twitter:description" content="Observer Pattern."/>
+  <meta property="twitter:title" content="EI1039 - Curso 2022/2023: TE6 Patrones estructurales/comportamiento"/>
+  <meta property="twitter:description" content="Composite y Decorator Patterns. &lt;br/&gt;&#10;Observer Pattern."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["TE6 Patrones de comportamiento"]},{"type":"character","attributes":{},"value":["Observer Pattern.\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["TE6 Patrones estructurales/comportamiento"]},{"type":"character","attributes":{},"value":["Composite y Decorator Patterns. <br/>\nObserver Pattern.\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2095,7 +2095,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"TE6 Patrones de comportamiento","description":"Observer Pattern.","authors":[]}
+{"title":"TE6 Patrones estructurales/comportamiento","description":"Composite y Decorator Patterns. <br/>\nObserver Pattern.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2136,7 +2136,7 @@ Sesiones
 <a href="TE3.html">TE3 SOLID Principles, Singleton &amp; Factory Method</a>
 <a href="slides/TE4_fp.html">TE4 Functional Thinking</a>
 <a href="TE5.html">TE5 Adapter, Facade &amp; Proxy</a>
-<a href="TE5old.html">TE5 Composite &amp; Decorator</a>
+<a href="TE6.html">TE6 Composite &amp; Decorator</a>
 <a href="TE6.html">TE6 Observer</a>
 <a href="TE7.html">TE7 Template Method &amp; Strategy</a>
 <a href="TE8.html">TE8 Command &amp; Iterator</a>
@@ -2155,10 +2155,11 @@ Sesiones
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>TE6 Patrones de comportamiento</h1>
+<h1>TE6 Patrones estructurales/comportamiento</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Observer Pattern.</p></p>
+<p><p>Composite y Decorator Patterns. <br/>
+Observer Pattern.</p></p>
 </div>
 
 
@@ -2168,45 +2169,18 @@ Sesiones
 <h3>Contents</h3>
 <ul>
 <li><a href="#organización-clase" id="toc-organización-clase">Organización clase</a></li>
-<li><a href="#section" id="toc-section"></a></li>
 </ul>
 </nav>
 </div>
 <h2 id="organización-clase">Organización clase</h2>
 <ul>
 <li><p>[5 min] <strong>Opening</strong></p></li>
-<li><p>[10 min] <strong>Revisión</strong>: Entrega #1 proyecto común</p></li>
-<li><p>[20 min] <strong>Revisión</strong>: <a href="HW4.html">HW4</a></p>
-<blockquote>
-<ul>
-<li>Composite pattern: En la clase <code>Composite</code>, incluir <a href="https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7">métodos</a> para gestionar el árbol.</li>
+<li><p>[20 min] <strong>Revisión</strong>: Actividad 6.1</p></li>
+<li><p>[20 min] <strong>Presentación</strong>: <a href="slides/TE6_composite.html">Composite pattern</a> y <a href="slides/TE6_decorator.html">Decorator pattern</a></p></li>
+<li><p>[40 min] <strong>Actividad</strong>: Actividad 6.2</p></li>
+<li><p>[20 min] <strong>Presentación</strong>: <a href="slides/TE6_observer.html">Observer pattern</a></p></li>
+<li><p>[10 min] <strong>Closing</strong>:</p></li>
 </ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Composite pattern: En el diagram UML propuesto, no olvidéis la relación de agregación porque permite la recursividad.</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Composite &amp; Decorator pattern: <a href="slides/images/students/HW4-UML.png">Diagrama UML de la solución</a>: La clase asbtracta Decorator implementa la interfaz común, y permite crear <code>Concrete Decorators</code>. Por lo tanto, no implementar un único Decorador (Base y Concreto) porque rompemos el <a href="https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#33">principio de abierto/cerado</a>. Además, el poder del patrón Decorator está en la <a href="https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#7">pila de agregación</a>, para concatenar un número variables de decoradores en tiempo de ejecución.</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Decorator pattern: Un error común ha sido extender (herencia) la clase <code>Song</code> (nodo hoja) para instanciar decoradores concretos, sin definir una clase abstracta para los decoradores. Con ello, no cumplimos el propósito del patrón Decorator en cuanto añadir responsabilidades a un objeto <a href="https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#4">dinámicamente</a>.</li>
-</ul>
-</blockquote></li>
-<li><p>[30 min] <strong>Presentación</strong>: <a href="slides/TE6_1_observer.html">Observer pattern</a></p></li>
-<li><p>[50 min] <strong>Actividad POGIL</strong>: Observer pattern</p>
-<ul>
-<li><p>Grupos de 4-5 personas</p></li>
-<li><p>Asignación de roles, incluyendo <strong>Programador</strong>. Todos se bajan una copia de las <em>Role Cards</em> (AV)</p></li>
-<li><p><a href="https://aulavirtual.uji.es/mod/resource/view.php?id=4626159">Actividad POGIL (AV)</a></p></li>
-</ul></li>
-<li><p>[5 min] <strong>Closing</strong></p></li>
-</ul>
-<h2 id="section"></h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

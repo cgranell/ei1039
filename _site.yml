@@ -35,8 +35,8 @@ navbar:
           href: slides/TE4_fp.html
         - text: "TE5 Adapter, Facade & Proxy"
           href: TE5.html
-        - text: "TE5 Composite & Decorator"
-          href: TE5old.html
+        - text: "TE6 Composite & Decorator"
+          href: TE6.html
         - text: "TE6 Observer"
           href: TE6.html
         - text: "TE7 Template Method & Strategy"

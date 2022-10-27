@@ -1,7 +1,9 @@
 ---
-title: "TE6 Patrones de comportamiento"
+title: "TE6 Patrones estructurales/comportamiento"
 description: |
+  Composite y Decorator Patterns. <br/>
   Observer Pattern.
+  
 output: distill::distill_article
 ---
 
@@ -13,28 +15,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [5 min] **Opening**
 
--   [10 min] **Revisión**: Entrega #1 proyecto común
+-   [20 min] **Revisión**: Actividad 6.1
 
--   [20 min] **Revisión**: [HW4](HW4.html)
+-   [20 min] **Presentación**: [Composite pattern](slides/TE6_composite.html) y [Decorator pattern](slides/TE6_decorator.html)
 
-    > -   Composite pattern: En la clase `Composite`, incluir [métodos](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) para gestionar el árbol.
-    
-    > -   Composite pattern: En el diagram UML propuesto, no olvidéis la relación de agregación porque permite la recursividad. 
+-   [40 min] **Actividad**: Actividad 6.2
 
-    > -   Composite & Decorator pattern: [Diagrama UML de la solución](slides/images/students/HW4-UML.png): La clase asbtracta Decorator implementa la interfaz común, y permite crear `Concrete Decorators`. Por lo tanto, no implementar un único Decorador (Base y Concreto) porque rompemos el [principio de abierto/cerado](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#33). Además, el poder del patrón Decorator está en la [pila de agregación](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#7), para concatenar un número variables de decoradores en tiempo de ejecución.
-    
-    > -   Decorator pattern: Un error común ha sido extender (herencia) la clase `Song` (nodo hoja) para instanciar decoradores concretos, sin definir una clase abstracta para los decoradores. Con ello, no cumplimos el propósito del patrón Decorator en cuanto añadir responsabilidades a un objeto [dinámicamente](https://cgranell.github.io/ei1039/slides/TE5_2_decorator.html#4).
+-   [20 min] **Presentación**: [Observer pattern](slides/TE6_observer.html)
 
--   [30 min] **Presentación**: [Observer pattern](slides/TE6_1_observer.html)
+-   [10 min] **Closing**: 
 
--   [50 min] **Actividad POGIL**: Observer pattern
-
-    -   Grupos de 4-5 personas
-
-    -   Asignación de roles, incluyendo **Programador**. Todos se bajan una copia de las *Role Cards* (AV)
-
-    -   [Actividad POGIL (AV)](https://aulavirtual.uji.es/mod/resource/view.php?id=4626159)
-
--   [5 min] **Closing** 
-
-## 

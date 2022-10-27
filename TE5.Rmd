@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [40 min] **Presentación**: [Adapter pattern](slides/TE5_adapter.html) and [Facade pattern](slides/TE5_facade.html)
 
--   [40 min] **Actividad*: Adapter-Facade patterns
+-   [40 min] **Actividad**: Adapter-Facade patterns
 
 -   [20 min] **Presentación**: [Proxy pattern](slides/TE5_proxy.html)
 
