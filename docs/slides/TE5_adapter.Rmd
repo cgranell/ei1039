@@ -65,8 +65,10 @@ source("load_references.r")
 
 ???
 
-Brooklyn Bridge, New York City, United States. Original public domain image from Wikimedia Commons
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
+Brooklyn Bridge, New York City, United States. Original public domain image from Wikimedia Commons. Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3282163)
+
+Categoría [Estructurales](https://cgranell.github.io/ei1039/slides/TE1_intro_patrones.html#p10): Analogía es el maridaje culinario cuando juntamos ingrediantes de distintas formas para formar nuevas relacionas, ya sea combinando ingredientes físicalmente (ensalada) o sin combinación (queso y vino)
+
 
 ---
 class: inverse, center, middle
@@ -269,7 +271,7 @@ name: aplicability
 .large[`r fontawesome::fa(name = "c")` Limita la propagación de efectos secundarios ya que no se descompone el cliente]
 
 
-.large[`r fontawesome::fa(name = "d")` Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#36)]
+.large[`r fontawesome::fa(name = "d")` Implementa el [Principio de Inversión de Dependencia](https://cgranell.github.io/ei1039/slides/TE3_solid.html#dip)]
 
 ???
 1111
