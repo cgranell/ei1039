@@ -1,9 +1,9 @@
 ---
-title: "[TE6_1] Patrones de Comportamiento"
+title: "[TE6] Patrones de Comportamiento"
 subtitle: "Observer pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,12 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -30,14 +36,22 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: center, middle
-background-image: url(images/rawpixel/jigsaw.jpg)
-background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
@@ -83,6 +97,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Observer: Propósito
@@ -91,19 +106,21 @@ class: center, middle
 
 
 ---
+name: problem
 # Observer: Problema
 
 ### Algunos objetos, pero no todos, dependen del estado de un objeto "importante"
 
 ### No queremos que un objeto compruebe reiteradamente el estado de ese objeto "importante"
 
-### No queremos que el objeto "importante" notifique a todos los clientes, estén o no interesados en su estado
+### No queremos que el objeto "importante" notifique a *todos* los clientes, estén o no interesados en su estado
 
 
 ---
+name: solution
 # Observer: Solución
 
-### Un _observer_ define una relación 1:N entre un __Sujeto__ (notificador) y muchos __Observadores__ (suscriptores). Cuando el sujeto cambio, se notifica a los suscriptores  
+### Un _observer_ define una relación 1:N entre un __Sujeto__ (notificador) y muchos __Observadores__ (suscriptores). Cuando el sujeto cambia, se notifica a los suscriptores  
 
 ### Un _observer_ separa lo que no cambia (en el Sujeto) de lo variable (Observadores)
 
@@ -140,6 +157,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ob
 
 
 ---
+name: structure
 class: left, bottom
 background-image: url(images/DivingDesingPatterns13.png)
 background-size: contain
@@ -160,17 +178,18 @@ background-size: contain
 
 ???
 
-Una estructura alternativa para el Sujeto es declarar una interfaz y luego implementar un Sujeto Concreto. La relació de composición ocurre entre el Sujeto y Observador Concreto.
+Una estructura alternativa para el Sujeto es declarar una interfaz y luego implementar un Sujeto Concreto. La relación de composición ocurre entre el Sujeto y el Observador Concreto.
 
 
 ---
+name: aplicability
 # Observer: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando los cambios en el estado de un objeto conllevan cambios en un grupo dinámico de objetos]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando los cambios en el estado de un objeto conllevan cambios en un grupo dinámico de objetos]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando algunos objetos de tu aplicación
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando algunos objetos de tu aplicación
 deban observar a otros, pero sólo durante un tiempo limitado o en casos específicos]
 
 ---
@@ -178,10 +197,10 @@ deban observar a otros, pero sólo durante un tiempo limitado o en casos especí
 
 ### El patrón Observer...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` facilita distribuir y gestionar notificaciones de cambios de una forma controlada]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` facilita distribuir y gestionar notificaciones de cambios de una forma controlada]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que varios objetos (observadores) se _suscriban_ a un objeto (observado)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` permite que varios objetos (observadores) se _suscriban_ a un objeto (observado)]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` permite que el objeto observado notifique a los objetos observados cuando cambia su estado]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` permite que el objeto observado notifique a los observadores cuando cambia su estado]
 
 
