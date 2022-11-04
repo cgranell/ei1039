@@ -182,17 +182,6 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/de
 ???
 0011
 
----
-name: aplicability
-# Decorator: Aplicabilidad
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas asignar funcionalidades
-adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
-
---
-
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
-
 
 ---
 # `r fontawesome::fa(name = "circle-question")` ¿Cómo funciona un patrón `Decorator`? Elige una
@@ -210,6 +199,40 @@ adicionales a objetos durante el tiempo de ejecución sin descomponer el código
 
 ???
 1000
+
+
+---
+name: aplicability
+# Decorator: Aplicabilidad
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas asignar funcionalidades
+adicionales a objetos durante el tiempo de ejecución sin descomponer el código cliente]
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando no sea posible extender el comportamiento de un objeto utilizando la herencia]
+
+
+---
+name: aplicability
+class: left, top
+background-image: url(images/awarns-graphical-abstract.png)
+background-size: contain
+### [AwarNS Framework](https://github.com/GeoTecINIT/awarns-framework/)
+
+---
+
+# Decorator: Aplicabilidad
+
+### [AwarNS Framework](https://github.com/GeoTecINIT/awarns-framework/)
+
+
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` [Traceable-task](https://github.com/GeoTecINIT/awarns-framework/blob/main/packages/tracing/internal/tasks/traceable-task.ts) en paquete *tracing*, decora una tarea ([task](https://github.com/GeoTecINIT/nativescript-task-dispatcher/blob/master/src/internal/tasks/task.ts)) para hacer un seguimiento de su ejecución y resultado]
+
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` [TimeSeriesSyncedStore](https://github.com/GeoTecINIT/awarns-framework/blob/main/packages/persistence/internal/stores/timeseries/synchronizer.ts) en paquete *persistence*, combina dos instancias y las expone con la misma interfaz, para sincronizar las operaciones de almacenamiento entre ellas]
+
 
 ---
 # Resumen
