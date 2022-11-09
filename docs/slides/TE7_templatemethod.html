@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>[TE7_1] Patrones de Comportamiento</title>
+    <title>[TE7] Patrones de Comportamiento</title>
     <meta charset="utf-8" />
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ea2df3f377c44a5dacda640ed3e5d5b2","expires":14}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#d33f49"],"pen_size":4,"eraser_size":40,"palette":[]}) })</script>
     <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-
-
-
-
 
 
 name: title
@@ -21,14 +35,29 @@ class: center, middle
 background-image: url(images/rawpixel/jigsaw.jpg)
 background-size: cover
 
-# .fancy[[TE7_1] Patrones de Comportamiento]
+
+
+
+
+<style>.shareagain-bar {
+--shareagain-foreground: rgb(255, 255, 255);
+--shareagain-background: rgba(0, 0, 0, 0.5);
+--shareagain-facebook: none;
+--shareagain-pinterest: none;
+--shareagain-reddit: none;
+}</style>
+
+
+
+
+# .fancy[[TE7] Patrones de Comportamiento]
 
 ### &amp;#183; Template method pattern
 
 
 Carlos Granell&amp;#183; Universitat Jaume I
 
-EI1039 - Diseño de Software &amp;#183; Sep 2021
+EI1039 - Diseño de Software &amp;#183; Sep 2022
 
 
 ???
@@ -74,6 +103,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Template Method: Propósito
@@ -82,6 +112,8 @@ class: center, middle
 
 
 ---
+name: problem
+
 # Template Method: Problema
 
 ### Dos (o más) objetos tienen muchas similitudes, pero su implementación es independiente (no reutilización)
@@ -90,6 +122,8 @@ class: center, middle
 
 
 ---
+name: solution
+
 # Template Method: Solución
 
 
@@ -104,10 +138,11 @@ class: center, middle
 ### `ConcreteClass`
 
 -   .large[Implementa los métodos abstractos de la superclase]
--   .large[Implemetna los métodos gancho, si es necesario]
+-   .large[Implementa los métodos gancho, si es necesario]
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns17.png)
 background-size: contain
@@ -128,10 +163,10 @@ class: right, top
 background-image: url(images/HeadFirstDesingPatterns05.png)
 background-size: contain
 
-# &lt;a name=cite-freeman2004&gt;&lt;/a&gt;[[Fre+04](#bib-freeman2004)] 
+# .small[&lt;a name=cite-freeman2004&gt;&lt;/a&gt;[[Fre+04](#bib-freeman2004)]] 
 
 ???
-Si tenemos una secuencia de pasos bien definida, template method es un buen candidato
+Si tenemos una secuencia de pasos bien definida, *template method* es un buen candidato
 
 ---
 background-image: url(images/HeadFirstDesingPatterns06.png)
@@ -141,7 +176,7 @@ background-size: contain
 
 Diferenciamos los pasos comunes de los que requieren especialización por receta (algoritmo) concreta
 
-[[Fre+04](#bib-freeman2004)] 
+.small[[[Fre+04](#bib-freeman2004)]] 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns07.png)
@@ -151,7 +186,7 @@ background-size: contain
 
 Aun podemos generalizar más los pasos del algoritmo: `brew()` y `addCondiments` hacen practicamente lo mismo, aunque difieren en la implementación. Los hacemos `abstract` en la clase base para que las subclases los implementen.
 
-[[Fre+04](#bib-freeman2004)] 
+.small[[[Fre+04](#bib-freeman2004)]] 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns08.png)
@@ -161,7 +196,7 @@ background-size: contain
 
 Implementación concreta de los métodos abstractos de la superclase.
 
-[[Fre+04](#bib-freeman2004)] 
+.small[[[Fre+04](#bib-freeman2004)]] 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns09.png)
@@ -171,7 +206,7 @@ background-size: contain
 
 Esquema final de la superclase abstracta.
 
-[[Fre+04](#bib-freeman2004)] 
+.small[[[Fre+04](#bib-freeman2004)]] 
 
 
 ---
@@ -185,39 +220,42 @@ background-size: contain
 
 Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin implementación o una por defecto. Las subclases pueden o no implementarlo. En cualquier caso, los hooks permiten extender el algortimo en puntos bien definidos
 
-[[Fre+04](#bib-freeman2004)] 
+.small[[[Fre+04](#bib-freeman2004)]] 
 
 ---
 # Ejemplos reales
 
-- .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por vuestra implementación del servlet]
+- .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por una implementación concreta del `servlet`]
 
-- .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ para puede ser implementados por los test cases concretos]
+- .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ que los test cases concretos puede implementar]
 
 ---
+name: aplicability
+
 # Template Method: Aplicabilidad
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando tenemos algoritmos muy similares]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cuando tenemos algoritmos muy similares]
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
 
 
 ---
+name: summary
 # Resumen
 
 ### El patrón Method Template...
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; diferencia  entre los pasos comunes y los que necesitan especialización]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> diferencia  entre los pasos comunes y los que necesitan especialización]
  
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cambia partes de un algoritmo (estáticamente) mediante herencia y sobrecarga de métodos (_overriding_)]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cambia partes de un algoritmo (estáticamente) mediante herencia y sobrecarga de métodos (_overriding_)]
 
 
 ---
@@ -225,7 +263,7 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 
 &lt;a name=bib-freeman2004&gt;&lt;/a&gt;[Freeman, Eric, Elisabeth Robson, et
 al.](#cite-freeman2004) (2004). _Head First Design Patterns, 1st
-edition_. O'Really Media Inc. ISBN: 978-059600712.
+edition_. ISBN: 978-059600712.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
@@ -275,6 +313,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

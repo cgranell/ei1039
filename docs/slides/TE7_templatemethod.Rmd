@@ -1,9 +1,9 @@
 ---
-title: "[TE7_1] Patrones de Comportamiento"
+title: "[TE7] Patrones de Comportamiento"
 subtitle: "Template method pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,12 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -30,14 +36,22 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
-
-name: title
-class: center, middle
-background-image: url(images/rawpixel/jigsaw.jpg)
-background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
@@ -92,6 +106,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Template Method: Propósito
@@ -100,6 +115,8 @@ class: center, middle
 
 
 ---
+name: problem
+
 # Template Method: Problema
 
 ### Dos (o más) objetos tienen muchas similitudes, pero su implementación es independiente (no reutilización)
@@ -108,6 +125,8 @@ class: center, middle
 
 
 ---
+name: solution
+
 # Template Method: Solución
 
 
@@ -122,10 +141,11 @@ class: center, middle
 ### `ConcreteClass`
 
 -   .large[Implementa los métodos abstractos de la superclase]
--   .large[Implemetna los métodos gancho, si es necesario]
+-   .large[Implementa los métodos gancho, si es necesario]
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns17.png)
 background-size: contain
@@ -146,10 +166,10 @@ class: right, top
 background-image: url(images/HeadFirstDesingPatterns05.png)
 background-size: contain
 
-# `r Cite(my_refs, "freeman2004")` 
+# `r cite("freeman2004")` 
 
 ???
-Si tenemos una secuencia de pasos bien definida, template method es un buen candidato
+Si tenemos una secuencia de pasos bien definida, *template method* es un buen candidato
 
 ---
 background-image: url(images/HeadFirstDesingPatterns06.png)
@@ -159,7 +179,7 @@ background-size: contain
 
 Diferenciamos los pasos comunes de los que requieren especialización por receta (algoritmo) concreta
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns07.png)
@@ -169,7 +189,7 @@ background-size: contain
 
 Aun podemos generalizar más los pasos del algoritmo: `brew()` y `addCondiments` hacen practicamente lo mismo, aunque difieren en la implementación. Los hacemos `abstract` en la clase base para que las subclases los implementen.
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns08.png)
@@ -179,7 +199,7 @@ background-size: contain
 
 Implementación concreta de los métodos abstractos de la superclase.
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns09.png)
@@ -189,7 +209,7 @@ background-size: contain
 
 Esquema final de la superclase abstracta.
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 
 ---
@@ -203,45 +223,48 @@ background-size: contain
 
 Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin implementación o una por defecto. Las subclases pueden o no implementarlo. En cualquier caso, los hooks permiten extender el algortimo en puntos bien definidos
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 ---
 # Ejemplos reales
 
-- .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por vuestra implementación del servlet]
+- .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por una implementación concreta del `servlet`]
 
-- .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ para puede ser implementados por los test cases concretos]
+- .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ que los test cases concretos puede implementar]
 
 ---
+name: aplicability
+
 # Template Method: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos muy similares]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando tenemos algoritmos muy similares]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando tenemos algoritmos con secuencias de pasos predefinidas muy similares]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
 
 
 ---
+name: summary
 # Resumen
 
 ### El patrón Method Template...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` encapsula (generaliza) los pasos de un algoritmo en una clase `abstract` mediante un método plantilla]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` diferencia  entre los pasos comunes y los que necesitan especialización]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` diferencia  entre los pasos comunes y los que necesitan especialización]
  
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cambia partes de un algoritmo (estáticamente) mediante herencia y sobrecarga de métodos (_overriding_)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cambia partes de un algoritmo (estáticamente) mediante herencia y sobrecarga de métodos (_overriding_)]
 
 
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 1)
+print(start = 1, end = 1)
 ```
 

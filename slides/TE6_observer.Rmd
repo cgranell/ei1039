@@ -193,6 +193,8 @@ name: aplicability
 deban observar a otros, pero sólo durante un tiempo limitado o en casos específicos]
 
 ---
+name: summary
+
 # Resumen
 
 ### El patrón Observer...

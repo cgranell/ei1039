@@ -1,9 +1,9 @@
 ---
-title: "[TE7_2] Patrones de Comportamiento"
+title: "[TE7] Patrones de Comportamiento"
 subtitle: "Strategy pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,12 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -27,17 +33,25 @@ knitr::opts_chunk$set(collapse = TRUE,
 # devtools::install_github("rstudio/fontawesome")
 library(emo)
 library(fontawesome) # from github: https://github.com/rstudio/fontawesome
-
 ```
+
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: center, middle
-background-image: url(images/rawpixel/jigsaw.jpg)
-background-size: cover
+
 
 # .fancy[`r rmarkdown::metadata$title`]
 
@@ -81,6 +95,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Strategy: Propósito
@@ -89,21 +104,27 @@ class: center, middle
 
 
 ---
+name: problem
+
 # Strategy: Problema
 
 ### Tenemos diferentes algoritmos para resolver un mismo problema
 
 ### Queremos evitar el acoplamiento _descontrolado_ entre clientes y las implementaciones de cada algoritmo
 
-> .large[Existe acoplamiento (_coupling_) si al cambiar un módulo en un programa requiere cambiar otro módulo. Acoplamiento impacta negativamente en la mantenibilidad del sistema]
+> .large[Existe acoplamiento (_coupling_) si al cambiar un módulo en un programa requiere cambiar otro módulo. ]
+
+> .large[Acoplamiento impacta negativamente en la mantenibilidad del sistema]
 
 ???
 
 Cuanto mayor sea el número de módulos que deben cambiarse para ampliar o adaptar un sistema, más difícil será implementar estos cambios sin descomponer algún código. El acoplamiento ocurre cuando (el código de un) módulo usa el código de otro, por ejemplo llamando a una función. Es prácticamente imposible evitar el acoplamiento. Sin embargo, puede controlarse. 
 
-[Programar a una interfaz, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_1_patrones_diseno.html#29) reduce el acoplamiento porque definir una interfaz que sirve como hub de comunicación es una buena estrategia para romper dependencias entre clases y módulos.
+[Programar a una interfaz, no a una implementación](https://cgranell.github.io/ei1039/slides/TE3_solid.html#principle-interface) reduce el acoplamiento porque definir una interfaz que sirve como hub de comunicación es una buena estrategia para romper dependencias entre clases y módulos.
 
 ---
+name: solution
+
 # Strategy: Solución
 
 ### `Strategy` 
@@ -121,6 +142,7 @@ Cuanto mayor sea el número de módulos que deben cambiarse para ampliar o adapt
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns18.png)
 background-size: contain
@@ -146,29 +168,33 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/st
 Las [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) de Java utilizan y [simplifican el patron Strategy](https://medium.com/analytics-vidhya/simplify-strategy-using-lambda-expression-40195d1445ea) 
 
 ---
+name: aplicability
+
 # Strategy: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando se utilizan variantes de un algoritmo y queremos cambiar de un algoritmo a otro dinámicamente]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando se utilizan variantes de un algoritmo y queremos cambiar de un algoritmo a otro dinámicamente]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando tenemos numerosos `if-else` para seleccionar variantes de un mismo algoritmo (¡reemplazandola por una única llamada a un método!)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando tenemos numerosos `if-else` para seleccionar variantes de un mismo algoritmo (¡reemplazándolos por una única llamada a un método!)]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos esconder detalles irrelevantes de la implementación de los algoritmos a los clientes]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos esconder detalles irrelevantes de la implementación de los algoritmos a los clientes]
 
 
 ---
+name: summary
+
 # Resumen
 
 ### El patrón Strategy...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` encapsula lo que varía (algoritmos) en clases separadas]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` encapsula lo que varía (algoritmos) en clases separadas]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` reduce acoplamiento, sustituyendo herencia por composición]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` reduce acoplamiento, sustituyendo herencia por composición]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` proporciona un mecanismo dinámico para cambiar algoritmos enteros mediante composición y delegación]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` proporciona un mecanismo dinámico para cambiar algoritmos enteros mediante composición y delegación]
 
 
 
