@@ -259,7 +259,7 @@ name: aplicability
 
 .large[`r fontawesome::fa(name = "a")`]
 
-<img src="images/coursera-templateA.PNG" width="100%"/>
+<img src="images/coursera-templateA.png" width="100%"/>
 
 ]
 
@@ -267,7 +267,7 @@ name: aplicability
 
 .large[`r fontawesome::fa(name = "b")`]
 
-<img src="images/coursera-templateB.PNG" width="100%"/>
+<img src="images/coursera-templateB.png" width="100%"/>
 
 
 ]
@@ -280,7 +280,7 @@ name: aplicability
 
 .large[`r fontawesome::fa(name = "c")`] 
 
-<img src="images/coursera-templateC.PNG" width="100%"/>
+<img src="images/coursera-templateC.png" width="100%"/>
 
 ]
 
@@ -289,7 +289,7 @@ name: aplicability
 
 .large[`r fontawesome::fa(name = "d")`]
 
-<img src="images/coursera-templateD.PNG" width="100%"/>
+<img src="images/coursera-templateD.png" width="100%"/>
 
 ]
 
