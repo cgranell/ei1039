@@ -248,6 +248,56 @@ name: aplicability
 .large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos evitar duplicación de código y trasladamos la implementación de los pasos comunes a la clase base]
 
 
+
+---
+# `r fontawesome::fa(name = "circle-question")` Elige el diagrama UML correcto según lo descrito al presionar `p`
+
+
+---
+
+.pull-left[
+
+.large[`r fontawesome::fa(name = "a")`]
+
+<img src="images/coursera-templateA.PNG" width="100%"/>
+
+]
+
+.pull-right[
+
+.large[`r fontawesome::fa(name = "b")`]
+
+<img src="images/coursera-templateB.PNG" width="100%"/>
+
+
+]
+
+
+---
+
+.pull-left[
+
+
+.large[`r fontawesome::fa(name = "c")`] 
+
+<img src="images/coursera-templateC.PNG" width="100%"/>
+
+]
+
+
+.pull-right[
+
+.large[`r fontawesome::fa(name = "d")`]
+
+<img src="images/coursera-templateD.PNG" width="100%"/>
+
+]
+
+???
+
+El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requerirían de una función para llegar a su destino
+
+
 ---
 name: summary
 # Resumen
