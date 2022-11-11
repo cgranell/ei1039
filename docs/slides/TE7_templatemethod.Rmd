@@ -90,6 +90,8 @@ Tea steeping in a red mug with lemons and honey on a blue towel and black table
 Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283040)
 
 
+Aunque café y té son bebidas distintas, ambos copartign muchas similitudes en su preparación. ¿No sería genial deshacerse de la duplicación de código, dejando intacta la estructura del algoritmo?
+
 ---
 class: inverse, center, middle
 
@@ -221,7 +223,7 @@ background-size: contain
 
 ???
 
-Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin implementación o una por defecto. Las subclases pueden o no implementarlo. En cualquier caso, los hooks permiten extender el algortimo en puntos bien definidos
+Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin implementación o una por defecto. Las subclases pueden o no implementarlo. En cualquier caso, los hooks permiten extender el algoritmo en puntos bien definidos
 
 `r cite("freeman2004")` 
 
@@ -251,6 +253,10 @@ name: aplicability
 
 ---
 # `r fontawesome::fa(name = "circle-question")` Elige el diagrama UML correcto según lo descrito al presionar `p`
+
+???
+
+El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requieren  de una función para llegar a su destino (`reachDestination()`)
 
 
 ---
@@ -292,10 +298,6 @@ name: aplicability
 <img src="images/coursera-templateD.png" width="100%"/>
 
 ]
-
-???
-
-El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requerirían de una función para llegar a su destino
 
 
 ---

@@ -256,7 +256,8 @@ name: aplicability
 
 ???
 
-El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requerirían de una función para llegar a su destino
+El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requieren  de una función para llegar a su destino (`reachDestination()`)
+
 
 ---
 
