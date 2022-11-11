@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Presentación**: [Template Method pattern](slides/TE7_templatemethod.html) 
 
--   [20 min] **ActividadL**: Template Method-Strategy patterns
+-   [20 min] **Actividad**: Template Method-Strategy patterns
 
 -   [20 min] **Presentación**: [Strategy pattern](slides/TE7_strategy.html)
 
