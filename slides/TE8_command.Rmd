@@ -1,9 +1,9 @@
 ---
-title: "[TE8_1] Patrones de Comportamiento"
-subtitle: "Command"
+title: "[TE8] Patrones de Comportamiento"
+subtitle: "Command pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,12 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -30,14 +36,21 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: center, middle
-background-image: url(images/rawpixel/jigsaw.jpg)
-background-size: cover
 
 # .fancy[`r rmarkdown::metadata$title`]
 
@@ -82,6 +95,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Command: Propósito
@@ -90,6 +104,7 @@ class: center, middle
 
 
 ---
+name: problem
 # Command: Problema
 
 <img src="images/coursera02.PNG" width="100%"/>
@@ -109,11 +124,12 @@ class: center, middle
 
 
 ---
+name: solution
 # Command: Solución
 
 ### `Invoker`
 
--   .large[Pide llevar a cabo una (o muchas) operación/acción como una petición al `Command`]
+-   .large[Pide llevar a cabo una (o muchas) operaciones/acciones como una petición al `Command`]
 
 ### `Receiver`
 
@@ -133,6 +149,7 @@ class: center, middle
 
 
 ---
+name: structure
 class: left, bottom
 background-image: url(images/DivingDesingPatterns19.png)
 background-size: contain
@@ -148,7 +165,7 @@ class: right, top
 background-image: url(images/HeadFirstDesingPatterns11.png)
 background-size: contain
 
-# `r Cite(my_refs, "freeman2004")` 
+# `r cite("freeman2004")` 
 
 ???
 
@@ -158,7 +175,7 @@ background-size: contain
 
 ???
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns13.png)
@@ -166,7 +183,7 @@ background-size: contain
 
 ???
 
-`r Cite(my_refs, "freeman2004")` 
+`r cite("freeman2004")` 
 
 
 
@@ -179,36 +196,38 @@ background-size: contain
 
 -   .large[serialización de objetos, i.e, guardar descripción de un objeto en un fichero]
 
--   .large[hacer o deshcer una operación, como el comando "Deshacer" de un editor de texto o al borrar un mensaje de correo en Gmail] 
+-   .large[hacer o deshacer una operación, como el comando "Deshacer" de un editor de texto o al borrar un mensaje de correo en Gmail] 
 
 ---
+name: aplicability
 # Command: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos parametrizar objetos con operaciones para pasar comandos como argumentos de un método, almacenar comandos en otros objetos, etc.]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos parametrizar objetos con operaciones para pasar comandos como argumentos de un método, almacenar comandos en otros objetos, etc.]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos planificar, poner en cola o serializar operaciones]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos planificar, poner en cola o serializar operaciones]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos implementar operaciones reversibles]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos implementar operaciones reversibles]
 
 
 ---
+name: summary
 # Resumen
 
 ### El patrón Command...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` encapsula una llamada a un método como un objeto]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` encapsula una llamada a un método como un objeto]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` desacopla el objeto que invoca del que realiza la acción]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` desacopla el objeto que invoca del que realiza la acción]
 
 ---
 # Referencias
 
 ```{r print_refs1, echo=FALSE, results="asis"}
-PrintBibliography(my_refs, start = 1, end = 1)
+print(start = 1, end = 1)
 ```
 
 

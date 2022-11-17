@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>[TE8_2] Patrones de Comportamiento</title>
+    <title>[TE8] Patrones de Comportamiento</title>
     <meta charset="utf-8" />
     <meta name="author" content="Carlos Granell" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0ed38bd2bda42cabf5ea30d2ad6e3a1","expires":14}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#d33f49"],"pen_size":4,"eraser_size":40,"palette":[]}) })</script>
     <link rel="stylesheet" href="assets/css/cgc-xaringan-style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-
-
-
-
 
 
 name: title
@@ -21,14 +35,31 @@ class: center, middle
 background-image: url(images/rawpixel/jigsaw.jpg)
 background-size: cover
 
-# .fancy[[TE8_2] Patrones de Comportamiento]
 
-### &amp;#183; Iterator
+
+<style>.shareagain-bar {
+--shareagain-foreground: rgb(255, 255, 255);
+--shareagain-background: rgba(0, 0, 0, 0.5);
+--shareagain-facebook: none;
+--shareagain-pinterest: none;
+--shareagain-reddit: none;
+}</style>
+
+
+
+
+
+
+
+
+# .fancy[[TE8] Patrones de Comportamiento]
+
+### &amp;#183; Iterator pattern
 
 
 Carlos Granell&amp;#183; Universitat Jaume I
 
-EI1039 - Diseño de Software &amp;#183; Sep 2021
+EI1039 - Diseño de Software &amp;#183; Sep 2022
 
 
 ???
@@ -48,7 +79,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 class: inverse, center, middle
 
-# Iterator Pattern
+# Iterator 
 
 .large[Propósito]
 
@@ -61,6 +92,7 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
 # Iterator: Propósito
@@ -69,6 +101,7 @@ class: center, middle
 
 
 ---
+name: problem
 # Iterator: Problema
 
 ### Un sistema tiene estructuras de datos diferentes (grafos, árboles, listas, etc.) que se recorren para obtener resultados similares
@@ -77,6 +110,7 @@ class: center, middle
 
 
 ---
+name: solution
 # Iterator: Solución
 
 ### Lo que _cambia_: la forma de iterar diferentes colecciones de objetos 
@@ -106,6 +140,7 @@ class: center, middle
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns20.png)
 background-size: contain
@@ -114,7 +149,7 @@ background-size: contain
 
 ???
 
-- las coleciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
+- las colecciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
 - El mantenimiento incluye métodos para agregar y eliminar elementos
 - El recorrido se refiere a acceder a los elementos y conocer el orden de acceso 
 - Iterator separa el mecanismo para recorrer la coleción de otras funciones de mantenimiento o similares.
@@ -125,31 +160,33 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 # Ejemplos reales
 
-- .large[Iteración &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"&gt;&lt;path d="M416 304H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32zm0-192H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/&gt;&lt;/svg&gt; repetición, recursión o bucles] 
+- .large[Iteración <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M48 192h352c17.69 0 32-14.32 32-32s-14.31-31.1-32-31.1h-352c-17.69 0-32 14.31-32 31.1S30.31 192 48 192zM400 320h-352c-17.69 0-32 14.31-32 31.1s14.31 32 32 32h352c17.69 0 32-14.32 32-32S417.7 320 400 320z"/></svg> repetición, recursión o bucles] 
 
 - .large[El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de [Iterators](https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/util/Iterator.java)]
 
 ---
+name: aplicability
 # Iterator: Aplicabilidad
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
 
 --
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
 
 
 ---
+name: summary
 # Resumen
 
 ### El patrón Iterator...
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; contribuye a la reutilización de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> contribuye a la reutilización de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
 
 
-.large[&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; separa el mecanismo para recorrer la colección de otras funciones de mantenimiento o similares]
+.large[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z"/></svg> separa el mecanismo para recorrer la colección de otras funciones de mantenimiento o similares]
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
@@ -199,6 +236,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

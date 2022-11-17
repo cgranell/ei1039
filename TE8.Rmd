@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
     >       - La seleción de estrategias se encapsula en la clase Context.
     
 
--   [40 min] **Presentación**: [Command pattern](slides/TE8_1_command.html) y [Iterator pattern](slides/TE8_2_iterator.html)
+-   [40 min] **Presentación**: [Command pattern](slides/TE8_command.html) y [Iterator pattern](slides/TE8_iterator.html)
 
 -   [50 min] **Actividad POGIL**: Command pattern
 

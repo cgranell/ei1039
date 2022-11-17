@@ -1,9 +1,9 @@
 ---
-title: "[TE8_2] Patrones de Comportamiento"
-subtitle: "Iterator"
+title: "[TE8] Patrones de Comportamiento"
+subtitle: "Iterator pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2021" 
+date: "Sep 2022" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -18,6 +18,11 @@ output:
       ratio: "16:9"
 ---
 
+name: title
+class: center, middle
+background-image: url(images/rawpixel/jigsaw.jpg)
+background-size: cover
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
@@ -30,14 +35,28 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
+```{r xaringan-extra, echo=FALSE}
+library(xaringanExtra)
+
+xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket"))
+xaringanExtra::use_scribble(
+  pen_color = "#d33f49", pen_size = 4)
+```
+
+
 ```{r, load_refs, include=FALSE, cache=FALSE}
 source("load_references.r")
 ```
 
-name: title
-class: center, middle
-background-image: url(images/rawpixel/jigsaw.jpg)
-background-size: cover
+```{r, pattern_name, echo=FALSE}
+pattern_name  <- stringr::str_split(rmarkdown::metadata$subtitle, " ")[[1]][1]
+  
+```
+
+
 
 # .fancy[`r rmarkdown::metadata$title`]
 
@@ -66,7 +85,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 ---
 class: inverse, center, middle
 
-# `r rmarkdown::metadata$subtitle` Pattern
+# `r pattern_name` 
 
 .large[Propósito]
 
@@ -79,15 +98,17 @@ class: inverse, center, middle
 .large[Aplicabilidad]
 
 ---
+name: purpose
 class: center, middle
 
-# `r rmarkdown::metadata$subtitle`: Propósito
+# `r pattern_name`: Propósito
 
 ## proporciona una forma de acceder a una agregación .coldinline[sin exponer su estructura interna]
 
 
 ---
-# `r rmarkdown::metadata$subtitle`: Problema
+name: problem
+# `r pattern_name`: Problema
 
 ### Un sistema tiene estructuras de datos diferentes (grafos, árboles, listas, etc.) que se recorren para obtener resultados similares
 
@@ -95,7 +116,8 @@ class: center, middle
 
 
 ---
-# `r rmarkdown::metadata$subtitle`: Solución
+name: solution
+# `r pattern_name`: Solución
 
 ### Lo que _cambia_: la forma de iterar diferentes colecciones de objetos 
 
@@ -111,7 +133,7 @@ class: center, middle
 -   .large[Sabe la posición actual de recurrido de la colección]
 
 ---
-# Iterator: Solución
+# `r pattern_name`: Solución
 
 ### `IterableCollection`
 
@@ -124,6 +146,7 @@ class: center, middle
 
 
 ---
+name: structure
 class: left, top
 background-image: url(images/DivingDesingPatterns20.png)
 background-size: contain
@@ -132,7 +155,7 @@ background-size: contain
 
 ???
 
-- las coleciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
+- las colecciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
 - El mantenimiento incluye métodos para agregar y eliminar elementos
 - El recorrido se refiere a acceder a los elementos y conocer el orden de acceso 
 - Iterator separa el mecanismo para recorrer la coleción de otras funciones de mantenimiento o similares.
@@ -148,24 +171,26 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 - .large[El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de [Iterators](https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/util/Iterator.java)]
 
 ---
-# `r rmarkdown::metadata$subtitle`: Aplicabilidad
+name: aplicability
+# `r pattern_name`: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos encapsular la estructura de datos de una colección y proporcionar a cambio métodos para recorrer la colección]
 
 --
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` cuando queremos homogeneizar la forma de recorrer distintas estructuras de datos]
 
 
 ---
+name: summary
 # Resumen
 
-### El patrón `r rmarkdown::metadata$subtitle`...
+### El patrón `r pattern_name`...
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` simplifica la interfaz de una colección, encapsulando la lógica para recorrer la colección]
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` contribuye a la reutilización de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` contribuye a la reutilización de código, permitiendo acceder a elementos de una colección sin comprometer su estructura interna]
 
 
-.large[`r fontawesome::fa(name = "arrow-circle-right")` separa el mecanismo para recorrer la colección de otras funciones de mantenimiento o similares]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` separa el mecanismo para recorrer la colección de otras funciones de mantenimiento o similares]
 
