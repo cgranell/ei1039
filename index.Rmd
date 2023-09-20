@@ -80,19 +80,15 @@ Para que te hagas una idea, una semana típica de clase de teoría podría ser a
 
 La asignatura también consta de sesiones de seminarios (SE) donde explorarás temas adicionales al diseño de patrones, como arquitectura de software e interfaces de usuario, relacionados con el proyecto común a desarrollar.
 
--   **Seminario 1** (*30 septiembre*) - MVC y variantes + interfaces de usuario
+-   **Seminario 1** (*29 septiembre*) - MVC y variantes + interfaces de usuario
 
--   **Seminario 2** (*21 octubre*) - Caso de estudio: Software architecture patterns
+-   **Seminario 2** (*13 octubre*) - Caso de estudio: Software architecture patterns
 
--   **Seminario 3** (*27-28 octubre*): Conjunto con EI1048
+-   **Seminario 3** (*26-27 octubre*) - Conjunto con EI1048. Relacionado con proyecto común
 
-    -   Jueves: Paradigmas de arquitectura
+-   **Seminario 4** (*23-24 noviembre*) - Conjunto con EI1048. Relacionado con proyecto común
 
-    -   Viernes: Charla empresa, en turno de mañana
-
--   **Seminario 4** (*25 noviembre*) - Caso de estudio: patrones en web frameworks
-
--   **Seminario 5** (*16 diciembre*) - Comunicación oral del proyecto
+-   **Seminario 5** (*1 diciembre*) - Comunicación oral del proyecto
 
 Las asignaturas [EI1039 (Diseño de software)](https://ujiapps.uji.es/sia/rest/publicacion/2022/estudio/225/asignatura/EI1039) y [EI1048 (Paradigmas de Software)](https://ujiapps.uji.es/sia/rest/publicacion/2022/estudio/225/asignatura/EI1048) están muy relacionadas, ya que son dos caras de la misma moneda a la hora de diseñar y desarrollar aplicaciones avanzadas. Para facilitar el aprendizaje de las competencias de ambas asignaturas, el profesorado nos hemos organizado para proponerte un proyecto común que viene detallado en un documento separado colgado en el Aula Virtual de las dos asignaturas. Las clases de laboratorio (LA) de la EI1039 son de trabajo (en grupo) para la consecución del proyecto común.
 
@@ -102,13 +98,14 @@ Los materiales del curso están disponibles en el [Aula Virtual](https://aulavir
 
 ## Métodos de evaluación
 
-La participación en clase es fundamental. Las actividades propuestas en aula invitan al trabajo colaborativo y participativo, fomentado el aprendizaje activo, la discusión y la comunicación. Las actividades previas cuentan un 10%. Es necesario entregarlas todas. Los seminarios computan otro 20% de la nota final. A lo largo del curso se informará con más detalle de la naturaleza de los seminarios evaluables. El desarrollo, entrega y defensa del proyecto común cubre el 70% de la nota.
+La participación en clase es fundamental. Las actividades propuestas en aula invitan al trabajo colaborativo y participativo, fomentado el aprendizaje activo, la discusión y la comunicación. Las actividades previas cuentan un 10%. Es necesario entregarlas todas. Los seminarios computan otro 20% de la nota final, según se desglosa en la tabla abajo. A lo largo del curso se informará con más detalle de la naturaleza de los seminarios evaluables. El desarrollo, entrega y defensa del proyecto común cubre el 70% de la nota.
 
-| Actividad                   |            | Peso | Tipo                  | Instrumento                                         |
+| Actividad                     |            | Peso | Tipo                  | Instrumento                                         |
 |---------------|---------------|---------------|---------------|---------------|
-| Actividades previas         | Individual | 10%  | Formativa / Formadora | Código y/o reflexión personal                       |
-| Seminarios                  | Grupo      | 20%  | Formativa / Formadora | Presentación y discusión                            |
-| Proyecto común (con EI1048) | Grupo      | 70%  | Acreditativa          | Código, documento escrito, presentación y discusión |
+| Actividades previas           | Individual | 10%  | Formativa / Formadora | Código y/o reflexión personal                       |
+| Seminario 1 y 2               | Individual | 10%  | Formativa / Formadora | Reflexión personal                                  |
+| Seminarios 3 y 4 (con EI1048) | Grupo      | 10%  | Formativa / Formadora | Presentación y discusión                            |
+| Proyecto común (con EI1048)   | Grupo      | 70%  | Acreditativa          | Código, documento escrito, presentación y discusión |
 
 : Instrumentos de evaluación
 
