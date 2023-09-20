@@ -3,7 +3,7 @@ title: "[TE1] Patrones de Diseño"
 subtitle: "Concepto, catálogo y principios"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
