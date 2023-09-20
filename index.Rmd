@@ -12,7 +12,7 @@ bibliography: references.bib
 link-citations: true
 
 description: |
-  Ampliación de la Guía Docente EI1039 para el curso académico 2022/2023
+  Ampliación de la Guía Docente EI1039 para el curso académico 2023/2024
 site: distill::distill_website
 ---
 
@@ -44,7 +44,7 @@ Carlos Granell <br> Office [UB1520DD](http://smart.uji.es/index.php?room=UB1520D
 
 [Tutorías](https://e-ujier.uji.es/pls/www/!gri_www.euji23797?p_profesor=6273) (virtuales).
 
-[Horarios y localización](https://ujiapps.uji.es/sia/rest/publicacion/2022/estudio/225/asignatura/EI1039) de las clases teóricas (TE), seminarios (SE) y laboratorio (LA).
+[Horarios y localización](https://ujiapps.uji.es/sia/rest/publicacion/2023/estudio/225/asignatura/EI1039) de las clases teóricas (TE), seminarios (SE) y laboratorio (LA).
 
 ## Objetivo y resultados de aprendizaje
 
@@ -90,7 +90,7 @@ La asignatura también consta de sesiones de seminarios (SE) donde explorarás t
 
     -   Viernes: Charla empresa, en turno de mañana
 
--    **Seminario 4** (*25 noviembre*) - Caso de estudio: patrones en web frameworks
+-   **Seminario 4** (*25 noviembre*) - Caso de estudio: patrones en web frameworks
 
 -   **Seminario 5** (*16 diciembre*) - Comunicación oral del proyecto
 

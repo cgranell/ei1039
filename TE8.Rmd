@@ -27,10 +27,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Actividad**: Command pattern 
 
--   [15 min] **Presentación**: [Command pattern](slides/TE8_command.html) y [Iterator pattern](slides/TE8_iterator.html)
+-   [15 min] **Presentación**: [Iterator pattern](slides/TE8_iterator.html)
 
 -   [30 min] **Actividad**: Command pattern 
-
 
 -   [10 min] **Closing**. 
 
