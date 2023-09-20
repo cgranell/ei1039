@@ -3,7 +3,7 @@ title: "[TE2] Fundamentos de arquitectura"
 subtitle: "Estilos de arquitectura"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
