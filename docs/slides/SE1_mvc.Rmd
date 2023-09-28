@@ -3,7 +3,7 @@ title: "[SE1] Patrones UI"
 subtitle: "MVC y variantes"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -51,13 +51,13 @@ class: left, top
 
 .right-column[
 
-```{r, fig.cap="MVC from hackernoon.com", out.width = '100%', echo=FALSE}
-knitr::include_graphics('https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fhn-images%2F0*7LesGFlzQzpGiP8m&w=3840&q=75')
+```{r, fig.cap="MVC architecture from freecodecamp.org", out.width = '100%', echo=FALSE}
+knitr::include_graphics('images/MVC3.png')
 ```
 ]
 
 ???
-Image credits: [hackernoon.com](https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65)
+Image credits: [freecodecamp.org](https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/)
 
 
 
@@ -107,7 +107,7 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/77/Try
 
 ## .acidinline[V]iew `r fontawesome::fa(name = "circle-arrow-right")` presentación de datos e interacción del usuario
 
-## .acidinline[C]ontroller `r fontawesome::fa(name = "circle-arrow-right")` El pegamiento (interfaz) entre `Model` y `View`; lógica de negocio
+## .acidinline[C]ontroller `r fontawesome::fa(name = "circle-arrow-right")` El interfaz entre `Model` y `View`; Controla y decide
 
 
 ---
@@ -178,7 +178,7 @@ knitr::include_graphics('images/HeadFirstDesingPatterns15.png')
 
 -   .large[`View` consiste en un conjunto de ventanas, paneles, botones, etiquetas, etc.]
 
--   .large[Cada elemento visual es o bien un _Composite_ (un frame) o bien un _Leaf_ (un botón)]
+-   .large[Cada elemento visual es bien un _Composite_, o nodo intermedio (un frame), o bien un _Leaf_, o nodo hoja (un botón)]
 
 
 ---
@@ -218,9 +218,9 @@ knitr::include_graphics('images/HeadFirstDesingPatterns17.png')
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` componentes _reutizables_]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` componentes que pueden _desplegarse_ independientemente]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` componentes pueden _desplegarse_ independientemente]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` componentes que pueden _testearse_ independientemente]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` componentes pueden _testearse_ independientemente `r fontawesome::fa(name = "circle-question")` EI1048]
 
 --
 
@@ -232,7 +232,7 @@ knitr::include_graphics('images/HeadFirstDesingPatterns17.png')
 
 ???
 
-Separation of concerns allows ease of modification as all the responsibilities are separate, simplifying the future development or modification.
+*Separation of concerns* (separación de responsabilidades) permite una fácil modificación ya que todas las responsabilidades están separadas, lo que simplifica el desarrollo o modificación futura de la aplicación o sistema.
 
 ---
 # .acidinline[MVC] como patrón de arquitectura
@@ -250,7 +250,10 @@ Separation of concerns allows ease of modification as all the responsibilities a
 ???
 ¿Cambiamos de gorra o nos ponemos las dos a la vez?
 
-Web framework = a software platform for developing web applications and websites.
+**(Web) Framework** =  conjunto de componentes personalizables e intercambiables para el desarrollo de una aplicación (web). Permitir a los desarrolladores implementar su propia aplicación utilizando funcionalidades común y reutilizables.
+
+**Platform** = ofrece herramientas y/o funcionalidades **out-of-the-box** configurables hasta cierto punto. 
+
 
 ---
 background-image: url(https://hackernoon.com/hn-images/0*1VVNmPlwpfeytDMh)
@@ -334,6 +337,9 @@ class: inverse, center, middle
 
 .heat[Model-View-Presenter (MVP)]
 
+
+.large[o Android MVP Architecture]
+
 ---
 # .heatinline[MVP] Model-View-.heatinline[Presenter]
 
@@ -363,7 +369,7 @@ knitr::include_graphics('https://miro.medium.com/max/1400/0*nryKBiuwZthT--SA.png
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` `Presenter` actúa de mediador entre `View` y `Model`]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` 1:1 mapping entre `Presenter` y `View`]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` 1:1 mapping entre `Presenter` y `View`. Un `Presenter` gestiona una `View`]
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` Mayor separación entre `View` y `Model` facilita Unit tests]
 
@@ -377,11 +383,13 @@ https://medium.com/@tinmegali/model-view-presenter-mvp-in-android-part-1-441bfd7
 ---
 # .heatinline[MVP] ¿Cuando utilizarlo?
 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` en desarrollos de aplicaciones moviles en Android]
+
 .large[`r fontawesome::fa(name = "circle-arrow-right")` si tenemos flujo bi-direccional de acciones en la pantalla]
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` si decisión/interacción del usuario afecta UI]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` con elementos UI limitados (¿desarollo móvil?)]
+
 
 ???
 
