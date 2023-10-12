@@ -26,6 +26,6 @@ knitr::opts_chunk$set(echo = FALSE)
     -   Factory object (Simple Factory) facilita la creación de objetos
     -   Factory method permite la creación de familias de objetos relacionados
 
--   [40 min] **Closing**: [Actividad 3.2](A32.html)
+-   [40 min] **Closing**: Actividad 3.2
 
 ## 

@@ -1,9 +1,9 @@
 ---
-title: "[TE3] Factory objects & <br/> Factory Method pattern"
+title: "[TE3] Factory objects & <br/> Factory Method"
 subtitle: "Patrones creacionales"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -35,7 +35,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -55,7 +55,7 @@ source("load_references.r")
 
 ### &#183; `r rmarkdown::metadata$subtitle`
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 .right[`r rmarkdown::metadata$author`&#183; `r rmarkdown::metadata$institute`]
@@ -195,9 +195,53 @@ public class KnifeStore() {
 
 ### Clase `KnifeStore` 
 
-.large[Produce `Knife`s de dos tipos ("productos")]
+.large[Produce `Knife`s ("*productos*") de dos tipos]
 
 .large[Instanciación concreta con `new` (+ `if-else`)]
+]
+
+---
+
+.pull-left[
+  
+```{r engine='java'}
+
+public class KnifeStore() {
+  
+  public Knife orderKnife(String type) {
+    Knife knife = null;
+
+    if (type.equals("chef")) {  
+      knife = new ChefKnife();  
+    } else if (type.equals("steak")) {  
+      knife = new SteakKnife();  
+    } else if (type.equals("bread")) { #<<
+      knife = new BreadKnife(); #<<
+    } else if (type.equals("paring")) { #<<
+      knife = new ParingKnife(); #<<
+    } #<<
+      
+      
+    knife.sharpen();
+    knife.polish();
+    knife.wrapp();
+
+    return knife;
+  }
+}
+```
+  
+]
+
+.pull-right[
+
+### Clase `KnifeStore` 
+
+.large[La tienda `KnifeStore` crece y ofrece nuevos "productos"]
+
+.large[Añadir o quitar tipos con cuchillos con `new + if-else` funciona...]
+
+
 ]
 
 ---
@@ -361,7 +405,7 @@ public class KnifeStore() {
 ---
 class: left
 
-# .center[Portavoces, atentos! ]
+# .center[Quiz, ¡atentos! ]
 
 .pull-left[
 
@@ -397,7 +441,7 @@ class: center, middle
 
 --
 
-.large[El client `KnifeStore` no maneja clases concretas de `Knife` ("implementaciones"), sino la clase base `Knife` (una "generalización")] 
+.large[El cliente `KnifeStore` no maneja clases concretas de `Knife` ("implementaciones"), sino la clase **abstracta** `Knife` (una "generalización")] 
 
 
 ???
@@ -442,16 +486,16 @@ name: problem
 - `USSimpleKnifeFactory` y 
 - `EuropeSimpleKnifeFactory`
 
-.large[Ok, la creación de objetos se especializa, pero el resto de funcionalidad como `orderKnife` resulta difícil de especializar]
+.large[Ok, la creación de objetos se especializa, pero el resto de funcionalidad cliente como `orderKnife` resulta difícil de especializar]
 
 
 ---
 name: solution
 # Factory Method: Solución
 
-- .large[En vez del objeto Factory `EuropeSimpleKnifeFactory`, el patrón Factory Method crea `EuropeKnifeStore` como subclase de `KnifeStore` (cliente).]
+- .large[En vez de crear más *factories* (`EuropeSimpleKnifeFactory`), el patrón Factory Method crea `EuropeKnifeStore` como subclase de `KnifeStore` (cliente).]
 
-- .large[Cada subclase decide cómo se crean los objetos ("productos"), y sobreescriben el **método fábrica**]
+- .large[Cada subclase decide cómo se crean *sus* objetos ("productos"), y sobreescribe el **método fábrica** de la superclase]
 
 - .large[Programa a una interfaz* para crear objetos]
 
@@ -581,4 +625,49 @@ name: aplicability
 - .large[¡Me dicen que quieren abrir en Singapure! Ok, veámos:]
   - .large[Extiendo la clase base `Knife` con los nuevos subtipos que necesito]
   - .large[Creo `SingapureKnifeStore` que sobreescribe el Factory Method para crear los nuevos productos]
+
+
+---
+class: inverse, center, middle
+
+# Otros patrones creacionales
+
+--
+
+.large[Prototype]
+
+.large[Builder]
+
+
+---
+name: prototype
+
+# Prototype
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Propósito: crea copias (*clones*) de objetos existentes a partir de una interfaz del objeto a copiar (o prototipo) aunque se desconozca el tipo exacto del objeto a copiar] 
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Problema: si crear una instancia de una clase es complicado o (computacionalmente) caro] 
+
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Explóralo en [refactoring.guru](https://refactoring.guru/es/design-patterns/prototype)]
+
+---
+name: builder
+# Builder
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Propósito: separa la creación de objetos complejos de su representación para que el mismo mecanismo de construcción puede crear diferentes representaciones] 
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Problema: si un objeto necesita más de una representación (distintas UI, Android/iOS); o permitir a clientes construir la estructura de un objeto complejo en varios pasos (e.g. Ikea kitchen planner, trip/house planner)] 
+
+
+--
+
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Explóralo en [refactoring.guru](https://refactoring.guru/es/design-patterns/builder)]
+
 
