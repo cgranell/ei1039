@@ -1,5 +1,5 @@
 ---
-title: "TE5 Patrones estructurales"
+title: "TE Patrones estructurales"
 description: |
   Adapter, Facade y Proxy Patterns.
 output: distill::distill_article

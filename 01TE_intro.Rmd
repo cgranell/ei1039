@@ -1,5 +1,5 @@
 ---
-title: "TE1"
+title: "TE Introducción"
 description: |
   Presentación de la asignatura y logística <br/> Descripción del proyecto común <br/> Introducción a los patrones de diseño.
 output: distill::distill_article
@@ -15,10 +15,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Presentación:** Proyecto común de EI1039/EI1048, con hincapié en aspectos de la EI1039
 
-    - [Bootcamps o programas intensivos de formación IT](https://blog.talenthackers.net/mejores-bootcamps-y-programas-de-formacion-para-perfiles-it-en-espana#Los_mejores_bootcamps_o_programas_de_estudio_para_ingeniero_de_Software). Los campamentos de entrenamiento de codificación son programas intensivos e inmersivos que enseñan a las personas las habilidades que necesitan para convertirse en desarrolladores de software. Por lo general, duran unos meses y cubren lenguajes de programación, algoritmos y **principios de ingeniería de software**.
+    -   [Bootcamps o programas intensivos de formación IT](https://blog.talenthackers.net/mejores-bootcamps-y-programas-de-formacion-para-perfiles-it-en-espana#Los_mejores_bootcamps_o_programas_de_estudio_para_ingeniero_de_Software). Los campamentos de entrenamiento de codificación son programas intensivos e inmersivos que enseñan a las personas las habilidades que necesitan para convertirse en desarrolladores de software. Por lo general, duran unos meses y cubren lenguajes de programación, algoritmos y **principios de ingeniería de software**.
 
-    - [Bootcamps para ingeniero de Software: 4 Geeks Academy](https://4geeksacademy.co/es/course/ingenieria-de-software-programacion)
-
+    -   [Bootcamps para ingeniero de Software: 4 Geeks Academy](https://4geeksacademy.co/es/course/ingenieria-de-software-programacion)
 
 -   [25 min] **Presentación**: [Patrones de Diseño: Concepto, catálogo y principios](slides/TE1_intro_patrones.html)
 

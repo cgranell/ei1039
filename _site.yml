@@ -25,24 +25,25 @@ navbar:
 
     - text: "Sesiones"
       menu:
-        - text: "TE1 Introducción a los patrones"
-          href: TE1.html
-        - text: "TE2 Fundamentos de arquitectura"
-          href: TE2.html
-        - text: "TE3 SOLID Principles & Singleton and Factory Method"
-          href: TE3.html
-        - text: "TE4 Functional Thinking"
+        - text: "TE Introducción a los patrones"
+          href: "01TE_intro.html"
+        - text: "TE Fundamentos de arquitectura"
+          href: "02TE_arquitectura.html"
+        - text: "TE SOLID Principles & Singleton and Factory Method"
+          href: "03TE_creacionales.html"
+        - text: "TE Adapter, Facade & Proxy"
+          href: "04TE_estructurales.html"
+        - text: "TE Composite & Decorator"
+          href: "05TE_estructurales.html"
+        - text: "TE Observer"
+          href: "05TE_estructurales.html"
+        - text: "TE Template Method & Strategy"
+          href: "06TE_comportamiento.html"
+        - text: "TE Command & Iterator"
+          href: "07TE_comportamiento.html"
+        - text: "Functional Thinking"
           href: slides/TE4_fp.html
-        - text: "TE5 Adapter, Facade & Proxy"
-          href: TE5.html
-        - text: "TE6 Composite & Decorator"
-          href: TE6.html
-        - text: "TE6 Observer"
-          href: TE6.html
-        - text: "TE7 Template Method & Strategy"
-          href: TE7.html
-        - text: "TE8 Command & Iterator"
-          href: TE8.html
+
     - text: "Referencias"
       href: references.html
     - icon: fab fa-github

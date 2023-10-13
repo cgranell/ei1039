@@ -1,5 +1,5 @@
 ---
-title: "TE2"
+title: "TE Fundamentos arquitectura"
 description: |
   Fundamentos de arquitectura: conceptos, roles y compromisos <br/>
   Fundamentos de arquitectura: características <br/>

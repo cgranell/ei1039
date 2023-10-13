@@ -1,8 +1,8 @@
 ---
-title: "TE6 Patrones estructurales/comportamiento"
+title: "TE Patrones estructurales y de comportamiento"
 description: |
-  Composite y Decorator Patterns. <br/>
-  Observer Pattern.
+  Patrones estructurales: Composite y Decorator Patterns. <br/>
+  Patrones de comportamiento: Observer Pattern.
   
 output: distill::distill_article
 ---

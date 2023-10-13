@@ -1,5 +1,5 @@
 ---
-title: "TE7 Patrones de comportamiento"
+title: "TE Patrones de comportamiento"
 description: |
   Template Method y Strategy Patterns.
 output: distill::distill_article

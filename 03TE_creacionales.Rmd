@@ -1,7 +1,8 @@
 ---
-title: "TE3 Patrones creacionales"
+title: "TE Patrones creacionales"
 description: |
-  Introducción a los patrones de diseño <br/> Patrones creacionales: Singleton y Factory Method.
+  Principios SOLID <br/>
+  Patrones creacionales: Singleton y Factory Method.
 output: distill::distill_article
 ---
 
