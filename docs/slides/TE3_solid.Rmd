@@ -3,7 +3,7 @@ title: "[TE3] Principios SOLID"
 subtitle: "Guía rápida"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -131,7 +131,7 @@ class: bottom, center
 background-image: url(images/rawpixel/airquality.jpg)
 background-size: cover
 
-# .whiteinline[¿Cómo reconecéis el aire de baja calidad?]
+# .whiteinline[¿Cómo reconocéis el aire de baja calidad?]
 
 ???
 
@@ -146,7 +146,7 @@ class: bottom, center
 background-image: url(images/rawpixel/sw-code.jpg)
 background-size: cover
 
-# .whiteinline[¿Cómo reconecéis código "malo"?]
+# .whiteinline[¿Cómo reconocéis código "malo"?]
 
 ???
 
@@ -168,11 +168,19 @@ class: inverse, center, middle
 
 .large[y reducir la **complejidad** de sistemas/aplicaciones a medida que crecen]
 
+--
+
+
+.large[y **prevenir** los síntomas del código malo]
+
+
 ???
 
-Receta contra los sintomas del código malo.
+Receta contra los síntomas del código malo.
 
-Principios SOLID introducidos por Robert Martin en 2000: [Design Principles and Design Patterns](http://staff.cs.utu.fi/~jounsmed/doos_06/material/DesignPrinciplesAndPatterns.pdf)
+Principios SOLID introducidos por Robert Martin (*Uncle Bob*) en 2000: [Design Principles and Design Patterns](http://staff.cs.utu.fi/~jounsmed/doos_06/material/DesignPrinciplesAndPatterns.pdf)
+
+[SOLID: The First 5 Principles of Object Oriented Design | DigitalOcean](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 
 ---
 name: srp
@@ -182,7 +190,7 @@ class: left
 
 .large[`r fontawesome::fa(name = "yin-yang")` Una clase debería tener un único propósito]
 
-.large[`r fontawesome::fa(name = "yin-yang")` Una clase solo debe tener una (buena) razón para cambiar]
+.large[`r fontawesome::fa(name = "yin-yang")` Una clase solo debe tener una (única y buena) razón para cambiar]
 
 --
 
@@ -262,13 +270,13 @@ class: left
 
 ### .cold[I]nterface Segregation Principle - Principio de segregación de la interfaz
 
-.large[`r fontawesome::fa(name = "yin-yang")` Mantén las interfaces pequeñas para no forzar a las clases implementar métodos que no necesitan]
+.large[`r fontawesome::fa(name = "yin-yang")` Mantén las interfaces pequeñas para no forzar a las clases a qeu implementen métodos que no necesitan]
 
 --
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` No forzar a clientes (implementaciones) a depender de métodos que no utilizan]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` No forzar a clientes (implementaciones) que dependan de métodos que no utilizan]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una interfaz es demasiado grande, sepárala en varias interfaces más pequeñas, pero *funcionalmente* más concisas]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Si una interfaz es demasiado grande, sepárala en varias interfaces más pequeñas, pero qeu sean *funcionalmente* más concisas]
 
 ???
 
@@ -288,7 +296,7 @@ class: left
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` [Principo de diseño composición](#principle-composition)]
 
--   .large[Componentes deben depender de abstracciones, no de implementaciones] 
+-   .large[Componentes/entidades deben depender de abstracciones, no de implementaciones] 
 
 
 ???
@@ -297,7 +305,7 @@ Clases de bajo nivel implementan operaciones básicas como transferir datos por 
 
 Clases de alto nivel contienen la lógica de negocio que indican a las clases de bajo nivel que hagan algo
 
-El uso del operador `new` crea depoendice fuertes entre clases
+El uso del operador `new` crea dependencias fuertes entre clases
 
 
 [https://stackify.com/dependency-inversion-principle/](https://stackify.com/dependency-inversion-principle/)
