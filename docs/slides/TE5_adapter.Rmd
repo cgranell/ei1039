@@ -3,7 +3,7 @@ title: "[TE5] Patrones Estructurales"
 subtitle: "Adapter pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -35,7 +35,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -117,7 +117,7 @@ name: problem
 ---
 # Adapter: Problema
 
-.large[En tu código, deseas llamar a un servicio web con interfaces incompatibles (_payload_ en JSON)]
+.large[En tu código, deseas llamar a un servicio web con interfaces incompatibles (*payload* en XML *vs.* JSON)]
 
 --
 
@@ -125,7 +125,10 @@ name: problem
 ```{java }
 public class Client {
   
-  public void doLocalAnalysis(XML data) {}
+  public void doLocalAnalysis(XML data) 
+  {
+      
+  }
 
 }
 ```
@@ -136,7 +139,10 @@ public class Client {
 ```{java }
 public class WebService {
   
-  public int doBetterAnalysis(Json request) {}
+  public int doBetterAnalysis(Json request) 
+  {
+    
+  }
 
 }
 ```
@@ -155,11 +161,15 @@ name: solution
 ```{java }
 public class Client {
   
-  public void doLocalAnalysis(XML data) {}
+  public void doLocalAnalysis(XML data) 
+  {
+    
+  }
   
-  public int doBetterAnalysisWS(XML data) { #<<
-    // Conversion de XML a JSON #<<
-    // Lamada al Web Service #<<
+  public int doBetterAnalysisWS(XML data) #<<
+  { #<<
+    // Conversión de XML a JSON #<<
+    // Llamada al Web Service #<<
   } #<<
 
 }
@@ -171,7 +181,10 @@ public class Client {
 ```{java }
 public class WebService {
   
-  public int doBetterAnalysis(Json request) {}
+  public int doBetterAnalysis(Json request) 
+  {
+    
+  }
 
 }
 ```
@@ -244,7 +257,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/ad
 .large[`r fontawesome::fa(name = "d")` Una clase `Abstract`]
 
 ???
-1000: Un adapter encapsula la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo
+1000: Un *Adapter* encapsula (*wrapper*) la clase adaptada y presenta una nueva interfaz al cliente. No es una interfaz en sí mismo.
 
 
 ---
@@ -252,11 +265,10 @@ name: aplicability
 
 # Adapter: Aplicabilidad
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando incorporas clases existente de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código] 
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando incorporas clases existentes de terceros (librerías, servicios, etc.), pero cuya interfaz no es compatible con tu código/sistema] 
 
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas transformación de datos, formatos, etc. entre objetos] 
-
 
 
 ---
@@ -287,6 +299,6 @@ name: summary
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` cambia indirectamente la interfaz de la clase adaptada a una que el cliente comprende, implementando la nueva interfaz]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` traduce indirectamente la solicitud del cliente en una que la clase adaptada espera]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` traduce indirectamente la solicitud del cliente en una petición que la clase adaptada espera/entiende]
 
 .large[`r fontawesome::fa(name = "circle-arrow-right")` reutiliza una clase adaptada existente que tiene una interfaz incompatible]

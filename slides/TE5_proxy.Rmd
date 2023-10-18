@@ -3,7 +3,7 @@ title: "[TE5] Patrones Estructurales"
 subtitle: "Proxy pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -37,7 +37,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -76,12 +76,11 @@ background-size: contain
 
 
 ???
-Se utilizan maniquíes de prueba (dummies) en lugar de personaspara las pruebas de colisión de vehículos.
+La idea de *proxie* esta muy estendida en la vida real. Se utilizan maniquíes de prueba (dummies) en lugar de personas reales para las pruebas de colisión de vehículos.
 Las tarjeta de crédito son una forma de pago aceptable en lugar de efectivo.
 
 
-Controlled Impact Demonstration instrumented test dummies installed in plane. Original from NASA.
-Image credits: [Rawpixel.com](https://www.rawpixel.com/image/440073/)
+Controlled Impact Demonstration instrumented test dummies installed in plane. Original from NASA. Image credits: [Rawpixel.com](https://www.rawpixel.com/image/440073/)
 
 
 ---
@@ -126,7 +125,7 @@ name: solution
 
 ### Un _proxy_ crea una nueva clase con la misma interfaz que la del objeto original.
 
-### Un _proxy_ delega las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder a dicho objeto ( y sus métodos).
+### Un _proxy_ delega las peticiones al objeto original, aunque puede realizar ciertas acciones antes y después de acceder a dicho objeto (y sus métodos).
 
 --
 
@@ -149,6 +148,9 @@ background-size: contain
 
 
 ???
+
+Atención a la relación de agregación. ¿Podría ser de composición?
+
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/proxy)
 
 
@@ -209,9 +211,9 @@ name: summary
 
 ### El patrón Proxy...
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` "representa" o "camufla" el objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` "representa" o "camufla" el objeto real/original]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` tiene un diseño polimórfico, así los clientes esperan la misma intefaz para el proxy y para el objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` tiene un diseño polimórfico, así los clientes esperan la misma interfaz para el objeto *proxy* que para el objeto real/original]
  
-.large[`r fontawesome::fa(name = "circle-arrow-right")` verifica, controla o registra las peticiones de los clientes al objeto original]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` verifica, controla o registra las peticiones de los clientes al objeto real/originall]
 

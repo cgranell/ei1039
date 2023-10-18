@@ -3,7 +3,7 @@ title: "[TE5] Patrones Estructurales"
 subtitle: "Facade pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -35,7 +35,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -107,7 +107,7 @@ class: center, middle
 
 ???
 
-Un ejemplo es el [caso de estudio de airbnb](https://cgranell.github.io/ei1039/SE2.html). Las fachadas mediante servicios *macro* proporcionan una interfaz simplificada a un conjunto de microservicios, canalizando las comunicaciones entre microservicios a través de (las interfaces de) los servicios macro.
+Un ejemplo es el [caso de estudio de airbnb](https://cgranell.github.io/ei1039/SE2.html). Las fachadas mediante servicios *macro* proporcionan una interfaz simplificada a un conjunto de microservicios (internos), canalizando las comunicaciones a estos microservicios a través de (la interface del) servicio macro correspondiente.
 
 ---
 name: problem
@@ -126,8 +126,12 @@ class: top, right
 background-image: url(images/HeadFirstDesingPatterns01.png)
 background-size: contain
 
-Home Cinema `r cite("freeman2004")` 
 
+'Home Cinema' example `r cite("freeman2004")` 
+
+
+???
+Home Cinema example `r cite("freeman2004")` 
 
 ---
 background-image: url(images/HeadFirstDesingPatterns02.png)
@@ -144,7 +148,7 @@ name: solution
 
 ### Un _facade_ crea una interfaz que simplifica la interacción con un subsistema complejo
 
-### Un _facade_ es un punto de acceso único al subsistema sin añadir más funcionalidad/comportamiento al subsistema
+### Un _facade_ es un punto de acceso único al subsistema sin añadir más funcionalidad/comportamiento al subsistema subyacente
 
 --
 
@@ -193,7 +197,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/fa
 
 --
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas estructurar un subsistema en capas lógicas, donde cada facade define un punto de acceso a un capa distinta (_domain-driven partition_)]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` Cuando necesitas estructurar un subsistema en capas lógicas, donde cada *facade* define un punto de acceso a un capa distinta (*domain-driven partition*)]
 
 
 ---
@@ -226,7 +230,7 @@ name: summary
  
 .large[`r fontawesome::fa(name = "circle-arrow-right")` desacopla clases clientes de la implementación del subsistema]
 
-.large[`r fontawesome::fa(name = "circle-arrow-right")` no encapsula; aún se puede acceder al subsistema directamente sin la interfaz facade]
+.large[`r fontawesome::fa(name = "circle-arrow-right")` ¡no encapsula (totalmente)!; aún se puede acceder al subsistema directamente sin la interfaz facade]
 
 
 

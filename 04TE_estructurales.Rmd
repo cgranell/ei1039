@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Organización clase
 
--   [10 min] **Revisión**: Seminarios
+-   [5 min] **Impresiones**: Seminario 2 - Debate
 
 -   [40 min] **Presentación**: [Adapter pattern](slides/TE5_adapter.html) and [Facade pattern](slides/TE5_facade.html)
 
