@@ -18,9 +18,7 @@ navbar:
           href: slides/SE1_mvc.html
         - text: "SE2 Caso de estudio - Software Architecture patterns"
           href: SE2.html
-        - text: "SE3 Paradigmas de arquitectura (conjunto)"
-          href: SE3.html
-        - text: "SE5 Ensayo presentacion"
+        - text: "SE5 Communicación oral"
           href: SE5.html
 
     - text: "Sesiones"
@@ -33,7 +31,7 @@ navbar:
           href: "03TE_creacionales.html"
         - text: "TE Adapter, Facade & Proxy"
           href: "04TE_estructurales.html"
-        - text: "TE Composite & Decorator"
+        - text: "TE Composite & Decorator; Observer"
           href: "05TE_estructurales.html"
         - text: "TE Observer"
           href: "05TE_estructurales.html"
