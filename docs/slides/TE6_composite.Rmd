@@ -3,7 +3,7 @@ title: "[TE6] Patrones Estructurales"
 subtitle: "Composite pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -37,7 +37,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -100,7 +100,7 @@ class: center, middle
 
 # Composite: Propósito
 
-## compone objetos en estructuras anidadas (árbol) y trata los objetos de forma .coldinline[uniforme]
+## compone objetos en estructuras anidadas (árbol) y los trata todos de forma .coldinline[uniforme]
 
 
 ---
@@ -118,11 +118,11 @@ name: solution
 
 # Composite: Solución
 
-### Un _composite_ crea una interfaz (`interface` o `abstract class`) común para las composiciones de objetos (nodos) y los objetos individuales (hojas)
+### Un _composite_ crea una interfaz (`interface` o `abstract`) común para las composiciones de objetos (nodos) y los objetos individuales (hojas)
 
 ### Un _composite_ usa polimorfirmo, ya que todas las clases que implementan la interfaz común tienen el mismo comportamiento (subtipos de la interfaz común)
 
-### El cliente usa la interfaz común para manipular cualquier objeto, sin tener que comprobar su  tipo
+### El cliente usa la interfaz común para manipular cualquier objeto, sin tener que comprobar si es composición u objeto individual
 
 
 ---
@@ -139,9 +139,9 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/co
 
 La agregación (tipo especializado de asociación) representa relaciones “uno a muchos”, “muchos a muchos” o “todo a parte” entre múltiples objetos. Aquí, jerarquías "todo-parte"
 
-`Component` puede ser interfaz o clase abstracta. Lo segundo permite definir comportamientos por defacto de los métodos base
+`Component` puede ser interfaz o clase abstracta. Lo segundo permite definir comportamientos por defecto de los métodos base
 
-Recursividad: Un `Composite` contiene elementos `Component` y un `Component` pueden ser `Leaf` o `Composite`. 
+Recursividad: Un `Composite` contiene elementos `Component` y un `Component` puede ser `Leaf` o `Composite`. 
 
 
 ---
