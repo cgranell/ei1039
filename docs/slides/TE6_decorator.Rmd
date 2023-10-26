@@ -3,7 +3,7 @@ title: "[TE6] Patrones Estructurales"
 subtitle: "Decorator pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -36,7 +36,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
