@@ -19,5 +19,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [20 min] **Presentación**: [Proxy pattern](slides/TE5_proxy.html)
 
--   [5 min] **Closing**: Actividad 6.1
+-   [5 min] **Closing**: Actividad 5.1
 

@@ -15,11 +15,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [5 min] **Opening**
 
--   [20 min] **Revisión**: Actividad 6.1
+-   [20 min] **Revisión**: Actividad 5.1
 
 -   [20 min] **Presentación**: [Composite pattern](slides/TE6_composite.html) y [Decorator pattern](slides/TE6_decorator.html)
 
--   [40 min] **Actividad**: Actividad 6.2
+-   [40 min] **Actividad**: Actividad 5.2
 
 -   [20 min] **Presentación**: [Observer pattern](slides/TE6_observer.html)
 
