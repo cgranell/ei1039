@@ -3,7 +3,7 @@ title: "[TE7] Patrones de Comportamiento"
 subtitle: "Template method pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -37,7 +37,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -90,7 +90,7 @@ Tea steeping in a red mug with lemons and honey on a blue towel and black table
 Image credits: [Rawpixel.com](https://www.rawpixel.com/image/3283040)
 
 
-Aunque café y té son bebidas distintas, ambos copartign muchas similitudes en su preparación. ¿No sería genial deshacerse de la duplicación de código, dejando intacta la estructura del algoritmo?
+Aunque café y té son bebidas distintas, ambas comparten muchas similitudes en su preparación. ¿No sería genial deshacerse de la duplicación de código, dejando intacta la estructura (serie de pasos) del algoritmo?
 
 ---
 class: inverse, center, middle
@@ -121,9 +121,9 @@ name: problem
 
 # Template Method: Problema
 
-### Dos (o más) objetos tienen muchas similitudes, pero su implementación es independiente (no reutilización)
+### Dos (o más) objetos tienen uan secuencia de tareas similares (proceso/algortimo), pero su implementación es independiente (no reutilización)
 
-### Un cambio común a los objetos implica duplicación (innecesaria)  
+### Si se implementan de forma totalmente separada, un cambio común a ambos objetos implica duplicación innecesaria (más mantenimiento, etc.)  
 
 
 ---
@@ -131,16 +131,22 @@ name: solution
 
 # Template Method: Solución
 
+### Permite cambiar el *comportamiento* de un algoritmo sin modificar su *estructura*
 
-### `AbstractClass`
+### Estructura: `AbstractClass` 
 
 -   .large[Implementa el método plantilla (`final`) con los pasos de un algoritmo]
 -   .large[Declara métodos abstractos que son pasos delegados a las subclases]
 -   .large[Implementa métodos (primitivas) que son pasos comunes]
 -   .large[Define ganchos (_hooks_) para pasos opcionales o extensiones del algoritmo]
 
+---
+name: solution
 
-### `ConcreteClass`
+# Template Method: Solución
+
+
+### Comportamiento: `ConcreteClass`
 
 -   .large[Implementa los métodos abstractos de la superclase]
 -   .large[Implementa los métodos gancho, si es necesario]
@@ -157,7 +163,7 @@ background-size: contain
 ???
 
 - El método de plantilla es `final` para que las subclases no puedan cambiar el orden de los pasos.
-- La clase base implementa todos los métodos que deifne pasos comunes para que las subclases no necesiten definirlos.
+- La clase base implementa todos los métodos que define pasos comunes para que las subclases no necesiten definirlos.
 - La clase base crea métodos abstractos que deben implementar las subclases.
 
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/template-method)
@@ -230,6 +236,8 @@ Un gancho o _hook_ es un método declarado en la clase abstracta, pero sin imple
 ---
 # Ejemplos reales
 
+### Común en aplicaciones derivadas de frameworks
+
 - .large[__Servlets en Java__: la clase [HttpServlet](https://github.com/eclipse-ee4j/servlet-api/blob/master/api/src/main/java/jakarta/servlet/http/HttpServlet.java) tiene el método [service](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L519), que actúa como un `Template Method`, y delega en el método `doXXX()` apropiado, por ejemplo [doGet()](https://github.com/eclipse-ee4j/servlet-api/blob/fc3f85f80c7a2e439a99d5bd5647a8161dd1b93c/api/src/main/java/jakarta/servlet/http/HttpServlet.java#L162), los cuales pueden ser sobreescritos por una implementación concreta del `servlet`]
 
 - .large[__TestCases en JUnit__: la clase [TestCase](https://github.com/junit-team/junit4/blob/main/src/main/java/junit/framework/TestCase.java) del framework JUnit tiene el método [runBare()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L138) que actúa como un `Template Method`, y llama a los métodos [setup()](https://github.com/junit-team/junit4/blob/7167b23b3ba7dd79410f6e9db350d16cbe30617b/src/main/java/junit/framework/TestCase.java#L474) y [teardown()](), que son _hooks_ que los test cases concretos puede implementar]
@@ -252,11 +260,13 @@ name: aplicability
 
 
 ---
-# `r fontawesome::fa(name = "circle-question")` Elige el diagrama UML correcto según lo descrito al presionar `p`
+# `r fontawesome::fa(name = "circle-question")` Elige el diagrama UML correcto según lo descrito abajo
+
+> .large[El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requieren  de una función para llegar a su destino (`reachDestination()`)]
 
 ???
 
-El nombre de un método de plantilla para una clase de vehículos autónomos podría ser conducir hasta el destino (`drivetoDestination()`. Tanto un automóvil autónomo como una motocicleta requieren  de una función para llegar a su destino (`reachDestination()`)
+El nombre de un método de plantilla para la clase "vehículos autónomos" podría ser conducir hasta el destino (`drivetoDestination()`). Tanto un automóvil autónomo como una motocicleta (subclases) requieren de una función para llegar a su destino (`reachDestination()`)
 
 
 ---
