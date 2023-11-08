@@ -3,7 +3,7 @@ title: "[TE7] Patrones de Comportamiento"
 subtitle: "Strategy pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -35,7 +35,7 @@ library(emo)
 library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -158,8 +158,8 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/st
 
 -   .large[Elegir diferentes algoritmos de búsqueda]
 -   .large[Guardar archivos en diferentes formatos]
--   .large[Comprimir archivos usando diferentes algoritmos de compresión]
--   .large[Elegir entre diferentes algoritmos de panificación de rutas]
+-   .large[Elegir diferentes algoritmos de compresión]
+-   .large[Elegir entre diferentes algoritmos de planificación de rutas]
 -   .large[Proporcionar diferentes estrategias de validación para campos de entrada]
 -   .large[Elegir entre diferentes algoritmos de enrutamiento para administrar el tráfico de red]
 -   .large[Aplicar distintos tipos de descuentos a un pedido]

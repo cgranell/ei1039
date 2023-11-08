@@ -33,8 +33,6 @@ navbar:
           href: "04TE_estructurales.html"
         - text: "TE Composite & Decorator; Observer"
           href: "05TE_estructurales.html"
-        - text: "TE Observer"
-          href: "05TE_estructurales.html"
         - text: "TE Template Method & Strategy"
           href: "06TE_comportamiento.html"
         - text: "TE Command & Iterator"
