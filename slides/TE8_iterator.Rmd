@@ -3,7 +3,7 @@ title: "[TE8] Patrones de Comportamiento"
 subtitle: "Iterator pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -35,7 +35,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -103,7 +103,7 @@ class: center, middle
 
 # `r pattern_name`: Propósito
 
-## proporciona una forma de acceder a una agregación .coldinline[sin exponer su estructura interna]
+## proporciona una forma de acceder a una agregación o colección .coldinline[sin exponer su estructura interna]
 
 
 ---
@@ -112,14 +112,14 @@ name: problem
 
 ### Un sistema tiene estructuras de datos diferentes (grafos, árboles, listas, etc.) que se recorren para obtener resultados similares
 
-### Código duplicado para iterar o recorrer la colección
+### Código duplicado para navegar, recorrer o iterar cada tipo de colección
 
 
 ---
 name: solution
 # `r pattern_name`: Solución
 
-### Lo que _cambia_: la forma de iterar diferentes colecciones de objetos 
+### Lo que *cambia*: la forma *interna* de iterar diferentes colecciones de objetos 
 
 
 ### `Iterator`
@@ -155,12 +155,23 @@ background-size: contain
 
 ???
 
-- las colecciones tienen al menos dos funciones: [mantenimiento](https://cgranell.github.io/ei1039/slides/TE5_1_composite.html#7) y recorrido. Relación con patrón Composite
-- El mantenimiento incluye métodos para agregar y eliminar elementos
-- El recorrido se refiere a acceder a los elementos y conocer el orden de acceso 
-- Iterator separa el mecanismo para recorrer la coleción de otras funciones de mantenimiento o similares.
-
 Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/iterator)
+
+
+---
+name: structure
+# `r pattern_name`: Estructura
+
+
+- .large[Funciones típicas sobre colecciones de objetos]
+
+  - .large[**Mantenimiento** ([Recuerda ¡Composite!](https://cgranell.github.io/ei1039/slides/TE6_composite.html#7)): incluye métodos para agregar y eliminar elementos] 
+  
+  - .large[**Recorrido** se refiere a acceder a los elementos y conocer el orden de acceso] 
+
+
+- .large[`r pattern_name` separa el mecanismo para recorrer una  colección de otras funciones de mantenimiento o similares]
+
 
 
 ---
@@ -168,7 +179,7 @@ Image credits: [refactoring.guru](https://refactoring.guru/es/design-patterns/it
 
 - .large[Iteración `r fontawesome::fa(name = "equals")` repetición, recursión o bucles] 
 
-- .large[El patrón Iterator implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de [Iterators](https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/util/Iterator.java)]
+- .large[El patrón `r pattern_name` implementa dicha iteración sobre arrays, vectores, árboles, u otros tipos de colecciones. Java está lleno de [Iterators](https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/util/Iterator.java)]
 
 ---
 name: aplicability

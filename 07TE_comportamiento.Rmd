@@ -14,14 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 -   [10 min] **Opening**
 
--   [20 min] **Revisión**: Actividad 7.1
-
-    > - Ningun problema con una estrategia
-    
-    > - Algunas dificultades con dos estrategias: [Diagrama UML](slides/images/students/HW5-UML.png)
-    
-    >       - Cada Strategy-ConcreteStrategy son bloques independientes. 
-    >       - La seleción de estrategias se encapsula en la clase Context.
+-   [20 min] **Revisión**: Actividad 6.2
 
 -   [15 min] **Presentación**: [Command pattern](slides/TE8_command.html) 
 

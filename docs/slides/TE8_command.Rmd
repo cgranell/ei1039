@@ -3,7 +3,7 @@ title: "[TE8] Patrones de Comportamiento"
 subtitle: "Command pattern"
 author: "Carlos Granell"
 institute: "Universitat Jaume I"
-date: "Sep 2022" 
+date: "Sep 2023" 
 description: "EI1039 - Diseño de Software"
 
 output:
@@ -36,7 +36,7 @@ library(fontawesome) # from github: https://github.com/rstudio/fontawesome
 
 ```
 
-```{r xaringan-extra, echo=FALSE}
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
 
 xaringanExtra:::use_xaringan_extra(c("tile_view", "panelset", "share_again", "editable"))
@@ -201,9 +201,9 @@ background-size: contain
 
 -   .large[trabajos/operaciones en cola]
 
--   .large[transacciones de operaciones: o todas se completan o ninguna]
+-   .large[transacciones de operaciones: o se completan todas o ninguna]
 
--   .large[serialización de objetos, i.e, guardar descripción de un objeto en un fichero]
+-   .large[serialización de objetos, i.e, guardar su descripción en  fichero]
 
 -   .large[hacer o deshacer una operación, como el comando "Deshacer" de un editor de texto o al borrar un mensaje de correo en Gmail] 
 
