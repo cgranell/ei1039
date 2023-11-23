@@ -38,7 +38,7 @@ navbar:
         - text: "TE Command & Iterator"
           href: "07TE_comportamiento.html"
         - text: "Functional Thinking"
-          href: slides/TE4_fp.html
+          href: slides/TE_fp.html
 
     - text: "Referencias"
       href: references.html
